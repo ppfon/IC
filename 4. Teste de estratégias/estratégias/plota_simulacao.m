@@ -1,11 +1,10 @@
-data = readmatrix('pratica/rpoc/reativo_teste.csv');
-data2 = readmatrix('pratica/rpoc/rpoc_q1000_p2000_d04pu_reativo.csv');
+data = readmatrix('rpoc/9k/aarc/q0p2000/aarc_q0_p2000_d04pu_reativo.csv');
+%data2 = readmatrix('rpoc/rpoc_q1000_p2000_d04pu_reativo.csv');
 
 freq_amostragem = 9e3;
 periodo_amostragem = 1/freq_amostragem;
-freq_nysq = freq_amostragem/2;
-% stgy = 51
-base_inf = 0; base_sup = 740e5;
+% stgy = 299
+base_inf = 57568; base_sup = 71411;
 base = data((data(:, 1) >= base_inf) & (data(:, 1) < base_sup), :);
 
 
@@ -21,8 +20,9 @@ P1(2:end-1) = 2*P1(2:end-1);
 
 %plot(aux,P1,"LineWidth",3);
 figure(1);
-plot(tempo, amplitude);
+plot(data(:,1), data(:,2));
+
 figure(2);
-plot((data2(:,1)-data(1))*periodo_amostragem, data2(:,2));
-%plot(data(:,1), data(:,2));
-%plot(base(:,1), base(:,2));
+%plot((data2(:,1)-data(1))*periodo_amostragem, data2(:,2));
+%plot(tempo, amplitude);
+plot(base(:,1), base(:,2));
