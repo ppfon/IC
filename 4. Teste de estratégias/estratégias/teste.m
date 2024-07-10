@@ -1,10 +1,10 @@
 freq_amostragem = 9e3;
 periodo_amostragem = 1/freq_amostragem;
 
-le_baixo = load("aarc\q0p2000\reativo\stgy.mat", "base");
+le_baixo = load("900\apoc\ativo\base.mat", "base");
 baixo = le_baixo.base;
 
-le_alto = load("rpoc\9k\aarc\q0p2000\reativo\stgy.mat", "base");
+le_alto = load("9k\apoc\ativo\base.mat", "base");
 alto = le_alto.base;
 
 tempo_alto = (alto(:,1)-alto(1))*periodo_amostragem;
