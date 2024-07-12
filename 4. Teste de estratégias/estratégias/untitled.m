@@ -7,7 +7,8 @@ L = 14e3;
 t = (0:L-1)*periodo_amostragem;
 S =  0.8 + 0.7*sin(2*pi*50*t) + sin(2*pi*300*t);
 %plot(t, S);
-[amp, fase, freq] = plota_espectro(S, periodo_amostragem, 500);
+[amp, fase, freq] = calcula_espectro(S, periodo_amostragem, 0);
+plot(freq, amp);
 
 % anal(S, periodo_amostragem, 600);
 % title('Fourier Analyis of the Rotor Voltage')
@@ -26,23 +27,3 @@ S =  0.8 + 0.7*sin(2*pi*50*t) + sin(2*pi*300*t);
 % title('Single-Sided Amplitude Spectrum of y(t)')
 % xlabel('Frequency (Hz)')
 % ylabel('|Y(f)|')
-
-% figure;
-% % plot 1 (base)
-% subplot(1,2,1);
-% plot(aux_base,P1_base,"blue");
-% title("Sem estratégia");
-% xlabel('Frequência [Hz]'); ylabel('Amplitude [p.u]');
-% xlim([0 500]);
-% grid on;
-% 
-% % plot 2 (estratégia)
-% subplot(1,2,2);
-% plot(aux_stgy,P1_stgy,"red");
-% title("Com estratégia");
-% xlabel('Frequência [Hz]'); ylabel('Amplitude [p.u]');
-% xlim([0 500]);
-% grid on;
-
-%plot(tempo_stgy, amplitude_stgy);
-%periodogram(amplitude_stgy, [], num_pontos_stgy);
