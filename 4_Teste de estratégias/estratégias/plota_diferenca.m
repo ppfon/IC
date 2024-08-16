@@ -1,29 +1,29 @@
 freq_amostragem = 9e3;
 periodo_amostragem = 1/freq_amostragem;
 
-le_baixo = load("900\aarc\q2000p0\reativo\stgy.mat", "base");
-baixo = le_baixo.base;
+le_antigo = load("Dados\9k\pnsc\q2000p0\reativo\base.mat", "base");
+antigo = le_antigo.base;
 
-le_alto = load("9k\aarc\q2000p0\reativo\stgy.mat", "base");
-alto = le_alto.base;
+le_novo = load("Novos dados\pnsc\q2000p0\reativo\base.mat", "stgy");
+novo = le_novo.stgy;
 
-tempo_alto = (alto(:,1)-alto(1))*periodo_amostragem;
-amplitude_alto = alto(:,2);
+tempo_novo = (novo(:,1)-novo(1))*periodo_amostragem;
+amplitude_novo = novo(:,2);
 
-tempo_baixo = (baixo(:,1)-baixo(1))*(periodo_amostragem*10);
-amplitude_baixo = baixo(:,2);
+tempo_antigo = (antigo(:,1)-antigo(1))*(periodo_amostragem);
+amplitude_antigo = antigo(:,2);
 
 figure(1);
 subplot(1,2,1);
-[amp, fase, freq] = calcula_espectro(amplitude_alto, periodo_amostragem, 1);
+[amp, fase, freq] = calcula_espectro(amplitude_novo, periodo_amostragem, 1);
 plot(freq, amp, 'g'); 
-title("Amostragem de 9 [kHz]");
+title("Sem compensador de 5º e 7º harmônico");
 xlabel('Frequência [Hz]'); ylabel('Amplitude [VA]');
 grid on;
 
 subplot(1,2,2);
-[amp, fase, freq] = calcula_espectro(amplitude_baixo, periodo_amostragem*10, 1);
+[amp, fase, freq] = calcula_espectro(amplitude_antigo, periodo_amostragem, 1);
 plot(freq, amp, 'r');
-title("Amostragem de 0.9 [kHz]");
+title("Com compensador de 5º e 7º harmônico");
 xlabel('Frequência [Hz]'); ylabel('Amplitude [VA]');
 grid on; 
