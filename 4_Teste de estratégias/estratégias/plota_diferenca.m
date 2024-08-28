@@ -1,11 +1,11 @@
 freq_amostragem = 9e3;
 periodo_amostragem = 1/freq_amostragem;
 
-le_antigo = load("Dados\9k\pnsc\q2000p0\reativo\base.mat", "base");
+le_antigo = load("Dados\9k\pnsc\q0p2000\reativo\base.mat", "base");
 antigo = le_antigo.base;
 
-le_novo = load("Novos dados\pnsc\q2000p0\reativo\base.mat", "stgy");
-novo = le_novo.stgy;
+le_novo = load("Novos dados\pnsc\q0p2000\reativa\base.mat", "base");
+novo = le_novo.base;
 
 tempo_novo = (novo(:,1)-novo(1))*periodo_amostragem;
 amplitude_novo = novo(:,2);

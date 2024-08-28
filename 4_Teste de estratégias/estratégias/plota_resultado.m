@@ -2,19 +2,19 @@ freq_amostragem = 9e3;
 periodo_amostragem = 1/freq_amostragem;
 resultado_pu = 0;
 
-le_base_ativo = load("Novos dados\bpsc\q2000p0\ativo\base.mat", "stgy");
+le_base_ativo = load("Novos dados\aarc\q2000p0\ativo\base.mat", "stgy");
 base_ativo = le_base_ativo.stgy;
 
-le_stgy_ativo = load("Novos dados\bpsc\q2000p0\ativo\stgy.mat", "stgy");
+le_stgy_ativo = load("Novos dados\aarc\q2000p0\ativo\stgy.mat", "stgy");
 stgy_ativo = le_stgy_ativo.stgy;
 
 amplitude_stgy_ativo = stgy_ativo(:,2);
 amplitude_base_ativo = base_ativo(:,2);
 
-le_base_reativo = load("Novos dados\bpsc\q2000p0\reativo\base.mat", "stgy");
+le_base_reativo = load("Novos dados\aarc\q2000p0\reativo\base.mat", "stgy");
 base_reativo = le_base_reativo.stgy;
 
-le_stgy_reativo = load("Novos dados\bpsc\q2000p0\reativo\stgy.mat", "stgy");
+le_stgy_reativo = load("Novos dados\aarc\q2000p0\reativo\stgy.mat", "stgy");
 stgy_reativo = le_stgy_reativo.stgy;
 
 amplitude_stgy_reativo = stgy_reativo(:,2);

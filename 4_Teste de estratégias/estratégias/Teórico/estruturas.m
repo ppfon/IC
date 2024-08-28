@@ -104,7 +104,7 @@ resultado_pu = 0;
 % plot(Vabc_comp(3,:));
 
 figure(3);
-plot(tempo, real(Vabc_comp(3,:)));
+plot(tempo, imag(Vabc_comp(1,:)));
 %Vabc_tempo = [ Va tempo; Vb tempo; Vc tempo;];
 Va_tempo = timeseries(Va, tempo'); 
 Vb_tempo = timeseries(Vb, tempo'); 
