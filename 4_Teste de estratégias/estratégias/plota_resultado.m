@@ -88,5 +88,5 @@ grid on; hold on; xlim([0 0.025]);
 plot(tempo_stgy_reativo, amplitude_stgy_reativo, 'b'); 
 % title("Potência Reativo - com a estratégia");
 % xlabel('Tempo [s]'); ylabel('Amplitude [VAr]');
-legend('APOC | P_{ref} = 2kW | Sem estratégia', 'APOC | P_{ref} = 2kW | Com estratégia');
+legend('APOC | Q_{ref} = 1kVAr | Sem estratégia', 'APOC | Q_{ref} = 1kVAr | Com estratégia');
 hold off;
