@@ -11,13 +11,17 @@
 
 #define P_ref ParamRealData(0,0)
 #define Q_ref ParamRealData(1,0)
-#define SELECAO ParamRealData(2,0)
+// #define SELECAO (int) ParamRealData(2,0)
 
-int kp_pos;
-int kp_neg;
-int kq_pos;
-int kq_neg;
-int selec;
+// float kp_pos;
+// float kp_neg;
+// float kq_pos;
+// float kq_neg;
+// int selec = 0;
+#define kp_pos 1
+#define kp_neg 0
+#define kq_pos 1
+#define kq_neg 0
 
 float omega;
 

@@ -1,27 +1,28 @@
-selec = SELECAO;
+// selec = SELECAO; 
 
-switch (selec) {
+// switch (selec) {
 
-    case 2: // AARC
-    kp_pos = 1; kp_neg = 1; kq_pos = 1; kq_neg = 1;
-    break;
+//    case 2: // AARC
+//    kp_pos = 1; kp_neg = 1; kq_pos = 1; kq_neg = 1;
+//    break;
 
-    case 3: // PNSC
-    kp_pos = 1; kp_neg = -1; kq_pos = 1; kq_neg = -1;
-    break;
+//    case 3: // PNSC
+//    kp_pos = 1; kp_neg = -1; kq_pos = 1; kq_neg = -1;
+//    break;
 
-    case 4: // BPSC
-    kp_pos = 1; kp_neg = 0; kq_pos = 1; kq_neg = 0;
-    break;
+//    case 4: // BPSC
+//    kp_pos = 1; kp_neg = 0; kq_pos = 1; kq_neg = 0;
+//    break;
 
-    case 5: // APOC 
-    kp_pos = 1; kp_neg = -1; kq_pos = 1; kq_neg = 1;
-    break;
+//    case 5: // APOC 
+//    kp_pos = 1; kp_neg = -1; kq_pos = 1; kq_neg = 1;
+//    break;
 
-    case 6: // RPOC
-    kp_pos = 1; kp_neg = 1; kq_pos = 1; kq_neg = -1;
-    break;
-}
+//    case 6: // RPOC
+//    kp_pos = 1; kp_neg = 1; kq_pos = 1; kq_neg = -1;
+//    break;
+// }
+//kp_pos = 1.0; kp_neg = 0.0; kq_pos = 1.0; kq_neg = 0.0;
 
 omega = 2*PI*60;
 
@@ -37,19 +38,19 @@ q_mag = u * sqrt( termo3 * termo3 + termo4 * termo4);
 
 // Instantâneo
 
-termo5 = ( (kp_pos + kp_neg) * v_pos_mod * v_neg_mod * cos(2 * omega * tempo + theta_pos - theta_neg) * P_ref )
-        / (kp_pos * v_pos_mod * v_pos_mod + kp_neg * v_neg_mod * v_neg_mod);
+termo5 = ( (kp_pos + kp_neg) * v_pos_mod * v_neg_mod * cos(2 * omega * tempo + theta_pos - theta_neg) )
+        / (kp_pos * v_pos_mod * v_pos_mod + kp_neg * v_neg_mod * v_neg_mod) * (P_ref);
 
-termo6 = ( (kq_pos - kq_neg) * v_pos_mod * v_neg_mod * sin(2 * omega * tempo + theta_pos - theta_neg) * Q_ref )
-        / (kq_pos * v_pos_mod * v_pos_mod + kq_neg * v_neg_mod * v_neg_mod);
+termo6 = ( (kq_pos - kq_neg) * v_pos_mod * v_neg_mod * sin(2 * omega * tempo + theta_pos - theta_neg) )
+        / (kq_pos * v_pos_mod * v_pos_mod + kq_neg * v_neg_mod * v_neg_mod) * (Q_ref);
 
 p_inst = termo5 + termo6;
 
-termo7 = ( (kq_pos + kq_neg) * v_pos_mod * v_neg_mod * cos(2 * omega * tempo + theta_pos - theta_neg) * Q_ref )
-        / (kq_pos * v_pos_mod * v_pos_mod + kq_neg * v_neg_mod * v_neg_mod);
+termo7 = ( (kq_pos + kq_neg) * v_pos_mod * v_neg_mod * cos(2 * omega * tempo + theta_pos - theta_neg) )
+        / (kq_pos * v_pos_mod * v_pos_mod + kq_neg * v_neg_mod * v_neg_mod) * (Q_ref);
 
-termo8 = ( (kp_pos - kp_neg) * v_pos_mod * v_neg_mod * sin(2 * omega * tempo + theta_pos - theta_neg) * P_ref )
-        / (kp_pos * v_pos_mod * v_pos_mod + kp_neg * v_neg_mod * v_neg_mod);
+termo8 = ( (kp_pos - kp_neg) * v_pos_mod * v_neg_mod * sin(2 * omega * tempo + theta_pos - theta_neg) )
+        / (kp_pos * v_pos_mod * v_pos_mod + kp_neg * v_neg_mod * v_neg_mod) * (P_ref);
 
 q_inst = termo7 - termo8;
 

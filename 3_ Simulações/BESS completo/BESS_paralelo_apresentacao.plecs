@@ -28,55 +28,55 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "2"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands base64 "U0VMRUNBTyA9IDU7ClBfcmVmID0gMTAwMDsKUV9yZWYgP"
-"SAyMDAwOwolJSBQYXLDom1ldHJvcyBkYSByZWRlIGUgZGEgY2FyZ2EKVnJtcyA9IDIyMDsgICAgIC"
-"AgICUgVGVuc8OjbyBkZSBsaW5oYSBlZmljYXogZGEgcmVkZQolVnJtcyA9ICAxNzA7ICAgICAgICA"
-"lIFRlbnPDo28gZGUgbGluaGEgZWZpY2F6IGRhIHJlZGUKVnBpY28gPSBWcm1zKnNxcnQoMC42NjY2"
-"NjY2NjY2NjY2NjcpOwpmbiA9IDYwOwpGcmVkZSA9IGZuOwp3biA9IDIqcGkqZm47CgpWZGMgPSA1M"
-"DA7ICAlJSBEYy1saW5rIHZvbHRhZ2UKCiUlIFRlbXBlcmF0dXJhIGluaWNpYWwgZG9zIGRpc3Bvc2"
-"l0aXZvcwpUZW1wX2luaWNpYWxfSUdCVCA9IDE1MDA7ClRlbXBfaW5pY2lhbF9kaW9kbyA9IDEwMDA"
-"7CgpUZW1wX2luaWNpYWxfSUdCVF9pbnYgPSA4MDA7ClRlbXBfaW5pY2lhbF9kaW9kb19pbnYgPSA4"
-"MDA7CgolJSBwYXLDom1ldHJvcyBkYSBzaW11bGHDp8Ojbwpmc3cgPSA5MDAwOyAgICAgICAgICAgI"
-"CAJCQkJICAgICUlIGZyZXF1w6puY2lhIGRlIGNoYXZlYW1lbnRvIGRvIGNvbnZlcnNvcgpmc2FtcG"
-"xlID0gZnN3OyAgICAgICAgICAgICAgICAgICAgICAldXRpbGl6YWRvIG5vcyBwYXLDom1ldHJvcyB"
-"kbyBjb250cm9sZSh0cmFuc2Zvcm1hw6fDo28gZSBjb250cm9sZSkKVHNhbXBsZSA9IDEvZnNhbXBs"
-"ZTsKZmRzcCA9IGZzYW1wbGUqMTIwOwpwYXNzbyA9IDEvKGZkc3ApOyAJCQkJICAJICUlIGluY3Jlb"
-"WVudG8gZGUgc2ltdWxhw6fDo28KCiUgUkVERQpTY2MgPSAyMDBlNjsKWF9SID0gMC4zOwpWcm1zX2"
-"YgPSBWcm1zL3NxcnQoMyk7CnRoZXRhID0gYXRhbihYX1IpOwpabW9kID0gVnJtc19mXjIvKFNjYy8"
-"zKTsKUnNvdXJjZSA9IDAuMDAwNTsKTHNvdXJjZSA9IDAuMDVlLTY7CgolJSBQYXJhbWV0cm9zIEZp"
-"bHRybwpMZiA9IDFlLTM7CkNmID0gMjVlLTA2OwolUmQgPSAxLjU7CkxnID0gTGY7CkwgPSBMZytMZ"
-"gpSZiA9IDIqcGkqZm4qTGYvMTguODk4MjsKUmcgPSAyKnBpKmZuKkxnLzE4Ljg5ODI7ClJkID0gMS"
-"44OwpSID0gUmcrUmY7CkVTUl9jYXBfbGNsID0gMC4wMjsKTl9lc3BpcmFzID0gODI7CkFyZWEgPSA"
-"5ODdlLTY7CgolJSBDb250cm9sZSByZXNzb25hbnRlCktpbiA9IDEwMDA7JS0yKnBpKmZjX2FiKlIq"
-"MjsKVD0xL2ZzdzsKcm89ZXhwKFIqVC9MKTsKS3BfZXFfMTMgPSBSKnNxcnQoMisyKnJvXi0yLSgxK"
-"3NxcnQoNSkpKnJvXi0xKS8oKDEtcm9eLTEpKnNxcnQoMikpOwoKJSUgUGFyYW1ldHJvcyBQTEwKV2"
-"luaXQgPSAyKnBpKmZuOwprc2lfc3JmID0gMS9zcXJ0KDIpOyAgICAgICAKd25fc3JmID0gMzAqMip"
-"waTsKCktwX3BsbCA9IDIqd25fc3JmKmtzaV9zcmY7CktpX3BsbCA9ICh3bl9zcmZeMik7CgolJSBN"
-"YWxoYSBleHRlcm5hIFZkYwpDZGMgPSAzKjQuN2UtMzsgICAgICAgICAKS3BvdXRlciA9IDAuMTkxO"
-"DA5MjgyNzY3NzY5OyAgICAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KS2lvdXRlciA9ID"
-"MuNDc5MDM1NTUxMzg0MDAwOyAgICAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KCiUlIE1"
-"hbGhhIHJlYXRpdm8gICAgICAgICAKS2lxID0gMTIuNTY2NDsgICAgICAgICAlJU1PZGVsYWdlbSBu"
-"byBhcnF1aXZvIC5tCktwcSA9IC0wLjE2Mjk7ICAgICAgICAgJSVNT2RlbGFnZW0gbm8gYXJxdWl2b"
-"yAubQoKJSUgQmF0dGVyeQpOYl9zZXJpZXMgID0gMTY7Ck5iX3N0cmluZ3MgPSAxOwpSaW50ID0gTm"
-"Jfc2VyaWVzKjcuMWUtMzsgICAlJVJlc2lzdMOqbmNpYSBpbnRlcm5hIGRhcyBiYXRlcmlhcwpTb2N"
-"fbWluID0gNTA7ICAgICUgU09DWyVdClNvY19tYXggPSAxMDA7ClZkY28gPSAxMy42Kk5iX3Nlcmll"
-"czsgICAgICAgICAgICAgICAgICAgICAgICAlJSB0ZW5zw6NvIGluaWNpYWwgZGMtbGluawoKJSBEY"
-"y9kYyBQYXJhbWV0ZXJzCkxiID0gNGUtMzsgICAgICAgICAgICAgICAgJUluZHV0b3IgZG8gQm9vc3"
-"QKUmIgPSAwLjU1OyAgICAgICAgICAgICAgJVJlc2lzdMOqbmNpYSBzw6lyaWUgZG8gaW5kdXRvcgp"
-"OID0gMzsgICAgICAgICAgICAgICAgICVOw7ptZXJvIGRlIGJyYcOnb3MgZG8gaW50ZXJsZWF2ZWQK"
-"Tl9lc3BpcmFzX2NjID0gNDAzOwpBcmVhX2NjID0gOTg3ZS02OyAgICAgICAKZnN3YiA9IDkwMDA7C"
-"lRzYiA9IDEvKGZzd2IpOwoKJSVHYW5ob3MgZG8gY29udHJvbGFkb3IgZG8gZGMvZGMKJSUgZ2FuaG"
-"8gY29udHJvbGUgZGUgY29ycmVudGUgZG8gYm9vc3QgZSBidWNrCktjID0gVmRjLyhSYitOKlJpbnQ"
-"pOwpUbSA9IExiLyhSYitOKlJpbnQpOwpmYyA9IGZzd2IvMjA7CktwYiA9IDIqcGkqZmMqVG0vS2M7"
-"ICAgICAgICAlJU1PZGVsYWdlbSBubyBhcnF1aXZvIC5tCktpYiA9IDIqcGkqZmMvS2M7ICAgICAgI"
-"CAgICAlJU1PZGVsYWdlbSBubyBhcnF1aXZvIC5tCiUlZ2FuaG8gY29udHJvbGUgZGUgY29ycmVudG"
-"UgZG8gYnVjayAoTW9kbyBjb3JyZW50ZSBjb25zdGFudGUpCktwaWJ1ID0gMipwaSpmYypUbS9LYzs"
-"gICAgICAlJU1PZGVsYWdlbSBubyBhcnF1aXZvIC5tCktpaWJ1ID0gMipwaSpmYy9LYzsgICAgICAg"
-"ICAlJU1PZGVsYWdlbSBubyBhcnF1aXZvIC5tCiUlIGdhbmhvIGNvbnRyb2xlIGRlIHRlbnPDo28gZ"
-"G8gYnVjayAoTW9kbyB0ZW5zw6NvIGNvbnN0YW50ZSkKS2UgPSBOKlJpbnQ7CmZjMSA9IDEwOwpmYz"
-"IgPSBmYzEvMjA7CktwdmJ1ID0gMipwaSpmYzIvKDIqcGkqS2UqKGZjMS1mYzIpKTsgICAgICAlJU1"
-"PZGVsYWdlbSBubyBhcnF1aXZvIC5tCktpdmJ1ID0gMipwaSpmYzEqKEtwdmJ1KTsgICAgICAlJU1P"
-"ZGVsYWdlbSBubyBhcnF1aXZvIC5t"
+  InitializationCommands base64 "U0VMRUNBTyA9IDQ7ClBfcmVmID0gMTAwMDsKUV9yZWYgP"
+"SAyMDAwOwoKJSBlc3RyYXTDqWdpYXMKa3BfcG9zID0gMTsKa3BfbmVnID0gMDsKa3FfcG9zID0gMT"
+"sKa3FfbmVnID0gMDsKCgolJSBQYXLDom1ldHJvcyBkYSByZWRlIGUgZGEgY2FyZ2EKVnJtcyA9IDI"
+"yMDsgICAgICAgICUgVGVuc8OjbyBkZSBsaW5oYSBlZmljYXogZGEgcmVkZQpWcGljbyA9IFZybXMq"
+"c3FydCgwLjY2NjY2NjY2NjY2NjY2Nyk7CmZuID0gNjA7CkZyZWRlID0gZm47CnduID0gMipwaSpmb"
+"jsKClZkYyA9IDUwMDsgICUlIERjLWxpbmsgdm9sdGFnZQoKJSUgVGVtcGVyYXR1cmEgaW5pY2lhbC"
+"Bkb3MgZGlzcG9zaXRpdm9zClRlbXBfaW5pY2lhbF9JR0JUID0gMTUwMDsKVGVtcF9pbmljaWFsX2R"
+"pb2RvID0gMTAwMDsKClRlbXBfaW5pY2lhbF9JR0JUX2ludiA9IDgwMDsKVGVtcF9pbmljaWFsX2Rp"
+"b2RvX2ludiA9IDgwMDsKCiUlIHBhcsOibWV0cm9zIGRhIHNpbXVsYcOnw6NvCmZzdyA9IDkwMDA7I"
+"CAgICAgICAgICAgIAkJCQkgICAgJSUgZnJlcXXDqm5jaWEgZGUgY2hhdmVhbWVudG8gZG8gY29udm"
+"Vyc29yCmZzYW1wbGUgPSBmc3c7ICAgICAgICAgICAgICAgICAgICAgICV1dGlsaXphZG8gbm9zIHB"
+"hcsOibWV0cm9zIGRvIGNvbnRyb2xlKHRyYW5zZm9ybWHDp8OjbyBlIGNvbnRyb2xlKQpUc2FtcGxl"
+"ID0gMS9mc2FtcGxlOwpmZHNwID0gZnNhbXBsZSoxMjA7CnBhc3NvID0gMS8oZmRzcCk7IAkJCQkgI"
+"AkgJSUgaW5jcmVtZW50byBkZSBzaW11bGHDp8OjbwoKJSBSRURFClNjYyA9IDIwMGU2OwpYX1IgPS"
+"AwLjM7ClZybXNfZiA9IFZybXMvc3FydCgzKTsKdGhldGEgPSBhdGFuKFhfUik7Clptb2QgPSBWcm1"
+"zX2ZeMi8oU2NjLzMpOwpSc291cmNlID0gMC4wMDA1OwpMc291cmNlID0gMC4wNWUtNjsKCiUlIFBh"
+"cmFtZXRyb3MgRmlsdHJvCkxmID0gMWUtMzsKQ2YgPSAyNWUtMDY7CiVSZCA9IDEuNTsKTGcgPSBMZ"
+"jsKTCA9IExnK0xmClJmID0gMipwaSpmbipMZi8xOC44OTgyOwpSZyA9IDIqcGkqZm4qTGcvMTguOD"
+"k4MjsKUmQgPSAxLjg7ClIgPSBSZytSZjsKRVNSX2NhcF9sY2wgPSAwLjAyOwpOX2VzcGlyYXMgPSA"
+"4MjsKQXJlYSA9IDk4N2UtNjsKCiUlIENvbnRyb2xlIHJlc3NvbmFudGUKS2luID0gMTAwMDslLTIq"
+"cGkqZmNfYWIqUioyOwpUPTEvZnN3Owpybz1leHAoUipUL0wpOwpLcF9lcV8xMyA9IFIqc3FydCgyK"
+"zIqcm9eLTItKDErc3FydCg1KSkqcm9eLTEpLygoMS1yb14tMSkqc3FydCgyKSk7CgolJSBQYXJhbW"
+"V0cm9zIFBMTApXaW5pdCA9IDIqcGkqZm47CmtzaV9zcmYgPSAxL3NxcnQoMik7ICAgICAgIAp3bl9"
+"zcmYgPSAzMCoyKnBpOwoKS3BfcGxsID0gMip3bl9zcmYqa3NpX3NyZjsKS2lfcGxsID0gKHduX3Ny"
+"Zl4yKTsKCiUlIE1hbGhhIGV4dGVybmEgVmRjCkNkYyA9IDMqNC43ZS0zOyAgICAgICAgIApLcG91d"
+"GVyID0gMC4xOTE4MDkyODI3Njc3Njk7ICAgICAgICAgJSVNT2RlbGFnZW0gbm8gYXJxdWl2byAubQ"
+"pLaW91dGVyID0gMy40NzkwMzU1NTEzODQwMDA7ICAgICAgICAgJSVNT2RlbGFnZW0gbm8gYXJxdWl"
+"2byAubQoKJSUgTWFsaGEgcmVhdGl2byAgICAgICAgIApLaXEgPSAxMi41NjY0OyAgICAgICAgICUl"
+"TU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KS3BxID0gLTAuMTYyOTsgICAgICAgICAlJU1PZGVsYWdlb"
+"SBubyBhcnF1aXZvIC5tCgolJSBCYXR0ZXJ5Ck5iX3NlcmllcyAgPSAxNjsKTmJfc3RyaW5ncyA9ID"
+"E7ClJpbnQgPSBOYl9zZXJpZXMqNy4xZS0zOyAgICUlUmVzaXN0w6puY2lhIGludGVybmEgZGFzIGJ"
+"hdGVyaWFzClNvY19taW4gPSA1MDsgICAgJSBTT0NbJV0KU29jX21heCA9IDEwMDsKVmRjbyA9IDEz"
+"LjYqTmJfc2VyaWVzOyAgICAgICAgICAgICAgICAgICAgICAgICUlIHRlbnPDo28gaW5pY2lhbCBkY"
+"y1saW5rCgolIERjL2RjIFBhcmFtZXRlcnMKTGIgPSA0ZS0zOyAgICAgICAgICAgICAgICAlSW5kdX"
+"RvciBkbyBCb29zdApSYiA9IDAuNTU7ICAgICAgICAgICAgICAlUmVzaXN0w6puY2lhIHPDqXJpZSB"
+"kbyBpbmR1dG9yCk4gPSAzOyAgICAgICAgICAgICAgICAgJU7Dum1lcm8gZGUgYnJhw6dvcyBkbyBp"
+"bnRlcmxlYXZlZApOX2VzcGlyYXNfY2MgPSA0MDM7CkFyZWFfY2MgPSA5ODdlLTY7ICAgICAgIApmc"
+"3diID0gOTAwMDsKVHNiID0gMS8oZnN3Yik7CgolJUdhbmhvcyBkbyBjb250cm9sYWRvciBkbyBkYy"
+"9kYwolJSBnYW5obyBjb250cm9sZSBkZSBjb3JyZW50ZSBkbyBib29zdCBlIGJ1Y2sKS2MgPSBWZGM"
+"vKFJiK04qUmludCk7ClRtID0gTGIvKFJiK04qUmludCk7CmZjID0gZnN3Yi8yMDsKS3BiID0gMipw"
+"aSpmYypUbS9LYzsgICAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KS2liID0gMipwaSpmY"
+"y9LYzsgICAgICAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KJSVnYW5obyBjb250cm9sZS"
+"BkZSBjb3JyZW50ZSBkbyBidWNrIChNb2RvIGNvcnJlbnRlIGNvbnN0YW50ZSkKS3BpYnUgPSAyKnB"
+"pKmZjKlRtL0tjOyAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KS2lpYnUgPSAyKnBpKmZj"
+"L0tjOyAgICAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KJSUgZ2FuaG8gY29udHJvbGUgZ"
+"GUgdGVuc8OjbyBkbyBidWNrIChNb2RvIHRlbnPDo28gY29uc3RhbnRlKQpLZSA9IE4qUmludDsKZm"
+"MxID0gMTA7CmZjMiA9IGZjMS8yMDsKS3B2YnUgPSAyKnBpKmZjMi8oMipwaSpLZSooZmMxLWZjMik"
+"pOyAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KS2l2YnUgPSAyKnBpKmZjMSooS3B2YnUp"
+"OyAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0="
   InitialState  "1"
   SystemState   "AAAACAAAAAADAAAAEgBUAGkAbQBlAFMAdABhAG0AcAAAABAAACWFAgOHlFj/A"
 "AAAFgBTAHQAYQB0AGUAVgBlAGMAdABvAHIAAAB/AAAAABlQbGVjc0FycmF5OjpEb3VibGVWZWN0b3"
@@ -127,9 +127,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [1920, 23; 3520, 814]
-    ZoomFactor    0.876165
-    SliderPosition [927, 367]
+    Location      [1366, -166; 2902, 588]
+    ZoomFactor    0.993532
+    SliderPosition [977, 423]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -2066,9 +2066,9 @@ Plecs {
                   DstTerminal   1
                 }
                 Annotation {
-                  Name          base64 "QSBlcXVhw6fDo28gZGUgY2FyZ2EgZGEgYmF0ZX"
-"JpYSBkZSBjaHVtYm8gZm9pIG11bHRpcGxpY2FkYSBwb3IgMTEgcGFyYSBhanVzdGFyIGEgY3VydmE"
-"gZGUgY2FyZ2E="
+                  Name          base64 "PGh0bWw+PGJvZHk+CjxwIGFsaWduPSJjZW50ZX"
+"IiPkEgZXF1YcOnw6NvIGRlIGNhcmdhIGRhIGJhdGVyaWEgZGUgY2h1bWJvIGZvaSBtdWx0aXBsaWN"
+"hZGEgcG9yIDExIHBhcmEgYWp1c3RhciBhIGN1cnZhIGRlIGNhcmdhPC9wPjwvYm9keT48L2h0bWw+"
                   Position      [240, 215]
                 } 
               }
@@ -4879,27 +4879,33 @@ Plecs {
               DstTerminal   2
             }
             Annotation {
-              Name          "E_NL"
+              Name          "<html><body>\n<p align=\"center\">E_NL</p></body>"
+"</html>"
               Position      [815, 200]
             } 
             Annotation {
-              Name          "E_dyn Discharge"
+              Name          "<html><body>\n<p align=\"center\">E_dyn Discharge"
+"</p></body></html>"
               Position      [810, 265]
             } 
             Annotation {
-              Name          "SOC[%]"
+              Name          "<html><body>\n<p align=\"center\">SOC[%]</p></bod"
+"y></html>"
               Position      [1445, 75]
             } 
             Annotation {
-              Name          "Voltage[V]"
+              Name          "<html><body>\n<p align=\"center\">Voltage[V]</p><"
+"/body></html>"
               Position      [1505, 180]
             } 
             Annotation {
-              Name          "Current[A]"
+              Name          "<html><body>\n<p align=\"center\">Current[A]</p><"
+"/body></html>"
               Position      [1415, 140]
             } 
             Annotation {
-              Name          "isat"
+              Name          "<html><body>\n<p align=\"center\">isat</p></body>"
+"</html>"
               Position      [480, 110]
             } 
           }
@@ -10987,9 +10993,9 @@ Plecs {
                   DstTerminal   1
                 }
                 Annotation {
-                  Name          base64 "QSBlcXVhw6fDo28gZGUgY2FyZ2EgZGEgYmF0ZX"
-"JpYSBkZSBjaHVtYm8gZm9pIG11bHRpcGxpY2FkYSBwb3IgMTEgcGFyYSBhanVzdGFyIGEgY3VydmE"
-"gZGUgY2FyZ2E="
+                  Name          base64 "PGh0bWw+PGJvZHk+CjxwIGFsaWduPSJjZW50ZX"
+"IiPkEgZXF1YcOnw6NvIGRlIGNhcmdhIGRhIGJhdGVyaWEgZGUgY2h1bWJvIGZvaSBtdWx0aXBsaWN"
+"hZGEgcG9yIDExIHBhcmEgYWp1c3RhciBhIGN1cnZhIGRlIGNhcmdhPC9wPjwvYm9keT48L2h0bWw+"
                   Position      [240, 215]
                 } 
               }
@@ -13800,27 +13806,33 @@ Plecs {
               DstTerminal   2
             }
             Annotation {
-              Name          "E_NL"
+              Name          "<html><body>\n<p align=\"center\">E_NL</p></body>"
+"</html>"
               Position      [815, 200]
             } 
             Annotation {
-              Name          "E_dyn Discharge"
+              Name          "<html><body>\n<p align=\"center\">E_dyn Discharge"
+"</p></body></html>"
               Position      [810, 265]
             } 
             Annotation {
-              Name          "SOC[%]"
+              Name          "<html><body>\n<p align=\"center\">SOC[%]</p></bod"
+"y></html>"
               Position      [1445, 75]
             } 
             Annotation {
-              Name          "Voltage[V]"
+              Name          "<html><body>\n<p align=\"center\">Voltage[V]</p><"
+"/body></html>"
               Position      [1505, 180]
             } 
             Annotation {
-              Name          "Current[A]"
+              Name          "<html><body>\n<p align=\"center\">Current[A]</p><"
+"/body></html>"
               Position      [1415, 140]
             } 
             Annotation {
-              Name          "isat"
+              Name          "<html><body>\n<p align=\"center\">isat</p></body>"
+"</html>"
               Position      [480, 110]
             } 
           }
@@ -14532,9 +14544,9 @@ Plecs {
         Direction     left
       }
       Schematic {
-        Location      [-192, 285; 1174, 944]
-        ZoomFactor    1
-        SliderPosition [0, 0]
+        Location      [1403, 102; 2769, 761]
+        ZoomFactor    4.18529
+        SliderPosition [1068, 797]
         ShowBrowser   off
         BrowserWidth  100
         Component {
@@ -15866,21 +15878,22 @@ Plecs {
           Direction     up
           Flipped       off
           LabelPosition south
-          Location      [379, 189; 1145, 638]
-          State         "AAAA/wAAAAD9AAAAAgAAAAEAAADmAAAB8PwCAAAAA/sAAAAQAFoAb"
-"wBvAG0AQQByAGUAYQAAAAAA/////wAAAEwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAA"
-"J5AAABeAAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAAQQAAAfAAAACXAP///wAAAAMAAAR9AAA"
-"AiPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABH0AAABxAP///wAAA5EAAAHw"
+          Location      [1727, 74; 2493, 533]
+          State         "AAAA/wAAAAD9AAAAAgAAAAEAAADmAAABL/wCAAAAA/sAAAAQAFoAb"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAA"
+"J5AAABeAAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAS8AAABmAP///wAAAAMAAAL+AAA"
+"AffwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAv4AAABQAP///wAAAhQAAAEv"
 "AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
 "AAAAAAAAA=="
           SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxP+gqM"
 "4KjOCo/9mZmZmZmZgAAAAIAf/gAAAAAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAT/xERERER"
 "ERP/ZmZmZmZmYB"
-          HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAALyAMAAAAFA"
-"AAABgAAAGQAAAAJAAAAZAAAAAgAAABkAAAAAwAAAGQAAAAHAAAAZAAABGMAAAALAQAAAQAAAAAAAA"
-"AAAAAAAJb/////AAAAgQAAAAAAAAALAAAAQAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAA"
-"AAAAAAAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEA"
-"AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAACkwAAAAEAAAAAAAAD6AAAAAA1"
+          HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJA"
+"AAABwAAAGQAAAAGAAAAZAAAAAkAAABkAAAACAAAAGQAAAABAAAAZAAAAAMAAABkAAAAAgAAAGQAAA"
+"AFAAAAZAAAAAQAAABkAAAC/gAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAB"
+"AAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAA"
+"AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAA"
+"AAAAAK+AAAAAQAAAAAAAAPoAAAAACQ="
           PlotPalettes  "AAAAAQAAAAMAAAADAAAAAQAAAAkB/////wAAAAAAAAH/////AAD//"
 "wAAAf///////wAAAAAC//8u4P//czMAAAH/////AAAAAAAAAf//AAAAAH9/AAAB/////1VVAAAAAA"
 "H//1VVVVV/fwAAAf//AACqqgAAAAAAAAABAAAACQEBAQABAQEBAQAAAAEAAAAJAAAAAQAAAAEAAAA"
@@ -16036,22 +16049,22 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [1986, 57; 3352, 754]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADZfwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAIMA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAJ5AA"
-"ABbgAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAAQQAAA2UAAACXAP///wAAAAMAAAgBAAAAiPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAACAEAAABxAP///wAAB0cAAANlAAAA"
+      Location      [1309, -17; 2675, 690]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAACJ/wCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAJ5AA"
+"ABbgAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAicAAABmAP///wAAAAMAAAVWAAAAffw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABVYAAABQAP///wAABJ4AAAInAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxAAAAAAAAA"
 "ABAAEB60b7bwgAAAAIAf/gAAAAAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAAAAAAAAAAAAAA"
 "AAAAAAAAAA"
       HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAB"
-"gAAAGQAAAAFAAAAZAAAAAQAAABkAAAACQAAAGQAAAAIAAAAZAAAAAMAAABkAAAAAgAAAGQAAAABAA"
-"AAZAAAAAcAAABkAAAH5wAAAAsBAAABAAAAAAAAAAAAAAAAlv////8AAACBAAAAAAAAAAsAAACnAAA"
+"wAAAGQAAAAGAAAAZAAAAAkAAABkAAAACAAAAGQAAAABAAAAZAAAAAMAAABkAAAAAgAAAGQAAAAFAA"
+"AAZAAAAAQAAABkAAAFVgAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAACnAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"AdAAAAAAQAAAAAAAAPoAAAAADU="
+"ASvAAAAAQAAAAAAAAPoAAAAACQ="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAQAAAAEC//8u4P//zMwAAAAAAAEAAAABAAAAA"
 "AEAAAABAAAAAQAAAAEAAAABAAAAAAEAAAABQAAAAAAAAAAAAAABAAAAAQEAAAABAAAAAQAAAAEAAA"
 "ABAv//LuD//8zMAAAAAAABAAAAAQAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAABAAAAAUAAAAAAAAA"
@@ -16262,9 +16275,9 @@ Plecs {
       MaskIconOpaque off
       MaskIconRotates on
       Schematic {
-        Location      [1920, 23; 3520, 814]
-        ZoomFactor    1.79644
-        SliderPosition [170, 96]
+        Location      [1366, -166; 2902, 588]
+        ZoomFactor    1.71169
+        SliderPosition [97, 62]
         ShowBrowser   off
         BrowserWidth  100
         Component {
@@ -16421,7 +16434,7 @@ Plecs {
           LabelPosition south
           Parameter {
             Variable      "DialogGeometry"
-            Value         "[3281 183 616 381]"
+            Value         "[472 214 423 314]"
             Show          off
           }
           Parameter {
@@ -16783,9 +16796,9 @@ Plecs {
             Direction     right
           }
           Schematic {
-            Location      [1850, 212; 3386, 964]
+            Location      [1, 31; 682, 680]
             ZoomFactor    1.41959
-            SliderPosition [194, 0]
+            SliderPosition [79, 0]
             ShowBrowser   off
             BrowserWidth  100
             Component {
@@ -19165,7 +19178,7 @@ Plecs {
                 Direction     left
               }
               Schematic {
-                Location      [1823, -40; 2881, 608]
+                Location      [308, 27; 1366, 675]
                 ZoomFactor    2.2459
                 SliderPosition [0, 33]
                 ShowBrowser   off
@@ -19692,7 +19705,7 @@ Plecs {
                 Direction     right
               }
               Schematic {
-                Location      [2048, 130; 3414, 785]
+                Location      [0, 23; 1366, 681]
                 ZoomFactor    1.96257
                 SliderPosition [0, 0]
                 ShowBrowser   off
@@ -24197,16 +24210,6 @@ Plecs {
             Direction     left
           }
           Terminal {
-            Type          Output
-            Position      [29, -25]
-            Direction     right
-          }
-          Terminal {
-            Type          Output
-            Position      [29, -15]
-            Direction     right
-          }
-          Terminal {
             Type          Input
             Position      [-25, 0]
             Direction     left
@@ -24227,16 +24230,16 @@ Plecs {
             Direction     left
           }
           Schematic {
-            Location      [1920, 23; 3520, 814]
-            ZoomFactor    2.32558
-            SliderPosition [0, 0]
+            Location      [1453, 73; 2819, 731]
+            ZoomFactor    2.14682
+            SliderPosition [0, 2]
             ShowBrowser   off
             BrowserWidth  100
             Component {
               Type          Input
               Name          "V+"
               Show          on
-              Position      [135, 80]
+              Position      [75, 40]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -24255,7 +24258,7 @@ Plecs {
               Type          Input
               Name          "V-"
               Show          on
-              Position      [135, 110]
+              Position      [75, 70]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -24274,7 +24277,7 @@ Plecs {
               Type          Product
               Name          "Divide"
               Show          off
-              Position      [190, 95]
+              Position      [130, 55]
               Direction     up
               Flipped       off
               LabelPosition south
@@ -24300,145 +24303,10 @@ Plecs {
               }
             }
             Component {
-              Type          CScript
-              Name          "C-Script"
+              Type          Input
+              Name          "theta+"
               Show          on
-              Position      [330, 110]
-              Direction     up
-              Flipped       off
-              LabelPosition south
-              Parameter {
-                Variable      "DialogGeometry"
-                Value         "[931 358 813 522]"
-                Show          off
-              }
-              Parameter {
-                Variable      "NumInputs"
-                Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "NumOutputs"
-                Value         "4"
-                Show          off
-              }
-              Parameter {
-                Variable      "NumContStates"
-                Value         "0"
-                Show          off
-              }
-              Parameter {
-                Variable      "NumDiscStates"
-                Value         "0"
-                Show          off
-              }
-              Parameter {
-                Variable      "NumZCSignals"
-                Value         "0"
-                Show          off
-              }
-              Parameter {
-                Variable      "DirectFeedthrough"
-                Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "Ts"
-                Value         "0"
-                Show          off
-              }
-              Parameter {
-                Variable      "TerminalBasedSampleTimes"
-                Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "Parameters"
-                Value         "P_ref, Q_ref, SELECAO"
-                Show          off
-              }
-              Parameter {
-                Variable      "LangStandard"
-                Value         "2"
-                Show          off
-              }
-              Parameter {
-                Variable      "GnuExtensions"
-                Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "RuntimeCheck"
-                Value         "2"
-                Show          off
-              }
-              Parameter {
-                Variable      "HighlightLevel"
-                Value         "0"
-                Show          off
-              }
-              Parameter {
-                Variable      "Declarations"
-                Value         "#include \"c_scripts/BESS_interleavead_parallel"
-"/Code_equacao_mag.h\""
-                Show          off
-              }
-              Parameter {
-                Variable      "StartFcn"
-                Value         ""
-                Show          off
-              }
-              Parameter {
-                Variable      "OutputFcn"
-                Value         "#include \"c_scripts/BESS_interleavead_parallel"
-"/Code_equacao_mag.c\""
-                Show          off
-              }
-              Parameter {
-                Variable      "UpdateFcn"
-                Value         ""
-                Show          off
-              }
-              Parameter {
-                Variable      "DerivativeFcn"
-                Value         ""
-                Show          off
-              }
-              Parameter {
-                Variable      "TerminateFcn"
-                Value         ""
-                Show          off
-              }
-              Parameter {
-                Variable      "StoreCustomStateFcn"
-                Value         ""
-                Show          off
-              }
-              Parameter {
-                Variable      "RestoreCustomStateFcn"
-                Value         ""
-                Show          off
-              }
-            }
-            Component {
-              Type          SignalDemux
-              Name          "Demux"
-              Show          off
-              Position      [410, 110]
-              Direction     right
-              Flipped       on
-              LabelPosition south
-              Parameter {
-                Variable      "Width"
-                Value         "2"
-                Show          off
-              }
-            }
-            Component {
-              Type          Output
-              Name          "|p|"
-              Show          on
-              Position      [455, 80]
+              Position      [85, 195]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -24454,10 +24322,10 @@ Plecs {
               }
             }
             Component {
-              Type          Output
-              Name          "|q|"
+              Type          Input
+              Name          "theta-"
               Show          on
-              Position      [455, 140]
+              Position      [85, 230]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -24473,28 +24341,621 @@ Plecs {
               }
             }
             Component {
-              Type          Scope
-              Name          "Scope"
+              Type          Input
+              Name          "|V+|"
               Show          on
-              Position      [460, 35]
+              Position      [85, 270]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "Index"
+                Value         "5"
+                Show          on
+              }
+              Parameter {
+                Variable      "Width"
+                Value         "-1"
+                Show          off
+              }
+            }
+            Component {
+              Type          Input
+              Name          "|V-|"
+              Show          on
+              Position      [85, 300]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "Index"
+                Value         "6"
+                Show          on
+              }
+              Parameter {
+                Variable      "Width"
+                Value         "-1"
+                Show          off
+              }
+            }
+            Component {
+              Type          Subsystem
+              Name          "Mag. P"
+              Show          on
+              Position      [250, 50]
               Direction     up
               Flipped       off
               LabelPosition south
-              Location      [2755, 233; 3105, 456]
+              Frame         [-35, -25; 35, 25]
+              SampleTime    "-1"
+              CodeGenDiscretizationMethod "2"
+              CodeGenTarget "Generic"
+              MaskDisplayLang "2"
+              MaskIconFrame on
+              MaskIconOpaque off
+              MaskIconRotates on
+              Terminal {
+                Type          Input
+                Position      [-35, 5]
+                Direction     left
+              }
+              Terminal {
+                Type          Output
+                Position      [39, -5]
+                Direction     right
+              }
+              Schematic {
+                Location      [1814, -21; 2260, 287]
+                ZoomFactor    1
+                SliderPosition [0, 0]
+                ShowBrowser   off
+                BrowserWidth  100
+                Component {
+                  Type          Function
+                  Name          "|p| - Termo 1"
+                  Show          on
+                  Position      [110, 105]
+                  Direction     right
+                  Flipped       off
+                  LabelPosition south
+                  Frame         [-20, -10; 20, 10]
+                  Parameter {
+                    Variable      "f(u)"
+                    Value         "( (kp_pos + kp_neg) * P_ref ) / ( kp_pos + "
+"kp_neg * u[1] *u[1] ) "
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Math
+                  Name          "Math"
+                  Show          off
+                  Position      [175, 105]
+                  Direction     up
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "Operator"
+                    Value         "1"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Sum
+                  Name          "Sum"
+                  Show          off
+                  Position      [230, 135]
+                  Direction     up
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "IconShape"
+                    Value         "1"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "Inputs"
+                    Value         "|++"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "DataType"
+                    Value         "11"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "DataTypeOverflowMode"
+                    Value         "1"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Function
+                  Name          "|p| - Termo 2"
+                  Show          on
+                  Position      [110, 165]
+                  Direction     right
+                  Flipped       off
+                  LabelPosition south
+                  Frame         [-20, -10; 20, 10]
+                  Parameter {
+                    Variable      "f(u)"
+                    Value         "( (kq_pos - kq_neg) * Q_ref ) / ( kq_pos + "
+"kq_neg * u[1] *u[1] ) "
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Math
+                  Name          "Math1"
+                  Show          off
+                  Position      [175, 165]
+                  Direction     up
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "Operator"
+                    Value         "1"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Math
+                  Name          "Math2"
+                  Show          off
+                  Position      [285, 135]
+                  Direction     up
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "Operator"
+                    Value         "2"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Product
+                  Name          "Product"
+                  Show          off
+                  Position      [345, 130]
+                  Direction     up
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "IconShape"
+                    Value         "1"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "Inputs"
+                    Value         "**"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "DataType"
+                    Value         "11"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "DataTypeOverflowMode"
+                    Value         "1"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Input
+                  Name          "u"
+                  Show          on
+                  Position      [25, 135]
+                  Direction     right
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "Index"
+                    Value         "1"
+                    Show          on
+                  }
+                  Parameter {
+                    Variable      "Width"
+                    Value         "-1"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Output
+                  Name          "||p||"
+                  Show          on
+                  Position      [395, 130]
+                  Direction     right
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "Index"
+                    Value         "2"
+                    Show          on
+                  }
+                  Parameter {
+                    Variable      "Width"
+                    Value         "-1"
+                    Show          off
+                  }
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "|p| - Termo 1"
+                  SrcTerminal   2
+                  DstComponent  "Math"
+                  DstTerminal   2
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "|p| - Termo 2"
+                  SrcTerminal   2
+                  DstComponent  "Math1"
+                  DstTerminal   2
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "Math"
+                  SrcTerminal   1
+                  Points        [200, 105]
+                  DstComponent  "Sum"
+                  DstTerminal   2
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "Math1"
+                  SrcTerminal   1
+                  Points        [200, 165]
+                  DstComponent  "Sum"
+                  DstTerminal   3
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "Sum"
+                  SrcTerminal   1
+                  DstComponent  "Math2"
+                  DstTerminal   2
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "Math2"
+                  SrcTerminal   1
+                  DstComponent  "Product"
+                  DstTerminal   3
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "Product"
+                  SrcTerminal   1
+                  DstComponent  "||p||"
+                  DstTerminal   1
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "u"
+                  SrcTerminal   1
+                  Points        [45, 135; 60, 135; 60, 135]
+                  Branch {
+                    Points        [75, 135]
+                    Branch {
+                      DstComponent  "|p| - Termo 1"
+                      DstTerminal   1
+                    }
+                    Branch {
+                      DstComponent  "|p| - Termo 2"
+                      DstTerminal   1
+                    }
+                  }
+                  Branch {
+                    Points        [60, 75; 310, 75; 310, 125]
+                    DstComponent  "Product"
+                    DstTerminal   2
+                  }
+                }
+              }
+            }
+            Component {
+              Type          Subsystem
+              Name          "Mag. Q"
+              Show          on
+              Position      [255, 125]
+              Direction     up
+              Flipped       off
+              LabelPosition south
+              Frame         [-35, -25; 35, 25]
+              SampleTime    "-1"
+              CodeGenDiscretizationMethod "2"
+              CodeGenTarget "Generic"
+              MaskDisplayLang "2"
+              MaskIconFrame on
+              MaskIconOpaque off
+              MaskIconRotates on
+              Terminal {
+                Type          Input
+                Position      [-35, 5]
+                Direction     left
+              }
+              Terminal {
+                Type          Output
+                Position      [39, -5]
+                Direction     right
+              }
+              Schematic {
+                Location      [1563, 110; 2009, 418]
+                ZoomFactor    3.68345
+                SliderPosition [0, 0]
+                ShowBrowser   off
+                BrowserWidth  100
+                Component {
+                  Type          Function
+                  Name          "|q| - Termo 1"
+                  Show          on
+                  Position      [110, 105]
+                  Direction     right
+                  Flipped       off
+                  LabelPosition south
+                  Frame         [-20, -10; 20, 10]
+                  Parameter {
+                    Variable      "f(u)"
+                    Value         "( (kq_pos + kq_neg) * Q_ref ) / ( kq_pos + "
+"kq_neg * u[1] *u[1] ) "
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Math
+                  Name          "Math"
+                  Show          off
+                  Position      [175, 105]
+                  Direction     up
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "Operator"
+                    Value         "1"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Sum
+                  Name          "Sum"
+                  Show          off
+                  Position      [230, 135]
+                  Direction     up
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "IconShape"
+                    Value         "1"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "Inputs"
+                    Value         "|++"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "DataType"
+                    Value         "11"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "DataTypeOverflowMode"
+                    Value         "1"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Function
+                  Name          "|q| - Termo 2"
+                  Show          on
+                  Position      [110, 165]
+                  Direction     right
+                  Flipped       off
+                  LabelPosition south
+                  Frame         [-20, -10; 20, 10]
+                  Parameter {
+                    Variable      "f(u)"
+                    Value         "( (kp_pos - kp_neg) * P_ref ) / ( kp_pos + "
+"kp_neg * u[1] *u[1] ) "
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Math
+                  Name          "Math1"
+                  Show          off
+                  Position      [175, 165]
+                  Direction     up
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "Operator"
+                    Value         "1"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Math
+                  Name          "Math2"
+                  Show          off
+                  Position      [285, 135]
+                  Direction     up
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "Operator"
+                    Value         "2"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Product
+                  Name          "Product"
+                  Show          off
+                  Position      [345, 130]
+                  Direction     up
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "IconShape"
+                    Value         "1"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "Inputs"
+                    Value         "**"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "DataType"
+                    Value         "11"
+                    Show          off
+                  }
+                  Parameter {
+                    Variable      "DataTypeOverflowMode"
+                    Value         "1"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Input
+                  Name          "u"
+                  Show          on
+                  Position      [25, 135]
+                  Direction     right
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "Index"
+                    Value         "1"
+                    Show          on
+                  }
+                  Parameter {
+                    Variable      "Width"
+                    Value         "-1"
+                    Show          off
+                  }
+                }
+                Component {
+                  Type          Output
+                  Name          "||q||"
+                  Show          on
+                  Position      [395, 130]
+                  Direction     right
+                  Flipped       off
+                  LabelPosition south
+                  Parameter {
+                    Variable      "Index"
+                    Value         "2"
+                    Show          on
+                  }
+                  Parameter {
+                    Variable      "Width"
+                    Value         "-1"
+                    Show          off
+                  }
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "|q| - Termo 1"
+                  SrcTerminal   2
+                  DstComponent  "Math"
+                  DstTerminal   2
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "|q| - Termo 2"
+                  SrcTerminal   2
+                  DstComponent  "Math1"
+                  DstTerminal   2
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "Math"
+                  SrcTerminal   1
+                  Points        [200, 105]
+                  DstComponent  "Sum"
+                  DstTerminal   2
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "Math1"
+                  SrcTerminal   1
+                  Points        [200, 165]
+                  DstComponent  "Sum"
+                  DstTerminal   3
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "Sum"
+                  SrcTerminal   1
+                  DstComponent  "Math2"
+                  DstTerminal   2
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "Math2"
+                  SrcTerminal   1
+                  DstComponent  "Product"
+                  DstTerminal   3
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "Product"
+                  SrcTerminal   1
+                  DstComponent  "||q||"
+                  DstTerminal   1
+                }
+                Connection {
+                  Type          Signal
+                  SrcComponent  "u"
+                  SrcTerminal   1
+                  Points        [45, 135; 60, 135; 60, 135]
+                  Branch {
+                    Points        [75, 135]
+                    Branch {
+                      DstComponent  "|q| - Termo 1"
+                      DstTerminal   1
+                    }
+                    Branch {
+                      DstComponent  "|q| - Termo 2"
+                      DstTerminal   1
+                    }
+                  }
+                  Branch {
+                    Points        [60, 75; 310, 75; 310, 125]
+                    DstComponent  "Product"
+                    DstTerminal   2
+                  }
+                }
+              }
+            }
+            Component {
+              Type          Scope
+              Name          "Scope"
+              Show          on
+              Position      [365, 75]
+              Direction     up
+              Flipped       off
+              LabelPosition south
+              Location      [371, 331; 721, 568]
               State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQA"
-"FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAAEwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
-"AAAAAA/////wAAAJcA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAACXAP///wAAAAMAAAI"
-"NAAAArvwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAg0AAABxAP///wAAAg0A"
-"AAB4AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
+"FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
+"AAAAAA/////wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAF"
+"eAAAAffwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAV4AAABQAP///wAAAV4A"
+"AABRAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
 "/8AAAAAAAAAAA=="
               SavedViews    "AAAAAgAAAAA="
-              HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAALyAMAA"
-"AAFAAAABgAAAJYAAAAJAAAAlgAAAAgAAACWAAAAAwAAAJYAAAAHAAAAlgAACWAAAAALAQAAAQAAAA"
-"AAAAAAAAAAAJb/////AAAAgQAAAAAAAAALAAAAmwAAAAEAAAAAAAAAlgAAAAEAAAAAAAAAlgAAAAE"
-"AAAAAAAAAAAAAAAEAAAAAAAAAlgAAAAEAAAAAAAAAlgAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA"
-"AAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAGbQAAAAEAAAAAAAAD6AAAAAA1"
-              PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-              Axes          "1"
+              HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAALwAMAA"
+"AAEAAAABwAAAGQAAAAGAAAAZAAAAAkAAABkAAAACAAAAGQAAAVWAAAACwEAAAEAAAAAAAAAAAAAAA"
+"Bk/////wAAAIEAAAAAAAAACwAAAGgAAAABAAAAAAAAAGQAAAABAAAAAAAAAGQAAAABAAAAAAAAAGQ"
+"AAAABAAAAAAAAAGQAAAABAAAAAAAAAGQAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAA"
+"AAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAvoAAAABAAAAAAAAA+gAAAAAJA=="
+              PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"AAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+              Axes          "2"
               TimeRange     "0"
               ScrollingMode "1"
               SingleTimeAxis "1"
@@ -24502,7 +24963,18 @@ Plecs {
               Ts            "-1"
               SampleLimit   "0"
               XAxisLabel    "Time / s"
-              ShowLegend    "2"
+              ShowLegend    "1"
+              Axis {
+                Name          ""
+                AutoScale     1
+                MinValue      0
+                MaxValue      1
+                Signals       {}
+                SignalTypes   [ ]
+                Untangle      0
+                KeepBaseline  off
+                BaselineValue 0
+              }
               Axis {
                 Name          ""
                 AutoScale     1
@@ -24530,112 +25002,47 @@ Plecs {
                   KeepBaseline  off
                   BaselineValue 0
                 }
+                Axis {
+                  Name          ""
+                  AutoScale     1
+                  MinValue      0
+                  MaxValue      1
+                  Signals       {}
+                  Untangle      0
+                  KeepBaseline  off
+                  BaselineValue 0
+                }
               }
             }
             Component {
-              Type          Input
-              Name          "theta+"
+              Type          Function
+              Name          "Fcn"
               Show          on
-              Position      [165, 170]
+              Position      [390, 210]
               Direction     right
               Flipped       off
               LabelPosition south
+              Frame         [-20, -10; 20, 10]
               Parameter {
-                Variable      "Index"
-                Value         "5"
-                Show          on
-              }
-              Parameter {
-                Variable      "Width"
-                Value         "-1"
-                Show          off
-              }
-            }
-            Component {
-              Type          Input
-              Name          "theta-"
-              Show          on
-              Position      [165, 205]
-              Direction     right
-              Flipped       off
-              LabelPosition south
-              Parameter {
-                Variable      "Index"
-                Value         "6"
-                Show          on
-              }
-              Parameter {
-                Variable      "Width"
-                Value         "-1"
-                Show          off
-              }
-            }
-            Component {
-              Type          SignalMux
-              Name          "Mux"
-              Show          off
-              Position      [275, 110]
-              Direction     right
-              Flipped       off
-              LabelPosition south
-              Parameter {
-                Variable      "Width"
-                Value         "6"
+                Variable      "f(u)"
+                Value         "cos(2*pi*60*u[1] + u[2] - u[3])"
                 Show          off
               }
             }
             Component {
               Type          Clock
               Name          "Clock"
-              Show          off
-              Position      [160, 45]
-              Direction     right
-              Flipped       off
-              LabelPosition south
-            }
-            Component {
-              Type          Input
-              Name          "|V+|"
               Show          on
-              Position      [165, 245]
+              Position      [330, 210]
               Direction     right
               Flipped       off
               LabelPosition south
-              Parameter {
-                Variable      "Index"
-                Value         "7"
-                Show          on
-              }
-              Parameter {
-                Variable      "Width"
-                Value         "-1"
-                Show          off
-              }
-            }
-            Component {
-              Type          Input
-              Name          "|V-|"
-              Show          on
-              Position      [165, 285]
-              Direction     right
-              Flipped       off
-              LabelPosition south
-              Parameter {
-                Variable      "Index"
-                Value         "8"
-                Show          on
-              }
-              Parameter {
-                Variable      "Width"
-                Value         "-1"
-                Show          off
-              }
             }
             Connection {
               Type          Signal
               SrcComponent  "V+"
               SrcTerminal   1
-              Points        [155, 90]
+              Points        [95, 50]
               DstComponent  "Divide"
               DstTerminal   2
             }
@@ -24643,94 +25050,47 @@ Plecs {
               Type          Signal
               SrcComponent  "V-"
               SrcTerminal   1
-              Points        [155, 100]
+              Points        [95, 60]
               DstComponent  "Divide"
               DstTerminal   3
             }
             Connection {
               Type          Signal
-              SrcComponent  "C-Script"
-              SrcTerminal   2
-              Points        [370, 110]
-              Branch {
-                DstComponent  "Demux"
-                DstTerminal   1
-              }
-              Branch {
-                Points        [370, 35]
-                DstComponent  "Scope"
-                DstTerminal   1
-              }
-            }
-            Connection {
-              Type          Signal
-              SrcComponent  "Demux"
-              SrcTerminal   2
-              Points        [420, 105; 420, 80]
-              DstComponent  "|p|"
-              DstTerminal   1
-            }
-            Connection {
-              Type          Signal
-              SrcComponent  "Demux"
-              SrcTerminal   3
-              Points        [420, 115; 420, 140]
-              DstComponent  "|q|"
-              DstTerminal   1
-            }
-            Connection {
-              Type          Signal
-              SrcComponent  "Mux"
+              SrcComponent  "Divide"
               SrcTerminal   1
-              DstComponent  "C-Script"
+              Points        [170, 55]
+              Branch {
+                DstComponent  "Mag. P"
+                DstTerminal   1
+              }
+              Branch {
+                Points        [170, 130]
+                DstComponent  "Mag. Q"
+                DstTerminal   1
+              }
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Mag. P"
+              SrcTerminal   2
+              Points        [315, 45; 315, 70]
+              DstComponent  "Scope"
               DstTerminal   1
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Mag. Q"
+              SrcTerminal   2
+              Points        [315, 120; 315, 80]
+              DstComponent  "Scope"
+              DstTerminal   2
             }
             Connection {
               Type          Signal
               SrcComponent  "Clock"
               SrcTerminal   1
-              Points        [240, 45; 240, 85]
-              DstComponent  "Mux"
-              DstTerminal   2
-            }
-            Connection {
-              Type          Signal
-              SrcComponent  "Divide"
-              SrcTerminal   1
-              DstComponent  "Mux"
-              DstTerminal   3
-            }
-            Connection {
-              Type          Signal
-              SrcComponent  "theta+"
-              SrcTerminal   1
-              Points        [220, 170; 220, 105]
-              DstComponent  "Mux"
-              DstTerminal   4
-            }
-            Connection {
-              Type          Signal
-              SrcComponent  "theta-"
-              SrcTerminal   1
-              Points        [230, 205; 230, 115]
-              DstComponent  "Mux"
-              DstTerminal   5
-            }
-            Connection {
-              Type          Signal
-              SrcComponent  "|V+|"
-              SrcTerminal   1
-              Points        [240, 245; 240, 125]
-              DstComponent  "Mux"
-              DstTerminal   6
-            }
-            Connection {
-              Type          Signal
-              SrcComponent  "|V-|"
-              SrcTerminal   1
-              Points        [250, 285; 250, 135]
-              DstComponent  "Mux"
-              DstTerminal   7
+              DstComponent  "Fcn"
+              DstTerminal   1
             }
           }
         }
@@ -24963,7 +25323,7 @@ Plecs {
           Branch {
             Points        [300, 75]
             DstComponent  base64 "RXF1YcOnw6Nv"
-            DstTerminal   5
+            DstTerminal   3
           }
         }
         Connection {
@@ -24978,7 +25338,7 @@ Plecs {
           Branch {
             Points        [320, 85]
             DstComponent  base64 "RXF1YcOnw6Nv"
-            DstTerminal   6
+            DstTerminal   4
           }
         }
         Connection {
@@ -24987,7 +25347,7 @@ Plecs {
           SrcTerminal   10
           Points        [330, 265; 330, 95]
           DstComponent  base64 "RXF1YcOnw6Nv"
-          DstTerminal   7
+          DstTerminal   5
         }
         Connection {
           Type          Signal
@@ -24995,7 +25355,7 @@ Plecs {
           SrcTerminal   11
           Points        [350, 275; 350, 105]
           DstComponent  base64 "RXF1YcOnw6Nv"
-          DstTerminal   8
+          DstTerminal   6
         }
         Annotation {
           Name          "<html><body>\n<p align=\"center\">Control enab</p></b"
