@@ -2,19 +2,19 @@ freq_amostragem = 9e3;
 periodo_amostragem = 1/freq_amostragem;
 resultado_pu = 0;
 
-le_base_ativo = load("Novos dados\apoc\ativa\base.mat", "base");
-base_ativo = le_base_ativo.base;
+le_base_ativo = load("Novos dados\bpsc\q2000p0\ativo\base.mat", "stgy");
+base_ativo = le_base_ativo.stgy;
 
-le_stgy_ativo = load("Novos dados\apoc\ativa\stgy.mat", "stgy");
+le_stgy_ativo = load("Novos dados\bpsc\q2000p0\ativo\stgy.mat", "stgy");
 stgy_ativo = le_stgy_ativo.stgy;
 
 amplitude_stgy_ativo = stgy_ativo(:,2);
 amplitude_base_ativo = base_ativo(:,2);
 
-le_base_reativo = load("Novos dados\apoc\reativa\base.mat", "base");
-base_reativo = le_base_reativo.base;
+le_base_reativo = load("Novos dados\bpsc\q2000p0\reativo\base.mat", "stgy");
+base_reativo = le_base_reativo.stgy;
 
-le_stgy_reativo = load("Novos dados\apoc\reativa\stgy.mat", "stgy");
+le_stgy_reativo = load("Novos dados\bpsc\q2000p0\reativo\stgy.mat", "stgy");
 stgy_reativo = le_stgy_reativo.stgy;
 
 amplitude_stgy_reativo = stgy_reativo(:,2);
@@ -25,7 +25,7 @@ figure(1);
 subplot(1,2,1);
 [amp, fase, freq] = calcula_espectro(amplitude_base_ativo, periodo_amostragem, resultado_pu);
 plot(freq, amp, 'r');
-title("Potência ativa");
+title("Potência ativo");
 xlabel('Frequência [Hz]'); ylabel('Amplitude [W]');xlim([0 600]);
 grid on; 
 hold on;
@@ -41,7 +41,7 @@ hold off;
 subplot(1,2,2)
 [amp, fase, freq] = calcula_espectro(amplitude_base_reativo, periodo_amostragem, resultado_pu);
 plot(freq, amp, 'r');
-title("Potência reativa");
+title("Potência reativo");
 xlabel('Frequência [Hz]'); ylabel('Amplitude [VAr]'); xlim([0 600]);
 grid on; hold on;
 
@@ -64,7 +64,7 @@ tempo_stgy_reativo = (0:length(amplitude_stgy_reativo)-1)/freq_amostragem;
 
 subplot(1,2,1);
 plot(tempo_base_ativo, amplitude_base_ativo, 'r');
-title("Potência ativa");
+title("Potência ativo");
 xlabel('Tempo [s]'); ylabel('Amplitude [W]');
 grid on; hold on; xlim([0 0.025]); 
 
@@ -80,7 +80,7 @@ hold off;
 
 subplot(1,2,2)
 plot(tempo_base_reativo, amplitude_base_reativo, 'r');
-title("Potência reativa");
+title("Potência reativo");
 xlabel('Tempo [s]'); ylabel('Amplitude [VAr]');
 grid on; hold on; xlim([0 0.025]);
 % 
