@@ -1,3 +1,5 @@
+syms u
+
 % Dados de aquisição
 fs = 9e3; Ts = 1/fs;
 fn = 60;
@@ -29,19 +31,19 @@ Valfabeta_comp_neg = Valfabeta_comp(2,:);
 
 mag_pos = abs(Vabc_comp_pos);
 mag_neg = abs(Vabc_comp_neg);
-u = Vabc_comp(1,:)/Vabc_comp(2,:);
+%u = Vabc_comp(1,:)/Vabc_comp(2,:);
 
 %u = 1/3;
 
 % Ganhos das estratégias
-% bpsc 
-kp_pos = 1; kp_neg = 0; kq_pos = 1; kq_neg = 0;
+% apoc 
+kp_pos = 1; kp_neg = -1; kq_pos = 1; kq_neg = 1;
 
 %theta_pos = angle(Valfabeta_comp_pos); theta_neg = angle(Valfabeta_comp_neg);
 theta_pos = 0; theta_neg = 0;
 
 % Referências de potências
-P_ref = 0; Q_ref = 2386.04;
+P_ref = 2000; Q_ref = 1000;
 
 
 ripple_pot_ativa = P_ref * ( (kp_pos + kp_neg) .* mag_pos .* mag_neg .* cos(2 * wn * tempo + theta_pos - theta_neg) ) ...
@@ -78,6 +80,9 @@ i_q = (kq_pos .* Vabc_orto_comp_pos + kq_neg .* Vabc_orto_comp_neg) * Q_ref / (k
 i_total = i_p + i_q; 
 
 resultado_pu = 0;
+val = subs(mag_pot_reativa, u, 1/3);
+fplot(@(u) 2000*u*(4/(u^2 - 1)^2 + 1/(u^2 + 1)^2)^(1/2), [0 0.9]);
+
 
 % figure(1);
 % subplot(2,2,1); 
@@ -102,10 +107,3 @@ resultado_pu = 0;
 % 
 % subplot(3,1,3);
 % plot(Vabc_comp(3,:));
-
-figure(3);
-plot(tempo, imag(Vabc_comp(1,:)));
-%Vabc_tempo = [ Va tempo; Vb tempo; Vc tempo;];
-Va_tempo = timeseries(Va, tempo'); 
-Vb_tempo = timeseries(Vb, tempo'); 
-Vc_tempo = timeseries(Vc, tempo');
