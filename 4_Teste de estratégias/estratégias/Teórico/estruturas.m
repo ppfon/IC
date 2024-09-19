@@ -42,9 +42,12 @@ kp_pos = 1; kp_neg = -1; kq_pos = 1; kq_neg = 1;
 %theta_pos = angle(Valfabeta_comp_pos); theta_neg = angle(Valfabeta_comp_neg);
 theta_pos = 0; theta_neg = 0;
 
+pot_ativa = 0;
+pot_reativa = 0;
+
 % Referências de potências
 P_ref = 2000; Q_ref = 1000;
-
+vetor_u = 0;
 
 ripple_pot_ativa = P_ref * ( (kp_pos + kp_neg) .* mag_pos .* mag_neg .* cos(2 * wn * tempo + theta_pos - theta_neg) ) ...
                       ./ (kp_pos .* mag_pos.^2 + kp_neg .* mag_neg.^2)  + ... 
@@ -56,18 +59,21 @@ ripple_pot_reativa = Q_ref * ( (kq_pos + kp_neg) .* mag_pos .* mag_neg .* cos(2 
                 P_ref * ( (kp_pos - kp_neg) .* mag_pos .* mag_neg .* sin(2 * wn * tempo + theta_pos - theta_neg) ) ...
                       ./ (kp_pos .* mag_pos.^2 + kp_neg .* mag_neg.^2);
 
+for u = 0:1/100:0.8 
 
-mag_pot_ativa = u .* sqrt( ...
+    mag_pot_ativa = u .* sqrt( ...
                 ((kp_pos + kp_neg) .* P_ref .* (1 ./ (kp_pos + kp_neg .* u.^2))).^2 + ...
                 ((kq_pos - kq_neg) .* Q_ref .* (1 ./ (kq_pos + kq_neg .* u.^2))).^2 );
 
-mag_pot_reativa = u .* sqrt( ...
+    mag_pot_reativa = u .* sqrt( ...
                  ((kq_pos + kq_neg) .* Q_ref .* (1 ./ (kq_pos + kq_neg .* u.^2))).^2 + ...
                  ((kp_pos - kp_neg) .* P_ref .* (1 ./ (kp_pos + kp_neg .* u.^2))).^2 );
 
 
-pot_ativa = ripple_pot_ativa; %+ mag_pot_ativa;
-pot_reativa = ripple_pot_reativa; %+ mag_pot_reativa;
+pot_ativa = [ pot_ativa mag_pot_ativa]; 
+pot_reativa  = [pot_reativa mag_pot_reativa]; 
+vetor_u = [vetor_u u];
+end
 
 Vabc_orto = comp_orto(Vabc);
 Vabc_orto_comp = comp_sime(Vabc_orto);
@@ -80,8 +86,15 @@ i_q = (kq_pos .* Vabc_orto_comp_pos + kq_neg .* Vabc_orto_comp_neg) * Q_ref / (k
 i_total = i_p + i_q; 
 
 resultado_pu = 0;
-val = subs(mag_pot_reativa, u, 1/3);
-fplot(@(u) 2000*u*(4/(u^2 - 1)^2 + 1/(u^2 + 1)^2)^(1/2), [0 0.9]);
+
+%fplot(@(u) , [0 0.8]);
+plot(vetor_u, pot_reativa);
+
+
+u_ponto = 1/3;
+y_ponto = 1437.64; %2000*u_ponto*(4/(u_ponto^2 - 1)^2 + 1/(u_ponto^2 + 1)^2)^(1/2);
+hold on;
+plot(u_ponto, y_ponto, 'r*', 'MarkerSize', 10); % 'ro' indica um ponto vermelho
 
 
 % figure(1);
