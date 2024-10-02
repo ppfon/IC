@@ -1,20 +1,20 @@
 freq_amostragem = 9e3;
 periodo_amostragem = 1/freq_amostragem;
-resultado_pu = 0;
+resultado_pu = 1;
 
-le_base_ativo = load("Novos dados\aarc\q0p2000\ativo\base.mat", "base");
+le_base_ativo = load("Dados2\apoc\ativo\base.mat", "base");
 base_ativo = le_base_ativo.base;
 
-le_stgy_ativo = load("Novos dados\aarc\q0p2000\ativo\stgy.mat", "stgy");
+le_stgy_ativo = load("Dados2\apoc\ativo\stgy.mat", "stgy");
 stgy_ativo = le_stgy_ativo.stgy;
 
 amplitude_stgy_ativo = stgy_ativo(:,2);
 amplitude_base_ativo = base_ativo(:,2);
 
-le_base_reativo = load("Novos dados\aarc\q0p2000\reativo\base.mat", "base");
+le_base_reativo = load("Dados2\apoc\reativo\base.mat", "base");
 base_reativo = le_base_reativo.base;
 
-le_stgy_reativo = load("Novos dados\aarc\q0p2000\reativo\stgy.mat", "stgy");
+le_stgy_reativo = load("Dados2\apoc\reativo\stgy.mat", "stgy");
 stgy_reativo = le_stgy_reativo.stgy;
 
 amplitude_stgy_reativo = stgy_reativo(:,2);
@@ -66,7 +66,7 @@ subplot(1,2,1);
 plot(tempo_base_ativo, amplitude_base_ativo, 'r');
 title("Potência ativo");
 xlabel('Tempo [s]'); ylabel('Amplitude [W]');
-grid on; hold on; xlim([0 0.025]); 
+grid on; hold on; xlim([0 0.075]); 
 
 
 % subplot(2,2,2);
@@ -82,7 +82,7 @@ subplot(1,2,2)
 plot(tempo_base_reativo, amplitude_base_reativo, 'r');
 title("Potência reativo");
 xlabel('Tempo [s]'); ylabel('Amplitude [VAr]');
-grid on; hold on; xlim([0 0.025]);
+grid on; hold on; xlim([0 0.075]);
 % 
 % subplot(2,2,4);
 plot(tempo_stgy_reativo, amplitude_stgy_reativo, 'b'); 

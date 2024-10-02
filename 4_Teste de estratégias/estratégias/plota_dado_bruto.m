@@ -1,20 +1,20 @@
 clear all;
-data = readmatrix('Novos dados\pnsc\q0p2000\pot_ativa.csv');
+data = readmatrix('Novos dados\0.6\rpoc\pot_ativa.csv');
 
-%base_inf = 13376; base_sup = 29972;
-%base_inf = 33192; base_sup = 56659;
 
-base_inf = 7473; base_sup = 23153;
+base_inf = 38069; base_sup = 65677;
+%base_inf = 0; base_sup = 656777;
+%base_inf = 41844; base_sup = 63277;
 
-base = data((data(:, 1) >= base_inf) & (data(:, 1) <= base_sup), :);
 %stgy = data((data(:, 1) >= base_inf) & (data(:, 1) <= base_sup), :);
+stgy = data((data(:, 1) >= base_inf) & (data(:, 1) <= base_sup), :);
 
 freq_amostragem = 9e3;
 periodo_amostragem = 1/freq_amostragem;
 resultado_pu = 0;
 
-amplitude1 = base(:,2);
-tempo1 = (base(:,1)-base(1,1)); %* periodo_amostragem;
+amplitude1 = stgy(:,2);
+tempo1 = (stgy(:,1)-stgy(1,1)); %* periodo_amostragem;
 
 figure(1);
 plot(tempo1, amplitude1);

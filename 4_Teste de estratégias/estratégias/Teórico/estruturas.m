@@ -1,122 +1,73 @@
-syms u
-
-% Dados de aquisição
-fs = 9e3; Ts = 1/fs;
-fn = 60;
-tempo = linspace(0, 20/fn, fs);
-
-% Dados da rede
-
-theta = 0; 
-wn = 2*pi*fn;
-theta_c = 2*pi/3;
-
-deseq = 0.4;
-amp_a = 180; 
-amp_b = amp_a*deseq; amp_c = amp_a*deseq;
-
-Va = amp_a * cos(wn * tempo + theta - 0*theta_c);
-Vb = amp_b * cos(wn * tempo + theta - 1*theta_c);
-Vc = amp_c * cos(wn * tempo + theta - 2*theta_c);
-
-Vabc = [ Va ; Vb ; Vc ;];
-
-Vabc_comp = comp_sime(Vabc);
-Vabc_comp_pos = Vabc_comp(1,:);
-Vabc_comp_neg = Vabc_comp(2,:);
-
-Valfabeta_comp = abc2alpha(Vabc_comp);
-Valfabeta_comp_pos = Valfabeta_comp(1,:);
-Valfabeta_comp_neg = Valfabeta_comp(2,:);
-
-mag_pos = abs(Vabc_comp_pos);
-mag_neg = abs(Vabc_comp_neg);
-%u = Vabc_comp(1,:)/Vabc_comp(2,:);
-
-%u = 1/3;
-
+clear all;
 % Ganhos das estratégias
-% apoc 
-kp_pos = 1; kp_neg = -1; kq_pos = 1; kq_neg = 1;
-
-%theta_pos = angle(Valfabeta_comp_pos); theta_neg = angle(Valfabeta_comp_neg);
+estrategia = 'apoc';
+run('escolha_pesos.m');
+run('dados.m');
 theta_pos = 0; theta_neg = 0;
 
-pot_ativa = 0;
-pot_reativa = 0;
+pu = 0;
 
-% Referências de potências
-P_ref = 2000; Q_ref = 1000;
-vetor_u = 0;
+% Criar figura única e configurar o subplot para os gráficos
+figure(1);
+subplot(1,2,1);
+xlabel('u'); ylabel('|q|');
+hold on; % Para segurar todos os gráficos no mesmo subplot
 
-ripple_pot_ativa = P_ref * ( (kp_pos + kp_neg) .* mag_pos .* mag_neg .* cos(2 * wn * tempo + theta_pos - theta_neg) ) ...
-                      ./ (kp_pos .* mag_pos.^2 + kp_neg .* mag_neg.^2)  + ... 
-                Q_ref * ( (kq_pos - kq_neg) .* mag_pos .* mag_neg .* sin(2 * wn * tempo + theta_pos - theta_neg) ) ...
-                      ./ (kq_pos .* mag_pos.^2 + kq_neg .* mag_neg.^2);
+% Definindo cores para as curvas
+cores = {'b', 'g', 'm'}; % Cores para as curvas: azul, verde, magenta
+legendInfo = cell(1, 3); % Prepara a variável para armazenar informações da legenda
+legendPatches = cell(1,3);
 
-ripple_pot_reativa = Q_ref * ( (kq_pos + kp_neg) .* mag_pos .* mag_neg .* cos(2 * wn * tempo + theta_pos - theta_neg) ) ...
-                      ./ (kq_pos .* mag_pos.^2 + kq_neg .* mag_neg.^2)  - ... 
-                P_ref * ( (kp_pos - kp_neg) .* mag_pos .* mag_neg .* sin(2 * wn * tempo + theta_pos - theta_neg) ) ...
-                      ./ (kp_pos .* mag_pos.^2 + kp_neg .* mag_neg.^2);
+for i = 1:3 
+    % Calcular potências
+    [pot_ativa{i}, pot_reativa{i}, vetor_u{i}] = calcular_potencias(Vabc_comp_pos, Vabc_comp_neg, ...
+        P_ref(i), Q_ref(i), kp, kq, tempo, wn, theta_pos, theta_neg, pu);
+    
+    % Plotar potência reativa no mesmo subplot
+    if (i == 2)
+        plot(vetor_u{i}, pot_reativa{i}, 'Color', cores{i}, 'LineStyle', '--'); % Define a cor da curva
+    else
+        plot(vetor_u{i}, pot_reativa{i}, 'Color', cores{i});
+    end
 
-for u = 0:1/100:0.8 
-
-    mag_pot_ativa = u .* sqrt( ...
-                ((kp_pos + kp_neg) .* P_ref .* (1 ./ (kp_pos + kp_neg .* u.^2))).^2 + ...
-                ((kq_pos - kq_neg) .* Q_ref .* (1 ./ (kq_pos + kq_neg .* u.^2))).^2 );
-
-    mag_pot_reativa = u .* sqrt( ...
-                 ((kq_pos + kq_neg) .* Q_ref .* (1 ./ (kq_pos + kq_neg .* u.^2))).^2 + ...
-                 ((kp_pos - kp_neg) .* P_ref .* (1 ./ (kp_pos + kp_neg .* u.^2))).^2 );
-
-
-pot_ativa = [ pot_ativa mag_pot_ativa]; 
-pot_reativa  = [pot_reativa mag_pot_reativa]; 
-vetor_u = [vetor_u u];
+    % Ponto de destaque
+    u_ponto = 2/11;
+    plot(u_ponto, y_ponto_reativo(i), '*', 'Color', cores{i}, 'MarkerSize', 10); % Define a cor do ponto
+    legendPatches{i} = patch([0 1], [0 0], cores{i}); % Cria um patch com a cor da curva
+     %hold on;
+    legendInfo{i} = sprintf('P_{ref} = %d, Q_{ref} = %d, * = %.3f', P_ref(i), Q_ref(i), y_ponto_reativo(i));
+    % Adicionar legenda para cada curva
+   
 end
 
-Vabc_orto = comp_orto(Vabc);
-Vabc_orto_comp = comp_sime(Vabc_orto);
-Vabc_orto_comp_pos = Vabc_orto_comp(1,:);
-Vabc_orto_comp_neg = Vabc_orto_comp(2,:);
-
-i_p = (kp_pos .* Vabc_comp_pos + kp_neg .* Vabc_comp_neg) * P_ref / (kp_pos .* mag_pos .* mag_pos + kp_neg .* mag_neg .* mag_neg);
-i_q = (kq_pos .* Vabc_orto_comp_pos + kq_neg .* Vabc_orto_comp_neg) * Q_ref / (kq_pos .* mag_pos .*mag_pos + kq_neg .* mag_neg .* mag_neg);
-
-i_total = i_p + i_q; 
-
-resultado_pu = 0;
-
-%fplot(@(u) , [0 0.8]);
-plot(vetor_u, pot_reativa);
+legend([legendPatches{:}], legendInfo, 'Location', 'northwest'); % Define a localização da legenda
 
 
-u_ponto = 1/3;
-y_ponto = 1437.64; %2000*u_ponto*(4/(u_ponto^2 - 1)^2 + 1/(u_ponto^2 + 1)^2)^(1/2);
-hold on;
-plot(u_ponto, y_ponto, 'r*', 'MarkerSize', 10); % 'ro' indica um ponto vermelho
+% Gráficos de potência ativa no subplot 2
+subplot(1,2,2);
+xlabel('u'); ylabel('|p|');
+hold on; % Para segurar todos os gráficos no mesmo subplot
 
+% Definindo cores para as curvas
+cores = {'b', 'g', 'm'}; % Cores para as curvas: azul, verde, magenta
+legendInfo = cell(1, 3); % Prepara a variável para armazenar informações da legenda
+legendPatches = cell(1,3);
 
-% figure(1);
-% subplot(2,2,1); 
-% plot(tempo, pot_ativa); ylim([-4000 4000]);
-% 
-% subplot(2,2,2);
-% [amp, fase, freq] = calcula_espectro(pot_ativa, Ts, resultado_pu);
-% plot(freq, amp, 'r');
-% 
-% subplot(2,2,3); 
-% plot(tempo, pot_reativa);
-% 
-% subplot(2,2,4);
-% plot(Vabc, 'r');
-% 
-% figure(2);
-% subplot(3,1,1);
-% plot(imag(Vabc_comp_pos));
-% 
-% subplot(3,1,2);
-% plot(imag(Vabc_comp_neg));
-% 
-% subplot(3,1,3);
-% plot(Vabc_comp(3,:));
+for i = 1:3 
+    if (i == 2)
+        plot(vetor_u{i}, pot_ativa{i}, 'Color', cores{i}, 'LineStyle', '--'); % Define a cor da curva
+    else
+        plot(vetor_u{i}, pot_ativa{i}, 'Color', cores{i});
+    end
+
+    % Ponto de destaque
+    plot(u_ponto, y_ponto_ativo(i), '*', 'Color', cores{i}, 'MarkerSize', 10); % Define a cor do ponto
+    legendPatches{i} = patch([0 1], [0 0], cores{i}); % Cria um patch com a cor da curva
+     %hold on;
+    legendInfo{i} = sprintf('P_{ref} = %d, Q_{ref} = %d, * = %.3f', P_ref(i), Q_ref(i), y_ponto_ativo(i));
+    % Adicionar legenda para cada curva
+   
+end
+
+legend([legendPatches{:}], legendInfo, 'Location', 'northwest'); % Define a localização da legenda
+
