@@ -1,20 +1,21 @@
+clear workspace;
 freq_amostragem = 9e3;
 periodo_amostragem = 1/freq_amostragem;
-resultado_pu = 1;
+resultado_pu = 0;
 
-le_base_ativo = load("Dados2\apoc\ativo\base.mat", "base");
-base_ativo = le_base_ativo.base;
+le_base_ativo = load("Novos dados/pnsc/0.1818/q0p1500/ativo/stgy.mat", "stgy");
+base_ativo = le_base_ativo.stgy;
 
-le_stgy_ativo = load("Dados2\apoc\ativo\stgy.mat", "stgy");
+le_stgy_ativo = load("Novos dados/pnsc/0.1818/q0p1500/ativo/stgy.mat", "stgy");
 stgy_ativo = le_stgy_ativo.stgy;
 
 amplitude_stgy_ativo = stgy_ativo(:,2);
 amplitude_base_ativo = base_ativo(:,2);
 
-le_base_reativo = load("Dados2\apoc\reativo\base.mat", "base");
-base_reativo = le_base_reativo.base;
+le_base_reativo = load("Novos dados/pnsc/0.1818/q0p1500/reativo/stgy.mat", "stgy");
+base_reativo = le_base_reativo.stgy;
 
-le_stgy_reativo = load("Dados2\apoc\reativo\stgy.mat", "stgy");
+le_stgy_reativo = load("Novos dados/pnsc/0.1818/q0p1500/reativo/stgy.mat", "stgy");
 stgy_reativo = le_stgy_reativo.stgy;
 
 amplitude_stgy_reativo = stgy_reativo(:,2);
@@ -26,16 +27,16 @@ subplot(1,2,1);
 [amp, fase, freq] = calcula_espectro(amplitude_base_ativo, periodo_amostragem, resultado_pu);
 plot(freq, amp, 'r');
 title("Potência ativo");
-xlabel('Frequência [Hz]'); ylabel('Amplitude [W]');xlim([0 600]);
-grid on; 
+xlabel('Frequência [Hz]'); ylabel('Amplitude [W]'); xlim([0 600]);
+grid on;
 hold on;
 %subplot(2,2,2);
 [amp, fase, freq] = calcula_espectro(amplitude_stgy_ativo, periodo_amostragem, resultado_pu);
-plot(freq, amp, 'b'); 
+plot(freq, amp, 'b');
 %title("Potência ativo - com a estratégia");
 %xlabel('Frequência [Hz]'); ylabel('Amplitude [W]');
 %grid on;
-legend('APOC | P_{ref} = 2kW | Sem estratégia', 'APOC | P_{ref} = 2kW | Com estratégia')
+legend('PNSC | P_{ref} = 0 kW | Sem estratégia', 'PNSC | P_{ref} = 0 kW | Com estratégia')
 hold off;
 
 subplot(1,2,2)
@@ -47,46 +48,42 @@ grid on; hold on;
 
 %subplot(2,2,4);
 [amp, fase, freq] = calcula_espectro(amplitude_stgy_reativo, periodo_amostragem, resultado_pu);
-plot(freq, amp, 'b'); 
+plot(freq, amp, 'b');
 % title("Potência Reativo - com a estratégia");
 % xlabel('Frequência [Hz]'); ylabel('Amplitude [VAr]');
 % grid on;
-legend('APOC | Q_{ref} = 1kVAr | Sem estratégia', 'APOC | Q_{ref} = 1kVAr | Com estratégia')
+legend('PNSC | Q_{ref} = 1kVAr | Sem estratégia', 'PNSC | Q_{ref} = 1kVAr | Com estratégia')
 hold off;
 
 
-figure(2);
+
 tempo_base_ativo = (0:length(amplitude_base_ativo)-1)/freq_amostragem;
 tempo_stgy_ativo = (0:length(amplitude_stgy_ativo)-1)/freq_amostragem;
 
 tempo_base_reativo = (0:length(amplitude_base_reativo)-1)/freq_amostragem;
 tempo_stgy_reativo = (0:length(amplitude_stgy_reativo)-1)/freq_amostragem;
 
-subplot(1,2,1);
-plot(tempo_base_ativo, amplitude_base_ativo, 'r');
-title("Potência ativo");
-xlabel('Tempo [s]'); ylabel('Amplitude [W]');
-grid on; hold on; xlim([0 0.075]); 
+ figure(2);
 
+ plot(tempo_base_ativo, amplitude_base_ativo, 'r');
+ titulo1 = 'Potencia ativa - PNSC - $P_{\mathrm{ref}} = 2 \; \mathrm{kW}$';
+ title(titulo1, 'Interpreter', 'latex');
+ xlabel('Tempo [s]'); ylabel('Amplitude [W]');
 
-% subplot(2,2,2);
-plot(tempo_stgy_ativo, amplitude_stgy_ativo, 'b'); 
-% title("Potência ativo - com a estratégia");
-% xlabel('Tempo [s]'); ylabel('Amplitude [W]');
-% grid on;
-legend('APOC | P_{ref} = 2kW | Sem estratégia', 'APOC | P_{ref} = 2kW | Com estratégia');
+ grid on; hold on; % xlim([0 0.075]); ylim([1400 2300]);
 
-hold off;
+ plot(tempo_stgy_ativo, amplitude_stgy_ativo, 'b');
+ legend('Sem estratégia', 'Com a estratégia');
 
-subplot(1,2,2)
-plot(tempo_base_reativo, amplitude_base_reativo, 'r');
-title("Potência reativo");
-xlabel('Tempo [s]'); ylabel('Amplitude [VAr]');
-grid on; hold on; xlim([0 0.075]);
-% 
-% subplot(2,2,4);
-plot(tempo_stgy_reativo, amplitude_stgy_reativo, 'b'); 
-% title("Potência Reativo - com a estratégia");
-% xlabel('Tempo [s]'); ylabel('Amplitude [VAr]');
-legend('APOC | Q_{ref} = 1kVAr | Sem estratégia', 'APOC | Q_{ref} = 1kVAr | Com estratégia');
-hold off;
+ hold off;
+
+ figure(3);
+ plot(tempo_base_reativo, amplitude_base_reativo, 'r');
+ titulo2 = 'Potencia reativa - PNSC - $Q_{\mathrm{ref}} = 0 \; \mathrm{kVAr}$';
+ title(titulo2, 'Interpreter', 'latex');
+ xlabel('Tempo [s]'); ylabel('Amplitude [VAr]');
+ grid on; hold on; %xlim([0 0.075]); ylim([-1700 1600]);
+
+ plot(tempo_stgy_reativo, amplitude_stgy_reativo, 'b');
+ legend('Sem estratégia', 'Com estratégia');
+ hold off;

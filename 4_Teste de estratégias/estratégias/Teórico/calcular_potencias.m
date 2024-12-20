@@ -20,7 +20,7 @@ function [pot_ativa, pot_reativa, vetor_u] = calcular_potencias(Vabc_comp_pos, V
                       ./ (mag_pos.^2 + kp .* mag_neg.^2);
     
     % Laço para calcular as potências ativa e reativa para diferentes valores de u
-    for u = 0:1/100:0.7
+    for u = 0:1/10000:0.7
         mag_pot_ativa = u .* sqrt( ...
                 ((kp + 1) .* P_ref .* (1 ./ (1 + kp .* u.^2))).^2 + ...
                 ((1 - kq) .* Q_ref .* (1 ./ (1 + kq .* u.^2))).^2 );
