@@ -1,9 +1,9 @@
 clear all;
-data = readmatrix('Novos dados\pnsc\0.1818\q0p1500\pot_reativa.csv');
+%data = readmatrix('Novos dados\pnsc\0.1818\q0p1500\pot_reativa.csv');
 %data = dlmread('Novos dados/apoc/0.3333/q1500p0/pot_ativa.csv', ';', 1, 0);
 
 %base_inf = 39949; base_sup = 60771;
-base_inf = 39993; base_sup = 78781;
+%base_inf = 39993; base_sup = 78781;
 %base_inf = 33277; base_sup = 69195;
 
 stgy = data((data(:, 1) >= base_inf) & (data(:, 1) <= base_sup), :);

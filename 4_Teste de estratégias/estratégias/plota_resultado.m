@@ -1,21 +1,20 @@
 clear workspace;
-freq_amostragem = 9e3;
-periodo_amostragem = 1/freq_amostragem;
+freq_amostragem = 9e3; periodo_amostragem = 1/freq_amostragem;
 resultado_pu = 0;
 
-le_base_ativo = load("Novos dados/pnsc/0.1818/q0p1500/ativo/stgy.mat", "stgy");
-base_ativo = le_base_ativo.stgy;
+le_base_ativo = load("Novos dados/apoc/0.5714/q0p1500/ativo/base.mat", "base");
+base_ativo = le_base_ativo.base;
 
-le_stgy_ativo = load("Novos dados/pnsc/0.1818/q0p1500/ativo/stgy.mat", "stgy");
+le_stgy_ativo = load("Novos dados/apoc/0.5714/q0p1500/ativo/stgy.mat", "stgy");
 stgy_ativo = le_stgy_ativo.stgy;
 
 amplitude_stgy_ativo = stgy_ativo(:,2);
 amplitude_base_ativo = base_ativo(:,2);
 
-le_base_reativo = load("Novos dados/pnsc/0.1818/q0p1500/reativo/stgy.mat", "stgy");
-base_reativo = le_base_reativo.stgy;
+le_base_reativo = load("Novos dados/apoc/0.5714/q0p1500/reativo/base.mat", "base");
+base_reativo = le_base_reativo.base;
 
-le_stgy_reativo = load("Novos dados/pnsc/0.1818/q0p1500/reativo/stgy.mat", "stgy");
+le_stgy_reativo = load("Novos dados/apoc/0.5714/q0p1500/reativo/stgy.mat", "stgy");
 stgy_reativo = le_stgy_reativo.stgy;
 
 amplitude_stgy_reativo = stgy_reativo(:,2);
@@ -42,7 +41,7 @@ hold off;
 subplot(1,2,2)
 [amp, fase, freq] = calcula_espectro(amplitude_base_reativo, periodo_amostragem, resultado_pu);
 plot(freq, amp, 'r');
-title("Potência reativo");
+title("Potência reativa");
 xlabel('Frequência [Hz]'); ylabel('Amplitude [VAr]'); xlim([0 600]);
 grid on; hold on;
 
@@ -82,8 +81,7 @@ tempo_stgy_reativo = (0:length(amplitude_stgy_reativo)-1)/freq_amostragem;
  titulo2 = 'Potencia reativa - PNSC - $Q_{\mathrm{ref}} = 0 \; \mathrm{kVAr}$';
  title(titulo2, 'Interpreter', 'latex');
  xlabel('Tempo [s]'); ylabel('Amplitude [VAr]');
- grid on; hold on; %xlim([0 0.075]); ylim([-1700 1600]);
-
+ grid on; hold on;
  plot(tempo_stgy_reativo, amplitude_stgy_reativo, 'b');
  legend('Sem estratégia', 'Com estratégia');
  hold off;

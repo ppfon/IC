@@ -1,6 +1,6 @@
 clear workspace;
-% Ganhos das estratégias
-estrategia = 'rpoc';
+% Escolha da estratégia
+estrategia = 'pnsc';
 run('escolha_pesos.m');
 run('dados.m');
 theta_pos = 0; theta_neg = 0;
