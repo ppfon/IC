@@ -3,13 +3,13 @@ clear; close all; clc;
 
 %% Define the user-specified parameters
 % Available main strategies: 'aarc', 'apoc', 'bpsc', 'pnsc', 'rpoc'
-mainStrategy = 'pnsc';  
+mainStrategy = 'apoc';  
 
 % Available unbalance factors: '0.1818', '0.3333', '0.5714'
 unbalanceFactor = '0.3333';  
 
 % Available power references: 'q0p1500', 'q1500p0', 'q1000p1000'
-powerReference = 'q1500p0';  
+powerReference = 'q0p1500';  
 
 %% Parse the powerReference string to extract reactive and active references
 % The expected format is 'q<number1>p<number2>' where:
@@ -35,8 +35,8 @@ reativoPath = fullfile(baseFolder, mainStrategy, unbalanceFactor, powerReference
 
 %% Load data from the "ativo" branch
 % Load the base data
-le_base_ativo = load(fullfile(ativoPath, 'stgy.mat'), 'stgy');
-base_ativo = le_base_ativo.stgy;
+le_base_ativo = load(fullfile(ativoPath, 'base.mat'), 'base');
+base_ativo = le_base_ativo.base;
 
 % Load the strategy data
 le_stgy_ativo = load(fullfile(ativoPath, 'stgy.mat'), 'stgy');
@@ -48,8 +48,8 @@ amplitude_stgy_ativo = stgy_ativo(:,2);
 
 %% Load data from the "reativo" branch
 % Load the base data
-le_base_reativo = load(fullfile(reativoPath, 'stgy.mat'), 'stgy');
-base_reativo = le_base_reativo.stgy;
+le_base_reativo = load(fullfile(reativoPath, 'base.mat'), 'base');
+base_reativo = le_base_reativo.base;
 
 % Load the strategy data
 le_stgy_reativo = load(fullfile(reativoPath, 'stgy.mat'), 'stgy');

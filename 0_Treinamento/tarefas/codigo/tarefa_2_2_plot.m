@@ -69,3 +69,6 @@ legend('pot_{abc}'); grid on;
 xlabel({'Tempo [s]'}); ylabel({'Potencia ativa instantanea [p.u]'});
 ytickformat('%.4f')
 title({'Potencia ativa instantanea da transf. variante em potencia'});
+
+figure(2);
+fplot(i_transf_amp_vetor(2,1), i_transf_amp_vetor(3,1));
