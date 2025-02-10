@@ -11,7 +11,7 @@ pu = 0;
 figure(1);
 subplot(1,2,1);
 xlabel('u'); ylabel('|q|');
-hold on; % Para segurar todos os gráficos no mesmo subplot
+hold on; grid on; xlim = [0 0.6]; % Para segurar todos os gráficos no mesmo subplot
 
 % Definindo cores para as curvas
 cores = {'b', 'g', 'm'}; % Cores para as curvas: azul, verde, magenta
@@ -24,7 +24,7 @@ for i = 1:3
         P_ref(i), Q_ref(i), kp, kq, tempo, wn, theta_pos, theta_neg, pu);
 
     % Plotar potência reativa no mesmo subplot
-    if (i == 2)
+    if (i == 2 && strcmp(estrategia, 'bpsc'))
         plot(vetor_u{i}, pot_reativa{i}, 'Color', cores{i}, 'LineStyle', '--'); xlim = [0 0.6]; % Define a cor da curva
     else
         plot(vetor_u{i}, pot_reativa{i}, 'Color', cores{i}); xlim = [0 0.6];
@@ -52,7 +52,7 @@ legend([legendPatches{:}], legendInfo, 'Location', 'northwest'); % Define a loca
 % Gráficos de potência ativa no subplot 2
 subplot(1,2,2);
 xlabel('u'); ylabel('|p|');
-hold on; % Para segurar todos os gráficos no mesmo subplot
+hold on; grid on; % Para segurar todos os gráficos no mesmo subplot
 
 % Definindo cores para as curvas
 cores = {'b', 'g', 'm'}; % Cores para as curvas: azul, verde, magenta
