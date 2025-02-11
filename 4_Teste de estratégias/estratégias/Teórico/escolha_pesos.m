@@ -1,6 +1,8 @@
 switch estrategia
     case 'aarc'
         kp = 1; kq = 1;
+        limite_reativo = [0 1500]; passo_reativo = [0:100:1500];
+        limite_ativo = limite_reativo; passo_ativo = passo_reativo;
         % u = 0.1818
         P_ref_1 = [0.218687; 1499.74; 1000.55];
         y_ponto_ativo_1 = [32.0819; 556.712; 373.668];
@@ -26,6 +28,8 @@ switch estrategia
        
         
     case 'bpsc'
+        limite_reativo = [0 1000]; passo_reativo = [0:50:1000];
+        limite_ativo = limite_reativo; passo_ativo = passo_reativo;
         kp = 0; kq = 0;
         % u = 0.1818
         P_ref_1 = [12.7804; 1499.85; 1000.73];
@@ -50,6 +54,8 @@ switch estrategia
 
     case 'pnsc'
         kp = -1; kq = -1;
+        limite_ativo = [0 3000]; passo_ativo = [0:250:3000]; 
+        limite_reativo = limite_ativo; passo_reativo = passo_ativo;
         % u = 0.1818
         P_ref_1 = [15.5962; 1504.08; 1002.15];
         y_ponto_ativo_1 = [549.663; 35.6034; 361.179];
@@ -67,7 +73,7 @@ switch estrategia
 
 
         % u = 0.5714 3.04409
-        P_ref_3 = [15.5421; 1499.48; 999.664];
+        P_ref_3 = [3.04409; 1499.48; 999.664];
         y_ponto_ativo_3 = [2767.05; 278.044; 1828.76];
         
         Q_ref_3 =  [1500.07; 0.933732; 1000.99];
@@ -76,6 +82,8 @@ switch estrategia
 
     case 'apoc'
         kp = -1; kq = 1;
+        limite_reativo = [0 3000]; passo_reativo = [0:250:3000];
+        limite_ativo = [0 500]; passo_ativo = [0 10 20 30 40 100 500];
         % u = 0.1818
         P_ref_1 = [2.75471; 1501.07; 999.602];
         y_ponto_ativo_1 = [26.6435; 14.2601; 27.2099];
@@ -104,6 +112,8 @@ switch estrategia
 
     case 'rpoc'
         kp = 1; kq = -1;
+        limite_reativo = [0 500]; passo_reativo = [0 20 40 60 80 100 500];
+        limite_ativo = [0 3000]; passo_ativo = [0:250:3000];
         % u = 0.1818
         P_ref_1 = [0.446157; 1501.03; 999.324];
         y_ponto_ativo_1 = [548.008; 547.56; 516.201];
