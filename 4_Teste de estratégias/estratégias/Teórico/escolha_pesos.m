@@ -83,7 +83,7 @@ switch estrategia
     case 'apoc'
         kp = -1; kq = 1;
         limite_reativo = [0 3000]; passo_reativo = [0:250:3000];
-        limite_ativo = [0 500]; passo_ativo = [0 10 20 30 40 100 500];
+        limite_ativo = [0 500]; passo_ativo = [0 25 50 75 100 200 300 400 500];
         % u = 0.1818
         P_ref_1 = [2.75471; 1501.07; 999.602];
         y_ponto_ativo_1 = [26.6435; 14.2601; 27.2099];
@@ -112,7 +112,7 @@ switch estrategia
 
     case 'rpoc'
         kp = 1; kq = -1;
-        limite_reativo = [0 500]; passo_reativo = [0 20 40 60 80 100 500];
+        limite_reativo = [0 500]; passo_reativo = [0 20 40 60 80 100 200 300 400 500];
         limite_ativo = [0 3000]; passo_ativo = [0:250:3000];
         % u = 0.1818
         P_ref_1 = [0.446157; 1501.03; 999.324];

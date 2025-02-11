@@ -1,10 +1,10 @@
 clear workspace;
 % Escolha da estratégia
-estrategia = 'rpoc';
+estrategia = 'bpsc';
 run('escolha_pesos.m');
 run('dados.m');
 theta_pos = 0; theta_neg = 0;
-clear('ylim');
+clear('ylim', 'yticks');
 pu = 0;
 
 % Criar figura única e configurar o subplot para os gráficos
@@ -13,10 +13,10 @@ subplot(1,2,1);
 xlabel('u','FontWeight', 'bold'); ylabel('|q| var','FontWeight', 'bold');
 hold on; grid on; 
 ylim(limite_reativo); yticks(passo_reativo); 
-xlim([0 0.6]); xticks([0 0.1 0.1818 0.3333 0.45 0.5714]) % Limites dos eixos
+xlim([0 0.6]); xticks([0:0.05:0.6]) % Limites dos eixos
 
 % Definindo cores para as curvas
-cores = {'b', 'g', 'm'}; % Cores para as curvas: azul, verde, magenta
+cores = {'b', 'r', 'k'}; % Cores para as curvas: azul, verde, magenta
 legendInfo = cell(1, 3); % Prepara a variável para armazenar informações da legenda
 legendPatches = cell(1,3);
 
@@ -27,7 +27,7 @@ for i = 1:3
 
     % Plotar potência reativa no mesmo subplot
     if (i == 2 && strcmp(estrategia, 'bpsc'))
-        plot(vetor_u{i}, pot_reativa{i}, 'Color', cores{i}, 'LineStyle', '--');
+        plot(vetor_u{i}, pot_reativa{i}, 'Color', cores{i}, 'LineStyle', '--', 'LineWidth', 2);
     else
         plot(vetor_u{i}, pot_reativa{i}, 'Color', cores{i});
     end
@@ -58,13 +58,13 @@ xlim([0 0.6]); %xticks([0 0.1 0.1818 0.3333 0.4 0.5714])
 xticks([0:0.05:0.6])% Define os limites do eixo x
 
 % Definindo cores para as curvas
-cores = {'b', 'g', 'm'};
+cores = {'b', 'r', 'k'};
 legendInfo = cell(1, 3);
 legendPatches = cell(1,3);
 
 for i = 1:3
     if (i == 2 && strcmp(estrategia, 'bpsc'))
-        plot(vetor_u{i}, pot_ativa{i}, 'Color', cores{i}, 'LineStyle', '--');
+        plot(vetor_u{i}, pot_ativa{i}, 'Color', cores{i}, 'LineStyle', '--', 'LineWidth', 2);
     else
         plot(vetor_u{i}, pot_ativa{i}, 'Color', cores{i});
     end
