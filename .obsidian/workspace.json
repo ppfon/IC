@@ -4,71 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "9eeea9acf16446c5",
+        "id": "005e2ae884168c00",
         "type": "tabs",
         "children": [
           {
-            "id": "5f6daaa8800dc14e",
+            "id": "ed9fb0162d3ca418",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "1_Bibliografia/base_estrategias/Flexible_Active_Power_Control_of_Distributed_Power_Generation_Systems_During_Grid_Faults.pdf",
-                "page": 3,
-                "left": -12,
-                "top": 391,
-                "zoom": 1.2676767676767677
-              },
-              "icon": "lucide-file-text",
-              "title": "Flexible_Active_Power_Control_of_Distributed_Power_Generation_Systems_During_Grid_Faults"
-            }
-          },
-          {
-            "id": "60934fdbab72870f",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "1_Bibliografia/nossos_autores/final_estrategias_rafel.pdf",
-                "page": 45,
-                "left": -13,
-                "top": 795,
-                "zoom": 1.1136867567022777
-              },
-              "icon": "lucide-file-text",
-              "title": "final_estrategias_rafel"
-            }
-          },
-          {
-            "id": "88530c3afa689e06",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "0_Treinamento/Treinamento.pdf",
-                "page": 20,
-                "left": -13,
-                "top": 541,
-                "zoom": 1.1136867567022777
-              },
-              "icon": "lucide-file-text",
-              "title": "Treinamento"
-            }
-          },
-          {
-            "id": "353f8c3b196a43c1",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "1_Bibliografia/blocos específicos/PLL/Comparison of DSOGI-Based PLL for Phase Estimation in three-phase weak grids.pdf",
-                "page": 5,
-                "left": -13,
-                "top": 740,
-                "zoom": 1.1137690751852924
-              },
-              "icon": "lucide-file-text",
-              "title": "Comparison of DSOGI-Based PLL for Phase Estimation in three-phase weak grids"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -128,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "3a5c12e89cc83a5d",
@@ -230,19 +176,19 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "5f6daaa8800dc14e",
+  "active": "ed9fb0162d3ca418",
   "lastOpenFiles": [
-    "1_Bibliografia/A_Review_on_Grid-Connected_Converter_Control_for_Short-Circuit_Power_Provision_Under_Grid_Unbalanced_Faults.pdf",
+    "1_Bibliografia/base_estrategias/Flexible_Active_Power_Control_of_Distributed_Power_Generation_Systems_During_Grid_Faults.pdf",
     "1_Bibliografia/nossos_autores/final_estrategias_rafel.pdf",
-    "1_Bibliografia/blocos específicos/PLL/Comparison of DSOGI-Based PLL for Phase Estimation in three-phase weak grids.pdf",
-    "0_Treinamento/Treinamento.pdf",
+    "4_Teste de estratégias/estratégias/variaveis.pdf",
+    "1_Bibliografia/nossos_autores/estrategias_rafel.pdf",
     "1_Bibliografia/nossos_autores/resumo das estratégias.pdf",
-    "1_Bibliografia/blocos específicos/PR/PR+Grid+Tie+inverter.pdf",
+    "1_Bibliografia/blocos específicos/PLL/Comparison of DSOGI-Based PLL for Phase Estimation in three-phase weak grids.pdf",
+    "4_Teste de estratégias/estratégias/Teórico/teste_artigo.asv",
     "4_Teste de estratégias/estratégias/Teórico/artigo_plots.asv",
-    "4_Teste de estratégias/estratégias/Teórico/plots.m",
-    "4_Teste de estratégias/estratégias/Análise/plot_resultados/estruturas.m",
-    "4_Teste de estratégias/estratégias/Análise/plot_resultados/escolha_pesos.m",
-    "4_Teste de estratégias/estratégias/Análise/plot_resultados/dados.m",
+    "1_Bibliografia/A_Review_on_Grid-Connected_Converter_Control_for_Short-Circuit_Power_Provision_Under_Grid_Unbalanced_Faults.pdf",
+    "0_Treinamento/Treinamento.pdf",
+    "1_Bibliografia/blocos específicos/PR/PR+Grid+Tie+inverter.pdf",
     "A fazer.md"
   ]
 }

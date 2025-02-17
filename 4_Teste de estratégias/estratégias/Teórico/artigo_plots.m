@@ -60,6 +60,8 @@ i_clarke = n_clarke * T_clarke * iabc_real;
 %% Clarke + Fortescue 
 q_op = exp(-1*j*pi/2);
 
+v_orto = [ 0, 1; -1, 0] * v_clarke;
+
 v_clarke_pos = 0.5 * [1, -q_op; q_op, 1] * v_clarke; % v_{alpha+,beta+}
 v_clarke_neg = 0.5 * [1, q_op; -q_op, 1] * v_clarke; % v_{alpha-,beta-}
 v_alpha = [v_clarke_pos(1,:) + v_clarke_neg(1,:)]; % v_{alpha} = v_{alpha+} + v_{alpha-}
@@ -76,17 +78,23 @@ i_beta = [i_clarke_neg(2,:) + i_clarke_neg(2,:)]; % i_{beta} = i_{beta+} + i_{be
 i_alphabeta = real([i_alpha; i_beta]); % i_{alpha,beta}
 i_pos = i_clarke_pos; i_neg = i_clarke_neg;
 
+% ip_ref = (v_pos + kp* v_neg) * P_ref/(norm(v_pos)^2 + kp * norm(v_neg)^2);
+% iq_ref = (v_orto_pos + kq* v_orto_neg) * Q_ref/(norm(v_pos)^2 + kq * norm(v_neg)^2);
+
 figure(1);
 subplot(2,1,1);
 plot(v_pos(2,:), v_pos(1,:)); hold on;
 plot(v_neg(2,:), v_neg(1,:), '--', 'LineWidth', 1.5);
-plot(v_alphabeta(2,:), v_alphabeta(1,:)); hold off; grid on;
+plot(v_alphabeta(2,:), v_alphabeta(1,:)); 
+hold off; grid on;
 legend;
+
 subplot(2,1,2);
 plot(i_pos(2,:), i_pos(1,:)); hold on;
 plot(i_neg(2,:), i_neg(1,:), '--', 'LineWidth', 1.5);
 plot(i_alphabeta(2,:), i_alphabeta(1,:)); hold off; grid on;
 legend;
+
 %% Figure 1: time-domain plot displaying one voltage and current cycle
 % figure(1);
 % subplot(2,1,1);
