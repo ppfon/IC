@@ -9,7 +9,7 @@ theta = 0;
 wn = 2*pi*fn;
 theta_c = 2*pi/3;
 
-v_ff = 220;
+v_ff = 1;
 deseq = 0.6;
 amp_a = v_ff*sqrt(2)/sqrt(3); 
 amp_b = amp_a*deseq;
