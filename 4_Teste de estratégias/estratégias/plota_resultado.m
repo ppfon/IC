@@ -2,19 +2,19 @@ clear workspace;
 freq_amostragem = 9e3; periodo_amostragem = 1/freq_amostragem;
 resultado_pu = 0;
 
-le_base_ativo = load("Novos dados/apoc/0.5714/q0p1500/ativo/base.mat", "base");
+le_base_ativo = load("Novos dados/bpsc/0.5714/q0p1500/ativo/base.mat", "base");
 base_ativo = le_base_ativo.base;
 
-le_stgy_ativo = load("Novos dados/apoc/0.5714/q0p1500/ativo/stgy.mat", "stgy");
+le_stgy_ativo = load("Novos dados/bpsc/0.5714/q0p1500/ativo/stgy.mat", "stgy");
 stgy_ativo = le_stgy_ativo.stgy;
 
 amplitude_stgy_ativo = stgy_ativo(:,2);
 amplitude_base_ativo = base_ativo(:,2);
 
-le_base_reativo = load("Novos dados/apoc/0.5714/q0p1500/reativo/base.mat", "base");
+le_base_reativo = load("Novos dados/bpsc/0.5714/q0p1500/reativo/base.mat", "base");
 base_reativo = le_base_reativo.base;
 
-le_stgy_reativo = load("Novos dados/apoc/0.5714/q0p1500/reativo/stgy.mat", "stgy");
+le_stgy_reativo = load("Novos dados/bpsc/0.5714/q0p1500/reativo/stgy.mat", "stgy");
 stgy_reativo = le_stgy_reativo.stgy;
 
 amplitude_stgy_reativo = stgy_reativo(:,2);
