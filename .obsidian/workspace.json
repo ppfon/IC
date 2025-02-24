@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "005e2ae884168c00",
+        "id": "001e3c02c2b96409",
         "type": "tabs",
         "children": [
           {
-            "id": "ed9fb0162d3ca418",
+            "id": "d821db3ed8a1b651",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -74,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
     "id": "3a5c12e89cc83a5d",
@@ -136,13 +136,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1_Bibliografia/base_estrategias/Flexible_Active_Power_Control_of_Distributed_Power_Generation_Systems_During_Grid_Faults.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Flexible_Active_Power_Control_of_Distributed_Power_Generation_Systems_During_Grid_Faults"
+              "title": "Outline"
             }
           },
           {
@@ -160,7 +159,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,19 +176,19 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "ed9fb0162d3ca418",
+  "active": "d821db3ed8a1b651",
   "lastOpenFiles": [
-    "1_Bibliografia/base_estrategias/Flexible_Active_Power_Control_of_Distributed_Power_Generation_Systems_During_Grid_Faults.pdf",
-    "1_Bibliografia/nossos_autores/final_estrategias_rafel.pdf",
-    "4_Teste de estratégias/estratégias/variaveis.pdf",
-    "1_Bibliografia/nossos_autores/estrategias_rafel.pdf",
-    "1_Bibliografia/nossos_autores/resumo das estratégias.pdf",
-    "1_Bibliografia/blocos específicos/PLL/Comparison of DSOGI-Based PLL for Phase Estimation in three-phase weak grids.pdf",
-    "4_Teste de estratégias/estratégias/Teórico/teste_artigo.asv",
-    "4_Teste de estratégias/estratégias/Teórico/artigo_plots.asv",
-    "1_Bibliografia/A_Review_on_Grid-Connected_Converter_Control_for_Short-Circuit_Power_Provision_Under_Grid_Unbalanced_Faults.pdf",
-    "0_Treinamento/Treinamento.pdf",
-    "1_Bibliografia/blocos específicos/PR/PR+Grid+Tie+inverter.pdf",
+    "1_Bibliografia/intro/IRENA_Grid_Codes_Renewable_Systems_2022.pdf",
+    "1_Bibliografia/intro/IRENA_Grid_Codes_Renewable_Systems_2022.pdf.crdownload",
+    "1_Bibliografia/intro/IEEE_Std_1159_2019.pdf",
+    "1_Bibliografia/intro/IEEE_Std_1159_2019.pdf.crdownload",
+    "1_Bibliografia/intro/IRENA_RE_Capacity_Statistics_2024.pdf",
+    "1_Bibliografia/intro/IRENA_RE_Capacity_Statistics_2024.pdf.crdownload",
+    "1_Bibliografia/intro/IRENA_Global_Energy_Transformation_2019.pdf",
+    "1_Bibliografia/intro/WorldEnergyOutlook2023.pdf",
+    "1_Bibliografia/intro/WorldEnergyOutlook2023.pdf.crdownload",
+    "1_Bibliografia/base_estrategias/Active_power_control_strategies_for_inverter-based_distributed_power_generation_adapted_to_grid-fault_ride-through_requirements.pdf",
+    "1_Bibliografia/base_IPT/instantaneous_power_theory_and_applications_to_power_conditioning_akagipdf.pdf",
     "A fazer.md"
   ]
 }

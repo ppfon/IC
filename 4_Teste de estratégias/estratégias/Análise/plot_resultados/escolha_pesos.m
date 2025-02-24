@@ -107,6 +107,7 @@ switch estrategia
         Q_ref_3 =  [1500.17; 0.0647945; 999.78];
         y_ponto_reativo_3 = [1337.5; 2484.14; 1842.32];
 
+       
        P_ref = [3.7233; 1500.70; 999.7967];
        Q_ref = [1499.78; 0.0690; 1000.09666];
 
@@ -140,10 +141,22 @@ switch estrategia
         error('Estratégia desconhecida.');
 end
 
-for (i = 1:3)
-    P_ref(i,1) = mean([P_ref_1(i,1) P_ref_2(i,1) P_ref_3(i,1)]);
-    Q_ref(i,1) = mean([Q_ref_1(i,1) Q_ref_2(i,1) Q_ref_3(i,1)]);
+P_std_all = zeros(3,1);
+Q_std_all = zeros(3,1);
+
+for i = 1:3
+    P_ref(i) = mean([P_ref_1(i,1), P_ref_2(i,1), P_ref_3(i,1)]);
+    Q_ref(i) = mean([Q_ref_1(i,1), Q_ref_2(i,1), Q_ref_3(i,1)]);
+    
+    P_std_all(i) = std([P_ref_1(i,1), P_ref_2(i,1), P_ref_3(i,1)]);
+    Q_std_all(i) = std([Q_ref_1(i,1), Q_ref_2(i,1), Q_ref_3(i,1)]);
+    p_factor(i) = 100 * P_std_all(i)/P_ref(i);
+    q_factor(i) = 100 * Q_std_all(i)/Q_ref(i);
 end
+
+
+
+
 % 
 % P_ref = [55.298791499999990,1.500510000000000e+03,1.000647000000000e+03];
 % Q_ref = [1.775642000000000e+03,45.372084600000000,1.151952000000000e+03];

@@ -1,11 +1,16 @@
 clear workspace;
 % Escolha da estratégia
-estrategia = 'bpsc';
+estrategia = 'apoc';
 run('escolha_pesos.m');
 run('dados.m');
 theta_pos = 0; theta_neg = 0;
 clear('ylim', 'yticks');
 pu = 0;
+
+% Ponto de destaque
+u_ponto_1 = 0.1818;
+u_ponto_2 = 0.3333;
+u_ponto_3 = 0.5714;
 
 % Criar figura única e configurar o subplot para os gráficos
 figure(1);
@@ -16,7 +21,7 @@ ylim(limite_reativo); yticks(passo_reativo);
 xlim([0 0.6]); xticks([0:0.05:0.6]) % Limites dos eixos
 
 % Definindo cores para as curvas
-cores = {'b', 'r', 'k'}; % Cores para as curvas: azul, verde, magenta
+cores = {'blue', 'r', 'black'}; % Cores para as curvas: azul, verde, magenta
 legendInfo = cell(1, 3); % Prepara a variável para armazenar informações da legenda
 legendPatches = cell(1,3);
 
@@ -33,21 +38,14 @@ for i = 1:3
     end
     xlim([0 0.6]); % Define os limites do eixo x após o plot
 
-    % Ponto de destaque
-    u_ponto_1 = 0.1818;
-    u_ponto_2 = 1/3;
-    u_ponto_3 = 0.5714;
-
     plot(u_ponto_1, y_ponto_reativo_1(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
     plot(u_ponto_2, y_ponto_reativo_2(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
     plot(u_ponto_3, y_ponto_reativo_3(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
     xlim([0 0.6]); % Garante os limites do eixo x
 
-    legendPatches{i} = patch([0 1], [0 0], cores{i}); % Cria um patch com a cor da curva
-    legendInfo{i} = sprintf('P_{ref} = %d, Q_{ref} = %d', P_ref(i), Q_ref(i));
 end
 
-legend([legendPatches{:}], legendInfo, 'Location', 'northwest'); % Define a localização da legenda
+%legend([legendPatches{:}], legendInfo, 'Location', 'northwest'); % Define a localização da legenda
 
 % Gráficos de potência ativa no subplot 2
 subplot(1,2,2);
@@ -70,21 +68,20 @@ for i = 1:3
     end
     xlim([0 0.6]); % Define os limites do eixo x após o plot
 
-    % Ponto de destaque
-    u_ponto_1 = 0.1818;
-    u_ponto_2 = 1/3;
-    u_ponto_3 = 0.5714;
-
     plot(u_ponto_1, y_ponto_ativo_1(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
     plot(u_ponto_2, y_ponto_ativo_2(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
     plot(u_ponto_3, y_ponto_ativo_3(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
     xlim([0 0.6]); % Garante os limites do eixo x
 
-    legendPatches{i} = patch([0 1], [0 0], cores{i});
-    legendInfo{i} = sprintf('P_{ref} = %d, Q_{ref} = %d', P_ref(i), Q_ref(i));
+%    legendPatches{i} = patch([0 1], [0 0], cores{i});
+%    legendInfo{i} = sprintf('P_{ref} = %.2f | CV = %.2f, Q_{ref} = %.2f | CV = %.2f', P_ref(i), p_factor(i), Q_ref(i), q_factor(i));
 end
+for i = 1:3
+    legendPatches{i} = patch([0 1], [0 0], cores{i}); % Cria um patch com a cor da curva
+    legendInfo{i} = sprintf('P_{ref} = %.2f | CV = %.2f, Q_{ref} = %.2f | CV = %.2f', P_ref(i), p_factor(i), Q_ref(i), q_factor(i));
+d
 
-switch (u_ponto_1)
+    switch (u_ponto_1)
     case 0.1818
         ponto = 1820;
     case 1/3
