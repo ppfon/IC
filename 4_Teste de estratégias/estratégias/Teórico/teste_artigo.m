@@ -7,8 +7,8 @@ theta_i = 0;
 t = linspace(0,1,100);
 
 %% Voltages and currents (abc)
-deseq_v = 0.6; deseq_i = 1;
-amp_va = 1*deseq_v; amp_vb = 1*deseq_v; amp_vc = 1;
+deseq_v = 0.8; deseq_i = 1;
+amp_va = 1*deseq_v; amp_vb = 1*deseq_i; amp_vc = 1;
 amp_ia = 1*deseq_i; amp_ib = 1*deseq_i; amp_ic = 1;
 
 va = amp_va * exp(1j*(w*t)); 
