@@ -1,6 +1,6 @@
 clear workspace;
 % Escolha da estratégia
-estrategia = 'apoc';
+estrategia = 'rpoc';
 run('escolha_pesos.m');
 run('dados.m');
 theta_pos = 0; theta_neg = 0;
@@ -8,9 +8,10 @@ clear('ylim', 'yticks');
 pu = 0;
 
 % Ponto de destaque
-u_ponto_1 = 0.1818;
-u_ponto_2 = 0.3333;
-u_ponto_3 = 0.5714;
+u_ponto = [0.1818; 0.3333; 0.5714];
+% u_ponto_1 = 0.1818;
+% u_ponto_2 = 0.3333;
+% u_ponto_3 = 0.5714;
 
 % Criar figura única e configurar o subplot para os gráficos
 figure(1);
@@ -25,6 +26,7 @@ cores = {'blue', 'r', 'black'}; % Cores para as curvas: azul, verde, magenta
 legendInfo = cell(1, 3); % Prepara a variável para armazenar informações da legenda
 legendPatches = cell(1,3);
 
+
 for i = 1:3
     % Calcular potências
     [pot_ativa{i}, pot_reativa{i}, vetor_u{i}] = calcular_potencias(Vabc_comp_pos, Vabc_comp_neg, ...
@@ -38,9 +40,14 @@ for i = 1:3
     end
     xlim([0 0.6]); % Define os limites do eixo x após o plot
 
-    plot(u_ponto_1, y_ponto_reativo_1(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
-    plot(u_ponto_2, y_ponto_reativo_2(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
-    plot(u_ponto_3, y_ponto_reativo_3(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
+    plot(u_ponto(1), y_ponto_reativo_1(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
+    plot(u_ponto(2), y_ponto_reativo_2(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
+    plot(u_ponto(3), y_ponto_reativo_3(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
+
+    erro_reativo(1,i) = 100 * (pot_reativa{i}(1820) - y_ponto_reativo_1(i)) / pot_reativa{i}(1820);
+    erro_reativo(2,i) = 100 * (pot_reativa{i}(3335) - y_ponto_reativo_2(i)) / pot_reativa{i}(3335);
+    erro_reativo(3,i) = 100 * (pot_reativa{i}(5716) - y_ponto_reativo_3(i)) / pot_reativa{i}(5716);
+
     xlim([0 0.6]); % Garante os limites do eixo x
 
 end
@@ -53,7 +60,7 @@ xlabel('u'); ylabel('|p| W');
 hold on; grid on; 
 ylim(limite_ativo); yticks(passo_ativo);
 xlim([0 0.6]); %xticks([0 0.1 0.1818 0.3333 0.4 0.5714])
-xticks([0:0.05:0.6])% Define os limites do eixo x
+xticks([0:0.05:0.6]);% Define os limites do eixo x
 
 % Definindo cores para as curvas
 cores = {'b', 'r', 'k'};
@@ -65,32 +72,29 @@ for i = 1:3
         plot(vetor_u{i}, pot_ativa{i}, 'Color', cores{i}, 'LineStyle', '--', 'LineWidth', 2);
     else
         plot(vetor_u{i}, pot_ativa{i}, 'Color', cores{i});
-    end
+    end 
     xlim([0 0.6]); % Define os limites do eixo x após o plot
 
-    plot(u_ponto_1, y_ponto_ativo_1(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
-    plot(u_ponto_2, y_ponto_ativo_2(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
-    plot(u_ponto_3, y_ponto_ativo_3(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
+    plot(u_ponto(1), y_ponto_ativo_1(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
+    plot(u_ponto(2), y_ponto_ativo_2(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
+    plot(u_ponto(3), y_ponto_ativo_3(i), 'o', 'Color', cores{i}, 'MarkerSize', 6);
+
+    erro_ativo(1,i) = 100 * (pot_ativa{i}(1820) - y_ponto_ativo_1(i)) / pot_ativa{i}(1820);
+    erro_ativo(2,i) = 100 * (pot_ativa{i}(3335) - y_ponto_ativo_2(i)) / pot_ativa{i}(3335);
+    erro_ativo(3,i) = 100 * (pot_ativa{i}(5716) - y_ponto_ativo_3(i)) / pot_ativa{i}(5716);
+
     xlim([0 0.6]); % Garante os limites do eixo x
 
 %    legendPatches{i} = patch([0 1], [0 0], cores{i});
 %    legendInfo{i} = sprintf('P_{ref} = %.2f | CV = %.2f, Q_{ref} = %.2f | CV = %.2f', P_ref(i), p_factor(i), Q_ref(i), q_factor(i));
 end
+
 for i = 1:3
     legendPatches{i} = patch([0 1], [0 0], cores{i}); % Cria um patch com a cor da curva
     legendInfo{i} = sprintf('P_{ref} = %.2f | CV = %.2f, Q_{ref} = %.2f | CV = %.2f', P_ref(i), p_factor(i), Q_ref(i), q_factor(i));
-d
-
-    switch (u_ponto_1)
-    case 0.1818
-        ponto = 1820;
-    case 1/3
-        ponto = 3335;
-    case 0.5714
-        ponto = 5716;
 end
 
-resultado_ativa = cellfun(@(x) x(ponto), pot_ativa);
-resultado_reativa = cellfun(@(x) x(ponto), pot_reativa);
+% resultado_ativa = cellfun(@(x) x(ponto), pot_ativa);
+% resultado_reativa = cellfun(@(x) x(ponto), pot_reativa);
 
 legend([legendPatches{:}], legendInfo, 'Location', 'northwest');

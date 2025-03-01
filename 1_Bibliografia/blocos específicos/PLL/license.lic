@@ -1,0 +1,18 @@
+PACKAGE plecscombo plexim COMPONENTS="plecsedit plecssolve" \
+	OPTIONS=SUITE SIGN="00C8 7A1F E1F6 4100 40EE AE92 29AC 6600 \
+	A0C8 8CA5 004D 8460 4438 F2F1 EB8E"
+PACKAGE plecscombocoder plexim COMPONENTS="plecsrtw plecscoder" \
+	OPTIONS=SUITE SIGN="00D7 CF6A 758D 517E D8D6 8750 0D4C 7200 \
+	5F17 C41C B911 CDC2 27B7 9F12 13CF"
+FEATURE plecscombo plexim 4.8 14-feb-2025 uncounted \
+	HOSTID=USERHOST=lcce-+14857fddbab2 ISSUED=15-feb-2024 \
+	NOTICE="{`name` : `Pedro Paulo` , `organization` : \
+	`Universidade Federal de Minas Gerais` , `country` : `BR`}" \
+	SN=STUDENT SIGN="000C 20B7 0E20 C207 EAB9 0AEB 4AAB 5900 5250 \
+	B60B A156 B8C4 4B03 9FE9 1479"
+FEATURE plecscombocoder plexim 4.8 14-feb-2025 uncounted \
+	HOSTID=USERHOST=lcce-+14857fddbab2 ISSUED=15-feb-2024 \
+	NOTICE="{`name` : `Pedro Paulo` , `organization` : \
+	`Universidade Federal de Minas Gerais` , `country` : `BR`}" \
+	SN=STUDENT SIGN="009E 2B8E A956 2BB5 9C66 4AE9 5F5B DA00 F1BE \
+	CFA1 D0CD 6666 CB6A 5F18 0AEB"

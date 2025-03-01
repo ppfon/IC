@@ -80,7 +80,11 @@ if (count == PRD)
   // Medição pot reativa Injetada
   Qc = 1.224744871391589 * PLL.Vbeta_in * 1.224744871391589 * Isalfabeta.alfa - 1.224744871391589 * PLL.Valfa_in * 1.224744871391589 * Isalfabeta.beta;
 
+
+  // PLL, Vdc e Q usam filtro de primeira ordem no código do BESS...
+
   fil2nQ.x = Qc;
+
 
   Second_order_filter(&fil2nQ);
 
