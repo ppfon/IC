@@ -1,0 +1,1820 @@
+[
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 746.758,
+            "y": -219.287
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 746.682,
+            "y": -331.993
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 746.682,
+            "y": -302.891
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 746.758,
+                    "y": -248.39
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 671.168,
+            "y": -219.287
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 671.092,
+            "y": -331.993
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 671.092,
+            "y": -302.89
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 671.168,
+                    "y": -248.389
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 595.501,
+            "y": -218.607
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 595.425,
+            "y": -331.313
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 595.425,
+            "y": -302.21
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 595.501,
+                    "y": -247.709
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "path",
+        "id": "path_cute-inductor",
+        "start": {
+            "x": 916.686,
+            "y": -284.824
+        },
+        "end": {
+            "x": 973.378,
+            "y": -284.824
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_cute-inductor",
+        "start": {
+            "x": 973.378,
+            "y": -284.824
+        },
+        "end": {
+            "x": 1030.071,
+            "y": -284.824
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_capacitor",
+        "start": {
+            "x": 973.378,
+            "y": -284.824
+        },
+        "end": {
+            "x": 973.378,
+            "y": -247.028
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        },
+        "scale": {
+            "x": 0.8,
+            "y": 0.8
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 973.378,
+            "y": -284.824
+        }
+    },
+    {
+        "type": "rect",
+        "position": {
+            "x": 907.237,
+            "y": -303.721
+        },
+        "size": {
+            "x": 0,
+            "y": 0
+        }
+    },
+    {
+        "type": "rect",
+        "position": {
+            "x": 1039.52,
+            "y": -303.721
+        },
+        "size": {
+            "x": 0,
+            "y": 0
+        }
+    },
+    {
+        "type": "rect",
+        "position": {
+            "x": 973.378,
+            "y": -274.619
+        },
+        "size": {
+            "x": 132.283,
+            "y": 74.079
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 822.197,
+            "y": -254.966
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 746.607,
+                    "y": -254.966
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 671.167,
+            "y": -273.712
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 746.757,
+            "y": -254.814
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 595.425,
+            "y": -292.763
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_capacitor",
+        "start": {
+            "x": 519.986,
+            "y": -150.877
+        },
+        "end": {
+            "x": 519.91,
+            "y": -406.147
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 519.986,
+            "y": -141.58
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 595.577,
+                    "y": -141.58
+                },
+                "direction": "-|"
+            },
+            {
+                "endPoint": {
+                    "x": 595.501,
+                    "y": -189.504
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 671.168,
+            "y": -190.184
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 671.167,
+                    "y": -141.58
+                },
+                "direction": "-|"
+            },
+            {
+                "endPoint": {
+                    "x": 595.577,
+                    "y": -141.58
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 746.758,
+            "y": -190.184
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 671.167,
+                    "y": -141.58
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 595.425,
+            "y": -360.415
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 595.577,
+                    "y": -406.147
+                },
+                "direction": "-|"
+            },
+            {
+                "endPoint": {
+                    "x": 519.986,
+                    "y": -406.147
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 671.092,
+            "y": -361.095
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 595.577,
+                    "y": -406.147
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 671.092,
+            "y": -406.147
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 746.682,
+                    "y": -361.095
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 444.395,
+            "y": -219.287
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 444.319,
+            "y": -331.993
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 444.395,
+            "y": -302.89
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 444.471,
+                    "y": -248.389
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 368.729,
+            "y": -219.287
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 368.729,
+            "y": -331.993
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 368.729,
+            "y": -302.89
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 368.805,
+                    "y": -248.389
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 293.138,
+            "y": -218.607
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_Lnigbt_bodydiode",
+        "position": {
+            "x": 293.062,
+            "y": -331.313
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 293.062,
+            "y": -302.21
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 293.138,
+                    "y": -247.709
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 444.244,
+            "y": -254.966
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 368.805,
+            "y": -190.184
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 368.805,
+                    "y": -141.58
+                },
+                "direction": "-|"
+            },
+            {
+                "endPoint": {
+                    "x": 293.214,
+                    "y": -141.58
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 444.395,
+            "y": -190.184
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 368.805,
+                    "y": -141.58
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 368.729,
+            "y": -361.095
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 293.214,
+                    "y": -406.147
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 368.729,
+            "y": -406.147
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 444.319,
+                    "y": -361.095
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 519.986,
+            "y": -141.58
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 519.986,
+                    "y": -152.389
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 444.319,
+            "y": -406.147
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 519.91,
+                    "y": -406.147
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "path",
+        "id": "path_battery2",
+        "start": {
+            "x": 47.394,
+            "y": -207.722
+        },
+        "end": {
+            "x": 47.394,
+            "y": -169.927
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 47.545,
+            "y": -141.58
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 47.394,
+                    "y": -169.927
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 368.729,
+            "y": -406.147
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 444.319,
+            "y": -406.147
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 444.395,
+            "y": -141.581
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 368.804,
+            "y": -141.581
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 293.214,
+            "y": -141.581
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 595.577,
+            "y": -406.147
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 671.167,
+            "y": -405.995
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 746.757,
+            "y": -405.995
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 444.395,
+            "y": -141.58
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 519.986,
+                    "y": -141.58
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 519.91,
+            "y": -406.147
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_cute-inductor",
+        "start": {
+            "x": 198.726,
+            "y": -292.913
+        },
+        "end": {
+            "x": 255.418,
+            "y": -292.609
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_cute-inductor",
+        "start": {
+            "x": 198.575,
+            "y": -274.016
+        },
+        "end": {
+            "x": 255.418,
+            "y": -273.712
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_cute-inductor",
+        "start": {
+            "x": 198.726,
+            "y": -255.118
+        },
+        "end": {
+            "x": 255.418,
+            "y": -254.966
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 444.244,
+            "y": -254.966
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 255.418,
+                    "y": -254.814
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 293.214,
+            "y": -291.097
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 255.418,
+                    "y": -292.609
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 368.804,
+            "y": -272.2
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 255.418,
+                    "y": -273.712
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 151.483,
+            "y": -292.913
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 113.763,
+                    "y": -277.415
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 151.483,
+            "y": -274.016
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 113.763,
+                    "y": -277.415
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 151.332,
+            "y": -255.27
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 113.763,
+                    "y": -274.016
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 293.062,
+            "y": -189.505
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 293.138,
+                    "y": -141.58
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 47.545,
+            "y": -141.58
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 293.063,
+                    "y": -142.412
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 293.062,
+            "y": -360.415
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 293.214,
+                    "y": -406.147
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "path",
+        "id": "path_battery2",
+        "start": {
+            "x": 47.545,
+            "y": -309.996
+        },
+        "end": {
+            "x": 47.545,
+            "y": -272.201
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_battery2",
+        "start": {
+            "x": 47.545,
+            "y": -376.138
+        },
+        "end": {
+            "x": 47.545,
+            "y": -338.343
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 47.696,
+            "y": -309.165
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 47.545,
+                    "y": -338.343
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 47.696,
+            "y": -376.138
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 47.545,
+                    "y": -405.316
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 47.394,
+            "y": -207.722
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 47.545,
+                    "y": -272.201
+                },
+                "direction": "|-"
+            }
+        ],
+        "stroke": {
+            "width": "2.3pt",
+            "style": "dotted"
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 113.763,
+            "y": -292.913
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 47.545,
+                    "y": -405.316
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 47.394,
+            "y": -405.316
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 293.214,
+            "y": -405.995
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 113.763,
+            "y": -292.913
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 113.763,
+            "y": -274.016
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 113.763,
+            "y": -255.27
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_controlled-sinusoidal-voltage-source",
+        "start": {
+            "x": 1303.937,
+            "y": -226.772
+        },
+        "end": {
+            "x": 1303.937,
+            "y": -321.26
+        },
+        "label": {
+            "value": "",
+            "otherSide": true,
+            "distance": "0.12cm"
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 368.804,
+            "y": -273.712
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 293.214,
+            "y": -292.609
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1039.52,
+            "y": -292.761
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1077.316,
+                    "y": -292.761
+                }
+            }
+        ]
+    },
+    {
+        "type": "path",
+        "id": "path_currtap",
+        "start": {
+            "x": 850.543,
+            "y": -292.761
+        },
+        "end": {
+            "x": 822.197,
+            "y": -292.761
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        },
+        "scale": {
+            "x": 0.5,
+            "y": 0.5
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_currtap",
+        "start": {
+            "x": 850.543,
+            "y": -273.864
+        },
+        "end": {
+            "x": 822.197,
+            "y": -273.864
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        },
+        "scale": {
+            "x": 0.5,
+            "y": 0.5
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_currtap",
+        "start": {
+            "x": 850.543,
+            "y": -254.966
+        },
+        "end": {
+            "x": 822.197,
+            "y": -254.966
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        },
+        "scale": {
+            "x": 0.5,
+            "y": 0.5
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 850.544,
+            "y": -254.966
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 907.237,
+                    "y": -254.966
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 822.197,
+            "y": -292.761
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 595.425,
+                    "y": -292.761
+                }
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 671.016,
+            "y": -273.864
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 822.197,
+                    "y": -273.864
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 850.544,
+            "y": -273.864
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 907.237,
+                    "y": -273.864
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_vcc",
+        "position": {
+            "x": 836.37,
+            "y": -295.407
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 850.544,
+            "y": -292.761
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 907.237,
+                    "y": -292.762
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "path",
+        "id": "path_currtap",
+        "start": {
+            "x": 1105.662,
+            "y": -292.761
+        },
+        "end": {
+            "x": 1077.316,
+            "y": -292.761
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        },
+        "scale": {
+            "x": 0.5,
+            "y": 0.5
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_currtap",
+        "start": {
+            "x": 1105.662,
+            "y": -273.864
+        },
+        "end": {
+            "x": 1077.316,
+            "y": -273.864
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        },
+        "scale": {
+            "x": 0.5,
+            "y": 0.5
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_currtap",
+        "start": {
+            "x": 1105.662,
+            "y": -254.966
+        },
+        "end": {
+            "x": 1077.316,
+            "y": -254.966
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        },
+        "scale": {
+            "x": 0.5,
+            "y": 0.5
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1105.511,
+            "y": -254.966
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1171.803,
+                    "y": -254.814
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1105.511,
+            "y": -273.864
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1171.803,
+                    "y": -273.712
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_vcc",
+        "position": {
+            "x": 1091.489,
+            "y": -295.406
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1105.511,
+            "y": -292.761
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1171.803,
+                    "y": -292.61
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1039.52,
+            "y": -273.864
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1077.316,
+                    "y": -273.864
+                }
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1039.52,
+            "y": -254.966
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1077.316,
+                    "y": -254.966
+                }
+            }
+        ]
+    },
+    {
+        "type": "path",
+        "id": "path_currtap",
+        "start": {
+            "x": 179.829,
+            "y": -292.913
+        },
+        "end": {
+            "x": 151.483,
+            "y": -292.913
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        },
+        "scale": {
+            "x": 0.5,
+            "y": 0.5
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_currtap",
+        "start": {
+            "x": 179.829,
+            "y": -274.016
+        },
+        "end": {
+            "x": 151.483,
+            "y": -274.016
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        },
+        "scale": {
+            "x": 0.5,
+            "y": 0.5
+        }
+    },
+    {
+        "type": "path",
+        "id": "path_currtap",
+        "start": {
+            "x": 179.829,
+            "y": -255.118
+        },
+        "end": {
+            "x": 151.332,
+            "y": -255.27
+        },
+        "label": {
+            "value": "",
+            "distance": "0.12cm"
+        },
+        "scale": {
+            "x": 0.5,
+            "y": 0.5
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 165.656,
+            "y": -257.763
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 165.656,
+                    "y": -295.559
+                }
+            }
+        ],
+        "stroke": {
+            "width": "0.7pt",
+            "style": "denselydotted"
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 1171.802,
+            "y": -292.609
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 1171.802,
+            "y": -273.712
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 1171.802,
+            "y": -254.814
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_vcc",
+        "position": {
+            "x": 1172.03,
+            "y": -296.313
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1171.803,
+            "y": -292.61
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1247.396,
+                    "y": -292.762
+                },
+                "direction": "-|"
+            },
+            {
+                "endPoint": {
+                    "x": 1247.244,
+                    "y": -292.913
+                }
+            },
+            {
+                "endPoint": {
+                    "x": 1304.089,
+                    "y": -321.109
+                },
+                "direction": "|-"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1171.953,
+            "y": -273.712
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1285.039,
+                    "y": -274.016
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1171.953,
+            "y": -254.814
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1247.244,
+                    "y": -255.118
+                },
+                "direction": "|-"
+            },
+            {
+                "endPoint": {
+                    "x": 1247.244,
+                    "y": -226.772
+                },
+                "direction": "-|"
+            },
+            {
+                "endPoint": {
+                    "x": 1303.937,
+                    "y": -226.772
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -292.913
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -283.464
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -274.015
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -264.566
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.202,
+            "y": -329.688
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -321.259
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -311.81
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -302.361
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -255.118
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -245.669
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -236.22
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -226.771
+        },
+        "rotation": -90
+    },
+    {
+        "type": "node",
+        "id": "node_tground",
+        "position": {
+            "x": 1247.244,
+            "y": -217.322
+        },
+        "rotation": -90
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 179.829,
+            "y": -292.913
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 198.726,
+                    "y": -292.609
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 179.829,
+            "y": -274.016
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 198.575,
+                    "y": -273.864
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 179.829,
+            "y": -255.118
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 198.726,
+                    "y": -254.814
+                },
+                "direction": "-|"
+            }
+        ]
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 595.425,
+            "y": -141.58
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 671.016,
+            "y": -141.58
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_circ",
+        "position": {
+            "x": 746.758,
+            "y": -141.58
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 836.37,
+            "y": -257.611
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 836.37,
+                    "y": -295.406
+                }
+            }
+        ],
+        "stroke": {
+            "width": "0.7pt",
+            "style": "denselydotted"
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1091.489,
+            "y": -257.611
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1091.489,
+                    "y": -295.406
+                }
+            }
+        ],
+        "stroke": {
+            "width": "0.7pt",
+            "style": "denselydotted"
+        }
+    },
+    {
+        "type": "wire",
+        "start": {
+            "x": 1171.652,
+            "y": -254.966
+        },
+        "segments": [
+            {
+                "endPoint": {
+                    "x": 1172.03,
+                    "y": -296.313
+                }
+            }
+        ],
+        "stroke": {
+            "width": "0.7pt",
+            "style": "denselydotted"
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_vcc",
+        "position": {
+            "x": 165.656,
+            "y": -295.558
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_vcc",
+        "position": {
+            "x": 47.545,
+            "y": -405.316
+        }
+    },
+    {
+        "type": "node",
+        "id": "node_vcc",
+        "position": {
+            "x": 519.986,
+            "y": -406.147
+        }
+    }
+]

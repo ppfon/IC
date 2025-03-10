@@ -3,13 +3,13 @@ clear; close all; clc;
 
 %% Define the user-specified parameters
 % Available main strategies: 'aarc', 'apoc', 'bpsc', 'pnsc', 'rpoc'
-mainStrategy = 'aarc';  
+mainStrategy = 'rpoc';  
 
 % Available unbalance factors: '0.1818', '0.3333', '0.5714'
 unbalanceFactor = '0.3333';  
 
 % Available power references: 'q0p1500', 'q1500p0', 'q1000p1000'
-powerReference = 'q1000p1000';  
+powerReference = 'q0p1500';  
 
 %% Parse the powerReference string to extract reactive and active references
 % The expected format is 'q<number1>p<number2>' where:

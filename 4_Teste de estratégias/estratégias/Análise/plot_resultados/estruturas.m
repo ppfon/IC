@@ -1,6 +1,6 @@
 clear workspace;
 % Escolha da estratégia
-estrategia = 'rpoc';
+estrategia = 'aarc';
 run('escolha_pesos.m');
 run('dados.m');
 theta_pos = 0; theta_neg = 0;
@@ -9,9 +9,6 @@ pu = 0;
 
 % Ponto de destaque
 u_ponto = [0.1818; 0.3333; 0.5714];
-% u_ponto_1 = 0.1818;
-% u_ponto_2 = 0.3333;
-% u_ponto_3 = 0.5714;
 
 % Criar figura única e configurar o subplot para os gráficos
 figure(1);
@@ -19,7 +16,7 @@ subplot(1,2,1);
 xlabel('u','FontWeight', 'bold'); ylabel('|q| var','FontWeight', 'bold');
 hold on; grid on; 
 ylim(limite_reativo); yticks(passo_reativo); 
-xlim([0 0.6]); xticks([0:0.05:0.6]) % Limites dos eixos
+xlim([0 0.6]); xticks(0:0.05:0.6) % Limites dos eixos
 
 % Definindo cores para as curvas
 cores = {'blue', 'r', 'black'}; % Cores para as curvas: azul, verde, magenta
@@ -59,7 +56,7 @@ subplot(1,2,2);
 xlabel('u'); ylabel('|p| W');
 hold on; grid on; 
 ylim(limite_ativo); yticks(passo_ativo);
-xlim([0 0.6]); %xticks([0 0.1 0.1818 0.3333 0.4 0.5714])
+xlim([0 0.6]);
 xticks([0:0.05:0.6]);% Define os limites do eixo x
 
 % Definindo cores para as curvas
@@ -93,8 +90,5 @@ for i = 1:3
     legendPatches{i} = patch([0 1], [0 0], cores{i}); % Cria um patch com a cor da curva
     legendInfo{i} = sprintf('P_{ref} = %.2f | CV = %.2f, Q_{ref} = %.2f | CV = %.2f', P_ref(i), p_factor(i), Q_ref(i), q_factor(i));
 end
-
-% resultado_ativa = cellfun(@(x) x(ponto), pot_ativa);
-% resultado_reativa = cellfun(@(x) x(ponto), pot_reativa);
 
 legend([legendPatches{:}], legendInfo, 'Location', 'northwest');
