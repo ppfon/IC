@@ -1,6 +1,6 @@
 clear workspace;
 % Escolha da estratégia
-estrategia = 'aarc';
+estrategia = 'bpsc';
 run('escolha_pesos.m');
 run('dados.m');
 theta_pos = 0; theta_neg = 0;
@@ -13,7 +13,7 @@ u_ponto = [0.1818; 0.3333; 0.5714];
 % Criar figura única e configurar o subplot para os gráficos
 figure(1);
 subplot(1,2,1);
-xlabel('u','FontWeight', 'bold'); ylabel('|q| var','FontWeight', 'bold');
+xlabel('$\bf{u}$','Interpreter','latex'); ylabel('$\bf{\vert \tilde{q} \vert \; VAr}$','Interpreter','latex');
 hold on; grid on; 
 ylim(limite_reativo); yticks(passo_reativo); 
 xlim([0 0.6]); xticks(0:0.05:0.6) % Limites dos eixos

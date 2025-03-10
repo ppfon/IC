@@ -4,15 +4,38 @@ mainFolders = {'aarc', 'apoc', 'bpsc', 'pnsc', 'rpoc'};
 decimalFolders = {'0.1818', '0.3333', '0.5714'};
 strategyFolders = {'q0p1500', 'q1500p0', 'q1000p1000'};
 
+% Initialize a cell array to store the CSV data with preallocation
+csvData = cell(length(mainFolders)*4, 7); % Preallocate for efficiency
+
+% Initialize a row counter
+rowCounter = 1;
+
+% Add strategy folder names as headers
+csvData{rowCounter, 1} = ''; % First cell is empty
+csvData{rowCounter, 2} = strategyFolders{1};
+csvData{rowCounter, 4} = strategyFolders{2};
+csvData{rowCounter, 6} = strategyFolders{3};
+rowCounter = rowCounter + 1;
+
+% Add "ativo" and "reativo" labels
+csvData{rowCounter, 2} = 'ativo';
+csvData{rowCounter, 3} = 'reativo';
+csvData{rowCounter, 4} = 'ativo';
+csvData{rowCounter, 5} = 'reativo';
+csvData{rowCounter, 6} = 'ativo';
+csvData{rowCounter, 7} = 'reativo';
+rowCounter = rowCounter + 1;
+
 % Loop through each main folder
 for m = 1:length(mainFolders)
-    % Print main folder name in uppercase for consistency
-    fprintf('%s:\n', upper(mainFolders{m}));
+    % Add the main folder name as a header row in the CSV data
+    csvData{rowCounter, 1} = upper(mainFolders{m});
+    rowCounter = rowCounter + 1;
     
     % Loop through each decimal folder within the main folder
     for d = 1:length(decimalFolders)
-        % Initialize the line with the decimal folder followed by a separator
-        outputLine = sprintf('%s | ', decimalFolders{d});
+        % Initialize a row for the current decimal folder
+        csvRow = {decimalFolders{d}};
         
         % Loop through each strategy folder
         for s = 1:length(strategyFolders)
@@ -40,19 +63,20 @@ for m = 1:length(mainFolders)
                 warning('Could not load %s: %s', reativoFile, ME.message);
             end
             
-            % Append the formatted string for the current strategy folder to the output line
-            % Format: <strategy> : A = <ativo_rows> R = <reativo_rows>
-            outputLine = [outputLine, sprintf('%s : A = %d R = %d | ', strategyFolders{s}, rowsAtivo, rowsReativo)];
+            % Append the A and R values to the CSV row
+            csvRow{end+1} = rowsAtivo;
+            csvRow{end+1} = rowsReativo;
         end
         
-        % Remove the trailing " | " from the output line
-        if length(outputLine) >= 3
-            outputLine = outputLine(1:end-3);
-        end
-        
-        % Print the line for the current decimal folder
-        fprintf('%s\n', outputLine);
+        % Add the row to the CSV data
+        csvData(rowCounter, :) = csvRow;
+        rowCounter = rowCounter + 1;
     end
-    % Add a blank line for better readability between main folders
-    fprintf('\n');
+    
+    % Add an empty row for separation between main folders
+    csvData{rowCounter, 1} = '';
+    rowCounter = rowCounter + 1;
 end
+
+% Write the CSV data to a file
+writecell(csvData, 'output.csv');
