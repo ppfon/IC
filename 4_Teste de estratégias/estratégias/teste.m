@@ -9,7 +9,7 @@ mainStrategy = 'bpsc';
 unbalanceFactor = '0.3333';  
 
 % Available power references: 'q0p1500', 'q1500p0', 'q1000p1000'
-powerReference = 'q0p1500';  
+powerReference = 'q1500p0';  
 
 %% Parse the powerReference string to extract reactive and active references
 % The expected format is 'q<number1>p<number2>' where:
@@ -35,8 +35,8 @@ reativoPath = fullfile(baseFolder, mainStrategy, unbalanceFactor, powerReference
 
 %% Load data from the "ativo" branch
 % Load the base data
-le_base_ativo = load(fullfile(ativoPath, 'base.mat'), 'base');
-base_ativo = le_base_ativo.base;
+le_base_ativo = load(fullfile(ativoPath, 'stgy.mat'), 'stgy');
+base_ativo = le_base_ativo.stgy;
 
 % Load the strategy data
 le_stgy_ativo = load(fullfile(ativoPath, 'stgy.mat'), 'stgy');
@@ -48,8 +48,8 @@ amplitude_stgy_ativo = stgy_ativo(:,2);
 
 %% Load data from the "reativo" branch
 % Load the base data
-le_base_reativo = load(fullfile(reativoPath, 'base.mat'), 'base');
-base_reativo = le_base_reativo.base;
+le_base_reativo = load(fullfile(reativoPath, 'stgy.mat'), 'stgy');
+base_reativo = le_base_reativo.stgy;
 
 % Load the strategy data
 le_stgy_reativo = load(fullfile(reativoPath, 'stgy.mat'), 'stgy');
@@ -66,16 +66,16 @@ figure(1);
 
 % Plot for the active (ativo) branch
 subplot(1,2,1);
-[amp, fase, freq] = calcula_espectro(amplitude_base_ativo, periodo_amostragem, resultado_pu);
-plot(freq, amp, 'r');
+[amp_ativo_base, fase, freq] = calcula_espectro(amplitude_base_ativo, periodo_amostragem, resultado_pu);
+plot(freq, amp_ativo_base, 'r');
 title('Potência ativo');
 xlabel('Frequência [Hz]');
 ylabel('Amplitude [W]');
 xlim([0 480]);
 grid on;
 hold on;
-[amp, fase, freq] = calcula_espectro(amplitude_stgy_ativo, periodo_amostragem, resultado_pu);
-plot(freq, amp, 'b');
+[amp_ativo_stgy, fase, freq] = calcula_espectro(amplitude_stgy_ativo, periodo_amostragem, resultado_pu);
+plot(freq, amp_ativo_stgy, 'b');
 % Dynamic legend for active branch using the active power reference
 legend( sprintf('%s | P_{ref} = %s kW | Sem estratégia', upper(mainStrategy), activeRef), ...
         sprintf('%s | P_{ref} = %s kW | Com estratégia', upper(mainStrategy), activeRef) );
@@ -83,15 +83,15 @@ hold off;
 
 % Plot for the reactive (reativo) branch
 subplot(1,2,2);
-[amp, fase, freq] = calcula_espectro(amplitude_base_reativo, periodo_amostragem, resultado_pu);
-plot(freq, amp, 'r');
+[amp_reativo_base, fase, freq] = calcula_espectro(amplitude_base_reativo, periodo_amostragem, resultado_pu);
+plot(freq, amp_reativo_base, 'r');
 title('Potência reativa');
 xlabel('Frequência [Hz]');
 ylabel('Amplitude [VAr]');
 xlim([0 480]);
 grid on; hold on;
-[amp, fase, freq] = calcula_espectro(amplitude_stgy_reativo, periodo_amostragem, resultado_pu);
-plot(freq, amp, 'b');
+[amp_reativo_stgy, fase, freq] = calcula_espectro(amplitude_stgy_reativo, periodo_amostragem, resultado_pu);
+plot(freq, amp_reativo_stgy, 'b');
 % Dynamic legend for reactive branch using the reactive power reference
 legend( sprintf('%s | Q_{ref} = %s kVAr | Sem estratégia', upper(mainStrategy), reactiveRef), ...
         sprintf('%s | Q_{ref} = %s kVAr | Com estratégia', upper(mainStrategy), reactiveRef) );
@@ -126,3 +126,6 @@ grid on; hold on;
 plot(tempo_stgy_reativo, amplitude_stgy_reativo, 'b');
 legend('Sem estratégia', 'Com estratégia');
 hold off;
+
+fprintf('Ativo: %d \n', amp_ativo_stgy(1,1));
+fprintf('Reativo: %d \n ', amp_reativo_stgy(1,1));

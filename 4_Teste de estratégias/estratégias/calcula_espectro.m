@@ -5,7 +5,7 @@ function [amp_pu, fase, freq] = calcula_espectro(amp_sinal, periodo, pu)
     num_pontos = length(amp_sinal);
     
     % Cálculo da FFT e normalização
-    Y = abs(fft(amp_sinal, num_pontos))/num_pontos;
+    Y = fft(amp_sinal, num_pontos)/num_pontos;
     %Y = abs(Y)/num_pontos;
     
     % Apenas a primeira metade do espectro (simétrica para FFT real)
