@@ -3,13 +3,13 @@ clear; close all; clc;
 
 %% Define the user-specified parameters
 % Available main strategies: 'aarc', 'apoc', 'bpsc', 'pnsc', 'rpoc'
-mainStrategy = 'bpsc';  
+mainStrategy = 'apoc';  
 
 % Available unbalance factors: '0.1818', '0.3333', '0.5714'
 unbalanceFactor = '0.3333';  
 
 % Available power references: 'q0p1500', 'q1500p0', 'q1000p1000'
-powerReference = 'q1500p0';  
+powerReference = 'q1000p1000';  
 
 %% Parse the powerReference string to extract reactive and active references
 % The expected format is 'q<number1>p<number2>' where:
@@ -35,8 +35,8 @@ reativoPath = fullfile(baseFolder, mainStrategy, unbalanceFactor, powerReference
 
 %% Load data from the "ativo" branch
 % Load the base data
-le_base_ativo = load(fullfile(ativoPath, 'stgy.mat'), 'stgy');
-base_ativo = le_base_ativo.stgy;
+le_base_ativo = load(fullfile(ativoPath, 'base.mat'), 'base');
+base_ativo = le_base_ativo.base;
 
 % Load the strategy data
 le_stgy_ativo = load(fullfile(ativoPath, 'stgy.mat'), 'stgy');
@@ -48,7 +48,7 @@ amplitude_stgy_ativo = stgy_ativo(:,2);
 
 %% Load data from the "reativo" branch
 % Load the base data
-le_base_reativo = load(fullfile(reativoPath, 'stgy.mat'), 'stgy');
+le_base_reativo = load(fullfile(reativoPath, 'base.mat'), 'stgy');
 base_reativo = le_base_reativo.stgy;
 
 % Load the strategy data
@@ -103,28 +103,40 @@ tempo_stgy_ativo  = (0:length(amplitude_stgy_ativo)-1) / freq_amostragem;
 tempo_base_reativo = (0:length(amplitude_base_reativo)-1) / freq_amostragem;
 tempo_stgy_reativo = (0:length(amplitude_stgy_reativo)-1) / freq_amostragem;
 
-%% Plot the time domain waveform for active branch
 figure(2);
-plot(tempo_base_ativo, amplitude_base_ativo, 'r');
-titulo1 = sprintf('Potência ativa - %s - $P_{\\mathrm{ref}} = %s \\; \\mathrm{W}$', upper(mainStrategy), activeRef);
-title(titulo1, 'Interpreter', 'latex');
-xlabel('Tempo [s]');
-ylabel('Amplitude [W]');
+%% Plot the time domain waveform for active branch
+tiledlayout(1,2, 'TileSpacing','Compact','Padding','Compact');
+nexttile
+plot(tempo_base_ativo, amplitude_base_ativo, 'r', 'LineWidth', 1.5);
+titulo1 = sprintf('Active power', upper(mainStrategy), activeRef);
+title(titulo1, 'Interpreter', 'latex', 'FontSize', 24);
+xlabel('Time [s]');
+ylabel('W','Interpreter','latex', 'FontWeight','bold', 'FontSize', 24);
+
 grid on; hold on;
-plot(tempo_stgy_ativo, amplitude_stgy_ativo, 'b');
-legend('Sem estratégia', 'Com estratégia');
+plot(tempo_stgy_ativo, amplitude_stgy_ativo, 'b', 'LineWidth', 1.5); xlim([0 2/60]);
+legend('IARC', upper(mainStrategy)); ylim([500 1500]);
+h = gca;
+h.YAxis.FontSize = 24;
+h.XAxis.FontSize = 24;
+h.GridLineWidth = 3; yticks([500:100:1500]);
 hold off;
 
 %% Plot the time domain waveform for reactive branch
-figure(3);
-plot(tempo_base_reativo, amplitude_base_reativo, 'r');
-titulo2 = sprintf('Potência reativa - %s - $Q_{\\mathrm{ref}} = %s \\; \\mathrm{VAr}$', upper(mainStrategy), reactiveRef);
-title(titulo2, 'Interpreter', 'latex');
-xlabel('Tempo [s]');
-ylabel('Amplitude [VAr]');
+nexttile
+plot(tempo_base_reativo, amplitude_base_reativo, 'r', 'LineWidth', 1.5);
+titulo2 = sprintf('Reactive power', upper(mainStrategy), reactiveRef);
+title(titulo2, 'Interpreter', 'latex', 'FontSize', 24);
+xlabel('Time [s]');
+ylabel('VAr','Interpreter','latex', 'FontWeight','bold', 'FontSize', 24);
+ xlim([0 2/60]);
 grid on; hold on;
-plot(tempo_stgy_reativo, amplitude_stgy_reativo, 'b');
-legend('Sem estratégia', 'Com estratégia');
+plot(tempo_stgy_reativo, amplitude_stgy_reativo, 'b', 'LineWidth', 1.5);
+legend('IARC', upper(mainStrategy)); yticks([700:100:1800]);
+h = gca;
+h.YAxis.FontSize = 24;
+h.XAxis.FontSize = 24;
+h.GridLineWidth = 3;
 hold off;
 
 fprintf('Ativo: %d \n', amp_ativo_stgy(1,1));
