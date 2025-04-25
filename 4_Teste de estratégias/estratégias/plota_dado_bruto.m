@@ -1,8 +1,8 @@
 %clear all;
-data = readmatrix('Novos dados\apoc\0.3333\q1000p1000\pot_reativa.csv');
+data = readmatrix('Novos estranhos_apagar\aarc\0.3333\q1000p1000\ia.csv');
 %data = dlmread('Novos dados/apoc/0.3333/q1500p0/pot_ativa.csv', ';', 1, 0);
 
-base_inf = 36306; base_sup = 58037;
+base_inf = 0; base_sup = 499022;
 %base_inf = 39993; base_sup = 78781;
 %base_inf = 33277; base_sup = 69195;
 
