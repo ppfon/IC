@@ -1,0 +1,108 @@
+%% Parâmetros da rede e da carga
+Vrms = 220;        % Tensão de linha eficaz da rede
+%Vrms =  170;        % Tensão de linha eficaz da rede
+Vpico = Vrms*sqrt(0.666666666666667);
+fn = 60;
+wn = 2*pi*fn;
+
+Vdc = 500;  %% Dc-link voltage
+
+%% Temperatura inicial dos dispositivos
+Temp_inicial_IGBT = 1500;
+Temp_inicial_diodo = 1000;
+
+Temp_inicial_IGBT_inv = 800;
+Temp_inicial_diodo_inv = 800;
+
+%% parâmetros da simulação
+fsw = 9000;             				    %% frequência de chaveamento do conversor
+fsample = fsw;                      %utilizado nos parâmetros do controle(transformação e controle)
+Tsample = 1/fsample;
+fdsp = fsample*120;
+passo = 1/(fdsp); 				  	 %% incremento de simulação
+
+% REDE
+Scc = 200e6;
+X_R = 0.3;
+Vrms_f = Vrms/sqrt(3);
+theta = atan(X_R);
+Zmod = Vrms_f^2/(Scc/3);
+Rsource = 0.0005;
+Lsource = 0.05e-6;
+
+%% Parametros Filtro
+Lf = 1e-3;
+Cf = 25e-06;
+%Rd = 1.5;
+Lg = Lf;
+L = Lg+Lf
+Rf = 2*pi*fn*Lf/18.8982;
+Rg = 2*pi*fn*Lg/18.8982;
+Rd = 1.8;
+R = Rg+Rf;
+ESR_cap_lcl = 0.02;
+N_espiras = 82;
+Area = 987e-6;
+
+%% Controle ressonante
+Kin = 1000;%-2*pi*fc_ab*R*2;
+T=1/fsw;
+ro=exp(R*T/L);
+Kp_eq_13 = R*sqrt(2+2*ro^-2-(1+sqrt(5))*ro^-1)/((1-ro^-1)*sqrt(2));
+
+%% Parametros PLL
+Winit = 2*pi*fn;
+ksi_srf = 1/sqrt(2);       
+wn_srf = 30*2*pi;
+
+Kp_pll = 2*wn_srf*ksi_srf;
+Ki_pll = (wn_srf^2);
+
+%% Malha externa Vdc
+Cdc = 4.7e-3;         
+Kpouter = 0.191809282767769;         %%MOdelagem no arquivo .m
+Kiouter = 3.479035551384000;         %%MOdelagem no arquivo .m
+
+%% Malha reativo         
+Kiq = 12.5664;         %%MOdelagem no arquivo .m
+Kpq = -0.1629;         %%MOdelagem no arquivo .m
+
+%% Battery
+Nb_series  = 16;
+Nb_strings = 1;
+Rint = Nb_series*7.1e-3;   %%Resistência interna das baterias
+Soc_min = 50;    % SOC[%]
+Soc_max = 100;
+Vdco = 13.6*Nb_series;                        %% tensão inicial dc-link
+
+% Dc/dc Parameters
+Lb = 4e-3;                %Indutor do Boost
+Rb = 0.55;              %Resistência série do indutor
+N = 3;                 %Número de braços do interleaved
+N_espiras_cc = 403;
+Area_cc = 987e-6;       
+fswb = 9000;
+Tsb = 1/(fswb);
+
+%%Ganhos do controlador do dc/dc
+%% ganho controle de corrente do boost e buck
+Kc = Vdc/(Rb+N*Rint);
+Tm = Lb/(Rb+N*Rint);
+fc = fswb/20;
+Kpb = 2*pi*fc*Tm/Kc;        %%MOdelagem no arquivo .m
+Kib = 2*pi*fc/Kc;           %%MOdelagem no arquivo .m
+%%ganho controle de corrente do buck (Modo corrente constante)
+Kpibu = 2*pi*fc*Tm/Kc;      %%MOdelagem no arquivo .m
+Kiibu = 2*pi*fc/Kc;         %%MOdelagem no arquivo .m
+%% ganho controle de tensão do buck (Modo tensão constante)
+Ke = N*Rint;
+fc1 = 10;
+fc2 = fc1/20;
+Kpvbu = 2*pi*fc2/(2*pi*Ke*(fc1-fc2));      %%MOdelagem no arquivo .m
+Kivbu = 2*pi*fc1*(Kpvbu);      %%MOdelagem no arquivo .m
+%% ganho controle de potencia no modo de descarga
+fcp1 = fc/10;
+fcp2 = fcp1/10;
+Vbat_nom = 12*Nb_series;
+Kpp = 0;
+Kip = -119

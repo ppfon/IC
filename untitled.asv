@@ -1,0 +1,9 @@
+y_shunt_low_mag = 0.21/127; angle_y_shunt_low = acos(30/(0.21*127));
+[gc_low, bm_low] =  pol2cart(angle_y_shunt_low, y_shunt_low_mag);
+
+rc_low = 1/gc_low; xm_low = 1/(bm_low);
+a = 127/220;
+
+rc_high = a^2 * rc_low; xm_high = a^2 * xm_low;
+
+ze_high = 10.2/4.18; 
