@@ -1,15 +1,15 @@
 clear; close all; clc;
 
+%%% Parâmetros
 s = tf('s');
 Cdc = 3*(4.7e-3);
 fc = 0.5;
 wc = 2*pi*fc;
 MF = 60;
-%C�digo
 
 Tplanta = (2/(Cdc*s))
-%%Tplanta = (2/(Cdc*s));
 
+%%% Cálculo dos ganhos
 [Amp,PH] = bode(Tplanta,wc);
 Gain_PI = 1/Amp;
 Phase_PI = -PH - 180 + MF;
@@ -28,6 +28,7 @@ Ki2 = wc/(Amp*sqrt(1+(wc*kapa)^2));
 Gc2 = Kp2+Ki2/s;
 MA2 = Tplanta*Gc2;
 
+%%% Plot em malha aberta
 bode(MA)
 hold
 bode(MA2)
