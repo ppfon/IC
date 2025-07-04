@@ -1,0 +1,75 @@
+\doxysection{dc\+\_\+converter.\+c File Reference}
+\hypertarget{dc__converter_8c}{}\label{dc__converter_8c}\index{dc\_converter.c@{dc\_converter.c}}
+{\ttfamily \#include "{}dc\+\_\+converter.\+h"{}}\newline
+Include dependency graph for dc\+\_\+converter.\+c\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dc__converter_8c_a18f5bdd026f44246047dc4ab2fd69d8d}{N\+\_\+br}}~6
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dc__converter_8c_a4cfdc045e8f03d588b31cfa5b112386e}{update\+Counters}} (int \mbox{\hyperlink{Code__declaration__interleaved_8h_a8ede2e52ad70ac8928ce0b1b9705b0d7}{count}}\mbox{[}$\,$\mbox{]}, int \mbox{\hyperlink{Code__declaration__interleaved_8h_a3001d76e8836a130df845fc2a9db7ab2}{inc}}\mbox{[}$\,$\mbox{]}, int((/)/2))
+\item 
+void \mbox{\hyperlink{dc__converter_8c_a8143eecedcbb60d06b5268a35af70617}{initialize\+Phases}} (int \mbox{\hyperlink{Code__declaration__interleaved_8h_a8ede2e52ad70ac8928ce0b1b9705b0d7}{count}}\mbox{[}$\,$\mbox{]}, int \mbox{\hyperlink{Code__declaration__interleaved_8h_a3001d76e8836a130df845fc2a9db7ab2}{inc}}\mbox{[}$\,$\mbox{]}, int((/)/2))
+\item 
+void \mbox{\hyperlink{dc__converter_8c_afbab05437ba042065bddcddcc959f8c7}{plecs\+Output}} (double \texorpdfstring{$\ast$}{*}in, double \texorpdfstring{$\ast$}{*}out)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{dc__converter_8c_ad06983e7f6e71b233ea7ff3dee1952f2}{initialized}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{dc__converter_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{dc__converter_8c_a18f5bdd026f44246047dc4ab2fd69d8d}\index{dc\_converter.c@{dc\_converter.c}!N\_br@{N\_br}}
+\index{N\_br@{N\_br}!dc\_converter.c@{dc\_converter.c}}
+\doxysubsubsection{\texorpdfstring{N\_br}{N\_br}}
+{\footnotesize\ttfamily \label{dc__converter_8c_a18f5bdd026f44246047dc4ab2fd69d8d} 
+\#define N\+\_\+br~6}
+
+
+
+\label{doc-func-members}
+\Hypertarget{dc__converter_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{dc__converter_8c_a8143eecedcbb60d06b5268a35af70617}\index{dc\_converter.c@{dc\_converter.c}!initializePhases@{initializePhases}}
+\index{initializePhases@{initializePhases}!dc\_converter.c@{dc\_converter.c}}
+\doxysubsubsection{\texorpdfstring{initializePhases()}{initializePhases()}}
+{\footnotesize\ttfamily \label{dc__converter_8c_a8143eecedcbb60d06b5268a35af70617} 
+void initialize\+Phases (\begin{DoxyParamCaption}\item[{int}]{count}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{inc}{\mbox{[}$\,$\mbox{]}, }\item[{int((/)/2)}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{dc__converter_8c_afbab05437ba042065bddcddcc959f8c7}\index{dc\_converter.c@{dc\_converter.c}!plecsOutput@{plecsOutput}}
+\index{plecsOutput@{plecsOutput}!dc\_converter.c@{dc\_converter.c}}
+\doxysubsubsection{\texorpdfstring{plecsOutput()}{plecsOutput()}}
+{\footnotesize\ttfamily \label{dc__converter_8c_afbab05437ba042065bddcddcc959f8c7} 
+void plecs\+Output (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{in}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{out}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{dc__converter_8c_a4cfdc045e8f03d588b31cfa5b112386e}\index{dc\_converter.c@{dc\_converter.c}!updateCounters@{updateCounters}}
+\index{updateCounters@{updateCounters}!dc\_converter.c@{dc\_converter.c}}
+\doxysubsubsection{\texorpdfstring{updateCounters()}{updateCounters()}}
+{\footnotesize\ttfamily \label{dc__converter_8c_a4cfdc045e8f03d588b31cfa5b112386e} 
+void update\+Counters (\begin{DoxyParamCaption}\item[{int}]{count}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{inc}{\mbox{[}$\,$\mbox{]}, }\item[{int((/)/2)}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\label{doc-var-members}
+\Hypertarget{dc__converter_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{dc__converter_8c_ad06983e7f6e71b233ea7ff3dee1952f2}\index{dc\_converter.c@{dc\_converter.c}!initialized@{initialized}}
+\index{initialized@{initialized}!dc\_converter.c@{dc\_converter.c}}
+\doxysubsubsection{\texorpdfstring{initialized}{initialized}}
+{\footnotesize\ttfamily \label{dc__converter_8c_ad06983e7f6e71b233ea7ff3dee1952f2} 
+int initialized = 0\hspace{0.3cm}{\ttfamily [static]}}
+

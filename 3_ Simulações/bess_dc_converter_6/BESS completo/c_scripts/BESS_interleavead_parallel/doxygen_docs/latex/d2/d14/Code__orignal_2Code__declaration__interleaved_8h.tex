@@ -1,0 +1,566 @@
+\doxysection{Code\+\_\+orignal/\+Code\+\_\+declaration\+\_\+interleaved.h File Reference}
+\hypertarget{Code__orignal_2Code__declaration__interleaved_8h}{}\label{Code__orignal_2Code__declaration__interleaved_8h}\index{Code\_orignal/Code\_declaration\_interleaved.h@{Code\_orignal/Code\_declaration\_interleaved.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for Code\+\_\+declaration\+\_\+interleaved.\+h\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsPI}{s\+PI}}
+\item 
+struct \mbox{\hyperlink{structsRamp}{s\+Ramp}}
+\item 
+struct \mbox{\hyperlink{structsflag}{sflag}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a81cc975e16180eb68cbd145135a7c3ec}{Ibat}}~Input (0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a26cb366e8b1ecb51825c0f5b080e7313}{Ibat2}}~Input (1)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a00749c254abd6170ed0cd47a1dbdd5ac}{Ibat3}}~Input (2)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_affd56373d284d6816b9e4b8452f42865}{control\+\_\+enable}}~Input (3)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a351d33329ee1d52ef041912d7f885209}{Iref\+\_\+ch}}~Input (4)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ae7c4d27c9afa0e8339720189d4aac6bc}{Iref\+\_\+dis}}~Input (5)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a68639110eb1e479f2305b58ba3bd2681}{Vbat}}~Input (6)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a128421e148fcf85d77b1cdd15e3e7a5e}{Vdc}}~Input (7)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a97acb0c1eb7ac580f3bc3806708950c0}{Soc}}~Input (8)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a01de9e6a115c86e1c2b8747df2b28925}{reset}}~Input (9)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a2ee3d96d1a95507305e8d474447004fe}{fsw}}~Param\+Real\+Data(0,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ac271f2ecf44740ce9bc6f97396a74944}{Ts}}~Param\+Real\+Data(1,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a8f2a1576234e4b07dab5d521cb5015c2}{fdsp}}~Param\+Real\+Data(2,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_acd89a9eccb16e71adf40275ec8db88ff}{Kpbt}}~Param\+Real\+Data(3,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a2c1562b5d04f5b077a6bb2ffc7e2f928}{Kibt}}~Param\+Real\+Data(4,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a97cf0c2a6df805e02e880fcb479d320b}{Kpvbu}}~Param\+Real\+Data(5,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a31a18116cd781cf3cc38abbd0d957ea9}{Kivbu}}~Param\+Real\+Data(6,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ab06041be17d6e7155385868a9bf653fc}{Kpibu}}~Param\+Real\+Data(7,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_acec677f2c640e0617039ba816db7e5aa}{Kiibu}}~Param\+Real\+Data(8,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a9bad094d9f577d7bd82bc11b71ef2703}{Soc\+\_\+min}}~Param\+Real\+Data(9,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ae026ad7d146bc6b9106ebbac1b07a1a5}{Soc\+\_\+max}}~Param\+Real\+Data(10,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a87695cfd0dfe98038e4ac94b5b73ce28}{Nb\+\_\+series}}~Param\+Real\+Data(11,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a92412c2bf90f60bbe0e04ed2b080c1ed}{Nb\+\_\+strings}}~Param\+Real\+Data(12,0)
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a18f5bdd026f44246047dc4ab2fd69d8d}{N\+\_\+br}}~3
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a5fda2e88ceb5bbd2c7aa7a30da279f79}{PRD}}~(\mbox{\hyperlink{Code__declaration__decomposition_8h_a8f2a1576234e4b07dab5d521cb5015c2}{fdsp}}/\mbox{\hyperlink{Code__declaration__decomposition_8h_a2ee3d96d1a95507305e8d474447004fe}{fsw}})/2
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a2ca5b484878049a868b8a0672b87a9df}{PRD\+\_\+div2}}~\mbox{\hyperlink{Code__declaration__interleaved_8h_a5fda2e88ceb5bbd2c7aa7a30da279f79}{PRD}}/2
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a1daf785e3f68d293c7caa1c756d5cb74}{pi}}~3.\+141592653589793
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ade27c64aae7c859c93de9cc74dca238b}{wn}}~2\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{Code__declaration__inverter_8h_a1daf785e3f68d293c7caa1c756d5cb74}{pi}}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{Code__declaration__decomposition_8h_aa2d335428764070d2dc8b2eb440b19b1}{fn}}
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a0240ac851181b84ac374872dc5434ee4}{N}}~150
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a29fc836c7f74862a866e40e780856cc2}{PI\+\_\+default}}~\{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a2564434aeb7fcc2385c0c137f9462026}{IRamp\+\_\+default}}~\{0,0,0,0,0,0,(15),(-\/15)\}
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_aee96efff7fa5b186dea0c4e37a6d3a3e}{VRamp\+\_\+default}}~\{0,0,0,0,0,0,(500),(-\/500)\}
+\item 
+\#define \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a5dafe55ef001079f8769ce1b2f5c1b8d}{IFlag\+\_\+default}}~\{0,0,1\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a225c5710deab89566bd0fdb6308d623f}{Ramp}} (\mbox{\hyperlink{structsRamp}{s\+Ramp}} \texorpdfstring{$\ast$}{*}rmp, float sample)
+\item 
+void \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a7f302b2edf3a02b669719a7e7bf42cdf}{Pifunc}} (\mbox{\hyperlink{structsPI}{s\+PI}} \texorpdfstring{$\ast$}{*}reg, float T\+\_\+div2, float Kp, float Ki, float satup, float satdown)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_aec2f66b90c73d890ab553c70e2d04dc1}{Vboost}} = 14.\+4
+\item 
+float \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ac66dbf9a7ab32320154bdd33fb828c82}{Vfloat}} = 13.\+6
+\item 
+float \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ad8624c7323eaffdc82a875cc4cb2fdfa}{Vref}} = 0
+\item 
+\mbox{\hyperlink{structsPI}{s\+PI}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a50105595fdf26b5ee34781fbcdfa5d5a}{PIbt}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsPI}{s\+PI}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a960fc07e598261e31f3688386c2649cd}{PIbt2}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsPI}{s\+PI}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_afd2f1eaf3e579228d3502a4147288e18}{PIbt3}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsPI}{s\+PI}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a28369a6b190c0f035f51e95d67f35f3f}{PIbu}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsPI}{s\+PI}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a948dcc50460d333ed5bce0d5b594f879}{PIbu2}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsPI}{s\+PI}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a904938cae1cdc9c439e5075d3ca72aef}{PIbu3}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsPI}{s\+PI}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a6bdb7fb34bf6a5059a902d931b1ef8bd}{PIbuv}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+float \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a66885542252b7007c5ddbcb077a26c13}{sat\+\_\+up}} = 1
+\item 
+float \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a28fddb9366e846ecd6f9d3158e35dc8d}{sat\+\_\+down}} = -\/1
+\item 
+\mbox{\hyperlink{structsRamp}{s\+Ramp}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a5f7e1eae4ac28107761e7b792b1d0c63}{IRamp\+\_\+bt}} = \{0,0,0,0,0,0,(15),(-\/15)\}
+\item 
+\mbox{\hyperlink{structsRamp}{s\+Ramp}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ab1592aef2788c1bfca69610c1243f5f5}{IRamp2\+\_\+bt}} = \{0,0,0,0,0,0,(15),(-\/15)\}
+\item 
+\mbox{\hyperlink{structsRamp}{s\+Ramp}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_aef0434f280ca60a002ff5c274d0c3155}{IRamp3\+\_\+bt}} = \{0,0,0,0,0,0,(15),(-\/15)\}
+\item 
+\mbox{\hyperlink{structsRamp}{s\+Ramp}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ac7d41f5096acb86ca40ae0c143182f92}{VRamp}} = \{0,0,0,0,0,0,(500),(-\/500)\}
+\item 
+\mbox{\hyperlink{structsflag}{sflag}} \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a5a33421f4c173d14fa2fbd71557ff41c}{flag}} = \{0,0,1\}
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a4ceb1f088dd634f7f680f758aa1fda44}{count\+\_\+0}} = 61
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a0bbdfde19b585424e9f194ca428d6196}{count\+\_\+120}} = 19
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a3a61444211dca9397b53c118148ad023}{count\+\_\+240}} = 21
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a1d54246868af1edf2ecdd7604edb37b9}{inc}} = -\/1
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a6446f825bef977ceaff8b6beae8036d6}{inc\+\_\+120}} = 1
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a619a4a60968a98d684e25937f516261a}{inc\+\_\+240}} = -\/1
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a51e63fbf9ca14962fb1b068c222366cc}{CMPB}} = 0
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a221a8165d63062901375ab4827d32cfc}{S1}} = 0
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a1802954b3de8e84a689424e0379859a0}{S2}} = 0
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a48cb38f95678bb5fa772ec653a1ad84c}{S3}} = 0
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a6ebbafc06e3790354a4d085970119f47}{S4}} = 0
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_aba03da85820e03fe3262acda34fdcfc2}{S5}} = 0
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a69b022727805704f92c8cbe1aaec6e9f}{S6}} = 0
+\item 
+int \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a71237b18c216e02629593b1969cff245}{teste}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_affd56373d284d6816b9e4b8452f42865}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!control\_enable@{control\_enable}}
+\index{control\_enable@{control\_enable}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{control\_enable}{control\_enable}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_affd56373d284d6816b9e4b8452f42865} 
+\#define control\+\_\+enable~Input (3)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a8f2a1576234e4b07dab5d521cb5015c2}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!fdsp@{fdsp}}
+\index{fdsp@{fdsp}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{fdsp}{fdsp}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a8f2a1576234e4b07dab5d521cb5015c2} 
+\#define fdsp~Param\+Real\+Data(2,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a2ee3d96d1a95507305e8d474447004fe}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!fsw@{fsw}}
+\index{fsw@{fsw}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{fsw}{fsw}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a2ee3d96d1a95507305e8d474447004fe} 
+\#define fsw~Param\+Real\+Data(0,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a81cc975e16180eb68cbd145135a7c3ec}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Ibat@{Ibat}}
+\index{Ibat@{Ibat}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Ibat}{Ibat}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a81cc975e16180eb68cbd145135a7c3ec} 
+\#define Ibat~Input (0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a26cb366e8b1ecb51825c0f5b080e7313}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Ibat2@{Ibat2}}
+\index{Ibat2@{Ibat2}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Ibat2}{Ibat2}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a26cb366e8b1ecb51825c0f5b080e7313} 
+\#define Ibat2~Input (1)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a00749c254abd6170ed0cd47a1dbdd5ac}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Ibat3@{Ibat3}}
+\index{Ibat3@{Ibat3}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Ibat3}{Ibat3}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a00749c254abd6170ed0cd47a1dbdd5ac} 
+\#define Ibat3~Input (2)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a5dafe55ef001079f8769ce1b2f5c1b8d}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!IFlag\_default@{IFlag\_default}}
+\index{IFlag\_default@{IFlag\_default}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{IFlag\_default}{IFlag\_default}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a5dafe55ef001079f8769ce1b2f5c1b8d} 
+\#define IFlag\+\_\+default~\{0,0,1\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a2564434aeb7fcc2385c0c137f9462026}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!IRamp\_default@{IRamp\_default}}
+\index{IRamp\_default@{IRamp\_default}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{IRamp\_default}{IRamp\_default}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a2564434aeb7fcc2385c0c137f9462026} 
+\#define IRamp\+\_\+default~\{0,0,0,0,0,0,(15),(-\/15)\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a351d33329ee1d52ef041912d7f885209}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Iref\_ch@{Iref\_ch}}
+\index{Iref\_ch@{Iref\_ch}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Iref\_ch}{Iref\_ch}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a351d33329ee1d52ef041912d7f885209} 
+\#define Iref\+\_\+ch~Input (4)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_ae7c4d27c9afa0e8339720189d4aac6bc}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Iref\_dis@{Iref\_dis}}
+\index{Iref\_dis@{Iref\_dis}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Iref\_dis}{Iref\_dis}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_ae7c4d27c9afa0e8339720189d4aac6bc} 
+\#define Iref\+\_\+dis~Input (5)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a2c1562b5d04f5b077a6bb2ffc7e2f928}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Kibt@{Kibt}}
+\index{Kibt@{Kibt}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Kibt}{Kibt}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a2c1562b5d04f5b077a6bb2ffc7e2f928} 
+\#define Kibt~Param\+Real\+Data(4,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_acec677f2c640e0617039ba816db7e5aa}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Kiibu@{Kiibu}}
+\index{Kiibu@{Kiibu}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Kiibu}{Kiibu}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_acec677f2c640e0617039ba816db7e5aa} 
+\#define Kiibu~Param\+Real\+Data(8,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a31a18116cd781cf3cc38abbd0d957ea9}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Kivbu@{Kivbu}}
+\index{Kivbu@{Kivbu}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Kivbu}{Kivbu}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a31a18116cd781cf3cc38abbd0d957ea9} 
+\#define Kivbu~Param\+Real\+Data(6,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_acd89a9eccb16e71adf40275ec8db88ff}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Kpbt@{Kpbt}}
+\index{Kpbt@{Kpbt}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Kpbt}{Kpbt}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_acd89a9eccb16e71adf40275ec8db88ff} 
+\#define Kpbt~Param\+Real\+Data(3,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_ab06041be17d6e7155385868a9bf653fc}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Kpibu@{Kpibu}}
+\index{Kpibu@{Kpibu}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Kpibu}{Kpibu}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_ab06041be17d6e7155385868a9bf653fc} 
+\#define Kpibu~Param\+Real\+Data(7,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a97cf0c2a6df805e02e880fcb479d320b}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Kpvbu@{Kpvbu}}
+\index{Kpvbu@{Kpvbu}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Kpvbu}{Kpvbu}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a97cf0c2a6df805e02e880fcb479d320b} 
+\#define Kpvbu~Param\+Real\+Data(5,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a0240ac851181b84ac374872dc5434ee4}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!N@{N}}
+\index{N@{N}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a0240ac851181b84ac374872dc5434ee4} 
+\#define N~150}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a18f5bdd026f44246047dc4ab2fd69d8d}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!N\_br@{N\_br}}
+\index{N\_br@{N\_br}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{N\_br}{N\_br}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a18f5bdd026f44246047dc4ab2fd69d8d} 
+\#define N\+\_\+br~3}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a87695cfd0dfe98038e4ac94b5b73ce28}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Nb\_series@{Nb\_series}}
+\index{Nb\_series@{Nb\_series}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Nb\_series}{Nb\_series}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a87695cfd0dfe98038e4ac94b5b73ce28} 
+\#define Nb\+\_\+series~Param\+Real\+Data(11,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a92412c2bf90f60bbe0e04ed2b080c1ed}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Nb\_strings@{Nb\_strings}}
+\index{Nb\_strings@{Nb\_strings}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Nb\_strings}{Nb\_strings}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a92412c2bf90f60bbe0e04ed2b080c1ed} 
+\#define Nb\+\_\+strings~Param\+Real\+Data(12,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a1daf785e3f68d293c7caa1c756d5cb74}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!pi@{pi}}
+\index{pi@{pi}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{pi}{pi}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a1daf785e3f68d293c7caa1c756d5cb74} 
+\#define pi~3.\+141592653589793}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a29fc836c7f74862a866e40e780856cc2}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!PI\_default@{PI\_default}}
+\index{PI\_default@{PI\_default}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{PI\_default}{PI\_default}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a29fc836c7f74862a866e40e780856cc2} 
+\#define PI\+\_\+default~\{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a5fda2e88ceb5bbd2c7aa7a30da279f79}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!PRD@{PRD}}
+\index{PRD@{PRD}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{PRD}{PRD}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a5fda2e88ceb5bbd2c7aa7a30da279f79} 
+\#define PRD~(\mbox{\hyperlink{Code__declaration__decomposition_8h_a8f2a1576234e4b07dab5d521cb5015c2}{fdsp}}/\mbox{\hyperlink{Code__declaration__decomposition_8h_a2ee3d96d1a95507305e8d474447004fe}{fsw}})/2}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a2ca5b484878049a868b8a0672b87a9df}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!PRD\_div2@{PRD\_div2}}
+\index{PRD\_div2@{PRD\_div2}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{PRD\_div2}{PRD\_div2}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a2ca5b484878049a868b8a0672b87a9df} 
+\#define PRD\+\_\+div2~\mbox{\hyperlink{Code__declaration__interleaved_8h_a5fda2e88ceb5bbd2c7aa7a30da279f79}{PRD}}/2}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a01de9e6a115c86e1c2b8747df2b28925}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!reset@{reset}}
+\index{reset@{reset}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a01de9e6a115c86e1c2b8747df2b28925} 
+\#define reset~Input (9)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a97acb0c1eb7ac580f3bc3806708950c0}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Soc@{Soc}}
+\index{Soc@{Soc}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Soc}{Soc}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a97acb0c1eb7ac580f3bc3806708950c0} 
+\#define Soc~Input (8)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_ae026ad7d146bc6b9106ebbac1b07a1a5}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Soc\_max@{Soc\_max}}
+\index{Soc\_max@{Soc\_max}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Soc\_max}{Soc\_max}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_ae026ad7d146bc6b9106ebbac1b07a1a5} 
+\#define Soc\+\_\+max~Param\+Real\+Data(10,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a9bad094d9f577d7bd82bc11b71ef2703}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Soc\_min@{Soc\_min}}
+\index{Soc\_min@{Soc\_min}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Soc\_min}{Soc\_min}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a9bad094d9f577d7bd82bc11b71ef2703} 
+\#define Soc\+\_\+min~Param\+Real\+Data(9,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_ac271f2ecf44740ce9bc6f97396a74944}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Ts@{Ts}}
+\index{Ts@{Ts}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Ts}{Ts}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_ac271f2ecf44740ce9bc6f97396a74944} 
+\#define Ts~Param\+Real\+Data(1,0)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a68639110eb1e479f2305b58ba3bd2681}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Vbat@{Vbat}}
+\index{Vbat@{Vbat}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Vbat}{Vbat}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a68639110eb1e479f2305b58ba3bd2681} 
+\#define Vbat~Input (6)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a128421e148fcf85d77b1cdd15e3e7a5e}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Vdc@{Vdc}}
+\index{Vdc@{Vdc}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Vdc}{Vdc}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a128421e148fcf85d77b1cdd15e3e7a5e} 
+\#define Vdc~Input (7)}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_aee96efff7fa5b186dea0c4e37a6d3a3e}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!VRamp\_default@{VRamp\_default}}
+\index{VRamp\_default@{VRamp\_default}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{VRamp\_default}{VRamp\_default}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_aee96efff7fa5b186dea0c4e37a6d3a3e} 
+\#define VRamp\+\_\+default~\{0,0,0,0,0,0,(500),(-\/500)\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_ade27c64aae7c859c93de9cc74dca238b}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!wn@{wn}}
+\index{wn@{wn}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{wn}{wn}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_ade27c64aae7c859c93de9cc74dca238b} 
+\#define wn~2\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{Code__declaration__inverter_8h_a1daf785e3f68d293c7caa1c756d5cb74}{pi}}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{Code__declaration__decomposition_8h_aa2d335428764070d2dc8b2eb440b19b1}{fn}}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a7f302b2edf3a02b669719a7e7bf42cdf}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Pifunc@{Pifunc}}
+\index{Pifunc@{Pifunc}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Pifunc()}{Pifunc()}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a7f302b2edf3a02b669719a7e7bf42cdf} 
+void Pifunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsPI}{s\+PI}} \texorpdfstring{$\ast$}{*}}]{reg}{, }\item[{float}]{T\+\_\+div2}{, }\item[{float}]{Kp}{, }\item[{float}]{Ki}{, }\item[{float}]{satup}{, }\item[{float}]{satdown}{}\end{DoxyParamCaption})}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a225c5710deab89566bd0fdb6308d623f}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Ramp@{Ramp}}
+\index{Ramp@{Ramp}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Ramp()}{Ramp()}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a225c5710deab89566bd0fdb6308d623f} 
+void Ramp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsRamp}{s\+Ramp}} \texorpdfstring{$\ast$}{*}}]{rmp}{, }\item[{float}]{sample}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a51e63fbf9ca14962fb1b068c222366cc}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!CMPB@{CMPB}}
+\index{CMPB@{CMPB}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{CMPB}{CMPB}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a51e63fbf9ca14962fb1b068c222366cc} 
+int CMPB = 0}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a4ceb1f088dd634f7f680f758aa1fda44}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!count\_0@{count\_0}}
+\index{count\_0@{count\_0}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{count\_0}{count\_0}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a4ceb1f088dd634f7f680f758aa1fda44} 
+int count\+\_\+0 = 61}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a0bbdfde19b585424e9f194ca428d6196}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!count\_120@{count\_120}}
+\index{count\_120@{count\_120}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{count\_120}{count\_120}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a0bbdfde19b585424e9f194ca428d6196} 
+int count\+\_\+120 = 19}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a3a61444211dca9397b53c118148ad023}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!count\_240@{count\_240}}
+\index{count\_240@{count\_240}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{count\_240}{count\_240}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a3a61444211dca9397b53c118148ad023} 
+int count\+\_\+240 = 21}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a5a33421f4c173d14fa2fbd71557ff41c}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!flag@{flag}}
+\index{flag@{flag}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{flag}{flag}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a5a33421f4c173d14fa2fbd71557ff41c} 
+\mbox{\hyperlink{structsflag}{sflag}} flag = \{0,0,1\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a1d54246868af1edf2ecdd7604edb37b9}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!inc@{inc}}
+\index{inc@{inc}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{inc}{inc}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a1d54246868af1edf2ecdd7604edb37b9} 
+int inc = -\/1}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a6446f825bef977ceaff8b6beae8036d6}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!inc\_120@{inc\_120}}
+\index{inc\_120@{inc\_120}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{inc\_120}{inc\_120}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a6446f825bef977ceaff8b6beae8036d6} 
+int inc\+\_\+120 = 1}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a619a4a60968a98d684e25937f516261a}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!inc\_240@{inc\_240}}
+\index{inc\_240@{inc\_240}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{inc\_240}{inc\_240}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a619a4a60968a98d684e25937f516261a} 
+int inc\+\_\+240 = -\/1}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_ab1592aef2788c1bfca69610c1243f5f5}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!IRamp2\_bt@{IRamp2\_bt}}
+\index{IRamp2\_bt@{IRamp2\_bt}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{IRamp2\_bt}{IRamp2\_bt}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_ab1592aef2788c1bfca69610c1243f5f5} 
+\mbox{\hyperlink{structsRamp}{s\+Ramp}} IRamp2\+\_\+bt = \{0,0,0,0,0,0,(15),(-\/15)\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_aef0434f280ca60a002ff5c274d0c3155}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!IRamp3\_bt@{IRamp3\_bt}}
+\index{IRamp3\_bt@{IRamp3\_bt}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{IRamp3\_bt}{IRamp3\_bt}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_aef0434f280ca60a002ff5c274d0c3155} 
+\mbox{\hyperlink{structsRamp}{s\+Ramp}} IRamp3\+\_\+bt = \{0,0,0,0,0,0,(15),(-\/15)\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a5f7e1eae4ac28107761e7b792b1d0c63}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!IRamp\_bt@{IRamp\_bt}}
+\index{IRamp\_bt@{IRamp\_bt}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{IRamp\_bt}{IRamp\_bt}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a5f7e1eae4ac28107761e7b792b1d0c63} 
+\mbox{\hyperlink{structsRamp}{s\+Ramp}} IRamp\+\_\+bt = \{0,0,0,0,0,0,(15),(-\/15)\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a50105595fdf26b5ee34781fbcdfa5d5a}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!PIbt@{PIbt}}
+\index{PIbt@{PIbt}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{PIbt}{PIbt}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a50105595fdf26b5ee34781fbcdfa5d5a} 
+\mbox{\hyperlink{structsPI}{s\+PI}} PIbt = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a960fc07e598261e31f3688386c2649cd}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!PIbt2@{PIbt2}}
+\index{PIbt2@{PIbt2}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{PIbt2}{PIbt2}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a960fc07e598261e31f3688386c2649cd} 
+\mbox{\hyperlink{structsPI}{s\+PI}} PIbt2 = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_afd2f1eaf3e579228d3502a4147288e18}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!PIbt3@{PIbt3}}
+\index{PIbt3@{PIbt3}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{PIbt3}{PIbt3}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_afd2f1eaf3e579228d3502a4147288e18} 
+\mbox{\hyperlink{structsPI}{s\+PI}} PIbt3 = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a28369a6b190c0f035f51e95d67f35f3f}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!PIbu@{PIbu}}
+\index{PIbu@{PIbu}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{PIbu}{PIbu}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a28369a6b190c0f035f51e95d67f35f3f} 
+\mbox{\hyperlink{structsPI}{s\+PI}} PIbu = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a948dcc50460d333ed5bce0d5b594f879}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!PIbu2@{PIbu2}}
+\index{PIbu2@{PIbu2}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{PIbu2}{PIbu2}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a948dcc50460d333ed5bce0d5b594f879} 
+\mbox{\hyperlink{structsPI}{s\+PI}} PIbu2 = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a904938cae1cdc9c439e5075d3ca72aef}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!PIbu3@{PIbu3}}
+\index{PIbu3@{PIbu3}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{PIbu3}{PIbu3}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a904938cae1cdc9c439e5075d3ca72aef} 
+\mbox{\hyperlink{structsPI}{s\+PI}} PIbu3 = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a6bdb7fb34bf6a5059a902d931b1ef8bd}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!PIbuv@{PIbuv}}
+\index{PIbuv@{PIbuv}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{PIbuv}{PIbuv}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a6bdb7fb34bf6a5059a902d931b1ef8bd} 
+\mbox{\hyperlink{structsPI}{s\+PI}} PIbuv = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a221a8165d63062901375ab4827d32cfc}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!S1@{S1}}
+\index{S1@{S1}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{S1}{S1}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a221a8165d63062901375ab4827d32cfc} 
+int S1 = 0}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a1802954b3de8e84a689424e0379859a0}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!S2@{S2}}
+\index{S2@{S2}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{S2}{S2}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a1802954b3de8e84a689424e0379859a0} 
+int S2 = 0}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a48cb38f95678bb5fa772ec653a1ad84c}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!S3@{S3}}
+\index{S3@{S3}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{S3}{S3}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a48cb38f95678bb5fa772ec653a1ad84c} 
+int S3 = 0}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a6ebbafc06e3790354a4d085970119f47}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!S4@{S4}}
+\index{S4@{S4}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{S4}{S4}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a6ebbafc06e3790354a4d085970119f47} 
+int S4 = 0}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_aba03da85820e03fe3262acda34fdcfc2}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!S5@{S5}}
+\index{S5@{S5}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{S5}{S5}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_aba03da85820e03fe3262acda34fdcfc2} 
+int S5 = 0}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a69b022727805704f92c8cbe1aaec6e9f}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!S6@{S6}}
+\index{S6@{S6}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{S6}{S6}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a69b022727805704f92c8cbe1aaec6e9f} 
+int S6 = 0}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a28fddb9366e846ecd6f9d3158e35dc8d}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!sat\_down@{sat\_down}}
+\index{sat\_down@{sat\_down}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{sat\_down}{sat\_down}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a28fddb9366e846ecd6f9d3158e35dc8d} 
+float sat\+\_\+down = -\/1}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a66885542252b7007c5ddbcb077a26c13}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!sat\_up@{sat\_up}}
+\index{sat\_up@{sat\_up}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{sat\_up}{sat\_up}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a66885542252b7007c5ddbcb077a26c13} 
+float sat\+\_\+up = 1}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_a71237b18c216e02629593b1969cff245}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!teste@{teste}}
+\index{teste@{teste}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{teste}{teste}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_a71237b18c216e02629593b1969cff245} 
+int teste = 0}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_aec2f66b90c73d890ab553c70e2d04dc1}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Vboost@{Vboost}}
+\index{Vboost@{Vboost}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Vboost}{Vboost}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_aec2f66b90c73d890ab553c70e2d04dc1} 
+float Vboost = 14.\+4}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_ac66dbf9a7ab32320154bdd33fb828c82}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Vfloat@{Vfloat}}
+\index{Vfloat@{Vfloat}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Vfloat}{Vfloat}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_ac66dbf9a7ab32320154bdd33fb828c82} 
+float Vfloat = 13.\+6}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_ac7d41f5096acb86ca40ae0c143182f92}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!VRamp@{VRamp}}
+\index{VRamp@{VRamp}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{VRamp}{VRamp}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_ac7d41f5096acb86ca40ae0c143182f92} 
+\mbox{\hyperlink{structsRamp}{s\+Ramp}} VRamp = \{0,0,0,0,0,0,(500),(-\/500)\}}
+
+\Hypertarget{Code__orignal_2Code__declaration__interleaved_8h_ad8624c7323eaffdc82a875cc4cb2fdfa}\index{Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}!Vref@{Vref}}
+\index{Vref@{Vref}!Code\_declaration\_interleaved.h@{Code\_declaration\_interleaved.h}}
+\doxysubsubsection{\texorpdfstring{Vref}{Vref}}
+{\footnotesize\ttfamily \label{Code__orignal_2Code__declaration__interleaved_8h_ad8624c7323eaffdc82a875cc4cb2fdfa} 
+float Vref = 0}
+

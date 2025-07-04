@@ -1,0 +1,1068 @@
+\doxysection{Codigo\+\_\+\+Pre\+\_\+\+Bancada/\+Code\+\_\+declaration\+\_\+inverter.h File Reference}
+\hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h}{}\label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h}\index{Codigo\_Pre\_Bancada/Code\_declaration\_inverter.h@{Codigo\_Pre\_Bancada/Code\_declaration\_inverter.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for Code\+\_\+declaration\+\_\+inverter.\+h\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsPI}{s\+PI}}
+\item 
+struct \mbox{\hyperlink{structsPR}{s\+PR}}
+\item 
+struct \mbox{\hyperlink{structsSOGI}{s\+SOGI}}
+\item 
+struct \mbox{\hyperlink{structsABC}{s\+ABC}}
+\item 
+struct \mbox{\hyperlink{structsAlfaBeta}{s\+Alfa\+Beta}}
+\item 
+struct \mbox{\hyperlink{structsDQ}{s\+DQ}}
+\item 
+struct \mbox{\hyperlink{structspll}{spll}}
+\item 
+struct \mbox{\hyperlink{structsMAV}{s\+MAV}}
+\item 
+struct \mbox{\hyperlink{structsFilter2nd}{s\+Filter2nd}}
+\item 
+struct \mbox{\hyperlink{structsRamp}{s\+Ramp}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a128421e148fcf85d77b1cdd15e3e7a5e}{Vdc}}~Input (0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3fa9ebd81ab34e89491597d1fc1526c8}{Vabcp\+\_\+a}}~Input (1)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5143f655a2fd7b0e34fca1fb4d329446}{Vabcp\+\_\+b}}~Input (2)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a15ab18b92ccb92393c78926a4ffd04fb}{Vabcp\+\_\+c}}~Input (3)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_abb749cd19c5b564a032a667551277410}{Vabcn\+\_\+a}}~Input (4)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aec7ff464800f44cae1f0423769cc63a4}{Vabcn\+\_\+b}}~Input (5)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a04cc3a9ffbba154eb8421c75d60db2f0}{Vabcn\+\_\+c}}~Input (6)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af2d62859db7c754b416687234a0d8fa5}{teta1}}~Input (7)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a25d86d1b2959ac64153c33c7a85a83c3}{teta2}}~Input (8)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3a2082d54044275c9687a5b9783be8a3}{v\+\_\+alpha}}~Input (9)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae6887289bb60ad09f0de24503aea6aa0}{v\+\_\+beta}}~Input (10)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_acf2a6c5ad0f553834554a8a393887dcf}{Pcc\+\_\+a}}~Input (11)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae803d8f8d8fc082b56c3c328dd98fb4d}{Pcc\+\_\+b}}~Input (12)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab4115632a26ad19ca8f1d51d2b246b1e}{Pcc\+\_\+c}}~Input (13)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_acb777719a383c586444aebe701b3eaa9}{Isa}}~Input (14)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a84838d00d4817e6a4fa7b2953bc43c41}{Isb}}~Input (15)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a4b14dff47d35e98d62c00f7127902613}{Isc}}~Input (16)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_affd56373d284d6816b9e4b8452f42865}{control\+\_\+enable}}~Input (17)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a576fc3945a63b91eafc7ebfb99b8ceb1}{Vdc\+\_\+ref}}~Input (18)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7b5a6b65c62d8b30d99aeb65d152bb2b}{Qref}}~Input (19)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a2ee3d96d1a95507305e8d474447004fe}{fsw}}~Param\+Real\+Data(0,0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ac271f2ecf44740ce9bc6f97396a74944}{Ts}}~Param\+Real\+Data(1,0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a8f2a1576234e4b07dab5d521cb5015c2}{fdsp}}~Param\+Real\+Data(2,0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a160ad2135ed02c23fa577046e4731f37}{Kpouter}}~Param\+Real\+Data(3,0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1d7105642a659cc5e67098fb1515e5d0}{Kiouter}}~Param\+Real\+Data(4,0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a068a9d16812a71372156794b11014fdf}{Kp\+\_\+pll}}~Param\+Real\+Data(5,0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ac3244fead3359ddfebe5886c568a3bdd}{Ki\+\_\+pll}}~Param\+Real\+Data(6,0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_afb2950900f0ca7bbab7f3556d7a6040a}{Kp\+\_\+res}}~Param\+Real\+Data(7,0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad9e4bc13a45f6ae4385d6dcafec90653}{Ki\+\_\+res}}~Param\+Real\+Data(8,0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5721505f44b237027a83dff2f02dc7e0}{Kiq}}~Param\+Real\+Data(9,0)
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5fda2e88ceb5bbd2c7aa7a30da279f79}{PRD}}~(\mbox{\hyperlink{Code__declaration__decomposition_8h_a8f2a1576234e4b07dab5d521cb5015c2}{fdsp}}/\mbox{\hyperlink{Code__declaration__decomposition_8h_a2ee3d96d1a95507305e8d474447004fe}{fsw}})/2
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a2ca5b484878049a868b8a0672b87a9df}{PRD\+\_\+div2}}~\mbox{\hyperlink{Code__declaration__interleaved_8h_a5fda2e88ceb5bbd2c7aa7a30da279f79}{PRD}}/2
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1daf785e3f68d293c7caa1c756d5cb74}{pi}}~3.\+141592653589793
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ade27c64aae7c859c93de9cc74dca238b}{wn}}~2\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{Code__declaration__inverter_8h_a1daf785e3f68d293c7caa1c756d5cb74}{pi}}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{Code__declaration__decomposition_8h_aa2d335428764070d2dc8b2eb440b19b1}{fn}}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0240ac851181b84ac374872dc5434ee4}{N}}~150
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a29fc836c7f74862a866e40e780856cc2}{PI\+\_\+default}}~\{0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3272dc9520f9779f0fe6d770b350e1b0}{PR\+\_\+default}}~\{0,0,0,0,0,0,0,0,0,0.\+00005553931071838902,-\/0.\+00005553931071838902,-\/1.\+99824566019771654446,0.\+99999999999999977796\}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a73e456525b86f6397db1727eba80226e}{SOGI\+\_\+default}}~\{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.\+414213562373095,60\}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5fb7f27688c1dbdacfec53c8128c70a7}{ABC\+\_\+default}}~\{0,0,0\}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a20143a4901d70af458cce4b91b45506c}{Alfa\+Beta\+\_\+default}}~\{0,0\}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6b4123178ee8848e452701e6304b4fa4}{dq\+\_\+default}}~\{0,0\}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae0df2e22558fcd65d935822a9212ca2f}{pll\+\_\+default}}~\{0,0,0,0,0,376.\+99111843077\}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a43b5dbba58b0a01f220ea8a9ab75fa6d}{MAV\+\_\+default}}~\{\{0\},0,0,0,0\}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a9144f4474ea40977e025aba199fd40d1}{FILTER2\+ND\+\_\+\+DEFAULTS}}~\{0,0,0,0,0,0,0.\+00042585082119787660,0.\+00085170164239575319,0.\+00042585082119787660,-\/1.\+94079521500497276243,0.\+94249861828976422284\}
+\item 
+\#define \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a8868904350fa274c9574f1f3a85fe3a8}{PRamp\+\_\+default}}~\{0,0,0,0,0,0,(6e3),(-\/6e3)\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0a4113516df78ec9f533e7a16a0a54d9}{Second\+\_\+order\+\_\+filter}} (\mbox{\hyperlink{structsFilter2nd}{s\+Filter2nd}} \texorpdfstring{$\ast$}{*}filt)
+\item 
+void \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7f302b2edf3a02b669719a7e7bf42cdf}{Pifunc}} (\mbox{\hyperlink{structsPI}{s\+PI}} \texorpdfstring{$\ast$}{*}reg, float T\+\_\+div2, float Kp, float Ki, float satup, float satdown)
+\item 
+void \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3724bc39a5c0ba4e61d245c2e34a64df}{SOGI\+\_\+func}} (\mbox{\hyperlink{structsSOGI}{s\+SOGI}} \texorpdfstring{$\ast$}{*}sog, float Tsample)
+\item 
+void \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a225c5710deab89566bd0fdb6308d623f}{Ramp}} (\mbox{\hyperlink{structsRamp}{s\+Ramp}} \texorpdfstring{$\ast$}{*}rmp, float sample)
+\item 
+void \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ade9453eb9985ff25a45cc4fd555b762c}{Resfunc}} (\mbox{\hyperlink{structsPR}{s\+PR}} \texorpdfstring{$\ast$}{*}point\+\_\+res, float Kp, float Kr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aa35667eed34f61ee7387f80ddbe295c1}{VabcP}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0c6d33f8a37f4d46c0f65b4498b6dd64}{VabcN}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab4b790b44c6753fb745c4ca172f7be1b}{Vsoma}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7394f6ed25138b786fa50d369ae26eeb}{Vcorr}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0e7b4a294177890e57460c447d92757a}{Pref}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af5f16d968531e18acd5425afd3efa1e1}{divide}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af74d51cca091807da55d472117f01484}{divide\+\_\+1}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_abe95b51e60c6599c8391826c55ab1823}{prod\+\_\+1x}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a9a5ca926417752c1ca58a48beedca2a1}{prod\+\_\+1y}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aaeb04e11f5c4facf80294337c920a5e3}{prod\+\_\+1z}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ace6cd14b7d16a85c0b3026c26210d3b3}{Pcc\+\_\+a\+\_\+trans}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a045dd9cb6d1838f2761ad64a2b30e7c5}{Pcc\+\_\+b\+\_\+trans}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1d62b6592a0bc7754e28546d9e177465}{Pcc\+\_\+c\+\_\+trans}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af2b26302be5e5f2c81238ffc7612082e}{Vabcp\+\_\+a\+\_\+trans}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a15e816e129a69cd25140b193570c9468}{Vabcp\+\_\+b\+\_\+trans}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5ab7c1d101ac1f98c95b3e3ac88bdc73}{Vabcp\+\_\+c\+\_\+trans}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7d92259f1ff43cedf1f91c5b5d3a0f81}{Vabcn\+\_\+a\+\_\+trans}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1e1f4dd68742c3fbe39cb4e2ca21966a}{Vabcn\+\_\+b\+\_\+trans}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a063475cea398ed2142c0feb69896b440}{Vabcn\+\_\+c\+\_\+trans}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a945c8847cedb6023ba3c4c0313d07721}{prod\+\_\+2x}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3e3b50dc9dc5974e3cee879cfeb326fb}{prod\+\_\+2y}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a73f07e9fb7969cc85b741cad8d41fe17}{prod\+\_\+2z}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae1b41b53aba457414974802ad2ecdaf0}{soma\+\_\+prod\+\_\+x}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae017abf8126f276cbb96fd0e364ddd8a}{soma\+\_\+prod\+\_\+y}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a4975a5c83f3cd565b06f4f841ac2b0a9}{soma\+\_\+prod\+\_\+z}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0f4ab96972d975fb16cd9e5a68dc46da}{I\+\_\+a}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab46f5b9ef1b5547db98bd8a252ff8a6a}{I\+\_\+b}}
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae3a19388b5c04a1ad8eef230b4cf3bb9}{psat}} = 10e3
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aaad70601083bbe8b63623eaac8c8ab78}{Ir}} = 30
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a40fc9bec28614f3e8e00c4373467cde1}{Pc}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a136bdd34a556215b224cfd006e50ce17}{Qc}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab93196b64ccf127dd90215295196414c}{Q\+\_\+control}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6a64b61f9bc0a329873707396dd8affd}{P\+\_\+control}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a806e698b8ab3b129ee40f3697d0e8da2}{Vpwm\+\_\+norm\+\_\+a}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_adc9a4b3fca78b57085c64b45c5c7ca37}{Vpwm\+\_\+norm\+\_\+b}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a39fa934784ebfe4f64d8dac842a99c60}{Vpwm\+\_\+norm\+\_\+c}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab0591f0882f895e9d83496c77e5c5055}{vmin}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad4cade1e0f82dfac0b5f997a5c482c93}{vmax}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aa14bb1771053c7e00052fe8252edff69}{vsa\+\_\+svpwm}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5e6704890d59e1722f7cbba4317f7628}{vsb\+\_\+svpwm}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab594bd88c15b56f8ec13412c70bd73ee}{vsc\+\_\+svpwm}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af993b187bdaa909f88ada8c33a5d7cd3}{dutya}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a754e9baf6087b802d14d0c657ab4ad50}{dutyb}} = 0
+\item 
+float \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0e19bc61b177623d5f21048086b2040f}{dutyc}} = 0
+\item 
+int \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_acfa7cadde7cc956613a6a92f4f160d05}{counti}} = 0
+\item 
+int \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a636006055670dae178d924dd5ec417c3}{count\+\_\+pll}} = 0
+\item 
+\mbox{\hyperlink{structsPI}{s\+PI}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab2d2e19451c3217dda7d86da11c65d3c}{PIvdc}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsPI}{s\+PI}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1ccee0407b1cf1af83a543d1e30b941b}{PIpll}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsPI}{s\+PI}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae7b9345f2b5d72b0dfd0201a7a1eaee8}{PIq}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsPR}{s\+PR}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a637f5c47d9d89ca3af878f75b49913a1}{PRf\+\_\+alfa}} = \{0,0,0,0,0,0,0,0,0,0.\+00005553931071838902,-\/0.\+00005553931071838902,-\/1.\+99824566019771654446,0.\+99999999999999977796\}
+\item 
+\mbox{\hyperlink{structsPR}{s\+PR}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_adfa99e41d91cfdd4f51a25ac8803ac99}{PRf\+\_\+beta}} = \{0,0,0,0,0,0,0,0,0,0.\+00005553931071838902,-\/0.\+00005553931071838902,-\/1.\+99824566019771654446,0.\+99999999999999977796\}
+\item 
+\mbox{\hyperlink{structsSOGI}{s\+SOGI}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad70f1507507b257a72fb19938577bc1f}{SOGI1}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.\+414213562373095,60\}
+\item 
+\mbox{\hyperlink{structsSOGI}{s\+SOGI}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a491468ea8b89262e8ed66a950424c663}{SOGI2}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.\+414213562373095,60\}
+\item 
+\mbox{\hyperlink{structsABC}{s\+ABC}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a46a62b22de928356d8aea40c66d63501}{Vabc}} = \{0,0,0\}
+\item 
+\mbox{\hyperlink{structsABC}{s\+ABC}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aac69d35f85423065739f7879cd724cb2}{Vpwm\+\_\+abc}} = \{0,0,0\}
+\item 
+\mbox{\hyperlink{structsABC}{s\+ABC}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a51949741fd5e956301d55957e6bd9fdc}{Isabc}} = \{0,0,0\}
+\item 
+\mbox{\hyperlink{structsAlfaBeta}{s\+Alfa\+Beta}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aaf43a28964c01b335ab08225212b22b0}{Valfabeta}} = \{0,0\}
+\item 
+\mbox{\hyperlink{structsAlfaBeta}{s\+Alfa\+Beta}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a9cff94cdc52a5515a98ffd1ad2ab3895}{Vpwm\+\_\+alfabeta}} = \{0,0\}
+\item 
+\mbox{\hyperlink{structsAlfaBeta}{s\+Alfa\+Beta}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a23555d0da34183f30af4948e7e0c7e0e}{Ialfabeta}} = \{0,0\}
+\item 
+\mbox{\hyperlink{structsAlfaBeta}{s\+Alfa\+Beta}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a504b75b914bcbc5cfab544a2ce247c5d}{Isalfabeta}} = \{0,0\}
+\item 
+\mbox{\hyperlink{structsDQ}{s\+DQ}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5a901494be0a33ef00e9ba6277a4a9ec}{Vdq}} = \{0,0\}
+\item 
+\mbox{\hyperlink{structspll}{spll}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6cd8ffd22f9eb9e80341fc7f21a323a6}{PLL}} = \{0,0,0,0,0,376.\+99111843077\}
+\item 
+\mbox{\hyperlink{structsMAV}{s\+MAV}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a74aa2bcbf6f062446510b87d9ae60ad5}{MAVP}} = \{\{0\},0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsMAV}{s\+MAV}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aa5972b8cb2e160968a382315989b6326}{MAVQ}} = \{\{0\},0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsMAV}{s\+MAV}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3783445b907da98a175bac61d02f9414}{MAVV}} = \{\{0\},0,0,0,0\}
+\item 
+\mbox{\hyperlink{structsFilter2nd}{s\+Filter2nd}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a274de66c10005e89ea1d37bf258ed795}{fil2n\+Vdc}} = \{0,0,0,0,0,0,0.\+00042585082119787660,0.\+00085170164239575319,0.\+00042585082119787660,-\/1.\+94079521500497276243,0.\+94249861828976422284\}
+\item 
+\mbox{\hyperlink{structsFilter2nd}{s\+Filter2nd}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a2abf1e4d080fe05bfcaaebfedee7db5f}{fil2n\+Pot}} = \{0,0,0,0,0,0,0.\+00042585082119787660,0.\+00085170164239575319,0.\+00042585082119787660,-\/1.\+94079521500497276243,0.\+94249861828976422284\}
+\item 
+\mbox{\hyperlink{structsFilter2nd}{s\+Filter2nd}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_abceb137a38787a272ffaeca4d8ccea4f}{fil2nQ}} = \{0,0,0,0,0,0,0.\+00042585082119787660,0.\+00085170164239575319,0.\+00042585082119787660,-\/1.\+94079521500497276243,0.\+94249861828976422284\}
+\item 
+\mbox{\hyperlink{structsRamp}{s\+Ramp}} \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1caf3b69b0223ab894fe72edab76bc96}{QRamp}} = \{0,0,0,0,0,0,(6e3),(-\/6e3)\}
+\item 
+int \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} = 0
+\item 
+int \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1d54246868af1edf2ecdd7604edb37b9}{inc}} = 1
+\item 
+int \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a221a8165d63062901375ab4827d32cfc}{S1}} = 0
+\item 
+int \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1802954b3de8e84a689424e0379859a0}{S2}} = 0
+\item 
+int \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a48cb38f95678bb5fa772ec653a1ad84c}{S3}} = 0
+\item 
+int \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6ebbafc06e3790354a4d085970119f47}{S4}} = 0
+\item 
+int \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aba03da85820e03fe3262acda34fdcfc2}{S5}} = 0
+\item 
+int \mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a69b022727805704f92c8cbe1aaec6e9f}{S6}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5fb7f27688c1dbdacfec53c8128c70a7}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!ABC\_default@{ABC\_default}}
+\index{ABC\_default@{ABC\_default}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{ABC\_default}{ABC\_default}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5fb7f27688c1dbdacfec53c8128c70a7} 
+\#define ABC\+\_\+default~\{0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a20143a4901d70af458cce4b91b45506c}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!AlfaBeta\_default@{AlfaBeta\_default}}
+\index{AlfaBeta\_default@{AlfaBeta\_default}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{AlfaBeta\_default}{AlfaBeta\_default}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a20143a4901d70af458cce4b91b45506c} 
+\#define Alfa\+Beta\+\_\+default~\{0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_affd56373d284d6816b9e4b8452f42865}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!control\_enable@{control\_enable}}
+\index{control\_enable@{control\_enable}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{control\_enable}{control\_enable}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_affd56373d284d6816b9e4b8452f42865} 
+\#define control\+\_\+enable~Input (17)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6b4123178ee8848e452701e6304b4fa4}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!dq\_default@{dq\_default}}
+\index{dq\_default@{dq\_default}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{dq\_default}{dq\_default}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6b4123178ee8848e452701e6304b4fa4} 
+\#define dq\+\_\+default~\{0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a8f2a1576234e4b07dab5d521cb5015c2}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!fdsp@{fdsp}}
+\index{fdsp@{fdsp}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{fdsp}{fdsp}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a8f2a1576234e4b07dab5d521cb5015c2} 
+\#define fdsp~Param\+Real\+Data(2,0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a9144f4474ea40977e025aba199fd40d1}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!FILTER2ND\_DEFAULTS@{FILTER2ND\_DEFAULTS}}
+\index{FILTER2ND\_DEFAULTS@{FILTER2ND\_DEFAULTS}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{FILTER2ND\_DEFAULTS}{FILTER2ND\_DEFAULTS}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a9144f4474ea40977e025aba199fd40d1} 
+\#define FILTER2\+ND\+\_\+\+DEFAULTS~\{0,0,0,0,0,0,0.\+00042585082119787660,0.\+00085170164239575319,0.\+00042585082119787660,-\/1.\+94079521500497276243,0.\+94249861828976422284\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a2ee3d96d1a95507305e8d474447004fe}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!fsw@{fsw}}
+\index{fsw@{fsw}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{fsw}{fsw}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a2ee3d96d1a95507305e8d474447004fe} 
+\#define fsw~Param\+Real\+Data(0,0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_acb777719a383c586444aebe701b3eaa9}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Isa@{Isa}}
+\index{Isa@{Isa}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Isa}{Isa}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_acb777719a383c586444aebe701b3eaa9} 
+\#define Isa~Input (14)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a84838d00d4817e6a4fa7b2953bc43c41}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Isb@{Isb}}
+\index{Isb@{Isb}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Isb}{Isb}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a84838d00d4817e6a4fa7b2953bc43c41} 
+\#define Isb~Input (15)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a4b14dff47d35e98d62c00f7127902613}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Isc@{Isc}}
+\index{Isc@{Isc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Isc}{Isc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a4b14dff47d35e98d62c00f7127902613} 
+\#define Isc~Input (16)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ac3244fead3359ddfebe5886c568a3bdd}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Ki\_pll@{Ki\_pll}}
+\index{Ki\_pll@{Ki\_pll}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Ki\_pll}{Ki\_pll}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ac3244fead3359ddfebe5886c568a3bdd} 
+\#define Ki\+\_\+pll~Param\+Real\+Data(6,0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad9e4bc13a45f6ae4385d6dcafec90653}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Ki\_res@{Ki\_res}}
+\index{Ki\_res@{Ki\_res}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Ki\_res}{Ki\_res}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad9e4bc13a45f6ae4385d6dcafec90653} 
+\#define Ki\+\_\+res~Param\+Real\+Data(8,0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1d7105642a659cc5e67098fb1515e5d0}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Kiouter@{Kiouter}}
+\index{Kiouter@{Kiouter}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Kiouter}{Kiouter}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1d7105642a659cc5e67098fb1515e5d0} 
+\#define Kiouter~Param\+Real\+Data(4,0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5721505f44b237027a83dff2f02dc7e0}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Kiq@{Kiq}}
+\index{Kiq@{Kiq}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Kiq}{Kiq}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5721505f44b237027a83dff2f02dc7e0} 
+\#define Kiq~Param\+Real\+Data(9,0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a068a9d16812a71372156794b11014fdf}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Kp\_pll@{Kp\_pll}}
+\index{Kp\_pll@{Kp\_pll}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Kp\_pll}{Kp\_pll}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a068a9d16812a71372156794b11014fdf} 
+\#define Kp\+\_\+pll~Param\+Real\+Data(5,0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_afb2950900f0ca7bbab7f3556d7a6040a}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Kp\_res@{Kp\_res}}
+\index{Kp\_res@{Kp\_res}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Kp\_res}{Kp\_res}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_afb2950900f0ca7bbab7f3556d7a6040a} 
+\#define Kp\+\_\+res~Param\+Real\+Data(7,0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a160ad2135ed02c23fa577046e4731f37}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Kpouter@{Kpouter}}
+\index{Kpouter@{Kpouter}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Kpouter}{Kpouter}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a160ad2135ed02c23fa577046e4731f37} 
+\#define Kpouter~Param\+Real\+Data(3,0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a43b5dbba58b0a01f220ea8a9ab75fa6d}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!MAV\_default@{MAV\_default}}
+\index{MAV\_default@{MAV\_default}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{MAV\_default}{MAV\_default}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a43b5dbba58b0a01f220ea8a9ab75fa6d} 
+\#define MAV\+\_\+default~\{\{0\},0,0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0240ac851181b84ac374872dc5434ee4}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!N@{N}}
+\index{N@{N}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0240ac851181b84ac374872dc5434ee4} 
+\#define N~150}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_acf2a6c5ad0f553834554a8a393887dcf}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Pcc\_a@{Pcc\_a}}
+\index{Pcc\_a@{Pcc\_a}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Pcc\_a}{Pcc\_a}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_acf2a6c5ad0f553834554a8a393887dcf} 
+\#define Pcc\+\_\+a~Input (11)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae803d8f8d8fc082b56c3c328dd98fb4d}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Pcc\_b@{Pcc\_b}}
+\index{Pcc\_b@{Pcc\_b}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Pcc\_b}{Pcc\_b}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae803d8f8d8fc082b56c3c328dd98fb4d} 
+\#define Pcc\+\_\+b~Input (12)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab4115632a26ad19ca8f1d51d2b246b1e}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Pcc\_c@{Pcc\_c}}
+\index{Pcc\_c@{Pcc\_c}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Pcc\_c}{Pcc\_c}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab4115632a26ad19ca8f1d51d2b246b1e} 
+\#define Pcc\+\_\+c~Input (13)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1daf785e3f68d293c7caa1c756d5cb74}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!pi@{pi}}
+\index{pi@{pi}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{pi}{pi}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1daf785e3f68d293c7caa1c756d5cb74} 
+\#define pi~3.\+141592653589793}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a29fc836c7f74862a866e40e780856cc2}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PI\_default@{PI\_default}}
+\index{PI\_default@{PI\_default}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PI\_default}{PI\_default}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a29fc836c7f74862a866e40e780856cc2} 
+\#define PI\+\_\+default~\{0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae0df2e22558fcd65d935822a9212ca2f}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!pll\_default@{pll\_default}}
+\index{pll\_default@{pll\_default}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{pll\_default}{pll\_default}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae0df2e22558fcd65d935822a9212ca2f} 
+\#define pll\+\_\+default~\{0,0,0,0,0,376.\+99111843077\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3272dc9520f9779f0fe6d770b350e1b0}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PR\_default@{PR\_default}}
+\index{PR\_default@{PR\_default}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PR\_default}{PR\_default}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3272dc9520f9779f0fe6d770b350e1b0} 
+\#define PR\+\_\+default~\{0,0,0,0,0,0,0,0,0,0.\+00005553931071838902,-\/0.\+00005553931071838902,-\/1.\+99824566019771654446,0.\+99999999999999977796\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a8868904350fa274c9574f1f3a85fe3a8}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PRamp\_default@{PRamp\_default}}
+\index{PRamp\_default@{PRamp\_default}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PRamp\_default}{PRamp\_default}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a8868904350fa274c9574f1f3a85fe3a8} 
+\#define PRamp\+\_\+default~\{0,0,0,0,0,0,(6e3),(-\/6e3)\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5fda2e88ceb5bbd2c7aa7a30da279f79}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PRD@{PRD}}
+\index{PRD@{PRD}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PRD}{PRD}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5fda2e88ceb5bbd2c7aa7a30da279f79} 
+\#define PRD~(\mbox{\hyperlink{Code__declaration__decomposition_8h_a8f2a1576234e4b07dab5d521cb5015c2}{fdsp}}/\mbox{\hyperlink{Code__declaration__decomposition_8h_a2ee3d96d1a95507305e8d474447004fe}{fsw}})/2}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a2ca5b484878049a868b8a0672b87a9df}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PRD\_div2@{PRD\_div2}}
+\index{PRD\_div2@{PRD\_div2}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PRD\_div2}{PRD\_div2}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a2ca5b484878049a868b8a0672b87a9df} 
+\#define PRD\+\_\+div2~\mbox{\hyperlink{Code__declaration__interleaved_8h_a5fda2e88ceb5bbd2c7aa7a30da279f79}{PRD}}/2}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7b5a6b65c62d8b30d99aeb65d152bb2b}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Qref@{Qref}}
+\index{Qref@{Qref}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Qref}{Qref}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7b5a6b65c62d8b30d99aeb65d152bb2b} 
+\#define Qref~Input (19)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a73e456525b86f6397db1727eba80226e}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!SOGI\_default@{SOGI\_default}}
+\index{SOGI\_default@{SOGI\_default}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{SOGI\_default}{SOGI\_default}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a73e456525b86f6397db1727eba80226e} 
+\#define SOGI\+\_\+default~\{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.\+414213562373095,60\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af2d62859db7c754b416687234a0d8fa5}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!teta1@{teta1}}
+\index{teta1@{teta1}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{teta1}{teta1}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af2d62859db7c754b416687234a0d8fa5} 
+\#define teta1~Input (7)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a25d86d1b2959ac64153c33c7a85a83c3}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!teta2@{teta2}}
+\index{teta2@{teta2}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{teta2}{teta2}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a25d86d1b2959ac64153c33c7a85a83c3} 
+\#define teta2~Input (8)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ac271f2ecf44740ce9bc6f97396a74944}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Ts@{Ts}}
+\index{Ts@{Ts}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Ts}{Ts}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ac271f2ecf44740ce9bc6f97396a74944} 
+\#define Ts~Param\+Real\+Data(1,0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3a2082d54044275c9687a5b9783be8a3}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!v\_alpha@{v\_alpha}}
+\index{v\_alpha@{v\_alpha}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{v\_alpha}{v\_alpha}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3a2082d54044275c9687a5b9783be8a3} 
+\#define v\+\_\+alpha~Input (9)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae6887289bb60ad09f0de24503aea6aa0}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!v\_beta@{v\_beta}}
+\index{v\_beta@{v\_beta}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{v\_beta}{v\_beta}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae6887289bb60ad09f0de24503aea6aa0} 
+\#define v\+\_\+beta~Input (10)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_abb749cd19c5b564a032a667551277410}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcn\_a@{Vabcn\_a}}
+\index{Vabcn\_a@{Vabcn\_a}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcn\_a}{Vabcn\_a}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_abb749cd19c5b564a032a667551277410} 
+\#define Vabcn\+\_\+a~Input (4)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aec7ff464800f44cae1f0423769cc63a4}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcn\_b@{Vabcn\_b}}
+\index{Vabcn\_b@{Vabcn\_b}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcn\_b}{Vabcn\_b}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aec7ff464800f44cae1f0423769cc63a4} 
+\#define Vabcn\+\_\+b~Input (5)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a04cc3a9ffbba154eb8421c75d60db2f0}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcn\_c@{Vabcn\_c}}
+\index{Vabcn\_c@{Vabcn\_c}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcn\_c}{Vabcn\_c}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a04cc3a9ffbba154eb8421c75d60db2f0} 
+\#define Vabcn\+\_\+c~Input (6)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3fa9ebd81ab34e89491597d1fc1526c8}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcp\_a@{Vabcp\_a}}
+\index{Vabcp\_a@{Vabcp\_a}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcp\_a}{Vabcp\_a}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3fa9ebd81ab34e89491597d1fc1526c8} 
+\#define Vabcp\+\_\+a~Input (1)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5143f655a2fd7b0e34fca1fb4d329446}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcp\_b@{Vabcp\_b}}
+\index{Vabcp\_b@{Vabcp\_b}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcp\_b}{Vabcp\_b}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5143f655a2fd7b0e34fca1fb4d329446} 
+\#define Vabcp\+\_\+b~Input (2)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a15ab18b92ccb92393c78926a4ffd04fb}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcp\_c@{Vabcp\_c}}
+\index{Vabcp\_c@{Vabcp\_c}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcp\_c}{Vabcp\_c}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a15ab18b92ccb92393c78926a4ffd04fb} 
+\#define Vabcp\+\_\+c~Input (3)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a128421e148fcf85d77b1cdd15e3e7a5e}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vdc@{Vdc}}
+\index{Vdc@{Vdc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vdc}{Vdc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a128421e148fcf85d77b1cdd15e3e7a5e} 
+\#define Vdc~Input (0)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a576fc3945a63b91eafc7ebfb99b8ceb1}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vdc\_ref@{Vdc\_ref}}
+\index{Vdc\_ref@{Vdc\_ref}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vdc\_ref}{Vdc\_ref}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a576fc3945a63b91eafc7ebfb99b8ceb1} 
+\#define Vdc\+\_\+ref~Input (18)}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ade27c64aae7c859c93de9cc74dca238b}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!wn@{wn}}
+\index{wn@{wn}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{wn}{wn}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ade27c64aae7c859c93de9cc74dca238b} 
+\#define wn~2\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{Code__declaration__inverter_8h_a1daf785e3f68d293c7caa1c756d5cb74}{pi}}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{Code__declaration__decomposition_8h_aa2d335428764070d2dc8b2eb440b19b1}{fn}}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7f302b2edf3a02b669719a7e7bf42cdf}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Pifunc@{Pifunc}}
+\index{Pifunc@{Pifunc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Pifunc()}{Pifunc()}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7f302b2edf3a02b669719a7e7bf42cdf} 
+void Pifunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsPI}{s\+PI}} \texorpdfstring{$\ast$}{*}}]{reg}{, }\item[{float}]{T\+\_\+div2}{, }\item[{float}]{Kp}{, }\item[{float}]{Ki}{, }\item[{float}]{satup}{, }\item[{float}]{satdown}{}\end{DoxyParamCaption})}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a225c5710deab89566bd0fdb6308d623f}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Ramp@{Ramp}}
+\index{Ramp@{Ramp}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Ramp()}{Ramp()}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a225c5710deab89566bd0fdb6308d623f} 
+void Ramp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsRamp}{s\+Ramp}} \texorpdfstring{$\ast$}{*}}]{rmp}{, }\item[{float}]{sample}{}\end{DoxyParamCaption})}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ade9453eb9985ff25a45cc4fd555b762c}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Resfunc@{Resfunc}}
+\index{Resfunc@{Resfunc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Resfunc()}{Resfunc()}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ade9453eb9985ff25a45cc4fd555b762c} 
+void Resfunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsPR}{s\+PR}} \texorpdfstring{$\ast$}{*}}]{point\+\_\+res}{, }\item[{float}]{Kp}{, }\item[{float}]{Kr}{}\end{DoxyParamCaption})}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0a4113516df78ec9f533e7a16a0a54d9}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Second\_order\_filter@{Second\_order\_filter}}
+\index{Second\_order\_filter@{Second\_order\_filter}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Second\_order\_filter()}{Second\_order\_filter()}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0a4113516df78ec9f533e7a16a0a54d9} 
+void Second\+\_\+order\+\_\+filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsFilter2nd}{s\+Filter2nd}} \texorpdfstring{$\ast$}{*}}]{filt}{}\end{DoxyParamCaption})}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3724bc39a5c0ba4e61d245c2e34a64df}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!SOGI\_func@{SOGI\_func}}
+\index{SOGI\_func@{SOGI\_func}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{SOGI\_func()}{SOGI\_func()}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3724bc39a5c0ba4e61d245c2e34a64df} 
+void SOGI\+\_\+func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsSOGI}{s\+SOGI}} \texorpdfstring{$\ast$}{*}}]{sog}{, }\item[{float}]{Tsample}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad43c3812e6d13e0518d9f8b8f463ffcf}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!count@{count}}
+\index{count@{count}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad43c3812e6d13e0518d9f8b8f463ffcf} 
+int count = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a636006055670dae178d924dd5ec417c3}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!count\_pll@{count\_pll}}
+\index{count\_pll@{count\_pll}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{count\_pll}{count\_pll}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a636006055670dae178d924dd5ec417c3} 
+int count\+\_\+pll = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_acfa7cadde7cc956613a6a92f4f160d05}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!counti@{counti}}
+\index{counti@{counti}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{counti}{counti}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_acfa7cadde7cc956613a6a92f4f160d05} 
+int counti = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af5f16d968531e18acd5425afd3efa1e1}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!divide@{divide}}
+\index{divide@{divide}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{divide}{divide}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af5f16d968531e18acd5425afd3efa1e1} 
+float divide}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af74d51cca091807da55d472117f01484}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!divide\_1@{divide\_1}}
+\index{divide\_1@{divide\_1}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{divide\_1}{divide\_1}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af74d51cca091807da55d472117f01484} 
+float divide\+\_\+1}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af993b187bdaa909f88ada8c33a5d7cd3}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!dutya@{dutya}}
+\index{dutya@{dutya}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{dutya}{dutya}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af993b187bdaa909f88ada8c33a5d7cd3} 
+float dutya = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a754e9baf6087b802d14d0c657ab4ad50}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!dutyb@{dutyb}}
+\index{dutyb@{dutyb}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{dutyb}{dutyb}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a754e9baf6087b802d14d0c657ab4ad50} 
+float dutyb = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0e19bc61b177623d5f21048086b2040f}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!dutyc@{dutyc}}
+\index{dutyc@{dutyc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{dutyc}{dutyc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0e19bc61b177623d5f21048086b2040f} 
+float dutyc = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a2abf1e4d080fe05bfcaaebfedee7db5f}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!fil2nPot@{fil2nPot}}
+\index{fil2nPot@{fil2nPot}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{fil2nPot}{fil2nPot}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a2abf1e4d080fe05bfcaaebfedee7db5f} 
+\mbox{\hyperlink{structsFilter2nd}{s\+Filter2nd}} fil2n\+Pot = \{0,0,0,0,0,0,0.\+00042585082119787660,0.\+00085170164239575319,0.\+00042585082119787660,-\/1.\+94079521500497276243,0.\+94249861828976422284\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_abceb137a38787a272ffaeca4d8ccea4f}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!fil2nQ@{fil2nQ}}
+\index{fil2nQ@{fil2nQ}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{fil2nQ}{fil2nQ}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_abceb137a38787a272ffaeca4d8ccea4f} 
+\mbox{\hyperlink{structsFilter2nd}{s\+Filter2nd}} fil2nQ = \{0,0,0,0,0,0,0.\+00042585082119787660,0.\+00085170164239575319,0.\+00042585082119787660,-\/1.\+94079521500497276243,0.\+94249861828976422284\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a274de66c10005e89ea1d37bf258ed795}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!fil2nVdc@{fil2nVdc}}
+\index{fil2nVdc@{fil2nVdc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{fil2nVdc}{fil2nVdc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a274de66c10005e89ea1d37bf258ed795} 
+\mbox{\hyperlink{structsFilter2nd}{s\+Filter2nd}} fil2n\+Vdc = \{0,0,0,0,0,0,0.\+00042585082119787660,0.\+00085170164239575319,0.\+00042585082119787660,-\/1.\+94079521500497276243,0.\+94249861828976422284\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0f4ab96972d975fb16cd9e5a68dc46da}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!I\_a@{I\_a}}
+\index{I\_a@{I\_a}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{I\_a}{I\_a}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0f4ab96972d975fb16cd9e5a68dc46da} 
+float I\+\_\+a}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab46f5b9ef1b5547db98bd8a252ff8a6a}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!I\_b@{I\_b}}
+\index{I\_b@{I\_b}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{I\_b}{I\_b}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab46f5b9ef1b5547db98bd8a252ff8a6a} 
+float I\+\_\+b}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a23555d0da34183f30af4948e7e0c7e0e}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Ialfabeta@{Ialfabeta}}
+\index{Ialfabeta@{Ialfabeta}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Ialfabeta}{Ialfabeta}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a23555d0da34183f30af4948e7e0c7e0e} 
+\mbox{\hyperlink{structsAlfaBeta}{s\+Alfa\+Beta}} Ialfabeta = \{0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1d54246868af1edf2ecdd7604edb37b9}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!inc@{inc}}
+\index{inc@{inc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{inc}{inc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1d54246868af1edf2ecdd7604edb37b9} 
+int inc = 1}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aaad70601083bbe8b63623eaac8c8ab78}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Ir@{Ir}}
+\index{Ir@{Ir}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Ir}{Ir}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aaad70601083bbe8b63623eaac8c8ab78} 
+float Ir = 30}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a51949741fd5e956301d55957e6bd9fdc}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Isabc@{Isabc}}
+\index{Isabc@{Isabc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Isabc}{Isabc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a51949741fd5e956301d55957e6bd9fdc} 
+\mbox{\hyperlink{structsABC}{s\+ABC}} Isabc = \{0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a504b75b914bcbc5cfab544a2ce247c5d}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Isalfabeta@{Isalfabeta}}
+\index{Isalfabeta@{Isalfabeta}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Isalfabeta}{Isalfabeta}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a504b75b914bcbc5cfab544a2ce247c5d} 
+\mbox{\hyperlink{structsAlfaBeta}{s\+Alfa\+Beta}} Isalfabeta = \{0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a74aa2bcbf6f062446510b87d9ae60ad5}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!MAVP@{MAVP}}
+\index{MAVP@{MAVP}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{MAVP}{MAVP}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a74aa2bcbf6f062446510b87d9ae60ad5} 
+\mbox{\hyperlink{structsMAV}{s\+MAV}} MAVP = \{\{0\},0,0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aa5972b8cb2e160968a382315989b6326}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!MAVQ@{MAVQ}}
+\index{MAVQ@{MAVQ}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{MAVQ}{MAVQ}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aa5972b8cb2e160968a382315989b6326} 
+\mbox{\hyperlink{structsMAV}{s\+MAV}} MAVQ = \{\{0\},0,0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3783445b907da98a175bac61d02f9414}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!MAVV@{MAVV}}
+\index{MAVV@{MAVV}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{MAVV}{MAVV}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3783445b907da98a175bac61d02f9414} 
+\mbox{\hyperlink{structsMAV}{s\+MAV}} MAVV = \{\{0\},0,0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6a64b61f9bc0a329873707396dd8affd}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!P\_control@{P\_control}}
+\index{P\_control@{P\_control}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{P\_control}{P\_control}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6a64b61f9bc0a329873707396dd8affd} 
+float P\+\_\+control = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a40fc9bec28614f3e8e00c4373467cde1}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Pc@{Pc}}
+\index{Pc@{Pc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Pc}{Pc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a40fc9bec28614f3e8e00c4373467cde1} 
+float Pc = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ace6cd14b7d16a85c0b3026c26210d3b3}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Pcc\_a\_trans@{Pcc\_a\_trans}}
+\index{Pcc\_a\_trans@{Pcc\_a\_trans}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Pcc\_a\_trans}{Pcc\_a\_trans}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ace6cd14b7d16a85c0b3026c26210d3b3} 
+float Pcc\+\_\+a\+\_\+trans}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a045dd9cb6d1838f2761ad64a2b30e7c5}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Pcc\_b\_trans@{Pcc\_b\_trans}}
+\index{Pcc\_b\_trans@{Pcc\_b\_trans}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Pcc\_b\_trans}{Pcc\_b\_trans}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a045dd9cb6d1838f2761ad64a2b30e7c5} 
+float Pcc\+\_\+b\+\_\+trans}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1d62b6592a0bc7754e28546d9e177465}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Pcc\_c\_trans@{Pcc\_c\_trans}}
+\index{Pcc\_c\_trans@{Pcc\_c\_trans}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Pcc\_c\_trans}{Pcc\_c\_trans}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1d62b6592a0bc7754e28546d9e177465} 
+float Pcc\+\_\+c\+\_\+trans}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1ccee0407b1cf1af83a543d1e30b941b}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PIpll@{PIpll}}
+\index{PIpll@{PIpll}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PIpll}{PIpll}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1ccee0407b1cf1af83a543d1e30b941b} 
+\mbox{\hyperlink{structsPI}{s\+PI}} PIpll = \{0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae7b9345f2b5d72b0dfd0201a7a1eaee8}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PIq@{PIq}}
+\index{PIq@{PIq}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PIq}{PIq}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae7b9345f2b5d72b0dfd0201a7a1eaee8} 
+\mbox{\hyperlink{structsPI}{s\+PI}} PIq = \{0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab2d2e19451c3217dda7d86da11c65d3c}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PIvdc@{PIvdc}}
+\index{PIvdc@{PIvdc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PIvdc}{PIvdc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab2d2e19451c3217dda7d86da11c65d3c} 
+\mbox{\hyperlink{structsPI}{s\+PI}} PIvdc = \{0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6cd8ffd22f9eb9e80341fc7f21a323a6}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PLL@{PLL}}
+\index{PLL@{PLL}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PLL}{PLL}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6cd8ffd22f9eb9e80341fc7f21a323a6} 
+\mbox{\hyperlink{structspll}{spll}} PLL = \{0,0,0,0,0,376.\+99111843077\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0e7b4a294177890e57460c447d92757a}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Pref@{Pref}}
+\index{Pref@{Pref}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Pref}{Pref}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0e7b4a294177890e57460c447d92757a} 
+float Pref}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a637f5c47d9d89ca3af878f75b49913a1}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PRf\_alfa@{PRf\_alfa}}
+\index{PRf\_alfa@{PRf\_alfa}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PRf\_alfa}{PRf\_alfa}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a637f5c47d9d89ca3af878f75b49913a1} 
+\mbox{\hyperlink{structsPR}{s\+PR}} PRf\+\_\+alfa = \{0,0,0,0,0,0,0,0,0,0.\+00005553931071838902,-\/0.\+00005553931071838902,-\/1.\+99824566019771654446,0.\+99999999999999977796\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_adfa99e41d91cfdd4f51a25ac8803ac99}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!PRf\_beta@{PRf\_beta}}
+\index{PRf\_beta@{PRf\_beta}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{PRf\_beta}{PRf\_beta}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_adfa99e41d91cfdd4f51a25ac8803ac99} 
+\mbox{\hyperlink{structsPR}{s\+PR}} PRf\+\_\+beta = \{0,0,0,0,0,0,0,0,0,0.\+00005553931071838902,-\/0.\+00005553931071838902,-\/1.\+99824566019771654446,0.\+99999999999999977796\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_abe95b51e60c6599c8391826c55ab1823}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!prod\_1x@{prod\_1x}}
+\index{prod\_1x@{prod\_1x}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{prod\_1x}{prod\_1x}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_abe95b51e60c6599c8391826c55ab1823} 
+float prod\+\_\+1x}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a9a5ca926417752c1ca58a48beedca2a1}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!prod\_1y@{prod\_1y}}
+\index{prod\_1y@{prod\_1y}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{prod\_1y}{prod\_1y}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a9a5ca926417752c1ca58a48beedca2a1} 
+float prod\+\_\+1y}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aaeb04e11f5c4facf80294337c920a5e3}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!prod\_1z@{prod\_1z}}
+\index{prod\_1z@{prod\_1z}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{prod\_1z}{prod\_1z}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aaeb04e11f5c4facf80294337c920a5e3} 
+float prod\+\_\+1z}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a945c8847cedb6023ba3c4c0313d07721}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!prod\_2x@{prod\_2x}}
+\index{prod\_2x@{prod\_2x}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{prod\_2x}{prod\_2x}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a945c8847cedb6023ba3c4c0313d07721} 
+float prod\+\_\+2x}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3e3b50dc9dc5974e3cee879cfeb326fb}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!prod\_2y@{prod\_2y}}
+\index{prod\_2y@{prod\_2y}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{prod\_2y}{prod\_2y}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a3e3b50dc9dc5974e3cee879cfeb326fb} 
+float prod\+\_\+2y}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a73f07e9fb7969cc85b741cad8d41fe17}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!prod\_2z@{prod\_2z}}
+\index{prod\_2z@{prod\_2z}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{prod\_2z}{prod\_2z}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a73f07e9fb7969cc85b741cad8d41fe17} 
+float prod\+\_\+2z}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae3a19388b5c04a1ad8eef230b4cf3bb9}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!psat@{psat}}
+\index{psat@{psat}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{psat}{psat}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae3a19388b5c04a1ad8eef230b4cf3bb9} 
+float psat = 10e3}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab93196b64ccf127dd90215295196414c}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Q\_control@{Q\_control}}
+\index{Q\_control@{Q\_control}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Q\_control}{Q\_control}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab93196b64ccf127dd90215295196414c} 
+float Q\+\_\+control = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a136bdd34a556215b224cfd006e50ce17}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Qc@{Qc}}
+\index{Qc@{Qc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Qc}{Qc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a136bdd34a556215b224cfd006e50ce17} 
+float Qc = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1caf3b69b0223ab894fe72edab76bc96}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!QRamp@{QRamp}}
+\index{QRamp@{QRamp}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{QRamp}{QRamp}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1caf3b69b0223ab894fe72edab76bc96} 
+\mbox{\hyperlink{structsRamp}{s\+Ramp}} QRamp = \{0,0,0,0,0,0,(6e3),(-\/6e3)\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a221a8165d63062901375ab4827d32cfc}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!S1@{S1}}
+\index{S1@{S1}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{S1}{S1}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a221a8165d63062901375ab4827d32cfc} 
+int S1 = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1802954b3de8e84a689424e0379859a0}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!S2@{S2}}
+\index{S2@{S2}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{S2}{S2}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1802954b3de8e84a689424e0379859a0} 
+int S2 = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a48cb38f95678bb5fa772ec653a1ad84c}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!S3@{S3}}
+\index{S3@{S3}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{S3}{S3}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a48cb38f95678bb5fa772ec653a1ad84c} 
+int S3 = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6ebbafc06e3790354a4d085970119f47}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!S4@{S4}}
+\index{S4@{S4}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{S4}{S4}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a6ebbafc06e3790354a4d085970119f47} 
+int S4 = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aba03da85820e03fe3262acda34fdcfc2}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!S5@{S5}}
+\index{S5@{S5}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{S5}{S5}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aba03da85820e03fe3262acda34fdcfc2} 
+int S5 = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a69b022727805704f92c8cbe1aaec6e9f}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!S6@{S6}}
+\index{S6@{S6}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{S6}{S6}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a69b022727805704f92c8cbe1aaec6e9f} 
+int S6 = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad70f1507507b257a72fb19938577bc1f}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!SOGI1@{SOGI1}}
+\index{SOGI1@{SOGI1}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{SOGI1}{SOGI1}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad70f1507507b257a72fb19938577bc1f} 
+\mbox{\hyperlink{structsSOGI}{s\+SOGI}} SOGI1 = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.\+414213562373095,60\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a491468ea8b89262e8ed66a950424c663}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!SOGI2@{SOGI2}}
+\index{SOGI2@{SOGI2}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{SOGI2}{SOGI2}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a491468ea8b89262e8ed66a950424c663} 
+\mbox{\hyperlink{structsSOGI}{s\+SOGI}} SOGI2 = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.\+414213562373095,60\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae1b41b53aba457414974802ad2ecdaf0}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!soma\_prod\_x@{soma\_prod\_x}}
+\index{soma\_prod\_x@{soma\_prod\_x}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{soma\_prod\_x}{soma\_prod\_x}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae1b41b53aba457414974802ad2ecdaf0} 
+float soma\+\_\+prod\+\_\+x}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae017abf8126f276cbb96fd0e364ddd8a}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!soma\_prod\_y@{soma\_prod\_y}}
+\index{soma\_prod\_y@{soma\_prod\_y}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{soma\_prod\_y}{soma\_prod\_y}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ae017abf8126f276cbb96fd0e364ddd8a} 
+float soma\+\_\+prod\+\_\+y}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a4975a5c83f3cd565b06f4f841ac2b0a9}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!soma\_prod\_z@{soma\_prod\_z}}
+\index{soma\_prod\_z@{soma\_prod\_z}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{soma\_prod\_z}{soma\_prod\_z}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a4975a5c83f3cd565b06f4f841ac2b0a9} 
+float soma\+\_\+prod\+\_\+z}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a46a62b22de928356d8aea40c66d63501}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabc@{Vabc}}
+\index{Vabc@{Vabc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabc}{Vabc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a46a62b22de928356d8aea40c66d63501} 
+\mbox{\hyperlink{structsABC}{s\+ABC}} Vabc = \{0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0c6d33f8a37f4d46c0f65b4498b6dd64}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!VabcN@{VabcN}}
+\index{VabcN@{VabcN}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{VabcN}{VabcN}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a0c6d33f8a37f4d46c0f65b4498b6dd64} 
+float VabcN}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7d92259f1ff43cedf1f91c5b5d3a0f81}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcn\_a\_trans@{Vabcn\_a\_trans}}
+\index{Vabcn\_a\_trans@{Vabcn\_a\_trans}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcn\_a\_trans}{Vabcn\_a\_trans}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7d92259f1ff43cedf1f91c5b5d3a0f81} 
+float Vabcn\+\_\+a\+\_\+trans}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1e1f4dd68742c3fbe39cb4e2ca21966a}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcn\_b\_trans@{Vabcn\_b\_trans}}
+\index{Vabcn\_b\_trans@{Vabcn\_b\_trans}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcn\_b\_trans}{Vabcn\_b\_trans}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a1e1f4dd68742c3fbe39cb4e2ca21966a} 
+float Vabcn\+\_\+b\+\_\+trans}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a063475cea398ed2142c0feb69896b440}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcn\_c\_trans@{Vabcn\_c\_trans}}
+\index{Vabcn\_c\_trans@{Vabcn\_c\_trans}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcn\_c\_trans}{Vabcn\_c\_trans}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a063475cea398ed2142c0feb69896b440} 
+float Vabcn\+\_\+c\+\_\+trans}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aa35667eed34f61ee7387f80ddbe295c1}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!VabcP@{VabcP}}
+\index{VabcP@{VabcP}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{VabcP}{VabcP}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aa35667eed34f61ee7387f80ddbe295c1} 
+float VabcP}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af2b26302be5e5f2c81238ffc7612082e}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcp\_a\_trans@{Vabcp\_a\_trans}}
+\index{Vabcp\_a\_trans@{Vabcp\_a\_trans}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcp\_a\_trans}{Vabcp\_a\_trans}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_af2b26302be5e5f2c81238ffc7612082e} 
+float Vabcp\+\_\+a\+\_\+trans}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a15e816e129a69cd25140b193570c9468}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcp\_b\_trans@{Vabcp\_b\_trans}}
+\index{Vabcp\_b\_trans@{Vabcp\_b\_trans}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcp\_b\_trans}{Vabcp\_b\_trans}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a15e816e129a69cd25140b193570c9468} 
+float Vabcp\+\_\+b\+\_\+trans}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5ab7c1d101ac1f98c95b3e3ac88bdc73}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vabcp\_c\_trans@{Vabcp\_c\_trans}}
+\index{Vabcp\_c\_trans@{Vabcp\_c\_trans}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vabcp\_c\_trans}{Vabcp\_c\_trans}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5ab7c1d101ac1f98c95b3e3ac88bdc73} 
+float Vabcp\+\_\+c\+\_\+trans}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aaf43a28964c01b335ab08225212b22b0}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Valfabeta@{Valfabeta}}
+\index{Valfabeta@{Valfabeta}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Valfabeta}{Valfabeta}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aaf43a28964c01b335ab08225212b22b0} 
+\mbox{\hyperlink{structsAlfaBeta}{s\+Alfa\+Beta}} Valfabeta = \{0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7394f6ed25138b786fa50d369ae26eeb}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vcorr@{Vcorr}}
+\index{Vcorr@{Vcorr}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vcorr}{Vcorr}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a7394f6ed25138b786fa50d369ae26eeb} 
+float Vcorr}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5a901494be0a33ef00e9ba6277a4a9ec}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vdq@{Vdq}}
+\index{Vdq@{Vdq}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vdq}{Vdq}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5a901494be0a33ef00e9ba6277a4a9ec} 
+\mbox{\hyperlink{structsDQ}{s\+DQ}} Vdq = \{0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad4cade1e0f82dfac0b5f997a5c482c93}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!vmax@{vmax}}
+\index{vmax@{vmax}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{vmax}{vmax}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ad4cade1e0f82dfac0b5f997a5c482c93} 
+float vmax = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab0591f0882f895e9d83496c77e5c5055}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!vmin@{vmin}}
+\index{vmin@{vmin}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{vmin}{vmin}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab0591f0882f895e9d83496c77e5c5055} 
+float vmin = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aac69d35f85423065739f7879cd724cb2}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vpwm\_abc@{Vpwm\_abc}}
+\index{Vpwm\_abc@{Vpwm\_abc}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vpwm\_abc}{Vpwm\_abc}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aac69d35f85423065739f7879cd724cb2} 
+\mbox{\hyperlink{structsABC}{s\+ABC}} Vpwm\+\_\+abc = \{0,0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a9cff94cdc52a5515a98ffd1ad2ab3895}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vpwm\_alfabeta@{Vpwm\_alfabeta}}
+\index{Vpwm\_alfabeta@{Vpwm\_alfabeta}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vpwm\_alfabeta}{Vpwm\_alfabeta}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a9cff94cdc52a5515a98ffd1ad2ab3895} 
+\mbox{\hyperlink{structsAlfaBeta}{s\+Alfa\+Beta}} Vpwm\+\_\+alfabeta = \{0,0\}}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a806e698b8ab3b129ee40f3697d0e8da2}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vpwm\_norm\_a@{Vpwm\_norm\_a}}
+\index{Vpwm\_norm\_a@{Vpwm\_norm\_a}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vpwm\_norm\_a}{Vpwm\_norm\_a}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a806e698b8ab3b129ee40f3697d0e8da2} 
+float Vpwm\+\_\+norm\+\_\+a = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_adc9a4b3fca78b57085c64b45c5c7ca37}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vpwm\_norm\_b@{Vpwm\_norm\_b}}
+\index{Vpwm\_norm\_b@{Vpwm\_norm\_b}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vpwm\_norm\_b}{Vpwm\_norm\_b}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_adc9a4b3fca78b57085c64b45c5c7ca37} 
+float Vpwm\+\_\+norm\+\_\+b = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a39fa934784ebfe4f64d8dac842a99c60}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vpwm\_norm\_c@{Vpwm\_norm\_c}}
+\index{Vpwm\_norm\_c@{Vpwm\_norm\_c}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vpwm\_norm\_c}{Vpwm\_norm\_c}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a39fa934784ebfe4f64d8dac842a99c60} 
+float Vpwm\+\_\+norm\+\_\+c = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aa14bb1771053c7e00052fe8252edff69}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!vsa\_svpwm@{vsa\_svpwm}}
+\index{vsa\_svpwm@{vsa\_svpwm}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{vsa\_svpwm}{vsa\_svpwm}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_aa14bb1771053c7e00052fe8252edff69} 
+float vsa\+\_\+svpwm = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5e6704890d59e1722f7cbba4317f7628}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!vsb\_svpwm@{vsb\_svpwm}}
+\index{vsb\_svpwm@{vsb\_svpwm}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{vsb\_svpwm}{vsb\_svpwm}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_a5e6704890d59e1722f7cbba4317f7628} 
+float vsb\+\_\+svpwm = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab594bd88c15b56f8ec13412c70bd73ee}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!vsc\_svpwm@{vsc\_svpwm}}
+\index{vsc\_svpwm@{vsc\_svpwm}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{vsc\_svpwm}{vsc\_svpwm}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab594bd88c15b56f8ec13412c70bd73ee} 
+float vsc\+\_\+svpwm = 0}
+
+\Hypertarget{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab4b790b44c6753fb745c4ca172f7be1b}\index{Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}!Vsoma@{Vsoma}}
+\index{Vsoma@{Vsoma}!Code\_declaration\_inverter.h@{Code\_declaration\_inverter.h}}
+\doxysubsubsection{\texorpdfstring{Vsoma}{Vsoma}}
+{\footnotesize\ttfamily \label{Codigo__Pre__Bancada_2Code__declaration__inverter_8h_ab4b790b44c6753fb745c4ca172f7be1b} 
+float Vsoma}
+

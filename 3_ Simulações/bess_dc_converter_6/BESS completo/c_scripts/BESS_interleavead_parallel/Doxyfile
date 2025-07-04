@@ -1,0 +1,101 @@
+# Doxyfile 1.9.1
+
+#---------------------------------------------------------------------------
+# Project related configuration options
+#---------------------------------------------------------------------------
+
+# The name of the project.
+PROJECT_NAME           = "6-Phase Interleaved DC/DC Converter Controller"
+
+# A brief description of the project.
+PROJECT_BRIEF          = "PLECS C-Script controller for a BESS application"
+
+# The version or release number of the project.
+PROJECT_NUMBER         = 1.2
+
+# The directory where the documentation will be written.
+OUTPUT_DIRECTORY       = doxygen_docs
+
+# Create subdirectories for different output formats.
+CREATE_SUBDIRS         = YES
+
+# The language for the output documentation.
+OUTPUT_LANGUAGE        = English
+
+#---------------------------------------------------------------------------
+# Build related configuration options
+#---------------------------------------------------------------------------
+
+# Extract documentation for all entities, even if not explicitly documented.
+EXTRACT_ALL            = YES
+
+# Extract documentation for private members of a class.
+EXTRACT_PRIVATE        = YES
+
+# Extract documentation for static members.
+EXTRACT_STATIC         = YES
+
+#---------------------------------------------------------------------------
+# Input files related configuration options
+#---------------------------------------------------------------------------
+
+# The root directory of the source files. "." means the current directory.
+INPUT                  = .
+
+# File patterns to include in the documentation.
+FILE_PATTERNS          = *.c \
+                         *.h
+
+# Search for files recursively in subdirectories.
+RECURSIVE              = YES
+
+#---------------------------------------------------------------------------
+# Preprocessor related configuration options
+#---------------------------------------------------------------------------
+
+# Enable Doxygen's C-preprocessor. This is crucial for handling #defines.
+ENABLE_PREPROCESSING   = YES
+
+# Expand macro names in the documentation.
+MACRO_EXPANSION        = YES
+
+# Define macros that are specific to the PLECS environment so Doxygen can parse
+# the code without errors. We define them to be empty.
+PREDEFINED             = Input(x)= \
+                         ParamRealData(x,y)=
+
+#---------------------------------------------------------------------------
+# GraphViz related configuration options
+#---------------------------------------------------------------------------
+
+# Enable support for Graphviz's dot tool to generate diagrams.
+# NOTE: You must have Graphviz installed for this to work.
+HAVE_DOT               = YES
+
+# Generate call graphs, showing which functions call other functions.
+CALL_GRAPH             = YES
+
+# Generate caller graphs, showing which functions are called by a function.
+CALLER_GRAPH           = YES
+
+# Use a UML-style look for the generated diagrams.
+UML_LOOK               = YES
+
+#---------------------------------------------------------------------------
+# HTML related configuration options
+#---------------------------------------------------------------------------
+
+# Enable HTML documentation generation.
+GENERATE_HTML          = YES
+
+# The name of the HTML output directory, relative to OUTPUT_DIRECTORY.
+HTML_OUTPUT            = html
+
+# Generate a searchable navigation tree.
+HTML_DYNAMIC_SECTIONS  = YES
+
+
+
+
+
+

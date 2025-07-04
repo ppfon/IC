@@ -1,0 +1,155 @@
+\doxysection{Code\+\_\+declaration\+\_\+interleaved.\+h}
+\hypertarget{Codigo__Pre__Bancada_2Code__declaration__interleaved_8h_source}{}\label{Codigo__Pre__Bancada_2Code__declaration__interleaved_8h_source}\index{Codigo\_Pre\_Bancada/Code\_declaration\_interleaved.h@{Codigo\_Pre\_Bancada/Code\_declaration\_interleaved.h}}
+\mbox{\hyperlink{Codigo__Pre__Bancada_2Code__declaration__interleaved_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ Ibat\ Input\ (0)}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ Ibat2\ Input\ (1)}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ Ibat3\ Input\ (2)}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ control\_enable\ Input\ (3)}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ Iref\_ch\ Input\ (4)}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ Iref\_dis\ Input\ (5)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ Vbat\ Input\ (6)}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ Vdc\ Input\ (7)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ Soc\ Input\ (8)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ reset\ Input\ (9)}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ fsw\ ParamRealData(0,0)\ \ \ \ }}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ Ts\ ParamRealData(1,0)\ \ \ }}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ fdsp\ ParamRealData(2,0)\ \ }}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ Kpbt\ ParamRealData(3,0)\ \ \ }}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ Kibt\ ParamRealData(4,0)\ \ \ }}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ Kpvbu\ ParamRealData(5,0)\ \ \ }}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ Kivbu\ ParamRealData(6,0)\ \ }}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ Kpibu\ ParamRealData(7,0)\ \ \ }}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ Kiibu\ ParamRealData(8,0)\ \ }}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ Soc\_min\ ParamRealData(9,0)\ \ \ }}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ Soc\_max\ ParamRealData(10,0)\ \ \ }}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ Nb\_series\ ParamRealData(11,0)\ \ \ }}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ Nb\_strings\ ParamRealData(12,0)\ \ }}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ N\_br\ \ 3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//Número\ de\ braços\ do\ interleaved}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ PRD\ \ (fdsp/fsw)/2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ COntador\ Up\ e\ Down,\ PRD\ =\ (fdsp/fsw)/2\ }}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ PRD\_div2\ \ PRD/2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PRD\_div2\ =\ PRD/2;}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ pi\ \ \ \ 3.141592653589793\ \ \ }}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ wn\ \ \ \ 2*pi*fn\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//Frequência\ angular\ fundamental}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ N\ \ \ \ \ 150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Numero\ de\ pontos\ da\ fundamental\ N\ =\ fs/fn;\ \ \ \ \ }}
+\DoxyCodeLine{00034\ \ \ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ Parâmetros\ da\ bateria}}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_aec2f66b90c73d890ab553c70e2d04dc1}{Vboost}}\ =\ 14.4;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Tensão\ de\ boost}}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ac66dbf9a7ab32320154bdd33fb828c82}{Vfloat}}\ =\ 13.6;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Tensão\ de\ float}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//Referências}}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ad8624c7323eaffdc82a875cc4cb2fdfa}{Vref}}\ =\ 0;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{//...............Parametros\ do\ Controle\ do\ DC/dc}}
+\DoxyCodeLine{00043\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ Xref;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ Xm;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ erro;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ erro\_ant;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{float}\ inte;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{float}\ inte\_ant;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ duty;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{float}\ piout;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{float}\ piout\_ant;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ piout\_sat;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ erropi;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{float}\ erropi\_ant;}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{float}\ dif;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{float}\ Kp;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{float}\ Ki;}
+\DoxyCodeLine{00059\ \}\ \mbox{\hyperlink{structsPI}{sPI}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ PI\_default\ \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \mbox{\hyperlink{structsPI}{sPI}}\ \mbox{\hyperlink{Code__declaration__interleaved_8h_a5300c822f7fc11e3303425c989a2766c}{PIbt}}\ =\ \mbox{\hyperlink{Code__declaration__inverter_8h_a29fc836c7f74862a866e40e780856cc2}{PI\_default}};}
+\DoxyCodeLine{00064\ \mbox{\hyperlink{structsPI}{sPI}}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a960fc07e598261e31f3688386c2649cd}{PIbt2}}\ =\ \mbox{\hyperlink{Code__declaration__inverter_8h_a29fc836c7f74862a866e40e780856cc2}{PI\_default}};}
+\DoxyCodeLine{00065\ \mbox{\hyperlink{structsPI}{sPI}}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_afd2f1eaf3e579228d3502a4147288e18}{PIbt3}}\ =\ \mbox{\hyperlink{Code__declaration__inverter_8h_a29fc836c7f74862a866e40e780856cc2}{PI\_default}};}
+\DoxyCodeLine{00066\ \mbox{\hyperlink{structsPI}{sPI}}\ \mbox{\hyperlink{Code__declaration__interleaved_8h_aa9887d0e8c4da89a4c4d2e39f1b0845e}{PIbu}}\ =\ \mbox{\hyperlink{Code__declaration__inverter_8h_a29fc836c7f74862a866e40e780856cc2}{PI\_default}};}
+\DoxyCodeLine{00067\ \mbox{\hyperlink{structsPI}{sPI}}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a948dcc50460d333ed5bce0d5b594f879}{PIbu2}}\ =\ \mbox{\hyperlink{Code__declaration__inverter_8h_a29fc836c7f74862a866e40e780856cc2}{PI\_default}};}
+\DoxyCodeLine{00068\ \mbox{\hyperlink{structsPI}{sPI}}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a904938cae1cdc9c439e5075d3ca72aef}{PIbu3}}\ =\ \mbox{\hyperlink{Code__declaration__inverter_8h_a29fc836c7f74862a866e40e780856cc2}{PI\_default}};}
+\DoxyCodeLine{00069\ \mbox{\hyperlink{structsPI}{sPI}}\ \mbox{\hyperlink{Code__declaration__interleaved_8h_a6bdb7fb34bf6a5059a902d931b1ef8bd}{PIbuv}}\ =\ \mbox{\hyperlink{Code__declaration__inverter_8h_a29fc836c7f74862a866e40e780856cc2}{PI\_default}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a66885542252b7007c5ddbcb077a26c13}{sat\_up}}\ =\ 1;}
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a28fddb9366e846ecd6f9d3158e35dc8d}{sat\_down}}\ =\ -\/1;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{float}\ t1;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{float}\ t1\_ant;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{float}\ y;}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{float}\ y\_ant;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{float}\ uin;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{float}\ rate;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{float}\ rising;\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{float}\ falling;}
+\DoxyCodeLine{00083\ \}\ \mbox{\hyperlink{structsRamp}{sRamp}};}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ IRamp\_default\{0,0,0,0,0,0,(15),(-\/15)\}\ }}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ VRamp\_default\{0,0,0,0,0,0,(500),(-\/500)\}\ }}
+\DoxyCodeLine{00086\ \mbox{\hyperlink{structsRamp}{sRamp}}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a5f7e1eae4ac28107761e7b792b1d0c63}{IRamp\_bt}}\ \ =\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a2564434aeb7fcc2385c0c137f9462026}{IRamp\_default}};}
+\DoxyCodeLine{00087\ \mbox{\hyperlink{structsRamp}{sRamp}}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_ab1592aef2788c1bfca69610c1243f5f5}{IRamp2\_bt}}\ =\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a2564434aeb7fcc2385c0c137f9462026}{IRamp\_default}};}
+\DoxyCodeLine{00088\ \mbox{\hyperlink{structsRamp}{sRamp}}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_aef0434f280ca60a002ff5c274d0c3155}{IRamp3\_bt}}\ =\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a2564434aeb7fcc2385c0c137f9462026}{IRamp\_default}};}
+\DoxyCodeLine{00089\ \mbox{\hyperlink{structsRamp}{sRamp}}\ \mbox{\hyperlink{Code__declaration__interleaved_8h_ac7d41f5096acb86ca40ae0c143182f92}{VRamp}}\ \ \ \ \ =\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_aee96efff7fa5b186dea0c4e37a6d3a3e}{VRamp\_default}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{int}\ CM;\ \ \ \ \ \ \textcolor{comment}{//Charge\ mode}}
+\DoxyCodeLine{00093\ \textcolor{keywordtype}{int}\ BVCM;\ \ \ \ \textcolor{comment}{//\ Boost\ Charge\ mode}}
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{int}\ DM;\ \ \ \ \ \ \textcolor{comment}{//\ Discharge\ mode}}
+\DoxyCodeLine{00095\ \}\ \mbox{\hyperlink{structsflag}{sflag}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ IFlag\_default\ \{0,0,1\}\ }}
+\DoxyCodeLine{00098\ \mbox{\hyperlink{structsflag}{sflag}}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a5a33421f4c173d14fa2fbd71557ff41c}{flag}}\ =\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a5dafe55ef001079f8769ce1b2f5c1b8d}{IFlag\_default}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{comment}{//................Parametros\ do\ PWM}}
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a4ceb1f088dd634f7f680f758aa1fda44}{count\_0}}\ =\ 61;}
+\DoxyCodeLine{00102\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a0bbdfde19b585424e9f194ca428d6196}{count\_120}}\ =\ 19;}
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a3a61444211dca9397b53c118148ad023}{count\_240}}\ =\ 21;}
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__declaration__interleaved_8h_a3001d76e8836a130df845fc2a9db7ab2}{inc}}\ =\ -\/1;}
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a6446f825bef977ceaff8b6beae8036d6}{inc\_120}}\ =\ 1;}
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a619a4a60968a98d684e25937f516261a}{inc\_240}}\ =\ -\/1;}
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a51e63fbf9ca14962fb1b068c222366cc}{CMPB}}\ =\ 0;}
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__declaration__inverter_8h_a221a8165d63062901375ab4827d32cfc}{S1}}\ =\ 0;}
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__declaration__inverter_8h_a1802954b3de8e84a689424e0379859a0}{S2}}\ =\ 0;}
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__declaration__inverter_8h_a48cb38f95678bb5fa772ec653a1ad84c}{S3}}\ =\ 0;}
+\DoxyCodeLine{00111\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__declaration__inverter_8h_a6ebbafc06e3790354a4d085970119f47}{S4}}\ =\ 0;}
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__declaration__inverter_8h_aba03da85820e03fe3262acda34fdcfc2}{S5}}\ =\ 0;}
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__declaration__inverter_8h_a69b022727805704f92c8cbe1aaec6e9f}{S6}}\ =\ 0;}
+\DoxyCodeLine{00114\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Code__orignal_2Code__declaration__interleaved_8h_a71237b18c216e02629593b1969cff245}{teste}}\ =\ 0;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{comment}{//\ Rampa}}
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Code__declaration__interleaved_8h_aba8459db8cb921c06cbeee75dd8466e6}{Ramp}}(\mbox{\hyperlink{structsRamp}{sRamp}}\ *rmp,\ \textcolor{keywordtype}{float}\ sample)}
+\DoxyCodeLine{00120\ \{}
+\DoxyCodeLine{00121\ \ \ \textcolor{keywordflow}{if}(rmp-\/>\mbox{\hyperlink{structsRamp_ae35f22a8a025578a4c52c3dece63982f}{uin}}\ !=\ rmp-\/>\mbox{\hyperlink{structsRamp_a1cfa14b1ffef52ba099650f182e0e845}{y}})\ rmp-\/>\mbox{\hyperlink{structsRamp_a4b6559b5a21afb035e4f5df2f45e28bf}{t1}}\ =\ rmp-\/>\mbox{\hyperlink{structsRamp_a4b6559b5a21afb035e4f5df2f45e28bf}{t1}}\ +\ sample;}
+\DoxyCodeLine{00122\ \ \ \textcolor{keywordflow}{else}\ rmp-\/>\mbox{\hyperlink{structsRamp_a4b6559b5a21afb035e4f5df2f45e28bf}{t1}}\ =\ 0;}
+\DoxyCodeLine{00123\ \ \ rmp-\/>\mbox{\hyperlink{structsRamp_adae2fc9ab221183c6dca053c7236e2f1}{rate}}\ =\ (rmp-\/>\mbox{\hyperlink{structsRamp_ae35f22a8a025578a4c52c3dece63982f}{uin}}\ -\/\ rmp-\/>\mbox{\hyperlink{structsRamp_aaf2b2f3ef14661bc2d3e772ff6a9de8f}{y\_ant}})/(rmp-\/>\mbox{\hyperlink{structsRamp_a4b6559b5a21afb035e4f5df2f45e28bf}{t1}}\ -\/\ rmp-\/>\mbox{\hyperlink{structsRamp_a0df5a681e895ddc617aeebbabc50ff6e}{t1\_ant}});}
+\DoxyCodeLine{00124\ \ \ \textcolor{keywordflow}{if}(rmp-\/>\mbox{\hyperlink{structsRamp_adae2fc9ab221183c6dca053c7236e2f1}{rate}}\ >\ rmp-\/>\mbox{\hyperlink{structsRamp_a8a9438cf17f71913fe0eb2e2a7c0888e}{rising}})\ rmp-\/>\mbox{\hyperlink{structsRamp_a1cfa14b1ffef52ba099650f182e0e845}{y}}\ =\ (rmp-\/>\mbox{\hyperlink{structsRamp_a4b6559b5a21afb035e4f5df2f45e28bf}{t1}}\ -\/\ rmp-\/>\mbox{\hyperlink{structsRamp_a0df5a681e895ddc617aeebbabc50ff6e}{t1\_ant}})*rmp-\/>\mbox{\hyperlink{structsRamp_a8a9438cf17f71913fe0eb2e2a7c0888e}{rising}}\ +\ rmp-\/>\mbox{\hyperlink{structsRamp_aaf2b2f3ef14661bc2d3e772ff6a9de8f}{y\_ant}};}
+\DoxyCodeLine{00125\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(rmp-\/>\mbox{\hyperlink{structsRamp_adae2fc9ab221183c6dca053c7236e2f1}{rate}}\ <\ rmp-\/>\mbox{\hyperlink{structsRamp_ab9d4844a5a688ed36fd828ca3e309ad6}{falling}})\ rmp-\/>\mbox{\hyperlink{structsRamp_a1cfa14b1ffef52ba099650f182e0e845}{y}}\ =\ (rmp-\/>\mbox{\hyperlink{structsRamp_a4b6559b5a21afb035e4f5df2f45e28bf}{t1}}\ -\/\ rmp-\/>\mbox{\hyperlink{structsRamp_a0df5a681e895ddc617aeebbabc50ff6e}{t1\_ant}})*rmp-\/>\mbox{\hyperlink{structsRamp_ab9d4844a5a688ed36fd828ca3e309ad6}{falling}}\ +\ rmp-\/>\mbox{\hyperlink{structsRamp_aaf2b2f3ef14661bc2d3e772ff6a9de8f}{y\_ant}};}
+\DoxyCodeLine{00126\ \ \ \textcolor{keywordflow}{else}\ rmp-\/>\mbox{\hyperlink{structsRamp_a1cfa14b1ffef52ba099650f182e0e845}{y}}\ =\ rmp-\/>\mbox{\hyperlink{structsRamp_ae35f22a8a025578a4c52c3dece63982f}{uin}};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ rmp-\/>\mbox{\hyperlink{structsRamp_a0df5a681e895ddc617aeebbabc50ff6e}{t1\_ant}}\ =\ rmp-\/>\mbox{\hyperlink{structsRamp_a4b6559b5a21afb035e4f5df2f45e28bf}{t1}};}
+\DoxyCodeLine{00129\ \ \ rmp-\/>\mbox{\hyperlink{structsRamp_aaf2b2f3ef14661bc2d3e772ff6a9de8f}{y\_ant}}\ =\ rmp-\/>\mbox{\hyperlink{structsRamp_a1cfa14b1ffef52ba099650f182e0e845}{y}};\ \ \ \ }
+\DoxyCodeLine{00130\ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{comment}{//\ Controlador\ PI}}
+\DoxyCodeLine{00133\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Code__declaration__interleaved_8h_a6ecf8feea3db7c8bb3c0020cdc182b8f}{Pifunc}}(\mbox{\hyperlink{structsPI}{sPI}}\ *reg,\ \textcolor{keywordtype}{float}\ T\_div2,\ \textcolor{keywordtype}{float}\ Kp,\ \textcolor{keywordtype}{float}\ Ki,\ \textcolor{keywordtype}{float}\ satup,\ \textcolor{keywordtype}{float}\ satdown)}
+\DoxyCodeLine{00134\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ reg-\/>\mbox{\hyperlink{structsPI_ab23a03c5d79c3a7c1db2bb3e0fd9d23e}{erro}}\ =\ reg-\/>\mbox{\hyperlink{structsPI_ad3fcc64b9bf1166bbe83e8a4d8e3de42}{Xref}}\ \ -\/\ reg-\/>\mbox{\hyperlink{structsPI_a420945f1bafe505d3c958927bf2c3e87}{Xm}};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ reg-\/>\mbox{\hyperlink{structsPI_ae4d638a7cf82d61ee138c119a85a4073}{erropi}}\ =\ reg-\/>\mbox{\hyperlink{structsPI_ab23a03c5d79c3a7c1db2bb3e0fd9d23e}{erro}}\ -\/\ (1/Kp)*reg-\/>\mbox{\hyperlink{structsPI_acf2938a177b142010bf2ac75ee8345e0}{dif}};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ reg-\/>\mbox{\hyperlink{structsPI_a08fc16fe16f2de3babb55202b73c2b76}{inte}}\ =\ reg-\/>\mbox{\hyperlink{structsPI_af8a51dad21831e255a0d8eaa20213c18}{inte\_ant}}\ +\ T\_div2\ *\ (reg-\/>\mbox{\hyperlink{structsPI_ae4d638a7cf82d61ee138c119a85a4073}{erropi}}\ \ +\ reg-\/>\mbox{\hyperlink{structsPI_adce598478f7e6f0a5eb8345a04288d15}{erropi\_ant}});\ \textcolor{comment}{//\ "{}T\_div2\ *\ (reg-\/>erropi\ \ +\ reg-\/>erropi\_ant)"{}:\ equivale\ a\ variavel\ 's'\ no\ domínio\ discreto}}
+\DoxyCodeLine{00140\ \ \ \ \ reg-\/>\mbox{\hyperlink{structsPI_af8a51dad21831e255a0d8eaa20213c18}{inte\_ant}}\ =\ reg-\/>\mbox{\hyperlink{structsPI_a08fc16fe16f2de3babb55202b73c2b76}{inte}};}
+\DoxyCodeLine{00141\ \ \ \ \ reg-\/>\mbox{\hyperlink{structsPI_adce598478f7e6f0a5eb8345a04288d15}{erropi\_ant}}\ =\ reg-\/>\mbox{\hyperlink{structsPI_ae4d638a7cf82d61ee138c119a85a4073}{erropi}};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ reg-\/>\mbox{\hyperlink{structsPI_ac0f6c4e4c7938676342d53366f5dfa57}{piout}}\ =\ (Kp*reg-\/>\mbox{\hyperlink{structsPI_ab23a03c5d79c3a7c1db2bb3e0fd9d23e}{erro}}\ +\ Ki*reg-\/>\mbox{\hyperlink{structsPI_a08fc16fe16f2de3babb55202b73c2b76}{inte}});\ }
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ reg-\/>\mbox{\hyperlink{structsPI_a410a9f110ba336ec4dbdc92531320764}{piout\_sat}}\ =\ reg-\/>\mbox{\hyperlink{structsPI_ac0f6c4e4c7938676342d53366f5dfa57}{piout}};}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{if}(reg-\/>\mbox{\hyperlink{structsPI_ac0f6c4e4c7938676342d53366f5dfa57}{piout}}>satup)\ reg-\/>\mbox{\hyperlink{structsPI_a410a9f110ba336ec4dbdc92531320764}{piout\_sat}}\ =\ satup;}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordflow}{if}(reg-\/>\mbox{\hyperlink{structsPI_ac0f6c4e4c7938676342d53366f5dfa57}{piout}}<satdown)\ reg-\/>\mbox{\hyperlink{structsPI_a410a9f110ba336ec4dbdc92531320764}{piout\_sat}}=\ satdown;}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ reg-\/>\mbox{\hyperlink{structsPI_acf2938a177b142010bf2ac75ee8345e0}{dif}}\ =\ reg-\/>\mbox{\hyperlink{structsPI_ac0f6c4e4c7938676342d53366f5dfa57}{piout}}\ -\/\ reg-\/>\mbox{\hyperlink{structsPI_a410a9f110ba336ec4dbdc92531320764}{piout\_sat}};}
+\DoxyCodeLine{00150\ \}}
+
+\end{DoxyCode}

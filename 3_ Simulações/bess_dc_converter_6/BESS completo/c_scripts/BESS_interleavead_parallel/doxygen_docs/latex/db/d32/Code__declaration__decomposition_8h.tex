@@ -1,0 +1,669 @@
+\doxysection{Code\+\_\+declaration\+\_\+decomposition.\+h File Reference}
+\hypertarget{Code__declaration__decomposition_8h}{}\label{Code__declaration__decomposition_8h}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for Code\+\_\+declaration\+\_\+decomposition.\+h\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_ab8adff562c4a42868902e3ca9e38bd98}{Vga}}~Input (0)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_a1fb1da2eb4e4a521b512c8464c141393}{Vgb}}~Input (1)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_a65c44a5de801c099c9977699fe1023ae}{Vgc}}~Input (2)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_a2ee3d96d1a95507305e8d474447004fe}{fsw}}~Param\+Real\+Data(0,0)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_ac271f2ecf44740ce9bc6f97396a74944}{Ts}}~Param\+Real\+Data(1,0)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_a8f2a1576234e4b07dab5d521cb5015c2}{fdsp}}~Param\+Real\+Data(2,0)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_a160ad2135ed02c23fa577046e4731f37}{Kpouter}}~Param\+Real\+Data(3,0)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_a1d7105642a659cc5e67098fb1515e5d0}{Kiouter}}~Param\+Real\+Data(4,0)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_a068a9d16812a71372156794b11014fdf}{Kp\+\_\+pll}}~Param\+Real\+Data(5,0)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_ac3244fead3359ddfebe5886c568a3bdd}{Ki\+\_\+pll}}~Param\+Real\+Data(6,0)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_afb2950900f0ca7bbab7f3556d7a6040a}{Kp\+\_\+res}}~Param\+Real\+Data(7,0)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_aa2d335428764070d2dc8b2eb440b19b1}{fn}}~Param\+Real\+Data(8,0)
+\item 
+\#define \mbox{\hyperlink{Code__declaration__decomposition_8h_ade27c64aae7c859c93de9cc74dca238b}{wn}}~Param\+Real\+Data(9,0)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_aab16f89b40313dd6238a39f1c52d0a64}{Vabc\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a5eead098008fcfe38582867ae62c316c}{Vabc\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_adf581683821ae90fa2449ebc7f33ae6b}{Vabc\+\_\+c}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a17241fc3322f2bf376054c2f3c375b20}{Valfabeta\+\_\+alfa}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_ad1fdf042aa2ed19498abcf71389e554d}{Valfabeta\+\_\+beta}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a20aa2804cc392e162754639d1ec564d4}{VA}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a46393dabfdc8b3c70d5811eadaedeaf4}{VB}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a4409e94ad13a060b0ffbc0f371c80004}{freq}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_aa84d44a91575d43c0263c80f11fe63b0}{Vabcp\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_ac2f20bce5287baeb865e7c64da210e2a}{Vabcp\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a8ae49eb20d62ba358901f1abe67b5b4d}{Vabcp\+\_\+c}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a3cf82a01c23c3a67d1995a66fe2e481d}{Vabcn\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a011e9b0c22d96593fd460fd6442425a0}{Vabcn\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_aacbb8909689a9a9d054c1a58fb9b67f8}{Vabcn\+\_\+c}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a948e1aa0efe3e5beba7fee3ed52bdd91}{integ\+One\+\_\+out}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a81408cf22b6e1f782842508dee1f2319}{integ\+One\+\_\+out\+\_\+ant}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a99b6fa45e4f2d6ee5d423804b08c771d}{integ\+One\+\_\+in\+\_\+ant}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a3384226eb3cc720b0a96427bf68ea940}{integ\+One\+\_\+in}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a6724d6cf13ac8729dc242ea7865f0f9c}{integ\+Two\+\_\+out}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_aacb61dd0c2a5ed584e3d5e622db8564a}{integ\+Two\+\_\+out\+\_\+ant}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_abcba8118eb70f5ce1111d6ab6c191e5d}{integ\+Two\+\_\+in\+\_\+ant}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a77dc0435f47570276eb414ae4898d4dd}{integ\+Two\+\_\+in}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a23b8a27aec4eb805e53591b97a2724f4}{feed\+Back\+\_\+\+Valfa}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_aefeaf2ac2851fbed9aa0b0a4cf97cff5}{feed\+Back\+\_\+\+Q\+\_\+\+Valfa}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a3587ef18ce4195bb352723295d1e47b8}{V\+\_\+alfa}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a2802eee13bbd7ce5b3d0f1bca96267ad}{Q\+\_\+\+Valfa}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a5debebd81af8d0ebe024d78cdcc97ee9}{V\+\_\+beta}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_af1af56d2dd8dbe78bdb28caa698213fa}{Q\+\_\+\+Vbeta}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_ab0848c4059e859180b0282cea187be1d}{feed\+Back\+\_\+\+Vbeta}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a992d5520330335f3906657d31cdbb659}{feed\+Back\+\_\+\+Q\+\_\+\+Vbeta}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_ac2784cf7b89b5dc0359f26114cf95439}{integ\+One\+\_\+out\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a19905a76803112885d0e7b5345438d10}{integ\+One\+\_\+out\+\_\+ant\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a60c2b730cdc0d9a711acaad73e60a4ac}{integ\+One\+\_\+in\+\_\+ant\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_ad7c6bbe7cdb76e5f739491b8004fb394}{integ\+One\+\_\+in\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_aac49937be3546f39e2ca1342dac32b56}{integ\+Two\+\_\+out\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_aa053f570decba54c6eaef148e8761780}{integ\+Two\+\_\+out\+\_\+ant\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a5d134df10d8d39af57edfb14a84b2552}{integ\+Two\+\_\+in\+\_\+ant\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a7d819dcaa6419a2a62b5add8d1682c7d}{integ\+Two\+\_\+in\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a1769cea2c7412ab042cbcd93d03d4078}{V\+\_\+alfa\+\_\+a}}
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_af9d9dfaaa194032aac93954dde880f84}{V\+\_\+beta\+\_\+a}}
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_ae8e60c8397326203f95ec2338eb4ca4b}{V\+\_\+alfa\+\_\+b}}
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a38ccbda9ef300f426ba7b1c29a35e969}{V\+\_\+beta\+\_\+b}}
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a04f78f5424ff28a119ba8d8110d124ef}{comp\+\_\+d\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_af47ff0bd7b35928b24ae0713f9bd193a}{comp\+\_\+q\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a664b127ddfb48eec89597235cece651c}{theta\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a3cbd87fa16a734dd54b92d7e24bef27c}{Fnc\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a079698192e1b4e4e35569ccf690685d9}{integ\+One\+\_\+in\+\_\+\+Fcn\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a701dbda75b2ab93cfba0036a28212f64}{integ\+One\+\_\+out\+\_\+\+Fcn\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_ae92a4e9dbdaab47eb3f36ec0cb39e2b0}{integ\+One\+\_\+in\+\_\+ant\+\_\+\+Fcn\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_abb26ac154e58b45d364a9183b758bacc}{integ\+One\+\_\+out\+\_\+ant\+\_\+\+Fcn\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_af80f18e3bb1877effbed3d8a7f9efa70}{omega\+\_\+a}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a84d927671e43470e18c263bc50953357}{integ\+One\+\_\+in\+\_\+\+Fcn\+\_\+a1}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a595e89de168cd3d2a5a7cfcc218354a3}{integ\+One\+\_\+out\+\_\+\+Fcn\+\_\+a1}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a58eac1395549ea3f35ec99c0778a9937}{integ\+One\+\_\+out\+\_\+ant\+\_\+\+Fcn\+\_\+a1}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a0103f922d4c4eeda4baaba6beed865ea}{integ\+One\+\_\+in\+\_\+ant\+\_\+\+Fcn\+\_\+a1}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a817089f6e5974265c2215d3d22a64c0e}{comp\+\_\+d\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a3e5fd4df9cba5dbec5e2badf6b58dd74}{comp\+\_\+q\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_ab34288cf2825336785d55f2b3cf6af49}{theta\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a2d2c7b768b9a2153c61f8428fb77a05a}{Fnc\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a073a995f2efb2d21248b2e0ec549ed5c}{integ\+One\+\_\+in\+\_\+\+Fcn\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a962f82ee2b78c352dcd8785ab98e30af}{integ\+One\+\_\+out\+\_\+\+Fcn\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a111e30a565a7b3f4e20cc0b991360abb}{integ\+One\+\_\+in\+\_\+ant\+\_\+\+Fcn\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_acf9121c5d5fb3ae443ce8f1383cf9930}{integ\+One\+\_\+out\+\_\+ant\+\_\+\+Fcn\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a5a5183b3301376435fef9eb5e8414a45}{omega\+\_\+b}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a37107ef38a1e58e1904af6909e385966}{integ\+One\+\_\+in\+\_\+\+Fcn\+\_\+b1}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_ab376b8b34affc239b38e784dbe0e27f1}{integ\+One\+\_\+out\+\_\+\+Fcn\+\_\+b1}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_aa9ff497fa5b3600c58621685069e9bc2}{integ\+One\+\_\+out\+\_\+ant\+\_\+\+Fcn\+\_\+b1}} =0
+\item 
+float \mbox{\hyperlink{Code__declaration__decomposition_8h_a205b801e7ec37db9faf9e5a5dc50cac4}{integ\+One\+\_\+in\+\_\+ant\+\_\+\+Fcn\+\_\+b1}} =0
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{Code__declaration__decomposition_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Code__declaration__decomposition_8h_a8f2a1576234e4b07dab5d521cb5015c2}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!fdsp@{fdsp}}
+\index{fdsp@{fdsp}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{fdsp}{fdsp}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a8f2a1576234e4b07dab5d521cb5015c2} 
+\#define fdsp~Param\+Real\+Data(2,0)}
+
+\Hypertarget{Code__declaration__decomposition_8h_aa2d335428764070d2dc8b2eb440b19b1}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!fn@{fn}}
+\index{fn@{fn}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{fn}{fn}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_aa2d335428764070d2dc8b2eb440b19b1} 
+\#define fn~Param\+Real\+Data(8,0)}
+
+\Hypertarget{Code__declaration__decomposition_8h_a2ee3d96d1a95507305e8d474447004fe}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!fsw@{fsw}}
+\index{fsw@{fsw}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{fsw}{fsw}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a2ee3d96d1a95507305e8d474447004fe} 
+\#define fsw~Param\+Real\+Data(0,0)}
+
+\Hypertarget{Code__declaration__decomposition_8h_ac3244fead3359ddfebe5886c568a3bdd}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Ki\_pll@{Ki\_pll}}
+\index{Ki\_pll@{Ki\_pll}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Ki\_pll}{Ki\_pll}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ac3244fead3359ddfebe5886c568a3bdd} 
+\#define Ki\+\_\+pll~Param\+Real\+Data(6,0)}
+
+\Hypertarget{Code__declaration__decomposition_8h_a1d7105642a659cc5e67098fb1515e5d0}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Kiouter@{Kiouter}}
+\index{Kiouter@{Kiouter}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Kiouter}{Kiouter}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a1d7105642a659cc5e67098fb1515e5d0} 
+\#define Kiouter~Param\+Real\+Data(4,0)}
+
+\Hypertarget{Code__declaration__decomposition_8h_a068a9d16812a71372156794b11014fdf}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Kp\_pll@{Kp\_pll}}
+\index{Kp\_pll@{Kp\_pll}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Kp\_pll}{Kp\_pll}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a068a9d16812a71372156794b11014fdf} 
+\#define Kp\+\_\+pll~Param\+Real\+Data(5,0)}
+
+\Hypertarget{Code__declaration__decomposition_8h_afb2950900f0ca7bbab7f3556d7a6040a}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Kp\_res@{Kp\_res}}
+\index{Kp\_res@{Kp\_res}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Kp\_res}{Kp\_res}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_afb2950900f0ca7bbab7f3556d7a6040a} 
+\#define Kp\+\_\+res~Param\+Real\+Data(7,0)}
+
+\Hypertarget{Code__declaration__decomposition_8h_a160ad2135ed02c23fa577046e4731f37}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Kpouter@{Kpouter}}
+\index{Kpouter@{Kpouter}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Kpouter}{Kpouter}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a160ad2135ed02c23fa577046e4731f37} 
+\#define Kpouter~Param\+Real\+Data(3,0)}
+
+\Hypertarget{Code__declaration__decomposition_8h_ac271f2ecf44740ce9bc6f97396a74944}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Ts@{Ts}}
+\index{Ts@{Ts}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Ts}{Ts}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ac271f2ecf44740ce9bc6f97396a74944} 
+\#define Ts~Param\+Real\+Data(1,0)}
+
+\Hypertarget{Code__declaration__decomposition_8h_ab8adff562c4a42868902e3ca9e38bd98}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vga@{Vga}}
+\index{Vga@{Vga}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vga}{Vga}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ab8adff562c4a42868902e3ca9e38bd98} 
+\#define Vga~Input (0)}
+
+\Hypertarget{Code__declaration__decomposition_8h_a1fb1da2eb4e4a521b512c8464c141393}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vgb@{Vgb}}
+\index{Vgb@{Vgb}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vgb}{Vgb}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a1fb1da2eb4e4a521b512c8464c141393} 
+\#define Vgb~Input (1)}
+
+\Hypertarget{Code__declaration__decomposition_8h_a65c44a5de801c099c9977699fe1023ae}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vgc@{Vgc}}
+\index{Vgc@{Vgc}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vgc}{Vgc}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a65c44a5de801c099c9977699fe1023ae} 
+\#define Vgc~Input (2)}
+
+\Hypertarget{Code__declaration__decomposition_8h_ade27c64aae7c859c93de9cc74dca238b}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!wn@{wn}}
+\index{wn@{wn}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{wn}{wn}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ade27c64aae7c859c93de9cc74dca238b} 
+\#define wn~Param\+Real\+Data(9,0)}
+
+
+
+\label{doc-var-members}
+\Hypertarget{Code__declaration__decomposition_8h_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{Code__declaration__decomposition_8h_a04f78f5424ff28a119ba8d8110d124ef}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!comp\_d\_a@{comp\_d\_a}}
+\index{comp\_d\_a@{comp\_d\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{comp\_d\_a}{comp\_d\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a04f78f5424ff28a119ba8d8110d124ef} 
+float comp\+\_\+d\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a817089f6e5974265c2215d3d22a64c0e}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!comp\_d\_b@{comp\_d\_b}}
+\index{comp\_d\_b@{comp\_d\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{comp\_d\_b}{comp\_d\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a817089f6e5974265c2215d3d22a64c0e} 
+float comp\+\_\+d\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_af47ff0bd7b35928b24ae0713f9bd193a}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!comp\_q\_a@{comp\_q\_a}}
+\index{comp\_q\_a@{comp\_q\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{comp\_q\_a}{comp\_q\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_af47ff0bd7b35928b24ae0713f9bd193a} 
+float comp\+\_\+q\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a3e5fd4df9cba5dbec5e2badf6b58dd74}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!comp\_q\_b@{comp\_q\_b}}
+\index{comp\_q\_b@{comp\_q\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{comp\_q\_b}{comp\_q\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a3e5fd4df9cba5dbec5e2badf6b58dd74} 
+float comp\+\_\+q\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_aefeaf2ac2851fbed9aa0b0a4cf97cff5}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!feedBack\_Q\_Valfa@{feedBack\_Q\_Valfa}}
+\index{feedBack\_Q\_Valfa@{feedBack\_Q\_Valfa}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{feedBack\_Q\_Valfa}{feedBack\_Q\_Valfa}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_aefeaf2ac2851fbed9aa0b0a4cf97cff5} 
+float feed\+Back\+\_\+\+Q\+\_\+\+Valfa =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a992d5520330335f3906657d31cdbb659}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!feedBack\_Q\_Vbeta@{feedBack\_Q\_Vbeta}}
+\index{feedBack\_Q\_Vbeta@{feedBack\_Q\_Vbeta}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{feedBack\_Q\_Vbeta}{feedBack\_Q\_Vbeta}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a992d5520330335f3906657d31cdbb659} 
+float feed\+Back\+\_\+\+Q\+\_\+\+Vbeta =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a23b8a27aec4eb805e53591b97a2724f4}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!feedBack\_Valfa@{feedBack\_Valfa}}
+\index{feedBack\_Valfa@{feedBack\_Valfa}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{feedBack\_Valfa}{feedBack\_Valfa}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a23b8a27aec4eb805e53591b97a2724f4} 
+float feed\+Back\+\_\+\+Valfa =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_ab0848c4059e859180b0282cea187be1d}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!feedBack\_Vbeta@{feedBack\_Vbeta}}
+\index{feedBack\_Vbeta@{feedBack\_Vbeta}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{feedBack\_Vbeta}{feedBack\_Vbeta}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ab0848c4059e859180b0282cea187be1d} 
+float feed\+Back\+\_\+\+Vbeta =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a3cbd87fa16a734dd54b92d7e24bef27c}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Fnc\_a@{Fnc\_a}}
+\index{Fnc\_a@{Fnc\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Fnc\_a}{Fnc\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a3cbd87fa16a734dd54b92d7e24bef27c} 
+float Fnc\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a2d2c7b768b9a2153c61f8428fb77a05a}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Fnc\_b@{Fnc\_b}}
+\index{Fnc\_b@{Fnc\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Fnc\_b}{Fnc\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a2d2c7b768b9a2153c61f8428fb77a05a} 
+float Fnc\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a4409e94ad13a060b0ffbc0f371c80004}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!freq@{freq}}
+\index{freq@{freq}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{freq}{freq}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a4409e94ad13a060b0ffbc0f371c80004} 
+float freq =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a3384226eb3cc720b0a96427bf68ea940}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in@{integOne\_in}}
+\index{integOne\_in@{integOne\_in}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in}{integOne\_in}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a3384226eb3cc720b0a96427bf68ea940} 
+float integ\+One\+\_\+in =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a99b6fa45e4f2d6ee5d423804b08c771d}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_ant@{integOne\_in\_ant}}
+\index{integOne\_in\_ant@{integOne\_in\_ant}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_ant}{integOne\_in\_ant}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a99b6fa45e4f2d6ee5d423804b08c771d} 
+float integ\+One\+\_\+in\+\_\+ant =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a60c2b730cdc0d9a711acaad73e60a4ac}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_ant\_b@{integOne\_in\_ant\_b}}
+\index{integOne\_in\_ant\_b@{integOne\_in\_ant\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_ant\_b}{integOne\_in\_ant\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a60c2b730cdc0d9a711acaad73e60a4ac} 
+float integ\+One\+\_\+in\+\_\+ant\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_ae92a4e9dbdaab47eb3f36ec0cb39e2b0}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_ant\_Fcn\_a@{integOne\_in\_ant\_Fcn\_a}}
+\index{integOne\_in\_ant\_Fcn\_a@{integOne\_in\_ant\_Fcn\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_ant\_Fcn\_a}{integOne\_in\_ant\_Fcn\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ae92a4e9dbdaab47eb3f36ec0cb39e2b0} 
+float integ\+One\+\_\+in\+\_\+ant\+\_\+\+Fcn\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a0103f922d4c4eeda4baaba6beed865ea}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_ant\_Fcn\_a1@{integOne\_in\_ant\_Fcn\_a1}}
+\index{integOne\_in\_ant\_Fcn\_a1@{integOne\_in\_ant\_Fcn\_a1}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_ant\_Fcn\_a1}{integOne\_in\_ant\_Fcn\_a1}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a0103f922d4c4eeda4baaba6beed865ea} 
+float integ\+One\+\_\+in\+\_\+ant\+\_\+\+Fcn\+\_\+a1 =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a111e30a565a7b3f4e20cc0b991360abb}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_ant\_Fcn\_b@{integOne\_in\_ant\_Fcn\_b}}
+\index{integOne\_in\_ant\_Fcn\_b@{integOne\_in\_ant\_Fcn\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_ant\_Fcn\_b}{integOne\_in\_ant\_Fcn\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a111e30a565a7b3f4e20cc0b991360abb} 
+float integ\+One\+\_\+in\+\_\+ant\+\_\+\+Fcn\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a205b801e7ec37db9faf9e5a5dc50cac4}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_ant\_Fcn\_b1@{integOne\_in\_ant\_Fcn\_b1}}
+\index{integOne\_in\_ant\_Fcn\_b1@{integOne\_in\_ant\_Fcn\_b1}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_ant\_Fcn\_b1}{integOne\_in\_ant\_Fcn\_b1}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a205b801e7ec37db9faf9e5a5dc50cac4} 
+float integ\+One\+\_\+in\+\_\+ant\+\_\+\+Fcn\+\_\+b1 =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_ad7c6bbe7cdb76e5f739491b8004fb394}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_b@{integOne\_in\_b}}
+\index{integOne\_in\_b@{integOne\_in\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_b}{integOne\_in\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ad7c6bbe7cdb76e5f739491b8004fb394} 
+float integ\+One\+\_\+in\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a079698192e1b4e4e35569ccf690685d9}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_Fcn\_a@{integOne\_in\_Fcn\_a}}
+\index{integOne\_in\_Fcn\_a@{integOne\_in\_Fcn\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_Fcn\_a}{integOne\_in\_Fcn\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a079698192e1b4e4e35569ccf690685d9} 
+float integ\+One\+\_\+in\+\_\+\+Fcn\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a84d927671e43470e18c263bc50953357}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_Fcn\_a1@{integOne\_in\_Fcn\_a1}}
+\index{integOne\_in\_Fcn\_a1@{integOne\_in\_Fcn\_a1}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_Fcn\_a1}{integOne\_in\_Fcn\_a1}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a84d927671e43470e18c263bc50953357} 
+float integ\+One\+\_\+in\+\_\+\+Fcn\+\_\+a1 =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a073a995f2efb2d21248b2e0ec549ed5c}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_Fcn\_b@{integOne\_in\_Fcn\_b}}
+\index{integOne\_in\_Fcn\_b@{integOne\_in\_Fcn\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_Fcn\_b}{integOne\_in\_Fcn\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a073a995f2efb2d21248b2e0ec549ed5c} 
+float integ\+One\+\_\+in\+\_\+\+Fcn\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a37107ef38a1e58e1904af6909e385966}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_in\_Fcn\_b1@{integOne\_in\_Fcn\_b1}}
+\index{integOne\_in\_Fcn\_b1@{integOne\_in\_Fcn\_b1}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_in\_Fcn\_b1}{integOne\_in\_Fcn\_b1}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a37107ef38a1e58e1904af6909e385966} 
+float integ\+One\+\_\+in\+\_\+\+Fcn\+\_\+b1 =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a948e1aa0efe3e5beba7fee3ed52bdd91}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out@{integOne\_out}}
+\index{integOne\_out@{integOne\_out}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out}{integOne\_out}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a948e1aa0efe3e5beba7fee3ed52bdd91} 
+float integ\+One\+\_\+out =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a81408cf22b6e1f782842508dee1f2319}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_ant@{integOne\_out\_ant}}
+\index{integOne\_out\_ant@{integOne\_out\_ant}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_ant}{integOne\_out\_ant}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a81408cf22b6e1f782842508dee1f2319} 
+float integ\+One\+\_\+out\+\_\+ant =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a19905a76803112885d0e7b5345438d10}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_ant\_b@{integOne\_out\_ant\_b}}
+\index{integOne\_out\_ant\_b@{integOne\_out\_ant\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_ant\_b}{integOne\_out\_ant\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a19905a76803112885d0e7b5345438d10} 
+float integ\+One\+\_\+out\+\_\+ant\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_abb26ac154e58b45d364a9183b758bacc}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_ant\_Fcn\_a@{integOne\_out\_ant\_Fcn\_a}}
+\index{integOne\_out\_ant\_Fcn\_a@{integOne\_out\_ant\_Fcn\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_ant\_Fcn\_a}{integOne\_out\_ant\_Fcn\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_abb26ac154e58b45d364a9183b758bacc} 
+float integ\+One\+\_\+out\+\_\+ant\+\_\+\+Fcn\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a58eac1395549ea3f35ec99c0778a9937}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_ant\_Fcn\_a1@{integOne\_out\_ant\_Fcn\_a1}}
+\index{integOne\_out\_ant\_Fcn\_a1@{integOne\_out\_ant\_Fcn\_a1}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_ant\_Fcn\_a1}{integOne\_out\_ant\_Fcn\_a1}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a58eac1395549ea3f35ec99c0778a9937} 
+float integ\+One\+\_\+out\+\_\+ant\+\_\+\+Fcn\+\_\+a1 =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_acf9121c5d5fb3ae443ce8f1383cf9930}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_ant\_Fcn\_b@{integOne\_out\_ant\_Fcn\_b}}
+\index{integOne\_out\_ant\_Fcn\_b@{integOne\_out\_ant\_Fcn\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_ant\_Fcn\_b}{integOne\_out\_ant\_Fcn\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_acf9121c5d5fb3ae443ce8f1383cf9930} 
+float integ\+One\+\_\+out\+\_\+ant\+\_\+\+Fcn\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_aa9ff497fa5b3600c58621685069e9bc2}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_ant\_Fcn\_b1@{integOne\_out\_ant\_Fcn\_b1}}
+\index{integOne\_out\_ant\_Fcn\_b1@{integOne\_out\_ant\_Fcn\_b1}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_ant\_Fcn\_b1}{integOne\_out\_ant\_Fcn\_b1}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_aa9ff497fa5b3600c58621685069e9bc2} 
+float integ\+One\+\_\+out\+\_\+ant\+\_\+\+Fcn\+\_\+b1 =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_ac2784cf7b89b5dc0359f26114cf95439}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_b@{integOne\_out\_b}}
+\index{integOne\_out\_b@{integOne\_out\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_b}{integOne\_out\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ac2784cf7b89b5dc0359f26114cf95439} 
+float integ\+One\+\_\+out\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a701dbda75b2ab93cfba0036a28212f64}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_Fcn\_a@{integOne\_out\_Fcn\_a}}
+\index{integOne\_out\_Fcn\_a@{integOne\_out\_Fcn\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_Fcn\_a}{integOne\_out\_Fcn\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a701dbda75b2ab93cfba0036a28212f64} 
+float integ\+One\+\_\+out\+\_\+\+Fcn\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a595e89de168cd3d2a5a7cfcc218354a3}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_Fcn\_a1@{integOne\_out\_Fcn\_a1}}
+\index{integOne\_out\_Fcn\_a1@{integOne\_out\_Fcn\_a1}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_Fcn\_a1}{integOne\_out\_Fcn\_a1}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a595e89de168cd3d2a5a7cfcc218354a3} 
+float integ\+One\+\_\+out\+\_\+\+Fcn\+\_\+a1 =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a962f82ee2b78c352dcd8785ab98e30af}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_Fcn\_b@{integOne\_out\_Fcn\_b}}
+\index{integOne\_out\_Fcn\_b@{integOne\_out\_Fcn\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_Fcn\_b}{integOne\_out\_Fcn\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a962f82ee2b78c352dcd8785ab98e30af} 
+float integ\+One\+\_\+out\+\_\+\+Fcn\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_ab376b8b34affc239b38e784dbe0e27f1}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integOne\_out\_Fcn\_b1@{integOne\_out\_Fcn\_b1}}
+\index{integOne\_out\_Fcn\_b1@{integOne\_out\_Fcn\_b1}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integOne\_out\_Fcn\_b1}{integOne\_out\_Fcn\_b1}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ab376b8b34affc239b38e784dbe0e27f1} 
+float integ\+One\+\_\+out\+\_\+\+Fcn\+\_\+b1 =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a77dc0435f47570276eb414ae4898d4dd}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integTwo\_in@{integTwo\_in}}
+\index{integTwo\_in@{integTwo\_in}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integTwo\_in}{integTwo\_in}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a77dc0435f47570276eb414ae4898d4dd} 
+float integ\+Two\+\_\+in =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_abcba8118eb70f5ce1111d6ab6c191e5d}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integTwo\_in\_ant@{integTwo\_in\_ant}}
+\index{integTwo\_in\_ant@{integTwo\_in\_ant}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integTwo\_in\_ant}{integTwo\_in\_ant}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_abcba8118eb70f5ce1111d6ab6c191e5d} 
+float integ\+Two\+\_\+in\+\_\+ant =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a5d134df10d8d39af57edfb14a84b2552}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integTwo\_in\_ant\_b@{integTwo\_in\_ant\_b}}
+\index{integTwo\_in\_ant\_b@{integTwo\_in\_ant\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integTwo\_in\_ant\_b}{integTwo\_in\_ant\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a5d134df10d8d39af57edfb14a84b2552} 
+float integ\+Two\+\_\+in\+\_\+ant\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a7d819dcaa6419a2a62b5add8d1682c7d}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integTwo\_in\_b@{integTwo\_in\_b}}
+\index{integTwo\_in\_b@{integTwo\_in\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integTwo\_in\_b}{integTwo\_in\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a7d819dcaa6419a2a62b5add8d1682c7d} 
+float integ\+Two\+\_\+in\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a6724d6cf13ac8729dc242ea7865f0f9c}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integTwo\_out@{integTwo\_out}}
+\index{integTwo\_out@{integTwo\_out}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integTwo\_out}{integTwo\_out}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a6724d6cf13ac8729dc242ea7865f0f9c} 
+float integ\+Two\+\_\+out =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_aacb61dd0c2a5ed584e3d5e622db8564a}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integTwo\_out\_ant@{integTwo\_out\_ant}}
+\index{integTwo\_out\_ant@{integTwo\_out\_ant}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integTwo\_out\_ant}{integTwo\_out\_ant}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_aacb61dd0c2a5ed584e3d5e622db8564a} 
+float integ\+Two\+\_\+out\+\_\+ant =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_aa053f570decba54c6eaef148e8761780}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integTwo\_out\_ant\_b@{integTwo\_out\_ant\_b}}
+\index{integTwo\_out\_ant\_b@{integTwo\_out\_ant\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integTwo\_out\_ant\_b}{integTwo\_out\_ant\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_aa053f570decba54c6eaef148e8761780} 
+float integ\+Two\+\_\+out\+\_\+ant\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_aac49937be3546f39e2ca1342dac32b56}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!integTwo\_out\_b@{integTwo\_out\_b}}
+\index{integTwo\_out\_b@{integTwo\_out\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{integTwo\_out\_b}{integTwo\_out\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_aac49937be3546f39e2ca1342dac32b56} 
+float integ\+Two\+\_\+out\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_af80f18e3bb1877effbed3d8a7f9efa70}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!omega\_a@{omega\_a}}
+\index{omega\_a@{omega\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{omega\_a}{omega\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_af80f18e3bb1877effbed3d8a7f9efa70} 
+float omega\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a5a5183b3301376435fef9eb5e8414a45}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!omega\_b@{omega\_b}}
+\index{omega\_b@{omega\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{omega\_b}{omega\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a5a5183b3301376435fef9eb5e8414a45} 
+float omega\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a2802eee13bbd7ce5b3d0f1bca96267ad}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Q\_Valfa@{Q\_Valfa}}
+\index{Q\_Valfa@{Q\_Valfa}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Q\_Valfa}{Q\_Valfa}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a2802eee13bbd7ce5b3d0f1bca96267ad} 
+float Q\+\_\+\+Valfa =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_af1af56d2dd8dbe78bdb28caa698213fa}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Q\_Vbeta@{Q\_Vbeta}}
+\index{Q\_Vbeta@{Q\_Vbeta}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Q\_Vbeta}{Q\_Vbeta}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_af1af56d2dd8dbe78bdb28caa698213fa} 
+float Q\+\_\+\+Vbeta =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a664b127ddfb48eec89597235cece651c}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!theta\_a@{theta\_a}}
+\index{theta\_a@{theta\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{theta\_a}{theta\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a664b127ddfb48eec89597235cece651c} 
+float theta\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_ab34288cf2825336785d55f2b3cf6af49}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!theta\_b@{theta\_b}}
+\index{theta\_b@{theta\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{theta\_b}{theta\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ab34288cf2825336785d55f2b3cf6af49} 
+float theta\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a3587ef18ce4195bb352723295d1e47b8}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!V\_alfa@{V\_alfa}}
+\index{V\_alfa@{V\_alfa}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{V\_alfa}{V\_alfa}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a3587ef18ce4195bb352723295d1e47b8} 
+float V\+\_\+alfa =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a1769cea2c7412ab042cbcd93d03d4078}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!V\_alfa\_a@{V\_alfa\_a}}
+\index{V\_alfa\_a@{V\_alfa\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{V\_alfa\_a}{V\_alfa\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a1769cea2c7412ab042cbcd93d03d4078} 
+float V\+\_\+alfa\+\_\+a}
+
+\Hypertarget{Code__declaration__decomposition_8h_ae8e60c8397326203f95ec2338eb4ca4b}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!V\_alfa\_b@{V\_alfa\_b}}
+\index{V\_alfa\_b@{V\_alfa\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{V\_alfa\_b}{V\_alfa\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ae8e60c8397326203f95ec2338eb4ca4b} 
+float V\+\_\+alfa\+\_\+b}
+
+\Hypertarget{Code__declaration__decomposition_8h_a5debebd81af8d0ebe024d78cdcc97ee9}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!V\_beta@{V\_beta}}
+\index{V\_beta@{V\_beta}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{V\_beta}{V\_beta}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a5debebd81af8d0ebe024d78cdcc97ee9} 
+float V\+\_\+beta =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_af9d9dfaaa194032aac93954dde880f84}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!V\_beta\_a@{V\_beta\_a}}
+\index{V\_beta\_a@{V\_beta\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{V\_beta\_a}{V\_beta\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_af9d9dfaaa194032aac93954dde880f84} 
+float V\+\_\+beta\+\_\+a}
+
+\Hypertarget{Code__declaration__decomposition_8h_a38ccbda9ef300f426ba7b1c29a35e969}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!V\_beta\_b@{V\_beta\_b}}
+\index{V\_beta\_b@{V\_beta\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{V\_beta\_b}{V\_beta\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a38ccbda9ef300f426ba7b1c29a35e969} 
+float V\+\_\+beta\+\_\+b}
+
+\Hypertarget{Code__declaration__decomposition_8h_a20aa2804cc392e162754639d1ec564d4}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!VA@{VA}}
+\index{VA@{VA}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{VA}{VA}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a20aa2804cc392e162754639d1ec564d4} 
+float VA =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_aab16f89b40313dd6238a39f1c52d0a64}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vabc\_a@{Vabc\_a}}
+\index{Vabc\_a@{Vabc\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vabc\_a}{Vabc\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_aab16f89b40313dd6238a39f1c52d0a64} 
+float Vabc\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a5eead098008fcfe38582867ae62c316c}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vabc\_b@{Vabc\_b}}
+\index{Vabc\_b@{Vabc\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vabc\_b}{Vabc\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a5eead098008fcfe38582867ae62c316c} 
+float Vabc\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_adf581683821ae90fa2449ebc7f33ae6b}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vabc\_c@{Vabc\_c}}
+\index{Vabc\_c@{Vabc\_c}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vabc\_c}{Vabc\_c}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_adf581683821ae90fa2449ebc7f33ae6b} 
+float Vabc\+\_\+c =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a3cf82a01c23c3a67d1995a66fe2e481d}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vabcn\_a@{Vabcn\_a}}
+\index{Vabcn\_a@{Vabcn\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vabcn\_a}{Vabcn\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a3cf82a01c23c3a67d1995a66fe2e481d} 
+float Vabcn\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a011e9b0c22d96593fd460fd6442425a0}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vabcn\_b@{Vabcn\_b}}
+\index{Vabcn\_b@{Vabcn\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vabcn\_b}{Vabcn\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a011e9b0c22d96593fd460fd6442425a0} 
+float Vabcn\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_aacbb8909689a9a9d054c1a58fb9b67f8}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vabcn\_c@{Vabcn\_c}}
+\index{Vabcn\_c@{Vabcn\_c}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vabcn\_c}{Vabcn\_c}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_aacbb8909689a9a9d054c1a58fb9b67f8} 
+float Vabcn\+\_\+c =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_aa84d44a91575d43c0263c80f11fe63b0}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vabcp\_a@{Vabcp\_a}}
+\index{Vabcp\_a@{Vabcp\_a}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vabcp\_a}{Vabcp\_a}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_aa84d44a91575d43c0263c80f11fe63b0} 
+float Vabcp\+\_\+a =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_ac2f20bce5287baeb865e7c64da210e2a}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vabcp\_b@{Vabcp\_b}}
+\index{Vabcp\_b@{Vabcp\_b}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vabcp\_b}{Vabcp\_b}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ac2f20bce5287baeb865e7c64da210e2a} 
+float Vabcp\+\_\+b =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a8ae49eb20d62ba358901f1abe67b5b4d}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Vabcp\_c@{Vabcp\_c}}
+\index{Vabcp\_c@{Vabcp\_c}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Vabcp\_c}{Vabcp\_c}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a8ae49eb20d62ba358901f1abe67b5b4d} 
+float Vabcp\+\_\+c =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a17241fc3322f2bf376054c2f3c375b20}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Valfabeta\_alfa@{Valfabeta\_alfa}}
+\index{Valfabeta\_alfa@{Valfabeta\_alfa}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Valfabeta\_alfa}{Valfabeta\_alfa}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a17241fc3322f2bf376054c2f3c375b20} 
+float Valfabeta\+\_\+alfa =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_ad1fdf042aa2ed19498abcf71389e554d}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!Valfabeta\_beta@{Valfabeta\_beta}}
+\index{Valfabeta\_beta@{Valfabeta\_beta}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{Valfabeta\_beta}{Valfabeta\_beta}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_ad1fdf042aa2ed19498abcf71389e554d} 
+float Valfabeta\+\_\+beta =0}
+
+\Hypertarget{Code__declaration__decomposition_8h_a46393dabfdc8b3c70d5811eadaedeaf4}\index{Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}!VB@{VB}}
+\index{VB@{VB}!Code\_declaration\_decomposition.h@{Code\_declaration\_decomposition.h}}
+\doxysubsubsection{\texorpdfstring{VB}{VB}}
+{\footnotesize\ttfamily \label{Code__declaration__decomposition_8h_a46393dabfdc8b3c70d5811eadaedeaf4} 
+float VB =0}
+

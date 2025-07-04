@@ -1,0 +1,180 @@
+\doxysection{Code\+\_\+equacao\+\_\+mag.\+c File Reference}
+\hypertarget{Code__equacao__mag_8c}{}\label{Code__equacao__mag_8c}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_a46f532c2f3e6094188977eca0b0ad513}{Output}} (0)
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_acf54211986ce94c26ef824769d54f6fe}{Output}} (1)
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_a3058c68fdbca6fa4621043731f7f8e3c}{Output}} (2)
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_ac7aa4c7795b2a66ce91afe178a4bd680}{Output}} (3)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_af6396b826521dad19a1761d9e32d5f82}{omega}} = 2\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{Code__equacao__mag_8h_a598a3330b3c21701223ee0ca14316eca}{PI}}\texorpdfstring{$\ast$}{*}60
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_a72b8a3ec1a88bf1d79df6c33b9c9cfbf}{termo1}} = ( (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\+\_\+neg}}) \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a45188cd406664cafc6efc616f5d3da9d}{P\+\_\+ref}}) / (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\+\_\+neg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}})
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_a567e7950810469796f4ea7776d130b6c}{termo2}} = ( (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\+\_\+pos}} -\/ \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\+\_\+neg}}) \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a9b0299464e2e7b53bcfcdb29cc5b70a2}{Q\+\_\+ref}}) / (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\+\_\+neg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}})
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_a8e1a4402789755ece7b3fb3a828afc51}{p\+\_\+mag}} = \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} sqrt( \mbox{\hyperlink{Code__equacao__mag_8c_a72b8a3ec1a88bf1d79df6c33b9c9cfbf}{termo1}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8c_a72b8a3ec1a88bf1d79df6c33b9c9cfbf}{termo1}} + \mbox{\hyperlink{Code__equacao__mag_8c_a567e7950810469796f4ea7776d130b6c}{termo2}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8c_a567e7950810469796f4ea7776d130b6c}{termo2}})
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_a384b8a26a14eaf0154437b01cf49f8ef}{termo3}} = ( (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\+\_\+neg}}) \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a9b0299464e2e7b53bcfcdb29cc5b70a2}{Q\+\_\+ref}}) / (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\+\_\+neg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}})
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_a11e52ba541018e15f0ff7855f0e92a6e}{termo4}} = ( (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\+\_\+pos}} -\/ \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\+\_\+neg}}) \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a45188cd406664cafc6efc616f5d3da9d}{P\+\_\+ref}}) / (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\+\_\+neg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}})
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_abf1dcb2cde57a0db9f2948a7fddbc4f0}{q\+\_\+mag}} = \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} sqrt( \mbox{\hyperlink{Code__equacao__mag_8c_a384b8a26a14eaf0154437b01cf49f8ef}{termo3}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8c_a384b8a26a14eaf0154437b01cf49f8ef}{termo3}} + \mbox{\hyperlink{Code__equacao__mag_8c_a11e52ba541018e15f0ff7855f0e92a6e}{termo4}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8c_a11e52ba541018e15f0ff7855f0e92a6e}{termo4}})
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_a5bd65ade467d07994c03279134d97523}{termo5}}
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_aa59eb0fbc9345f563b45b6eccd2b377b}{termo6}}
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_ab48c77ab14fa9da81d09ac5c66dd08af}{p\+\_\+inst}} = \mbox{\hyperlink{Code__equacao__mag_8c_a5bd65ade467d07994c03279134d97523}{termo5}} + \mbox{\hyperlink{Code__equacao__mag_8c_aa59eb0fbc9345f563b45b6eccd2b377b}{termo6}}
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_a6bf30e2488d651e7318f0d81aed78336}{termo7}}
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_a389f25fdea85d22595ea3be420e13b13}{termo8}}
+\item 
+\mbox{\hyperlink{Code__equacao__mag_8c_ad31e41faaea7f6e057f120fbde65b89f}{q\+\_\+inst}} = \mbox{\hyperlink{Code__equacao__mag_8c_a6bf30e2488d651e7318f0d81aed78336}{termo7}} -\/ \mbox{\hyperlink{Code__equacao__mag_8c_a389f25fdea85d22595ea3be420e13b13}{termo8}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{Code__equacao__mag_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{Code__equacao__mag_8c_a46f532c2f3e6094188977eca0b0ad513}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!Output@{Output}}
+\index{Output@{Output}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{Output()}{Output()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_a46f532c2f3e6094188977eca0b0ad513} 
+Output (\begin{DoxyParamCaption}\item[{0}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 0
+\Hypertarget{Code__equacao__mag_8c_acf54211986ce94c26ef824769d54f6fe}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!Output@{Output}}
+\index{Output@{Output}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{Output()}{Output()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_acf54211986ce94c26ef824769d54f6fe} 
+Output (\begin{DoxyParamCaption}\item[{1}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{Code__equacao__mag_8c_a3058c68fdbca6fa4621043731f7f8e3c}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!Output@{Output}}
+\index{Output@{Output}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{Output()}{Output()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_a3058c68fdbca6fa4621043731f7f8e3c} 
+Output (\begin{DoxyParamCaption}\item[{2}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{Code__equacao__mag_8c_ac7aa4c7795b2a66ce91afe178a4bd680}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!Output@{Output}}
+\index{Output@{Output}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{Output()}{Output()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_ac7aa4c7795b2a66ce91afe178a4bd680} 
+Output (\begin{DoxyParamCaption}\item[{3}]{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{Code__equacao__mag_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{Code__equacao__mag_8c_af6396b826521dad19a1761d9e32d5f82}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!omega@{omega}}
+\index{omega@{omega}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{omega}{omega}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_af6396b826521dad19a1761d9e32d5f82} 
+omega = 2\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{Code__equacao__mag_8h_a598a3330b3c21701223ee0ca14316eca}{PI}}\texorpdfstring{$\ast$}{*}60}
+
+\Hypertarget{Code__equacao__mag_8c_ab48c77ab14fa9da81d09ac5c66dd08af}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!p\_inst@{p\_inst}}
+\index{p\_inst@{p\_inst}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{p\_inst}{p\_inst}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_ab48c77ab14fa9da81d09ac5c66dd08af} 
+p\+\_\+inst = \mbox{\hyperlink{Code__equacao__mag_8c_a5bd65ade467d07994c03279134d97523}{termo5}} + \mbox{\hyperlink{Code__equacao__mag_8c_aa59eb0fbc9345f563b45b6eccd2b377b}{termo6}}}
+
+\Hypertarget{Code__equacao__mag_8c_a8e1a4402789755ece7b3fb3a828afc51}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!p\_mag@{p\_mag}}
+\index{p\_mag@{p\_mag}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{p\_mag}{p\_mag}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_a8e1a4402789755ece7b3fb3a828afc51} 
+p\+\_\+mag = \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} sqrt( \mbox{\hyperlink{Code__equacao__mag_8c_a72b8a3ec1a88bf1d79df6c33b9c9cfbf}{termo1}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8c_a72b8a3ec1a88bf1d79df6c33b9c9cfbf}{termo1}} + \mbox{\hyperlink{Code__equacao__mag_8c_a567e7950810469796f4ea7776d130b6c}{termo2}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8c_a567e7950810469796f4ea7776d130b6c}{termo2}})}
+
+\Hypertarget{Code__equacao__mag_8c_ad31e41faaea7f6e057f120fbde65b89f}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!q\_inst@{q\_inst}}
+\index{q\_inst@{q\_inst}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{q\_inst}{q\_inst}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_ad31e41faaea7f6e057f120fbde65b89f} 
+q\+\_\+inst = \mbox{\hyperlink{Code__equacao__mag_8c_a6bf30e2488d651e7318f0d81aed78336}{termo7}} -\/ \mbox{\hyperlink{Code__equacao__mag_8c_a389f25fdea85d22595ea3be420e13b13}{termo8}}}
+
+\Hypertarget{Code__equacao__mag_8c_abf1dcb2cde57a0db9f2948a7fddbc4f0}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!q\_mag@{q\_mag}}
+\index{q\_mag@{q\_mag}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{q\_mag}{q\_mag}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_abf1dcb2cde57a0db9f2948a7fddbc4f0} 
+q\+\_\+mag = \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} sqrt( \mbox{\hyperlink{Code__equacao__mag_8c_a384b8a26a14eaf0154437b01cf49f8ef}{termo3}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8c_a384b8a26a14eaf0154437b01cf49f8ef}{termo3}} + \mbox{\hyperlink{Code__equacao__mag_8c_a11e52ba541018e15f0ff7855f0e92a6e}{termo4}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8c_a11e52ba541018e15f0ff7855f0e92a6e}{termo4}})}
+
+\Hypertarget{Code__equacao__mag_8c_a72b8a3ec1a88bf1d79df6c33b9c9cfbf}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!termo1@{termo1}}
+\index{termo1@{termo1}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{termo1}{termo1}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_a72b8a3ec1a88bf1d79df6c33b9c9cfbf} 
+termo1 = ( (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\+\_\+neg}}) \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a45188cd406664cafc6efc616f5d3da9d}{P\+\_\+ref}}) / (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\+\_\+neg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}})}
+
+\Hypertarget{Code__equacao__mag_8c_a567e7950810469796f4ea7776d130b6c}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!termo2@{termo2}}
+\index{termo2@{termo2}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{termo2}{termo2}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_a567e7950810469796f4ea7776d130b6c} 
+termo2 = ( (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\+\_\+pos}} -\/ \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\+\_\+neg}}) \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a9b0299464e2e7b53bcfcdb29cc5b70a2}{Q\+\_\+ref}}) / (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\+\_\+neg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}})}
+
+\Hypertarget{Code__equacao__mag_8c_a384b8a26a14eaf0154437b01cf49f8ef}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!termo3@{termo3}}
+\index{termo3@{termo3}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{termo3}{termo3}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_a384b8a26a14eaf0154437b01cf49f8ef} 
+termo3 = ( (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\+\_\+neg}}) \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a9b0299464e2e7b53bcfcdb29cc5b70a2}{Q\+\_\+ref}}) / (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\+\_\+neg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}})}
+
+\Hypertarget{Code__equacao__mag_8c_a11e52ba541018e15f0ff7855f0e92a6e}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!termo4@{termo4}}
+\index{termo4@{termo4}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{termo4}{termo4}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_a11e52ba541018e15f0ff7855f0e92a6e} 
+termo4 = ( (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\+\_\+pos}} -\/ \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\+\_\+neg}}) \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a45188cd406664cafc6efc616f5d3da9d}{P\+\_\+ref}}) / (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\+\_\+pos}} + \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\+\_\+neg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Code__equacao__mag_8h_a1f9aca42e2010bb82488684dee1a66ea}{u}})}
+
+\Hypertarget{Code__equacao__mag_8c_a5bd65ade467d07994c03279134d97523}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!termo5@{termo5}}
+\index{termo5@{termo5}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{termo5}{termo5}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_a5bd65ade467d07994c03279134d97523} 
+termo5}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\ (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\_pos}}\ +\ \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\_neg}})\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}}\ *\ cos(2\ *\ \mbox{\hyperlink{Code__equacao__mag_8c_af6396b826521dad19a1761d9e32d5f82}{omega}}\ *\ \mbox{\hyperlink{Code__declaration__inverter_8h_a7bac9eddc00f71cea0731261103a7dcb}{tempo}}\ +\ \mbox{\hyperlink{Code__equacao__mag_8h_a20b5cd6b50229fb4696f4c7dbda62b1c}{theta\_pos}}\ -\/\ \mbox{\hyperlink{Code__equacao__mag_8h_a4c17419658e1f2cbcd6673b650d1bf5b}{theta\_neg}})\ )}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ /\ (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\_pos}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ +\ \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\_neg}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}})\ *\ (\mbox{\hyperlink{Code__equacao__mag_8h_a45188cd406664cafc6efc616f5d3da9d}{P\_ref}})}
+
+\end{DoxyCode}
+\Hypertarget{Code__equacao__mag_8c_aa59eb0fbc9345f563b45b6eccd2b377b}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!termo6@{termo6}}
+\index{termo6@{termo6}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{termo6}{termo6}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_aa59eb0fbc9345f563b45b6eccd2b377b} 
+termo6}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\ (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\_pos}}\ -\/\ \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\_neg}})\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}}\ *\ sin(2\ *\ \mbox{\hyperlink{Code__equacao__mag_8c_af6396b826521dad19a1761d9e32d5f82}{omega}}\ *\ \mbox{\hyperlink{Code__declaration__inverter_8h_a7bac9eddc00f71cea0731261103a7dcb}{tempo}}\ +\ \mbox{\hyperlink{Code__equacao__mag_8h_a20b5cd6b50229fb4696f4c7dbda62b1c}{theta\_pos}}\ -\/\ \mbox{\hyperlink{Code__equacao__mag_8h_a4c17419658e1f2cbcd6673b650d1bf5b}{theta\_neg}})\ )}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ /\ (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\_pos}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ +\ \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\_neg}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}})\ *\ (\mbox{\hyperlink{Code__equacao__mag_8h_a9b0299464e2e7b53bcfcdb29cc5b70a2}{Q\_ref}})}
+
+\end{DoxyCode}
+\Hypertarget{Code__equacao__mag_8c_a6bf30e2488d651e7318f0d81aed78336}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!termo7@{termo7}}
+\index{termo7@{termo7}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{termo7}{termo7}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_a6bf30e2488d651e7318f0d81aed78336} 
+termo7}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\ (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\_pos}}\ +\ \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\_neg}})\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}}\ *\ cos(2\ *\ \mbox{\hyperlink{Code__equacao__mag_8c_af6396b826521dad19a1761d9e32d5f82}{omega}}\ *\ \mbox{\hyperlink{Code__declaration__inverter_8h_a7bac9eddc00f71cea0731261103a7dcb}{tempo}}\ +\ \mbox{\hyperlink{Code__equacao__mag_8h_a20b5cd6b50229fb4696f4c7dbda62b1c}{theta\_pos}}\ -\/\ \mbox{\hyperlink{Code__equacao__mag_8h_a4c17419658e1f2cbcd6673b650d1bf5b}{theta\_neg}})\ )}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ /\ (\mbox{\hyperlink{Code__equacao__mag_8h_aefb66a33cb62d377de8a645df6d6e927}{kq\_pos}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ +\ \mbox{\hyperlink{Code__equacao__mag_8h_a5d249a02a0739cc455d600b40df669ee}{kq\_neg}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}})\ *\ (\mbox{\hyperlink{Code__equacao__mag_8h_a9b0299464e2e7b53bcfcdb29cc5b70a2}{Q\_ref}})}
+
+\end{DoxyCode}
+\Hypertarget{Code__equacao__mag_8c_a389f25fdea85d22595ea3be420e13b13}\index{Code\_equacao\_mag.c@{Code\_equacao\_mag.c}!termo8@{termo8}}
+\index{termo8@{termo8}!Code\_equacao\_mag.c@{Code\_equacao\_mag.c}}
+\doxysubsubsection{\texorpdfstring{termo8}{termo8}}
+{\footnotesize\ttfamily \label{Code__equacao__mag_8c_a389f25fdea85d22595ea3be420e13b13} 
+termo8}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\ (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\_pos}}\ -\/\ \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\_neg}})\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}}\ *\ sin(2\ *\ \mbox{\hyperlink{Code__equacao__mag_8c_af6396b826521dad19a1761d9e32d5f82}{omega}}\ *\ \mbox{\hyperlink{Code__declaration__inverter_8h_a7bac9eddc00f71cea0731261103a7dcb}{tempo}}\ +\ \mbox{\hyperlink{Code__equacao__mag_8h_a20b5cd6b50229fb4696f4c7dbda62b1c}{theta\_pos}}\ -\/\ \mbox{\hyperlink{Code__equacao__mag_8h_a4c17419658e1f2cbcd6673b650d1bf5b}{theta\_neg}})\ )}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ /\ (\mbox{\hyperlink{Code__equacao__mag_8h_a02e449d03b20c4c87452001429184109}{kp\_pos}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_ad3d208a46eecfe52dcf5160798b21f29}{v\_pos\_mod}}\ +\ \mbox{\hyperlink{Code__equacao__mag_8h_ae82e67d26e9deba0a131b4a7cc9a205e}{kp\_neg}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}}\ *\ \mbox{\hyperlink{Code__equacao__mag_8h_a01936ed32b8d112adc5041577a1cfb72}{v\_neg\_mod}})\ *\ (\mbox{\hyperlink{Code__equacao__mag_8h_a45188cd406664cafc6efc616f5d3da9d}{P\_ref}})}
+
+\end{DoxyCode}
