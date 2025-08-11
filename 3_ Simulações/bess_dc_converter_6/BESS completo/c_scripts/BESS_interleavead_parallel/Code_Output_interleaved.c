@@ -129,9 +129,9 @@ for (i = 0; i < 2 * N; i++) {
     Output(i) = S[i];
 }
 
-Output(12) = Iref_dis - total_Ibat; // PIbt[0].erro;
-Output(13) = 0; //PIbt[1].erro;
-Output(14) = 0; //PIbt[2].erro;
-Output(15) = 0; //PIbt[3].erro;
-Output(16) = 0; //PIbt[4].erro;
-Output(17) = 0; //PIbt[5].erro;
+Output(12) = PIbt[0].piout_sat; // PIbt[0].erro;
+Output(13) = PIbt[1].piout_sat; //PIbt[1].erro;
+Output(14) = PIbt[2].piout_sat; //PIbt[2].erro;
+Output(15) = PIbt[3].piout_sat; //PIbt[3].erro;
+Output(16) = PIbt[4].piout_sat; //PIbt[4].erro;
+Output(17) = PIbt[5].piout_sat; //PIbt[5].erro;

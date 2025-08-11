@@ -1,119 +1,133 @@
-#ifndef DC_CONVERTER_H
-#define DC_CONVERTER_H
+/**
+ * @file Code_declaration_interleaved.h
+ * @brief Declarations for a 6-phase interleaved DC/DC converter controller.
+ * @details This header file defines the data structures, constants, inputs, parameters,
+ * and function definitions for the PLECS C-Script controller.
+ */
 
 #include <math.h>
 
-// Input Definitions
-#define Ibat Input(0)
-#define Ibat2 Input(1)
-#define Ibat3 Input(2)
-#define Ibat4 Input(3)
-#define Ibat5 Input(4)
-#define Ibat6 Input(5)
-#define control_enable Input(6)
-#define Iref_ch Input(7)
-#define Iref_dis Input(8)
-#define Vbat Input(9)
-#define Vdc Input(10)
-#define Soc Input(11)
-#define reset Input(12)
+// --- INPUTS, PARAMETERS, CONSTANTS, and STRUCTS (Unchanged) ---
 
-// Parameter Definitions
-#define fsw ParamRealData(0,0)    
-#define Ts ParamRealData(1,0)   
-#define fdsp ParamRealData(2,0)  
-#define Kpbt ParamRealData(3,0)   
-#define Kibt ParamRealData(4,0)   
-#define Kpvbu ParamRealData(5,0)   
-#define Kivbu ParamRealData(6,0)  
-#define Kpibu ParamRealData(7,0)   
-#define Kiibu ParamRealData(8,0)  
-#define Soc_min ParamRealData(9,0)   
-#define Soc_max ParamRealData(10,0)   
-#define Nb_series ParamRealData(11,0)   
-#define Nb_strings ParamRealData(12,0)  
+#define control_enable  Input(6)
+#define Iref_ch         Input(7)
+#define Iref_dis        Input(8)
+#define Vbat            Input(9)
+#define Vdc             Input(10)
+#define Soc             Input(11)
+#define reset           Input(12)
+#define fsw             ParamRealData(0,0)
+#define Ts              ParamRealData(1,0)
+#define fdsp            ParamRealData(2,0)
+#define Kpbt            ParamRealData(3,0)
+#define Kibt            ParamRealData(4,0)
+#define Kpvbu           ParamRealData(5,0)
+#define Kivbu           ParamRealData(6,0)
+#define Kpibu           ParamRealData(7,0)
+#define Kiibu           ParamRealData(8,0)
+#define Soc_min         ParamRealData(9,0)
+#define Soc_max         ParamRealData(10,0)
+#define NB_SERIES       ParamRealData(11,0)
+#define NB_STRINGS      ParamRealData(12,0)
+#define N               6
+#define PRD             (fdsp/fsw)/2
+#define VBOOST          14.4
+#define VFLOAT          13.6
 
-#define N_br  6                     // Number of interleaved phases
-#define PRD  ((fdsp/fsw)/2)         // Counter period for up/down counting
-#define PRD_div2  (PRD/2)           // Half period
-#define pi    3.141592653589793   
-#define wn    (2*pi*50.0)           // Fundamental angular frequency (50 Hz assumed)
-#define N     150                   // Number of points in fundamental
+#define SAT_UP          1.0
+#define SAT_DOWN        -SAT_UP
+#define IREF_SAT_LOW    -10.0
+#define IREF_DIS_MAX    16.0
+#define VDC_MAX         550.0
 
-// Battery Parameters
-float Vboost = 14.4;               // Boost voltage
-float Vfloat = 13.6;               // Float voltage
+typedef enum { MODE_DISCHARGE, MODE_CHARGE } OperationMode;
 
-// References
-float Vref = 0;
-float Ibat_total = 0;              // Sum of all phase currents
-
-// PI Controller Structure
 typedef struct {
-    float Xref;
-    float Xm;
-    float erro;
-    float erro_ant;
-    float inte;
-    float inte_ant;
-    float duty;
-    float piout;
-    float piout_sat;
-    float erropi;
-    float erropi_ant;
-    float dif;
-    float Kp;
-    float Ki;
+    OperationMode mode;
+    int boost_charge_active;
+} ConverterState;
+
+#define STATE_DEFAULT {MODE_DISCHARGE, 0}
+ConverterState state = STATE_DEFAULT;
+
+typedef struct {
+    float Xref, Xm, erro, erro_ant, inte, inte_ant, duty, piout, piout_ant;
+    float piout_sat, erropi, erropi_ant, dif, Kp, Ki;
 } sPI;
 
-#define PI_default {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+#define PI_DEFAULT {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 
-// Arrays for PI Controllers (6 phases)
-sPI PIbt[6] = {PI_default};        // Boost mode PI controllers
-sPI PIbu[6] = {PI_default};        // Buck mode PI controllers
-sPI PIbuv = PI_default;            // Voltage PI controller (shared)
-
-float sat_up = 1;
-float sat_down = -1;
-
-// Ramp Structure
 typedef struct {
-    float t1;
-    float t1_ant;
-    float y;
-    float y_ant;
-    float uin;
-    float rate;
-    float rising; 
-    float falling;
+    float t1, t1_ant, y, y_ant, uin, rate, rising, falling;
 } sRamp;
 
-#define IRamp_default {0,0,0,0,0,0,(15),(-15)} 
-#define VRamp_default {0,0,0,0,0,0,(500),(-500)} 
-sRamp IRamp_bt[6] = {IRamp_default};  // Ramp for each phase
-sRamp VRamp = VRamp_default;
+#define IRAMP_DEFAULT {0,0,0,0,0,0, IREF_DIS_MAX, -IREF_DIS_MAX} 
+#define VRAMP_DEFAULT {0,0,0,0,0,0, VDC_MAX, -VDC_MAX}
 
-// Flags
-typedef struct {
-    int CM;      // Charge mode
-    int BVCM;    // Boost Charge mode
-    int DM;      // Discharge mode
-} sflag;
+sPI PIbt;
+sPI PIbu;
+sRamp IRamp;
 
-#define IFlag_default {0,0,1} 
-sflag flag = IFlag_default;
+sPI PIbuv = PI_DEFAULT;
+sRamp VRamp = VRAMP_DEFAULT;
+const sPI PI_DEFAULT_INSTANCE = PI_DEFAULT;
+const sRamp IRAMP_DEFAULT_INSTANCE = IRAMP_DEFAULT;
 
-// PWM Parameters
-static int count[6];               // Counter array for 6 phases
-static int inc[6];                 // Increment direction array
-static int CMPB = 0;
-static int S[12];                  // Switch states (2 switches per phase)
-static int teste = 0;
+float count[N] = {0, 10, 20, 30, 40, 50};
+float inc[N] = {0.5, 0.5, 0.5, 0.5, 0.5, 0.5};
+int S[2 * N];
 
-// Function Declarations
-void Ramp(sRamp *rmp, float sample);
-void Pifunc(sPI *reg, float T_div2, float Kp, float Ki, float satup, float satdown);
-void updateCounters(int count[], int inc[], int PRD);
-void initializePhases(int count[], int inc[], int PRD);
+static int is_initialized = 0; 
 
-#endif // DC_CONVERTER_H
+// --- FUNCTION DEFINITIONS ---
+
+/**
+ * @brief Implements a ramp function to smoothly change a value towards a target.
+ * @param[in,out] rmp Pointer to the ramp controller structure to be updated.
+ * @param[in] sample The sample time (Ts) of the controller.
+ */
+static inline void Ramp(sRamp *rmp, float sample) {
+    if (rmp->uin != rmp->y) 
+      rmp->t1 = rmp->t1 + sample; 
+    else rmp->t1 = 0;
+
+    rmp->rate = (rmp->uin - rmp->y_ant) / (rmp->t1 - rmp->t1_ant);
+
+    if (rmp->rate > rmp->rising) 
+      rmp->y = (rmp->t1 - rmp->t1_ant) * rmp->rising + rmp->y_ant;
+    else 
+      if (rmp->rate < rmp->falling) 
+        rmp->y = (rmp->t1 - rmp->t1_ant) * rmp->falling + rmp->y_ant;
+      else rmp->y = rmp->uin;
+
+    rmp->t1_ant = rmp->t1;
+    rmp->y_ant = rmp->y;	
+}
+
+/**
+ * @brief Implements a Proportional-Integral (PI) controller with anti-windup.
+ * @param[in,out] reg Pointer to the PI controller structure to be updated.
+ * @param[in] T_div2 Half of the sampling period, used in the integration step.
+ * @param[in] Kp The proportional gain for the controller.
+ * @param[in] Ki The integral gain for the controller.
+ * @param[in] satup The upper saturation limit for the PI output.
+ * @param[in] satdown The lower saturation limit for the PI output.
+ */
+static inline void Pifunc(sPI *reg, float T_div2, float Kp, float Ki, float satup, float satdown) {
+    reg->erro = reg->Xref - reg->Xm;
+    reg->erropi = reg->erro - (1.0f / Kp) * reg->dif;
+
+    reg->inte = reg->inte_ant + T_div2 * (reg->erropi + reg->erropi_ant); 
+    reg->inte_ant = reg->inte;
+
+    reg->erropi_ant = reg->erropi;
+    reg->piout = (Kp * reg->erro + Ki * reg->inte); 
+    reg->piout_sat = reg->piout;
+
+    if (reg->piout > satup) 
+      reg->piout_sat = satup;
+    if (reg->piout < satdown) 
+      reg->piout_sat = satdown;
+
+    reg->dif = reg->piout - reg->piout_sat;
+}

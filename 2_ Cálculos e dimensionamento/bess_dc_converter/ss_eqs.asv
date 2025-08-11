@@ -1,0 +1,66 @@
+% --- Provided and Previously Established Code ---
+syms L C R RL v i vg vg_ref v_ref fs % Added fs
+x_t = [i ; v];
+u_t = [vg];
+K = [L 0; 0 C];
+A1 = [-R 0; 0 -1/RL];   B1 = [1; 0];
+A2 = [-R -1; 1 -1/RL];  B2 = [1; 0];
+% Note: C and E matrices are not needed for pole placement
+D = v_ref/vg_ref; 
+D_linha = (1 - D);
+
+% Calculate averaged matrices A, B
+A = D * A1 + D_linha * A2;
+B = D * B1 + D_linha * B2;
+
+% Calculate Quiescent Operating Point
+U = [vg_ref]; 
+X = -inv(A)*B*U;
+
+% Calculate the Duty Cycle Input Matrix F
+F = (A1 - A2)*X + (B1 - B2)*U;
+
+% --- New Steps for Pole Placement ---
+
+%% Step 1: Form the Standard State and Input Matrices
+fprintf('--- Calculating Standard Matrices for Pole Placement ---\n');
+% The standard state matrix is A_std = inv(K)*A
+% The standard control input matrix is B_std = inv(K)*F
+A_std = inv(K) * A;
+B_std = inv(K) * F;
+
+%% Step 2: Define Desired Pole Locations
+fprintf('--- Defining Desired Pole Locations ---\n');
+% Poles are placed at -fs/10 for stability and fast response
+p = [-fs/10, -fs/10];
+
+%% Step 3: Calculate the Symbolic Gain Matrix
+% Using acker() which is well-suited for symbolic single-input systems
+fprintf('--- Calculating Symbolic Gain Matrix (this may take a moment) ---\n');
+K_gain_sym = acker(A_std, B_std, p);
+
+%% Step 4: Substitute Numerical Values and Find Final Gain
+fprintf('--- Substituting Numerical Values ---\n');
+
+% Define dummy values for the symbolic variables
+N = 3; P_ref = 3000; 
+vg_ref_val = 200;
+v_ref_val = 500;
+L_val = (4/N)*1e-3;
+C_val = 14e-3;
+R_val = 0.55/N;
+RL_val = P_r;
+fs_val = 9000; % 9 kHz
+
+% Substitute values into the symbolic matrices
+A_std_num = subs(A_std, {vg_ref, v_ref, L, C, R, RL}, ...
+                        {vg_ref_val, v_ref_val, L_val, C_val, R_val, RL_val});
+B_std_num = subs(B_std, {vg_ref, v_ref, L, C, R, RL}, ...
+                        {vg_ref_val, v_ref_val, L_val, C_val, R_val, RL_val});
+p_num = subs(p, fs, fs_val);
+
+% Calculate the final numerical gain matrix K_gain = [ki, kv]
+K_gain_num = place(double(A_std_num), double(B_std_num), double(p_num));
+
+fprintf('Calculated Numerical Gain Matrix (K_gain):\n');
+disp(K_gain_num);
