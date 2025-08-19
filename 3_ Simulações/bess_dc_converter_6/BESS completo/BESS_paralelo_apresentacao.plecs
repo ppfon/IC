@@ -1,14 +1,14 @@
 Plecs {
   Name          "BESS_paralelo_apresentacao"
-  Version       "4.9"
+  Version       "4.8"
   CircuitModel  "DiscStateSpace"
   StartTime     "0.0"
-  TimeSpan      "2"
+  TimeSpan      "0.5"
   Timeout       ""
   Solver        "FixedStepDiscrete"
   MaxStep       "passo"
   InitStep      "-1"
-  FixedStep     "passo"
+  FixedStep     "passo/5"
   Refine        "1"
   ZCStepSize    "1e-8"
   RelTol        "1e-3"
@@ -29,7 +29,7 @@ Plecs {
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
   InitializationCommands base64 "ZGVzZXEgPSAwOyBrcCA9IDA7IGtxID0gMDsgU0VMRUNBT"
-"yA9IDY7CgoKJSUgUGFyw6JtZXRyb3MgZGEgcmVkZSBlIGRhIGNhcmdhClZybXMgPSAyMjA7ICAgIC"
+"yA9IDA7CgoKJSUgUGFyw6JtZXRyb3MgZGEgcmVkZSBlIGRhIGNhcmdhClZybXMgPSAyMjA7ICAgIC"
 "AgICAlIFRlbnPDo28gZGUgbGluaGEgZWZpY2F6IGRhIHJlZGUKVnBpY28gPSBWcm1zKnNxcnQoMC4"
 "2NjY2NjY2NjY2NjY2NjcpOwpmbiA9IDYwOyBGcmVkZSA9IGZuOwp3biA9IDIqcGkqZm47ClBfcmVm"
 "ID0gMzAwMDsKUV9yZWYgPSAzMDAwOwpWZGMgPSA1MDA7ICAlJSBEYy1saW5rIHZvbHRhZ2UKTiA9I"
@@ -37,47 +37,48 @@ Plecs {
 "lHQlQgPSAxNTAwOwpUZW1wX2luaWNpYWxfZGlvZG8gPSAxMDAwOwoKVGVtcF9pbmljaWFsX0lHQlR"
 "faW52ID0gODAwOwpUZW1wX2luaWNpYWxfZGlvZG9faW52ID0gODAwOwoKJSUgcGFyw6JtZXRyb3Mg"
 "ZGEgc2ltdWxhw6fDo28KZnN3ID0gOTAwMDsgdHN3PTEvZnN3OyAgICAgICAgICAgCQkJCSAgICAlJ"
-"SBmcmVxdcOqbmNpYSBkZSBjaGF2ZWFtZW50byBkbyBjb252ZXJzb3IKdFNhbXBsZSA9IDEvKE4qZn"
-"N3KTsKU2FtcGxlUmF0ZSA9IDI7CmZzYW1wbGUgPSBmc3c7ICAgICAgICAgICAgICAgICAgICAgICV"
-"1dGlsaXphZG8gbm9zIHBhcsOibWV0cm9zIGRvIGNvbnRyb2xlKHRyYW5zZm9ybWHDp8OjbyBlIGNv"
-"bnRyb2xlKQpUc2FtcGxlID0gMS9mc2FtcGxlOwpmZHNwID0gZnNhbXBsZSoxMjA7CnBhc3NvID0gM"
-"S8oZmRzcCk7IAkJCQkgIAkgJSUgaW5jcmVtZW50byBkZSBzaW11bGHDp8OjbwoKJSBSRURFClNjYy"
-"A9IDIwMGU2OwpYX1IgPSAwLjM7ClZybXNfZiA9IFZybXMvc3FydCgzKTsKdGhldGEgPSBhdGFuKFh"
-"fUik7Clptb2QgPSBWcm1zX2ZeMi8oU2NjLzMpOwpSc291cmNlID0gMC4wMDA1OwpMc291cmNlID0g"
-"MC4wNWUtNjsKCiUlIFBhcmFtZXRyb3MgRmlsdHJvCkxmID0gMWUtMzsKQ2YgPSAyNWUtMDY7CiVSZ"
-"CA9IDEuNTsKTGcgPSBMZjsKTCA9IExnK0xmClJmID0gMipwaSpmbipMZi8xOC44OTgyOwpSZyA9ID"
-"IqcGkqZm4qTGcvMTguODk4MjsKUmQgPSAxLjg7ClIgPSBSZytSZjsKRVNSX2NhcF9sY2wgPSAwLjA"
-"yOwpOX2VzcGlyYXMgPSA4MjsKQXJlYSA9IDk4N2UtNjsKCiUlIENvbnRyb2xlIHJlc3NvbmFudGUK"
-"S2luID0gMTAwMDslLTIqcGkqZmNfYWIqUioyOwpUPTEvZnN3Owpybz1leHAoUipUL0wpOwpLcF9lc"
-"V8xMyA9IFIqc3FydCgyKzIqcm9eLTItKDErc3FydCg1KSkqcm9eLTEpLygoMS1yb14tMSkqc3FydC"
-"gyKSk7CgolJSBQYXJhbWV0cm9zIFBMTApXaW5pdCA9IDIqcGkqZm47CmtzaV9zcmYgPSAxL3NxcnQ"
-"oMik7ICAgICAgIAp3bl9zcmYgPSAzMCoyKnBpOwoKS3BfcGxsID0gMip3bl9zcmYqa3NpX3NyZjsK"
-"S2lfcGxsID0gKHduX3NyZl4yKTsKCiUlIE1hbGhhIGV4dGVybmEgVmRjCkNkYyA9IDMqNC43ZS0zO"
-"yAgICAgICAgIApLcG91dGVyID0gMC4xOTE4MDkyODI3Njc3Njk7ICAgICAgICAgJSVNT2RlbGFnZW"
-"0gbm8gYXJxdWl2byAubQpLaW91dGVyID0gMy40NzkwMzU1NTEzODQwMDA7ICAgICAgICAgJSVNT2R"
-"lbGFnZW0gbm8gYXJxdWl2byAubQoKJSUgTWFsaGEgcmVhdGl2byAgICAgICAgIApLaXEgPSAxMi41"
-"NjY0OyAgICAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KS3BxID0gLTAuMTYyOTsgICAgI"
-"CAgICAlJU1PZGVsYWdlbSBubyBhcnF1aXZvIC5tCgolJSBCYXR0ZXJ5Ck5iX3NlcmllcyAgPSAxNj"
-"sKTmJfc3RyaW5ncyA9IDE7ClJpbnQgPSBOYl9zZXJpZXMqNy4xZS0zOyAgICUlUmVzaXN0w6puY2l"
-"hIGludGVybmEgZGFzIGJhdGVyaWFzClNvY19taW4gPSA1MDsgICAgJSBTT0NbJV0KU29jX21heCA9"
-"IDEwMDsKVmRjbyA9IDEzLjYqTmJfc2VyaWVzOyAgICAgICAgICAgICAgICAgICAgICAgICUlIHRlb"
-"nPDo28gaW5pY2lhbCBkYy1saW5rCnZmbG9hdCA9IDEzLjY7CnZib29zdCA9IDE0LjQ7CiUgRGMvZG"
-"MgUGFyYW1ldGVycwpuQ2VsbCA9IE47CkxiID0gMTkuNWUtMyAlNGUtMyAgICAgJUluZHV0b3IgZG8"
-"gQm9vc3QKUmIgPSAwLjU1OyAgICAgICAgICAgICAgJVJlc2lzdMOqbmNpYSBzw6lyaWUgZG8gaW5k"
-"dXRvcgogICAgICAgICAgICAgICAgJU7Dum1lcm8gZGUgYnJhw6dvcyBkbyBpbnRlcmxlYXZlZApOX"
-"2VzcGlyYXNfY2MgPSA0MDM7CkFyZWFfY2MgPSA5ODdlLTY7ICAgICAgIApmc3diID0gOTAwMDsKVH"
-"NiID0gMS8oZnN3Yik7CgolJUdhbmhvcyBkbyBjb250cm9sYWRvciBkbyBkYy9kYwolJSBnYW5obyB"
-"jb250cm9sZSBkZSBjb3JyZW50ZSBkbyBib29zdCBlIGJ1Y2sKS2MgPSBWZGMvKFJiK04qUmludCk7"
-"ClRtID0gTGIvKFJiK04qUmludCk7CmZjID0gZnN3Yi8xMDsKS3BiID0gMipwaSpmYypUbS9LYzsgI"
-"CAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KS2liID0gMipwaSpmYy9LYzsgICAgICAgIC"
-"AgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KJSVnYW5obyBjb250cm9sZSBkZSBjb3JyZW50ZSB"
-"kbyBidWNrIChNb2RvIGNvcnJlbnRlIGNvbnN0YW50ZSkKS3BpYnUgPSAyKnBpKmZjKlRtL0tjOyAg"
-"ICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KS2lpYnUgPSAyKnBpKmZjL0tjOyAgICAgICAgI"
-"CUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KJSUgZ2FuaG8gY29udHJvbGUgZGUgdGVuc8OjbyBkby"
-"BidWNrIChNb2RvIHRlbnPDo28gY29uc3RhbnRlKQpLZSA9IE4qUmludDsKZmMxID0gMTA7CmZjMiA"
-"9IGZjMS8yMDsKS3B2YnUgPSAyKnBpKmZjMi8oMipwaSpLZSooZmMxLWZjMikpOyAgICAgICUlTU9k"
-"ZWxhZ2VtIG5vIGFycXVpdm8gLm0KS2l2YnUgPSAyKnBpKmZjMSooS3B2YnUpOyAgICAgICUlTU9kZ"
-"WxhZ2VtIG5vIGFycXVpdm8gLm0="
+"SBmcmVxdcOqbmNpYSBkZSBjaGF2ZWFtZW50byBkbyBjb252ZXJzb3IKU2FtcGxlUmF0ZSA9IDI7Cn"
+"RTYW1wbGUgPSAxLyhTYW1wbGVSYXRlICogTipmc3cpOwpmc2FtcGxlID0gZnN3OyAgICAgICAgICA"
+"gICAgICAgICAgICAldXRpbGl6YWRvIG5vcyBwYXLDom1ldHJvcyBkbyBjb250cm9sZSh0cmFuc2Zv"
+"cm1hw6fDo28gZSBjb250cm9sZSkKVHNhbXBsZSA9IDEvZnNhbXBsZTsKZmRzcCA9IGZzYW1wbGUqM"
+"TIwOwpwYXNzbyA9IDEvKGZkc3ApOyAJCQkJICAJICUlIGluY3JlbWVudG8gZGUgc2ltdWxhw6fDo2"
+"8KCiUgUkVERQpTY2MgPSAyMDBlNjsKWF9SID0gMC4zOwpWcm1zX2YgPSBWcm1zL3NxcnQoMyk7CnR"
+"oZXRhID0gYXRhbihYX1IpOwpabW9kID0gVnJtc19mXjIvKFNjYy8zKTsKUnNvdXJjZSA9IDAuMDAw"
+"NTsKTHNvdXJjZSA9IDAuMDVlLTY7CgolJSBQYXJhbWV0cm9zIEZpbHRybwpMZiA9IDFlLTM7CkNmI"
+"D0gMjVlLTA2OwolUmQgPSAxLjU7CkxnID0gTGY7CkwgPSBMZytMZgpSZiA9IDIqcGkqZm4qTGYvMT"
+"guODk4MjsKUmcgPSAyKnBpKmZuKkxnLzE4Ljg5ODI7ClJkID0gMS44OwpSID0gUmcrUmY7CkVTUl9"
+"jYXBfbGNsID0gMC4wMjsKTl9lc3BpcmFzID0gODI7CkFyZWEgPSA5ODdlLTY7CgolJSBDb250cm9s"
+"ZSByZXNzb25hbnRlCktpbiA9IDEwMDA7JS0yKnBpKmZjX2FiKlIqMjsKVD0xL2ZzdzsKcm89ZXhwK"
+"FIqVC9MKTsKS3BfZXFfMTMgPSBSKnNxcnQoMisyKnJvXi0yLSgxK3NxcnQoNSkpKnJvXi0xKS8oKD"
+"Etcm9eLTEpKnNxcnQoMikpOwoKJSUgUGFyYW1ldHJvcyBQTEwKV2luaXQgPSAyKnBpKmZuOwprc2l"
+"fc3JmID0gMS9zcXJ0KDIpOyAgICAgICAKd25fc3JmID0gMzAqMipwaTsKCktwX3BsbCA9IDIqd25f"
+"c3JmKmtzaV9zcmY7CktpX3BsbCA9ICh3bl9zcmZeMik7CgolJSBNYWxoYSBleHRlcm5hIFZkYwpDZ"
+"GMgPSAzKjQuN2UtMzsgICAgICAgICAKS3BvdXRlciA9IDAuMTkxODA5MjgyNzY3NzY5OyAgICAgIC"
+"AgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KS2lvdXRlciA9IDMuNDc5MDM1NTUxMzg0MDAwOyA"
+"gICAgICAgICUlTU9kZWxhZ2VtIG5vIGFycXVpdm8gLm0KCiUlIE1hbGhhIHJlYXRpdm8gICAgICAg"
+"ICAKS2lxID0gMTIuNTY2NDsgICAgICAgICAlJU1PZGVsYWdlbSBubyBhcnF1aXZvIC5tCktwcSA9I"
+"C0wLjE2Mjk7ICAgICAgICAgJSVNT2RlbGFnZW0gbm8gYXJxdWl2byAubQoKJSUgQmF0dGVyeQpOYl"
+"9zZXJpZXMgID0gMTY7Ck5iX3N0cmluZ3MgPSAxOwpSaW50ID0gTmJfc2VyaWVzKjcuMWUtMzsgICA"
+"lJVJlc2lzdMOqbmNpYSBpbnRlcm5hIGRhcyBiYXRlcmlhcwpTb2NfbWluID0gNTA7ICAgICUgU09D"
+"WyVdClNvY19tYXggPSAxMDA7ClZkY28gPSAxMy42Kk5iX3NlcmllczsgICAgICAgICAgICAgICAgI"
+"CAgICAgICAlJSB0ZW5zw6NvIGluaWNpYWwgZGMtbGluawp2ZmxvYXQgPSAxMy42Owp2Ym9vc3QgPS"
+"AxNC40OwolIERjL2RjIFBhcmFtZXRlcnMKbkNlbGwgPSBOOwpMYiA9IDE5LjVlLTM7ICAgICAlSW5"
+"kdXRvciBkbyBCb29zdApSYiA9IDAuNTU7ICAgICAgICAgICAgICAlUmVzaXN0w6puY2lhIHPDqXJp"
+"ZSBkbyBpbmR1dG9yCiAgICAgICAgICAgICAgICAlTsO6bWVybyBkZSBicmHDp29zIGRvIGludGVyb"
+"GVhdmVkCk5fZXNwaXJhc19jYyA9IDQwMzsKQXJlYV9jYyA9IDk4N2UtNjsgICAgICAgCmZzd2IgPS"
+"A5MDAwOwpUc2IgPSAxLyhmc3diKTsKCiUlR2FuaG9zIGRvIGNvbnRyb2xhZG9yIGRvIGRjL2RjCiU"
+"lIGdhbmhvIGNvbnRyb2xlIGRlIGNvcnJlbnRlIGRvIGJvb3N0IGUgYnVjawpLYyA9IFZkYy8oUmIr"
+"TipSaW50KTsKVG0gPSBMYi8oUmIrTipSaW50KTsKZmMgPSBmc3diLzEwOwpLcGIgPSAyKnBpKmZjK"
+"lRtL0tjOyAgICAgICAgJSVNT2RlbGFnZW0gbm8gYXJxdWl2byAubQpLaWIgPSAyKnBpKmZjL0tjOy"
+"AgICAgICAgICAgJSVNT2RlbGFnZW0gbm8gYXJxdWl2byAubQolJWdhbmhvIGNvbnRyb2xlIGRlIGN"
+"vcnJlbnRlIGRvIGJ1Y2sgKE1vZG8gY29ycmVudGUgY29uc3RhbnRlKQpLcGlidSA9IDIqcGkqZmMq"
+"VG0vS2M7ICAgICAgJSVNT2RlbGFnZW0gbm8gYXJxdWl2byAubQpLaWlidSA9IDIqcGkqZmMvS2M7I"
+"CAgICAgICAgJSVNT2RlbGFnZW0gbm8gYXJxdWl2byAubQolJSBnYW5obyBjb250cm9sZSBkZSB0ZW"
+"5zw6NvIGRvIGJ1Y2sgKE1vZG8gdGVuc8OjbyBjb25zdGFudGUpCktlID0gTipSaW50OwpmYzEgPSA"
+"xMDsKZmMyID0gZmMxLzIwOwpLcHZidSA9IDIqcGkqZmMyLygyKnBpKktlKihmYzEtZmMyKSk7ICAg"
+"ICAgJSVNT2RlbGFnZW0gbm8gYXJxdWl2byAubQpLaXZidSA9IDIqcGkqZmMxKihLcHZidSk7ICAgI"
+"CAgJSVNT2RlbGFnZW0gbm8gYXJxdWl2byAubQoKS2NzID0gc3FydCggKCBSYiArIE4gKiBSaW50IC"
+"leMiArICgyKnBpKmZjKkxiKV4yKS9WZGM7CktpY3MgPSAyKnBpKihmYy8xMCkqS2NzOw=="
   InitialState  "1"
   SystemState   "AAAACAAAAAADAAAAEgBUAGkAbQBlAFMAdABhAG0AcAAAABAAACWFAgOHlFj/A"
 "AAAFgBTAHQAYQB0AGUAVgBlAGMAdABvAHIAAAB/AAAAABlQbGVjc0FycmF5OjpEb3VibGVWZWN0b3"
@@ -128,9 +129,9 @@ Plecs {
   ScriptsDialogGeometry "[691 368 538 284]"
   ScriptsDialogSplitterPos "100"
   Schematic {
-    Location      [0, 51; 1920, 1039]
+    Location      [0, 26; 1539, 832]
     ZoomFactor    1
-    SliderPosition [91, 0]
+    SliderPosition [317, 30]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -149,11 +150,6 @@ Plecs {
       Parameter {
         Variable      "Visibility"
         Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "3"
         Show          off
       }
     }
@@ -316,18 +312,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -880,18 +871,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -967,18 +953,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -1238,18 +1219,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -1325,18 +1301,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -1562,8 +1533,8 @@ Plecs {
           SavedViews    "AAAAAgAAAAEAAAAYAFMAYQB2AGUAZAAgAHYAaQBlAHcAIAAxP+gqM"
 "4KjOCo/9mZmZmZmZgAAAAIAf/gAAAAAAAB/+AAAAAAAAAB/+AAAAAAAAH/4AAAAAAAAAT/xERERER"
 "ERP/ZmZmZmZmYB"
-          HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":88,\"Labels\":"
-"[\"Delta\",\"Min\",\"Max\"],\"VisualIdxs\":[3,5,6]}"
+          HeaderState   "DefaultSecSize0FirstSecSize88LabelsDeltaMinMaxVisualI"
+"dxs354="
           PlotPalettes  "AAAAAQAAAAwAAAAMAAAAAQAAAAwB////////AAAAAAH//6qq//8AA"
 "AAAAf//qqoAAAAAAAAC//8u4P//czMAAAH//6qq//8AAAAAAf//AAAAAH9/AAAB/////1VVAAAAAA"
 "H//1VVVVV/fwAAAf//VVX/////AAAC//8u4P//g30AAAH//wAAVVX//wAAAv//LuD//3MzAAAAAAA"
@@ -1685,8 +1656,7 @@ Plecs {
 "AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
 "AAAAAAAAA=="
           SavedViews    "AAAAAgAAAAA="
-          HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":196,\"Labels\""
-":[],\"VisualIdxs\":[]}"
+          HeaderState   "DefaultSecSize0FirstSecSize196LabelsVisualIdxg=="
           PlotPalettes  "AAAAAQAAACEAAAALAAAAAwAAAAsB//8AAFVV//8AAAL//y7g///D1"
 "gAAAv//LuD//7rhAAAC//8u4P//sesAAAL//y7g//+o9QAAAf//AACqqgAAAAAC//8u4P//lwoAAA"
 "L//y7g//+OFAAAAv//LuD//4UeAAAC//8u4P//fCgAAAL//y7g//9zMwAAAAAACwH//wAAqqr//wA"
@@ -1762,18 +1732,13 @@ Plecs {
             Show          off
           }
           Parameter {
-            Variable      "OutputDataType"
+            Variable      "DataType"
             Value         "11"
             Show          off
           }
           Parameter {
             Variable      "DataTypeOverflowMode"
             Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "GainDataType"
-            Value         "11"
             Show          off
           }
         }
@@ -1952,11 +1917,6 @@ Plecs {
       Parameter {
         Variable      "Visibility"
         Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "3"
         Show          off
       }
     }
@@ -3775,11 +3735,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "3"
-        Show          off
-      }
     }
     Component {
       Type          Capacitor
@@ -3855,8 +3810,8 @@ Plecs {
       MaskIconOpaque off
       MaskIconRotates on
       Schematic {
-        Location      [0, 51; 1920, 1039]
-        ZoomFactor    1.38215
+        Location      [0, 26; 1539, 832]
+        ZoomFactor    1.05542
         SliderPosition [0, 0]
         ShowBrowser   off
         BrowserWidth  100
@@ -3906,11 +3861,6 @@ Plecs {
             Value         "1"
             Show          off
           }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
         }
         Component {
           Type          From
@@ -3927,11 +3877,6 @@ Plecs {
           }
           Parameter {
             Variable      "Visibility"
-            Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
             Value         "1"
             Show          off
           }
@@ -3994,11 +3939,6 @@ Plecs {
             Value         "1"
             Show          off
           }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
         }
         Component {
           Type          CScript
@@ -4010,7 +3950,7 @@ Plecs {
           LabelPosition south
           Parameter {
             Variable      "DialogGeometry"
-            Value         "[2147 411 615 381]"
+            Value         "[441 353 1213 560]"
             Show          off
           }
           Parameter {
@@ -4183,20 +4123,20 @@ Plecs {
           Direction     up
           Flipped       off
           LabelPosition south
-          Location      [1301, 190; 2667, 1017]
-          State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADIPwCAAAAA/sAAAAQAFoAb"
-"wBvAG0AQQByAGUAYQAAAAAA/////wAAAKwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
-"AA/////wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAyAAAABmAP///wAAAAMAAAAAAAA"
-"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABJ4AAAMg"
+          Location      [170, 37; 1536, 861]
+          State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD5/wCAAAAA/sAAAAQAFoAb"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAAMwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMBAAAAOAAAA+cAAAB+AP///wAAAAMAAAAAAAA"
+"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABfAP///wAABfMAAAPn"
 "AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
 "AAAAAAAAA=="
           SavedViews    "AAAAAgAAAAA="
           HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJA"
-"AAABAAAAGQAAAAFAAAAZAAAAAYAAABkAAAABwAAAGQAAAAIAAAAZAAAAAkAAABkAAAAAQAAAGQAAA"
-"ACAAAAZAAAAAMAAABkAAAAxgAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAC"
+"AAAAQAAAGQAAAADAAAAZAAAAAIAAABkAAAABQAAAGQAAAAEAAAAZAAAAAcAAABkAAAABgAAAGQAAA"
+"AJAAAAZAAAAAgAAABkAAAAzQAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAsAAAC"
 "iAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAA"
 "AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAA"
-"AAAAAAkAAAAAQAAAAAAAAPoAAAAACQ="
+"AAAAAArAAAAAQAAAAAAAAPoAAAAACs="
           PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "QAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "AAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -4514,18 +4454,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -4887,18 +4822,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -4921,18 +4851,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -4955,18 +4880,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -4989,18 +4909,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -5367,18 +5282,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -5420,18 +5330,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -5454,18 +5359,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -5488,18 +5388,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -5522,18 +5417,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -5556,18 +5446,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -5896,18 +5781,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -6473,18 +6353,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -6526,18 +6401,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -6560,18 +6430,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -6594,18 +6459,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -6628,18 +6488,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -6662,18 +6517,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -7002,18 +6852,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -7036,18 +6881,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -7070,18 +6910,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -7104,18 +6939,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -7138,18 +6968,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -7172,18 +6997,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -7666,18 +7486,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -7777,18 +7592,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -7859,18 +7669,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -8039,18 +7844,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -8092,18 +7892,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -8145,18 +7940,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -8730,18 +8520,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -8764,18 +8549,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -9596,18 +9376,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -9707,18 +9482,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -9789,18 +9559,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -9969,18 +9734,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -10022,18 +9782,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -10075,18 +9830,13 @@ Plecs {
                         Show          off
                       }
                       Parameter {
-                        Variable      "OutputDataType"
-                        Value         "10"
+                        Variable      "DataType"
+                        Value         "11"
                         Show          off
                       }
                       Parameter {
                         Variable      "DataTypeOverflowMode"
                         Value         "1"
-                        Show          off
-                      }
-                      Parameter {
-                        Variable      "GainDataType"
-                        Value         "11"
                         Show          off
                       }
                     }
@@ -10660,18 +10410,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -10694,18 +10439,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -11982,11 +11722,6 @@ Plecs {
             Value         "1"
             Show          off
           }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
         }
         Component {
           Type          Goto
@@ -12004,11 +11739,6 @@ Plecs {
           Parameter {
             Variable      "Visibility"
             Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
             Show          off
           }
         }
@@ -12030,11 +11760,6 @@ Plecs {
             Value         "1"
             Show          off
           }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
         }
         Component {
           Type          Goto
@@ -12052,11 +11777,6 @@ Plecs {
           Parameter {
             Variable      "Visibility"
             Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
             Show          off
           }
         }
@@ -12078,11 +11798,6 @@ Plecs {
             Value         "1"
             Show          off
           }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
         }
         Component {
           Type          Goto
@@ -12100,11 +11815,6 @@ Plecs {
           Parameter {
             Variable      "Visibility"
             Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
             Show          off
           }
         }
@@ -12402,8 +12112,7 @@ Plecs {
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":177,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
+      HeaderState   "DefaultSecSize0FirstSecSize177LabelsVisualIdxg=="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
@@ -12483,11 +12192,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "3"
-        Show          off
-      }
     }
     Component {
       Type          Goto
@@ -12505,11 +12209,6 @@ Plecs {
       Parameter {
         Variable      "Visibility"
         Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "3"
         Show          off
       }
     }
@@ -12547,11 +12246,6 @@ Plecs {
       Parameter {
         Variable      "Visibility"
         Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "3"
         Show          off
       }
     }
@@ -13121,7 +12815,7 @@ Plecs {
         Direction     right
       }
       Schematic {
-        Location      [0, 27; 1366, 691]
+        Location      [0, 27; 1366, 690]
         ZoomFactor    1
         SliderPosition [0, 50]
         ShowBrowser   off
@@ -13243,11 +12937,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          ConstantRelationalOperator
@@ -13301,11 +12990,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          From
@@ -13323,11 +13007,6 @@ Plecs {
               Parameter {
                 Variable      "Visibility"
                 Value         "2"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
                 Show          off
               }
             }
@@ -13363,11 +13042,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          From
@@ -13387,11 +13061,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          From
@@ -13409,11 +13078,6 @@ Plecs {
               Parameter {
                 Variable      "Visibility"
                 Value         "2"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
                 Show          off
               }
             }
@@ -13449,11 +13113,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          From
@@ -13473,11 +13132,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          Goto
@@ -13495,11 +13149,6 @@ Plecs {
               Parameter {
                 Variable      "Visibility"
                 Value         "2"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
                 Show          off
               }
             }
@@ -14024,11 +13673,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          Subsystem
@@ -14061,7 +13705,7 @@ Plecs {
                 Direction     left
               }
               Schematic {
-                Location      [0, 0; 669, 322]
+                Location      [512, 216; 1181, 538]
                 ZoomFactor    1
                 SliderPosition [0, 0]
                 ShowBrowser   off
@@ -14143,18 +13787,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "9"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -14206,18 +13845,13 @@ Plecs {
                     Show          off
                   }
                   Parameter {
-                    Variable      "OutputDataType"
-                    Value         "10"
+                    Variable      "DataType"
+                    Value         "11"
                     Show          off
                   }
                   Parameter {
                     Variable      "DataTypeOverflowMode"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "GainDataType"
-                    Value         "11"
                     Show          off
                   }
                 }
@@ -14605,7 +14239,8 @@ Plecs {
                   DstTerminal   1
                 }
                 Annotation {
-                  Name          "Li-ion"
+                  Name          "<html><body>\n<p align=\"center\">Li-ion</p><"
+"/body></html>"
                   Position      [190, 205]
                 } 
               }
@@ -14945,11 +14580,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          From
@@ -14969,11 +14599,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          From
@@ -14991,11 +14616,6 @@ Plecs {
               Parameter {
                 Variable      "Visibility"
                 Value         "2"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
                 Show          off
               }
             }
@@ -15043,18 +14663,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -15110,11 +14725,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          Function
@@ -15168,11 +14778,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          Gain
@@ -15193,18 +14798,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -15307,11 +14907,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          TransferFunction
@@ -15356,11 +14951,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          ConstantRelationalOperator
@@ -15401,18 +14991,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -15452,11 +15037,6 @@ Plecs {
               Parameter {
                 Variable      "Visibility"
                 Value         "2"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
                 Show          off
               }
             }
@@ -15747,18 +15327,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -16063,11 +15638,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          Gain
@@ -16088,18 +15658,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -16190,18 +15755,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -16224,18 +15784,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -16255,11 +15810,6 @@ Plecs {
               Parameter {
                 Variable      "Visibility"
                 Value         "2"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
                 Show          off
               }
             }
@@ -16282,18 +15832,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -16349,11 +15894,6 @@ Plecs {
                 Value         "2"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Gain
@@ -16374,18 +15914,13 @@ Plecs {
                 Show          off
               }
               Parameter {
-                Variable      "OutputDataType"
-                Value         "10"
+                Variable      "DataType"
+                Value         "11"
                 Show          off
               }
               Parameter {
                 Variable      "DataTypeOverflowMode"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "GainDataType"
-                Value         "11"
                 Show          off
               }
             }
@@ -16405,11 +15940,6 @@ Plecs {
               Parameter {
                 Variable      "Visibility"
                 Value         "2"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
                 Show          off
               }
             }
@@ -17089,18 +16619,13 @@ Plecs {
             Show          off
           }
           Parameter {
-            Variable      "OutputDataType"
-            Value         "10"
+            Variable      "DataType"
+            Value         "11"
             Show          off
           }
           Parameter {
             Variable      "DataTypeOverflowMode"
             Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "GainDataType"
-            Value         "11"
             Show          off
           }
         }
@@ -17151,18 +16676,13 @@ Plecs {
             Show          off
           }
           Parameter {
-            Variable      "OutputDataType"
-            Value         "10"
+            Variable      "DataType"
+            Value         "11"
             Show          off
           }
           Parameter {
             Variable      "DataTypeOverflowMode"
             Value         "1"
-            Show          off
-          }
-          Parameter {
-            Variable      "GainDataType"
-            Value         "11"
             Show          off
           }
         }
@@ -17302,8 +16822,8 @@ Plecs {
           DstTerminal   1
         }
         Annotation {
-          Name          base64 "TW9kZWxhZ2VtIGRlIGJhdGVyaWFzIGVtIHPDqXJpZSBlIH"
-"N0cmluZ3M="
+          Name          base64 "PGh0bWw+PGJvZHk+CjxwIGFsaWduPSJjZW50ZXIiPk1vZG"
+"VsYWdlbSBkZSBiYXRlcmlhcyBlbSBzw6lyaWUgZSBzdHJpbmdzPC9wPjwvYm9keT48L2h0bWw+"
           Position      [595, 450]
         } 
       }
@@ -17350,11 +16870,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "3"
-        Show          off
-      }
     }
     Component {
       Type          Step
@@ -17393,16 +16908,20 @@ Plecs {
       Direction     down
       Flipped       on
       LabelPosition south
-      Location      [5, 56; 1541, 1221]
+      Location      [0, 40; 1536, 864]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAIEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABjAP///wAAAAMAAAYAAAAAmfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABEAP///wAABgAAAAPPAAAA"
+"G0AQQByAGUAYQAAAAAA/////wAAAJ0A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAAB+AP///wAAAAMAAAeAAAAAmfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABfAP///wAAB4AAAANJAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":133,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
+"QAAAH0AAAADAAAAfQAAAAIAAAB9AAAABQAAAH0AAAAEAAAAfQAAAAcAAAB9AAAABgAAAH0AAAAJAA"
+"AAfQAAAAgAAAB9AAAHawAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAsAAACNAAA"
+"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"AbeAAAAAQAAAAAAAAPoAAAAACs="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "=="
@@ -17503,8 +17022,8 @@ Plecs {
       MaskIconOpaque off
       MaskIconRotates on
       Schematic {
-        Location      [0, 51; 1920, 1039]
-        ZoomFactor    1.13413
+        Location      [0, 26; 1539, 832]
+        ZoomFactor    1.48523
         SliderPosition [0, 0]
         ShowBrowser   off
         BrowserWidth  100
@@ -17513,7 +17032,7 @@ Plecs {
           SrcComponent  "Components/Control/Discrete/Discrete PID\\nController"
           Name          "Discrete PID\nController"
           Show          off
-          Position      [685, 120]
+          Position      [430, 170]
           Direction     up
           Flipped       off
           LabelPosition south
@@ -17668,13 +17187,13 @@ Plecs {
           Type          ZeroOrderHold
           Name          "Zero-Order\nHold"
           Show          off
-          Position      [445, 175]
+          Position      [190, 225]
           Direction     right
           Flipped       off
           LabelPosition south
           Parameter {
             Variable      "Ts"
-            Value         "tSample"
+            Value         "1/(N*fsw)"
             Show          off
           }
         }
@@ -17682,7 +17201,7 @@ Plecs {
           Type          From
           Name          "From28"
           Show          off
-          Position      [415, 85]
+          Position      [160, 135]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -17696,17 +17215,12 @@ Plecs {
             Value         "1"
             Show          off
           }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
         }
         Component {
           Type          Product
           Name          "Divide1"
           Show          off
-          Position      [465, 60]
+          Position      [210, 110]
           Direction     up
           Flipped       off
           LabelPosition south
@@ -17735,7 +17249,7 @@ Plecs {
           Type          Constant
           Name          "Constant1"
           Show          off
-          Position      [405, 45]
+          Position      [150, 95]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -17755,7 +17269,7 @@ Plecs {
           Type          Sum
           Name          "Subtract"
           Show          off
-          Position      [605, 120]
+          Position      [350, 170]
           Direction     up
           Flipped       off
           LabelPosition south
@@ -17784,7 +17298,7 @@ Plecs {
           Type          From
           Name          "From"
           Show          off
-          Position      [395, 175]
+          Position      [140, 225]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -17798,17 +17312,12 @@ Plecs {
             Value         "1"
             Show          off
           }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
         }
         Component {
           Type          ManualSignalSwitch
           Name          "Manual Switch"
           Show          off
-          Position      [525, 115]
+          Position      [270, 165]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -17819,30 +17328,10 @@ Plecs {
           }
         }
         Component {
-          Type          Constant
-          Name          "Constant3"
-          Show          off
-          Position      [455, 120]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Frame         [-10, -10; 10, 10]
-          Parameter {
-            Variable      "Value"
-            Value         "16"
-            Show          off
-          }
-          Parameter {
-            Variable      "DataType"
-            Value         "10"
-            Show          off
-          }
-        }
-        Component {
           Type          Subsystem
           Name          "Modulador"
           Show          on
-          Position      [935, 125]
+          Position      [580, 175]
           Direction     up
           Flipped       off
           LabelPosition none
@@ -17860,9 +17349,9 @@ Plecs {
             Direction     left
           }
           Schematic {
-            Location      [554, 377; 1365, 712]
-            ZoomFactor    1
-            SliderPosition [0, 0]
+            Location      [0, 26; 1536, 780]
+            ZoomFactor    1.71498
+            SliderPosition [0, 16]
             ShowBrowser   off
             BrowserWidth  100
             Component {
@@ -18163,7 +17652,7 @@ Plecs {
               Type          TriangleGenerator
               Name          "Triangular Wave5"
               Show          off
-              Position      [400, 185]
+              Position      [400, 220]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18197,7 +17686,7 @@ Plecs {
               Type          Comparator
               Name          "Comparator5"
               Show          off
-              Position      [460, 155]
+              Position      [510, 150]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18206,7 +17695,7 @@ Plecs {
               Type          LogicalOperator
               Name          "Logical\nOperator5"
               Show          off
-              Position      [510, 125]
+              Position      [560, 120]
               Direction     up
               Flipped       off
               LabelPosition south
@@ -18225,7 +17714,7 @@ Plecs {
               Type          Goto
               Name          "Goto11"
               Show          off
-              Position      [545, 155]
+              Position      [595, 150]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18239,17 +17728,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "2"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto12"
               Show          off
-              Position      [545, 125]
+              Position      [595, 120]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18263,17 +17747,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "2"
-                Show          off
-              }
             }
             Component {
               Type          SignalDemux
               Name          "Demux"
               Show          off
-              Position      [645, 105]
+              Position      [175, 295]
               Direction     right
               Flipped       on
               LabelPosition south
@@ -18287,7 +17766,7 @@ Plecs {
               Type          From
               Name          "From1"
               Show          off
-              Position      [615, 105]
+              Position      [145, 295]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18301,17 +17780,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto15"
               Show          off
-              Position      [685, 70]
+              Position      [215, 260]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18325,17 +17799,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto1"
               Show          off
-              Position      [685, 85]
+              Position      [215, 275]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18349,17 +17818,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto2"
               Show          off
-              Position      [685, 100]
+              Position      [215, 290]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18373,17 +17837,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto3"
               Show          off
-              Position      [685, 115]
+              Position      [215, 305]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18397,17 +17856,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto8"
               Show          off
-              Position      [685, 125]
+              Position      [215, 315]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18421,17 +17875,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto10"
               Show          off
-              Position      [685, 140]
+              Position      [215, 330]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18445,17 +17894,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          SignalDemux
               Name          "Demux1"
               Show          off
-              Position      [645, 210]
+              Position      [175, 400]
               Direction     right
               Flipped       on
               LabelPosition south
@@ -18469,7 +17913,7 @@ Plecs {
               Type          From
               Name          "From2"
               Show          off
-              Position      [615, 210]
+              Position      [145, 400]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18483,17 +17927,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "1"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto16"
               Show          off
-              Position      [685, 175]
+              Position      [215, 365]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18507,17 +17946,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto4"
               Show          off
-              Position      [685, 190]
+              Position      [215, 380]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18531,17 +17965,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto5"
               Show          off
-              Position      [685, 205]
+              Position      [215, 395]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18555,17 +17984,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto6"
               Show          off
-              Position      [685, 220]
+              Position      [215, 410]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18579,17 +18003,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto9"
               Show          off
-              Position      [685, 230]
+              Position      [215, 420]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18603,17 +18022,12 @@ Plecs {
                 Value         "1"
                 Show          off
               }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
-                Show          off
-              }
             }
             Component {
               Type          Goto
               Name          "Goto13"
               Show          off
-              Position      [685, 245]
+              Position      [215, 435]
               Direction     right
               Flipped       off
               LabelPosition south
@@ -18625,11 +18039,6 @@ Plecs {
               Parameter {
                 Variable      "Visibility"
                 Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
-                Value         "3"
                 Show          off
               }
             }
@@ -18649,6 +18058,531 @@ Plecs {
               Parameter {
                 Variable      "Width"
                 Value         "-1"
+                Show          off
+              }
+            }
+            Component {
+              Type          ManualSignalSwitch
+              Name          "Manual Switch"
+              Show          off
+              Position      [390, 145]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "SwitchState"
+                Value         "2"
+                Show          off
+              }
+            }
+            Component {
+              Type          Scope
+              Name          "Scope"
+              Show          off
+              Position      [540, 70]
+              Direction     up
+              Flipped       off
+              LabelPosition south
+              Location      [670, 243; 1020, 472]
+              State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQA"
+"FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAAD8A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
+"AAAAAA/////wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAAB+AP///wAAAAMAAAA"
+"AAAAAAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABfAP///wAAAbYA"
+"AAD/AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
+"/8AAAAAAAAAAA=="
+              SavedViews    "AAAAAgAAAAA="
+              HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAA"
+"AAJAAAAAQAAAH0AAAACAAAAfQAAAAMAAAB9AAAABAAAAH0AAAAFAAAAfQAAAAYAAAB9AAAABwAAAH"
+"0AAAAIAAAAfQAAAAkAAAB9AAAA0gAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAs"
+"AAACnAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAA"
+"AAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA"
+"QAAAAAAAAArAAAAAQAAAAAAAAPoAAAAACs="
+              PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              Axes          "1"
+              TimeRange     "0.0"
+              ScrollingMode "1"
+              SingleTimeAxis "1"
+              Open          "0"
+              Ts            "-1"
+              SampleLimit   "0"
+              XAxisLabel    "Time / s"
+              ShowLegend    "1"
+              Axis {
+                Name          ""
+                AutoScale     1
+                MinValue      0
+                MaxValue      1
+                Signals       {}
+                SignalTypes   [ ]
+                Untangle      0
+                KeepBaseline  off
+                BaselineValue 0
+              }
+              Fourier {
+                SingleXAxis       on
+                AxisLabel         "Frequency / Hz"
+                Scaling           0
+                PhaseDisplay      0
+                ShowFourierLegend off
+                Axis {
+                  Name          ""
+                  AutoScale     1
+                  MinValue      0
+                  MaxValue      1
+                  Signals       {}
+                  Untangle      0
+                  KeepBaseline  off
+                  BaselineValue 0
+                }
+              }
+            }
+            Component {
+              Type          Scope
+              Name          "Scope1"
+              Show          on
+              Position      [715, 310]
+              Direction     up
+              Flipped       off
+              LabelPosition south
+              Location      [0, 26; 1536, 803]
+              State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQA"
+"FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAAD8A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
+"AAAAAA/////wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAAB+AP///wAAAAMAAAA"
+"AAAAAAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABfAP///wAAB4AA"
+"AAOsAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
+"/8AAAAAAAAAAA=="
+              SavedViews    "AAAAAgAAAAA="
+              HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAA"
+"AAJAAAAAQAAAH0AAAACAAAAfQAAAAMAAAB9AAAABAAAAH0AAAAFAAAAfQAAAAYAAAB9AAAABwAAAH"
+"0AAAAIAAAAfQAAAAkAAAB9AAAAoAAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAs"
+"AAAB1AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAA"
+"AAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA"
+"QAAAAAAAAArAAAAAQAAAAAAAAPoAAAAACs="
+              PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              Axes          "1"
+              TimeRange     "0.0"
+              ScrollingMode "1"
+              SingleTimeAxis "1"
+              Open          "0"
+              Ts            "-1"
+              SampleLimit   "0"
+              XAxisLabel    "Time / s"
+              ShowLegend    "1"
+              Axis {
+                Name          ""
+                AutoScale     1
+                MinValue      0
+                MaxValue      1
+                Signals       {}
+                SignalTypes   [ ]
+                Untangle      0
+                KeepBaseline  off
+                BaselineValue 0
+              }
+              Fourier {
+                SingleXAxis       on
+                AxisLabel         "Frequency / Hz"
+                Scaling           0
+                PhaseDisplay      0
+                ShowFourierLegend off
+                Axis {
+                  Name          ""
+                  AutoScale     1
+                  MinValue      0
+                  MaxValue      1
+                  Signals       {}
+                  Untangle      0
+                  KeepBaseline  off
+                  BaselineValue 0
+                }
+              }
+            }
+            Component {
+              Type          PlecsProbe
+              Name          "Interleaved Currents3"
+              Show          off
+              Position      [360, 305]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Probe {
+                Component     "L14"
+                Path          ""
+                Signals       {"Inductor current"}
+              }
+              Probe {
+                Component     "L13"
+                Path          ""
+                Signals       {"Inductor current"}
+              }
+              Probe {
+                Component     "L12"
+                Path          ""
+                Signals       {"Inductor current"}
+              }
+              Probe {
+                Component     "L11"
+                Path          ""
+                Signals       {"Inductor current"}
+              }
+              Probe {
+                Component     "L10"
+                Path          ""
+                Signals       {"Inductor current"}
+              }
+              Probe {
+                Component     "L9"
+                Path          ""
+                Signals       {"Inductor current"}
+              }
+            }
+            Component {
+              Type          Sum
+              Name          "Subtract"
+              Show          off
+              Position      [485, 310]
+              Direction     up
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "IconShape"
+                Value         "1"
+                Show          off
+              }
+              Parameter {
+                Variable      "Inputs"
+                Value         "+-"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "11"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataTypeOverflowMode"
+                Value         "1"
+                Show          off
+              }
+            }
+            Component {
+              Type          Gain
+              Name          "Gain"
+              Show          off
+              Position      [430, 360]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "K"
+                Value         "1/N"
+                Show          off
+              }
+              Parameter {
+                Variable      "Multiplication"
+                Value         "1"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "11"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataTypeOverflowMode"
+                Value         "1"
+                Show          off
+              }
+            }
+            Component {
+              Type          Gain
+              Name          "Gain1"
+              Show          off
+              Position      [540, 310]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "K"
+                Value         "Kcs"
+                Show          off
+              }
+              Parameter {
+                Variable      "Multiplication"
+                Value         "1"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "11"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataTypeOverflowMode"
+                Value         "1"
+                Show          off
+              }
+            }
+            Component {
+              Type          Sum
+              Name          "Sum"
+              Show          off
+              Position      [480, 195]
+              Direction     left
+              Flipped       off
+              LabelPosition east
+              Parameter {
+                Variable      "IconShape"
+                Value         "2"
+                Show          off
+              }
+              Parameter {
+                Variable      "Inputs"
+                Value         "|++"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "11"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataTypeOverflowMode"
+                Value         "1"
+                Show          off
+              }
+            }
+            Component {
+              Type          Scope
+              Name          "Scope2"
+              Show          on
+              Position      [720, 175]
+              Direction     up
+              Flipped       off
+              LabelPosition south
+              Location      [0, 26; 1536, 807]
+              State         "AAAA/wAAAAD9AAAAAgAAAAEAAACiAAAC2vwCAAAAA/sAAAAQA"
+"FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAAD8A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
+"AAAAAA/////wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMBAAAAOAAAAtoAAAB+AP///wAAAAMAAAe"
+"AAAAA0vwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABfAP///wAABtkA"
+"AALaAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
+"/8AAAAAAAAAAA=="
+              SavedViews    "AAAAAgAAAAA="
+              HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAA"
+"AAJAAAAAQAAAH0AAAACAAAAfQAAAAMAAAB9AAAABAAAAH0AAAAFAAAAfQAAAAYAAAB9AAAABwAAAH"
+"0AAAAIAAAAfQAAAAkAAAB9AAAHgAAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAs"
+"AAABtAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAA"
+"AAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA"
+"QAAAAAAAAcTAAAAAQAAAAAAAAPoAAAAACs="
+              PlotPalettes  "AAAAAQAAAAwAAAACAAAABgAAAAIB//+qqgAAAAAAAAL//y7g/"
+"/+ZmQAAAAAAAgL//wAA/////wAAAv//AAD//8zMAAAAAAACAv//T7D/////AAAC//9PsP//zMwAAA"
+"AAAAIB/////wAAf38AAAL//xLA///MzAAAAAAAAgL//3Uw/////wAAAv//dTD//8zMAAAAAAACAv/"
+"/RlC//8zMAAAC//9GUL//mZkAAAAAAAYAAAACAQAAAAACAAAAAAACAAAAAAACAQAAAAACAAAAAAAC"
+"AAAAAAAGAAAAAgAAAAEAAAABAAAAAgAAAAEAAAABAAAAAgAAAAEAAAABAAAAAgAAAAEAAAABAAAAA"
+"gAAAAEAAAABAAAAAgAAAAEAAAABAAAABgAAAAIAAAAAAAIAAAAAAAIAAAAAAAIAAAAAAAIAAAAAAA"
+"IAAAAAAAYAAAACP/AAAAAAAAA/8AAAAAAAAAAAAAI/8AAAAAAAAD/wAAAAAAAAAAAAAj/wAAAAAAA"
+"AP/AAAAAAAAAAAAACP/AAAAAAAAA/8AAAAAAAAAAAAAI/8AAAAAAAAD/wAAAAAAAAAAAAAj/wAAAA"
+"AAAAP/AAAAAAAAAAAAAGAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAA"
+              Axes          "1"
+              TimeRange     "0.0"
+              ScrollingMode "1"
+              SingleTimeAxis "1"
+              Open          "0"
+              Ts            "-1"
+              SampleLimit   "0"
+              XAxisLabel    "Time / s"
+              ShowLegend    "1"
+              Axis {
+                Name          ""
+                AutoScale     1
+                MinValue      0
+                MaxValue      1
+                Signals       {}
+                SignalTypes   [ ]
+                Untangle      0
+                KeepBaseline  off
+                BaselineValue 0
+              }
+              Fourier {
+                SingleXAxis       on
+                AxisLabel         "Frequency / Hz"
+                Scaling           0
+                PhaseDisplay      0
+                ShowFourierLegend off
+                Axis {
+                  Name          ""
+                  AutoScale     1
+                  MinValue      0
+                  MaxValue      1
+                  Signals       {}
+                  Untangle      0
+                  KeepBaseline  off
+                  BaselineValue 0
+                }
+              }
+            }
+            Component {
+              Type          ZeroOrderHold
+              Name          "Zero-Order\nHold"
+              Show          off
+              Position      [425, 305]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "Ts"
+                Value         "1/(N*fsw)"
+                Show          off
+              }
+            }
+            Component {
+              Type          Sum
+              Name          "Sum1"
+              Show          off
+              Position      [640, 310]
+              Direction     up
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "IconShape"
+                Value         "2"
+                Show          off
+              }
+              Parameter {
+                Variable      "Inputs"
+                Value         "|++"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "11"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataTypeOverflowMode"
+                Value         "1"
+                Show          off
+              }
+            }
+            Component {
+              Type          DiscreteIntegrator
+              Name          "Discrete\nIntegrator"
+              Show          off
+              Position      [605, 375]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "ExternalReset"
+                Value         "1"
+                Show          off
+              }
+              Parameter {
+                Variable      "InitialConditionSource"
+                Value         "1"
+                Show          off
+              }
+              Parameter {
+                Variable      "x0"
+                Value         "0"
+                Show          off
+              }
+              Parameter {
+                Variable      "ShowStatePort"
+                Value         "1"
+                Show          off
+              }
+              Parameter {
+                Variable      "EnableWrapping"
+                Value         "1"
+                Show          off
+              }
+              Parameter {
+                Variable      "UpperLimit"
+                Value         "inf"
+                Show          off
+              }
+              Parameter {
+                Variable      "LowerLimit"
+                Value         "-inf"
+                Show          off
+              }
+              Parameter {
+                Variable      "IntegrationMethod"
+                Value         "3"
+                Show          off
+              }
+              Parameter {
+                Variable      "SampleTime"
+                Value         "tSample"
+                Show          off
+              }
+            }
+            Component {
+              Type          Gain
+              Name          "Gain2"
+              Show          off
+              Position      [540, 375]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "K"
+                Value         "Kics"
+                Show          off
+              }
+              Parameter {
+                Variable      "Multiplication"
+                Value         "1"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "11"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataTypeOverflowMode"
+                Value         "1"
+                Show          off
+              }
+            }
+            Component {
+              Type          PulseGenerator
+              Name          "IL_ref"
+              Show          on
+              Position      [375, 360]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Parameter {
+                Variable      "Hi"
+                Value         "16"
+                Show          off
+              }
+              Parameter {
+                Variable      "Lo"
+                Value         "0"
+                Show          off
+              }
+              Parameter {
+                Variable      "f"
+                Value         "5"
+                Show          off
+              }
+              Parameter {
+                Variable      "DutyCycle"
+                Value         "0.5"
+                Show          off
+              }
+              Parameter {
+                Variable      "Delay"
+                Value         "0"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "10"
                 Show          off
               }
             }
@@ -18714,17 +18648,9 @@ Plecs {
             }
             Connection {
               Type          Signal
-              SrcComponent  "Triangular Wave5"
-              SrcTerminal   1
-              Points        [430, 185]
-              DstComponent  "Comparator5"
-              DstTerminal   2
-            }
-            Connection {
-              Type          Signal
               SrcComponent  "Comparator5"
               SrcTerminal   3
-              Points        [480, 155]
+              Points        [530, 150]
               Branch {
                 DstComponent  "Goto11"
                 DstTerminal   1
@@ -18743,13 +18669,6 @@ Plecs {
             }
             Connection {
               Type          Signal
-              SrcComponent  "CONTROL @tSample"
-              SrcTerminal   2
-              DstComponent  "Comparator5"
-              DstTerminal   1
-            }
-            Connection {
-              Type          Signal
               SrcComponent  "From1"
               SrcTerminal   1
               DstComponent  "Demux"
@@ -18759,7 +18678,7 @@ Plecs {
               Type          Signal
               SrcComponent  "Demux"
               SrcTerminal   2
-              Points        [650, 70]
+              Points        [180, 260]
               DstComponent  "Goto15"
               DstTerminal   1
             }
@@ -18767,7 +18686,7 @@ Plecs {
               Type          Signal
               SrcComponent  "Demux"
               SrcTerminal   3
-              Points        [660, 90; 660, 85]
+              Points        [190, 280; 190, 275]
               DstComponent  "Goto1"
               DstTerminal   1
             }
@@ -18782,7 +18701,7 @@ Plecs {
               Type          Signal
               SrcComponent  "Demux"
               SrcTerminal   5
-              Points        [655, 110; 655, 115]
+              Points        [185, 300; 185, 305]
               DstComponent  "Goto3"
               DstTerminal   1
             }
@@ -18790,7 +18709,7 @@ Plecs {
               Type          Signal
               SrcComponent  "Demux"
               SrcTerminal   6
-              Points        [650, 125]
+              Points        [180, 315]
               DstComponent  "Goto8"
               DstTerminal   1
             }
@@ -18798,7 +18717,7 @@ Plecs {
               Type          Signal
               SrcComponent  "Demux"
               SrcTerminal   7
-              Points        [665, 130]
+              Points        [195, 320]
               DstComponent  "Goto10"
               DstTerminal   1
             }
@@ -18813,7 +18732,7 @@ Plecs {
               Type          Signal
               SrcComponent  "Demux1"
               SrcTerminal   2
-              Points        [650, 175]
+              Points        [180, 365]
               DstComponent  "Goto16"
               DstTerminal   1
             }
@@ -18821,7 +18740,7 @@ Plecs {
               Type          Signal
               SrcComponent  "Demux1"
               SrcTerminal   3
-              Points        [660, 195; 660, 190]
+              Points        [190, 385; 190, 380]
               DstComponent  "Goto4"
               DstTerminal   1
             }
@@ -18836,7 +18755,7 @@ Plecs {
               Type          Signal
               SrcComponent  "Demux1"
               SrcTerminal   5
-              Points        [655, 215; 655, 220]
+              Points        [185, 405; 185, 410]
               DstComponent  "Goto6"
               DstTerminal   1
             }
@@ -18844,7 +18763,7 @@ Plecs {
               Type          Signal
               SrcComponent  "Demux1"
               SrcTerminal   6
-              Points        [650, 230]
+              Points        [180, 420]
               DstComponent  "Goto9"
               DstTerminal   1
             }
@@ -18852,27 +18771,163 @@ Plecs {
               Type          Signal
               SrcComponent  "Demux1"
               SrcTerminal   7
-              Points        [665, 235]
+              Points        [195, 425]
               DstComponent  "Goto13"
               DstTerminal   1
             }
             Connection {
               Type          Signal
+              SrcComponent  "CONTROL @tSample"
+              SrcTerminal   2
+              DstComponent  "Manual Switch"
+              DstTerminal   3
+            }
+            Connection {
+              Type          Signal
               SrcComponent  "duty"
               SrcTerminal   1
-              DstComponent  "Mux13"
-              DstTerminal   9
+              Points        [200, 185]
+              Branch {
+                DstComponent  "Mux13"
+                DstTerminal   9
+              }
+              Branch {
+                Points        [200, 100; 360, 100]
+                DstComponent  "Manual Switch"
+                DstTerminal   2
+              }
             }
+            Connection {
+              Type          Signal
+              SrcComponent  "Manual Switch"
+              SrcTerminal   1
+              Points        [475, 145]
+              Branch {
+                DstComponent  "Comparator5"
+                DstTerminal   1
+              }
+              Branch {
+                Points        [475, 70]
+                DstComponent  "Scope"
+                DstTerminal   1
+              }
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Gain"
+              SrcTerminal   2
+              Points        [455, 360]
+              DstComponent  "Subtract"
+              DstTerminal   3
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Triangular Wave5"
+              SrcTerminal   1
+              DstComponent  "Sum"
+              DstTerminal   2
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "IL_ref"
+              SrcTerminal   1
+              DstComponent  "Gain"
+              DstTerminal   1
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Subtract"
+              SrcTerminal   1
+              Points        [510, 310]
+              Branch {
+                DstComponent  "Gain1"
+                DstTerminal   1
+              }
+              Branch {
+                DstComponent  "Gain2"
+                DstTerminal   1
+              }
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Interleaved Currents3"
+              SrcTerminal   1
+              DstComponent  "Zero-Order\nHold"
+              DstTerminal   1
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Sum1"
+              SrcTerminal   1
+              Points        [675, 310]
+              Branch {
+                DstComponent  "Scope1"
+                DstTerminal   1
+              }
+              Branch {
+                Points        [675, 195]
+                DstComponent  "Sum"
+                DstTerminal   3
+              }
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Gain1"
+              SrcTerminal   2
+              DstComponent  "Sum1"
+              DstTerminal   2
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Gain2"
+              SrcTerminal   2
+              DstComponent  "Discrete\nIntegrator"
+              DstTerminal   1
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Discrete\nIntegrator"
+              SrcTerminal   2
+              DstComponent  "Sum1"
+              DstTerminal   3
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Zero-Order\nHold"
+              SrcTerminal   2
+              DstComponent  "Subtract"
+              DstTerminal   2
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Sum"
+              SrcTerminal   1
+              Points        [480, 175]
+              Branch {
+                DstComponent  "Comparator5"
+                DstTerminal   2
+              }
+              Branch {
+                DstComponent  "Scope2"
+                DstTerminal   1
+              }
+            }
+            Annotation {
+              Name          "<html><body>\n<p align=\"center\">Balanceamento d"
+"e corrente</p></body></html>"
+              Position      [495, 420]
+            } 
           }
         }
         Component {
           Type          Subsystem
           Name          "antigo"
           Show          on
-          Position      [860, 365]
+          Position      [860, 140]
           Direction     up
           Flipped       off
           LabelPosition none
+          CommentOut    DisabledOpenCircuit
           Frame         [-50, -35; 50, 35]
           SampleTime    "-1"
           CodeGenDiscretizationMethod "2"
@@ -18882,7 +18937,7 @@ Plecs {
           MaskIconOpaque off
           MaskIconRotates on
           Schematic {
-            Location      [1062, 56; 1915, 514]
+            Location      [403, 157; 1256, 615]
             ZoomFactor    1
             SliderPosition [0, 0]
             ShowBrowser   off
@@ -18934,7 +18989,6 @@ Plecs {
               Direction     right
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Frame         [-25, -10; 25, 10]
               Parameter {
                 Variable      "Value"
@@ -18955,7 +19009,6 @@ Plecs {
               Direction     right
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "Tag"
                 Value         "Vbat"
@@ -18963,11 +19016,6 @@ Plecs {
               }
               Parameter {
                 Variable      "Visibility"
-                Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
                 Value         "1"
                 Show          off
               }
@@ -18980,7 +19028,6 @@ Plecs {
               Direction     right
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "Tag"
                 Value         "Vdc"
@@ -18988,11 +19035,6 @@ Plecs {
               }
               Parameter {
                 Variable      "Visibility"
-                Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
                 Value         "1"
                 Show          off
               }
@@ -19005,7 +19047,6 @@ Plecs {
               Direction     right
               Flipped       on
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "Width"
                 Value         "18"
@@ -19020,7 +19061,6 @@ Plecs {
               Direction     right
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "Width"
                 Value         "[6 1 1 1 1 1 1 1]"
@@ -19035,7 +19075,6 @@ Plecs {
               Direction     right
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "Tag"
                 Value         "Soc"
@@ -19043,11 +19082,6 @@ Plecs {
               }
               Parameter {
                 Variable      "Visibility"
-                Value         "1"
-                Show          off
-              }
-              Parameter {
-                Variable      "NoMatchingCounterpartAction"
                 Value         "1"
                 Show          off
               }
@@ -19060,7 +19094,6 @@ Plecs {
               Direction     up
               Flipped       off
               LabelPosition none
-              CommentOut    DisabledOpenCircuit
               Frame         [-20, -60; 20, 60]
               SampleTime    "-1"
               CodeGenDiscretizationMethod "2"
@@ -19496,11 +19529,6 @@ Plecs {
                     Value         "1"
                     Show          off
                   }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
-                    Show          off
-                  }
                 }
                 Component {
                   Type          Goto
@@ -19518,11 +19546,6 @@ Plecs {
                   Parameter {
                     Variable      "Visibility"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
                     Show          off
                   }
                 }
@@ -19544,11 +19567,6 @@ Plecs {
                     Value         "1"
                     Show          off
                   }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
-                    Show          off
-                  }
                 }
                 Component {
                   Type          Goto
@@ -19566,11 +19584,6 @@ Plecs {
                   Parameter {
                     Variable      "Visibility"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
                     Show          off
                   }
                 }
@@ -19592,11 +19605,6 @@ Plecs {
                     Value         "1"
                     Show          off
                   }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
-                    Show          off
-                  }
                 }
                 Component {
                   Type          Goto
@@ -19614,11 +19622,6 @@ Plecs {
                   Parameter {
                     Variable      "Visibility"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
                     Show          off
                   }
                 }
@@ -19812,11 +19815,6 @@ Plecs {
                     Value         "1"
                     Show          off
                   }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
-                    Show          off
-                  }
                 }
                 Component {
                   Type          Goto
@@ -19834,11 +19832,6 @@ Plecs {
                   Parameter {
                     Variable      "Visibility"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
                     Show          off
                   }
                 }
@@ -19860,11 +19853,6 @@ Plecs {
                     Value         "1"
                     Show          off
                   }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
-                    Show          off
-                  }
                 }
                 Component {
                   Type          Goto
@@ -19882,11 +19870,6 @@ Plecs {
                   Parameter {
                     Variable      "Visibility"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
                     Show          off
                   }
                 }
@@ -19908,11 +19891,6 @@ Plecs {
                     Value         "1"
                     Show          off
                   }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
-                    Show          off
-                  }
                 }
                 Component {
                   Type          Goto
@@ -19930,11 +19908,6 @@ Plecs {
                   Parameter {
                     Variable      "Visibility"
                     Value         "1"
-                    Show          off
-                  }
-                  Parameter {
-                    Variable      "NoMatchingCounterpartAction"
-                    Value         "3"
                     Show          off
                   }
                 }
@@ -20116,7 +20089,6 @@ Plecs {
               Direction     right
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "Time"
                 Value         "0"
@@ -20146,10 +20118,9 @@ Plecs {
               Direction     up
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "DialogGeometry"
-                Value         "[309 132 1276 917]"
+                Value         "[309 102 1276 917]"
                 Show          off
               }
               Parameter {
@@ -20269,16 +20240,20 @@ Plecs {
               Direction     up
               Flipped       off
               LabelPosition south
-              Location      [0, 51; 1920, 1061]
+              Location      [0, 26; 1539, 850]
               State         "AAAA/wAAAAD9AAAAAgAAAAEAAADhAAADdvwCAAAAA/sAAAAQA"
-"FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAADEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
-"AAAAAA/////wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMgAAA3YAAABjAP///wAAAAMAAAe"
-"AAAAAV/wBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAABpkA"
+"FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAAD8A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
+"AAAAAA/////wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMBAAAAOAAAA3YAAAB+AP///wAAAAMAAAe"
+"EAAAAbPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4QAAABfAP///wAABp4A"
 "AAN2AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
 "/8AAAAAAAAAAA=="
               SavedViews    "AAAAAgAAAAA="
-              HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":179,\"Labe"
-"ls\":[],\"VisualIdxs\":[]}"
+              HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAA"
+"AAJAAAAAQAAAH0AAAADAAAAfQAAAAIAAAB9AAAABQAAAH0AAAAEAAAAfQAAAAcAAAB9AAAABgAAAH"
+"0AAAAJAAAAfQAAAAgAAAB9AAAHhAAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAs"
+"AAABJAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAA"
+"AAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA"
+"QAAAAAAAAc7AAAAAQAAAAAAAAPoAAAAACs="
               PlotPalettes  "AAAAAQAAAAgAAAACAAAABAAAAAIB//+qqlVVAAAAAAL//y7g/"
 "/+ZmQAAAAAAAgH//1VVAAD//wAAAf//////////AAAAAAACAv//T7D/////AAAB////////AAAAAA"
 "AAAAIC//8SwP////8AAAL//xLA///MzAAAAAAABAAAAAIBAAAAAAIBAQAAAAIAAQAAAAIAAAAAAAQ"
@@ -20332,7 +20307,6 @@ Plecs {
               Direction     right
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Frame         [-25, -10; 25, 10]
               Parameter {
                 Variable      "Value"
@@ -20353,7 +20327,6 @@ Plecs {
               Direction     up
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Location      [195, 100; 1731, 1056]
               State         "AAAA/wAAAAD9AAAAAgAAAAEAAADhAAADSvwCAAAAA/sAAAAQA"
 "FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAADEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
@@ -20362,8 +20335,7 @@ Plecs {
 "AANKAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
 "/8AAAAAAAAAAA=="
               SavedViews    "AAAAAgAAAAA="
-              HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":186,\"Labe"
-"ls\":[],\"VisualIdxs\":[]}"
+              HeaderState   "DefaultSecSize0FirstSecSize186LabelsVisualIdxg=="
               PlotPalettes  "AAAAAQAAAAwAAAABAAAADAAAAAIC//8u4P//zMwAAAL//y7g/"
 "/+ZmQAAAAAAAgL//wAA/////wAAAv//AAD//8zMAAAAAAACAf//////////AAAC//9PsP//zMwAAA"
 "AAAAIC//8SwP////8AAAL//xLA///MzAAAAAAAAgL//3Uw/////wAAAv//dTD//8zMAAAAAAACAv/"
@@ -20426,7 +20398,6 @@ Plecs {
               Direction     up
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "IconShape"
                 Value         "1"
@@ -20456,7 +20427,6 @@ Plecs {
               Direction     right
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Frame         [-10, -10; 10, 10]
               Parameter {
                 Variable      "Value"
@@ -20477,7 +20447,6 @@ Plecs {
               Direction     up
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Location      [624, 258; 974, 566]
               State         "AAAA/wAAAAD9AAAAAgAAAAEAAACCAAABFfwCAAAAA/sAAAAQA"
 "FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAADEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
@@ -20486,8 +20455,7 @@ Plecs {
 "AAEVAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
 "/8AAAAAAAAAAA=="
               SavedViews    "AAAAAgAAAAA="
-              HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":175,\"Labe"
-"ls\":[],\"VisualIdxs\":[]}"
+              HeaderState   "DefaultSecSize0FirstSecSize175LabelsVisualIdxg=="
               PlotPalettes  "AAAAAQAAAAwAAAACAAAABgAAAAIB/////wAAAAAAAAL//y7g/"
 "/+ZmQAAAAAAAgL//wAA/////wAAAv//AAD//8zMAAAAAAACAv//T7D/////AAAC//9PsP//zMwAAA"
 "AAAAIC//8SwP////8AAAL//xLA///MzAAAAAAAAgL//3Uw/////wAAAv//dTD//8zMAAAAAAACAv/"
@@ -20543,7 +20511,6 @@ Plecs {
               Direction     right
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "Width"
                 Value         "6"
@@ -20558,7 +20525,6 @@ Plecs {
               Direction     up
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "T_average"
                 Value         "1/fsw"
@@ -20573,7 +20539,6 @@ Plecs {
               Direction     up
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Location      [0, 51; 1920, 1061]
               State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADIPwCAAAAA/sAAAAQA"
 "FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAADEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
@@ -20582,8 +20547,8 @@ Plecs {
 "AAMgAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
 "/8AAAAAAAAAAA=="
               SavedViews    "AAAAAgAAAAA="
-              HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":168,\"Labe"
-"ls\":[\"Delta\",\"Mean\"],\"VisualIdxs\":[3,8]}"
+              HeaderState   "DefaultSecSize0FirstSecSize168LabelsDeltaMeanVisu"
+"alIdxs3"
               PlotPalettes  "AAAAAQAAAAwAAAACAAAABgAAAAIB/////wAAAAAAAAL//y7g/"
 "/+ZmQAAAAAAAgL//wAA/////wAAAv//AAD//8zMAAAAAAACAv//T7D/////AAAC//9PsP//zMwAAA"
 "AAAAIC//8SwP////8AAAL//xLA///MzAAAAAAAAgL//3Uw/////wAAAv//dTD//8zMAAAAAAACAv/"
@@ -20639,7 +20604,6 @@ Plecs {
               Direction     right
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Parameter {
                 Variable      "ExternalReset"
                 Value         "1"
@@ -20694,7 +20658,6 @@ Plecs {
               Direction     up
               Flipped       off
               LabelPosition south
-              CommentOut    DisabledOpenCircuit
               Location      [184, 188; 534, 463]
               State         "AAAA/wAAAAD9AAAAAgAAAAEAAACCAAAAefwCAAAAA/sAAAAQA"
 "FoAbwBvAG0AQQByAGUAYQAAAAAA/////wAAADEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcw"
@@ -20703,8 +20666,7 @@ Plecs {
 "AAB5AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP///"
 "/8AAAAAAAAAAA=="
               SavedViews    "AAAAAgAAAAA="
-              HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":180,\"Labe"
-"ls\":[],\"VisualIdxs\":[]}"
+              HeaderState   "DefaultSecSize0FirstSecSize180LabelsVisualIdxg=="
               PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
               Axes          "1"
               TimeRange     "0.0"
@@ -20742,6 +20704,26 @@ Plecs {
                   KeepBaseline  off
                   BaselineValue 0
                 }
+              }
+            }
+            Component {
+              Type          Constant
+              Name          "Constant15"
+              Show          off
+              Position      [185, 245]
+              Direction     right
+              Flipped       off
+              LabelPosition south
+              Frame         [-25, -10; 25, 10]
+              Parameter {
+                Variable      "Value"
+                Value         "16"
+                Show          off
+              }
+              Parameter {
+                Variable      "DataType"
+                Value         "10"
+                Show          off
               }
             }
             Connection {
@@ -21002,18 +20984,18 @@ Plecs {
             }
             Connection {
               Type          Signal
-              SrcComponent  "Divide"
-              SrcTerminal   1
-              Points        [150, 260]
-              DstComponent  "Mux15"
-              DstTerminal   5
-            }
-            Connection {
-              Type          Signal
               SrcComponent  "Demux2"
               SrcTerminal   19
               DstComponent  "Mux"
               DstTerminal   7
+            }
+            Connection {
+              Type          Signal
+              SrcComponent  "Constant15"
+              SrcTerminal   1
+              Points        [290, 245; 290, 260]
+              DstComponent  "Mux15"
+              DstTerminal   5
             }
             Annotation {
               Name          "<html><body>\n<p align=\"center\">Iref_ch</p></bo"
@@ -21052,11 +21034,205 @@ Plecs {
             } 
           }
         }
+        Component {
+          Type          PlecsProbe
+          Name          "Interleaved Currents3"
+          Show          off
+          Position      [375, 330]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Probe {
+            Component     "L14"
+            Path          ""
+            Signals       {"Inductor current"}
+          }
+          Probe {
+            Component     "L13"
+            Path          ""
+            Signals       {"Inductor current"}
+          }
+          Probe {
+            Component     "L12"
+            Path          ""
+            Signals       {"Inductor current"}
+          }
+          Probe {
+            Component     "L11"
+            Path          ""
+            Signals       {"Inductor current"}
+          }
+          Probe {
+            Component     "L10"
+            Path          ""
+            Signals       {"Inductor current"}
+          }
+          Probe {
+            Component     "L9"
+            Path          ""
+            Signals       {"Inductor current"}
+          }
+        }
+        Component {
+          Type          Scope
+          Name          "Scope"
+          Show          on
+          Position      [455, 335]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Location      [0, 30; 1536, 823]
+          State         "AAAA/wAAAAD9AAAAAgAAAAEAAAFgAAADCfwCAAAAA/sAAAAQAFoAb"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAAG4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMBAAAAOAAAAwkAAAB+AP///wAAAAMAAAeAAAA"
+"AsvwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABfAP///wAABhsAAAMJ"
+"AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
+"AAAAAAAAA=="
+          SavedViews    "AAAAAgAAAAA="
+          HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJA"
+"AAAAQAAAH0AAAACAAAAfQAAAAMAAAB9AAAABAAAAH0AAAAFAAAAfQAAAAYAAAB9AAAABwAAAH0AAA"
+"AIAAAAfQAAAAkAAAB9AAAHawAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAsAAAD"
+"PAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAA"
+"AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAA"
+"AAAAAacAAAAAQAAAAAAAAPoAAAAACs="
+          PlotPalettes  "AAAAAQAAABIAAAADAAAABgAAAAMB//9VVf////8AAAL//y7g//+f/"
+"wAAAf///////wAAAAAAAAADAf//VVX/////AAAC//8AAP//zMwAAAH///////8AAAAAAAAAAwH//1"
+"VV/////wAAAv//T7D//8zMAAAB////////AAAAAAAAAAMB//9VVf////8AAAL//xLA///MzAAAAf/"
+"//////wAAAAAAAAADAf//VVX/////AAAC//91MP//zMwAAAH///////8AAAAAAAAAAwH//1VV////"
+"/wAAAv//RlC//5//AAAB////////AAAAAAAAAAYAAAADAQABAAAAAwEAAQAAAAMBAAEAAAADAQABA"
+"AAAAwEAAQAAAAMBAAEAAAAGAAAAAwAAAAEAAAABAAAAAQAAAAMAAAABAAAAAQAAAAEAAAADAAAAAQ"
+"AAAAEAAAABAAAAAwAAAAEAAAABAAAAAQAAAAMAAAABAAAAAQAAAAEAAAADAAAAAQAAAAEAAAABAAA"
+"ABgAAAAMAAAAAAAADAAAAAAAAAwAAAAAAAAMAAAAAAAADAAAAAAAAAwAAAAAAAAYAAAADP/AAAAAA"
+"AAA/8AAAAAAAAD/wAAAAAAAAAAAAAz/wAAAAAAAAP/AAAAAAAAA/8AAAAAAAAAAAAAM/8AAAAAAAA"
+"D/wAAAAAAAAP/AAAAAAAAAAAAADP/AAAAAAAAA/8AAAAAAAAD/wAAAAAAAAAAAAAz/wAAAAAAAAP/"
+"AAAAAAAAA/8AAAAAAAAAAAAAM/8AAAAAAAAD/wAAAAAAAAP/AAAAAAAAAAAAAGAAAAAwAAAAAAAAM"
+"AAAAAAAADAAAAAAAAAwAAAAAAAAMAAAAAAAADAAAAAAAAAgAAAAIAAAABAAAABwH//wAA/////wAA"
+"Af////8AAAAAAAAC//8u4P//ru4AAAL//y7g//+f/wAAAf////8AAH9/AAAC//8u4P//giIAAAL//"
+"y7g//9zMwAAAAAAAQAAAAcBAQAAAQAAAAAAAQAAAAcAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAA"
+"ABAAAAAQAAAAcAAAAAAAAAAAAAAQAAAAc/8AAAAAAAAD/wAAAAAAAAP/AAAAAAAAA/8AAAAAAAAD/"
+"wAAAAAAAAP/AAAAAAAAA/8AAAAAAAAAAAAAEAAAAHAAAAAAAAAA=="
+          Axes          "2"
+          TimeRange     "0"
+          ScrollingMode "1"
+          SingleTimeAxis "1"
+          Open          "0"
+          Ts            "-1"
+          SampleLimit   "0"
+          XAxisLabel    "Time / s"
+          ShowLegend    "1"
+          Axis {
+            Name          ""
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Axis {
+            Name          ""
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Fourier {
+            SingleXAxis       on
+            AxisLabel         "Frequency / Hz"
+            Scaling           0
+            PhaseDisplay      0
+            ShowFourierLegend off
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+          }
+        }
+        Component {
+          Type          From
+          Name          "From1"
+          Show          off
+          Position      [385, 360]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "Ibat"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          PulseGenerator
+          Name          "Pulse\nGenerator"
+          Show          off
+          Position      [145, 170]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Hi"
+            Value         "16"
+            Show          off
+          }
+          Parameter {
+            Variable      "Lo"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "f"
+            Value         "5"
+            Show          off
+          }
+          Parameter {
+            Variable      "DutyCycle"
+            Value         "0.5"
+            Show          off
+          }
+          Parameter {
+            Variable      "Delay"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "From28"
           SrcTerminal   1
-          Points        [430, 85; 430, 65]
+          Points        [175, 135; 175, 115]
           DstComponent  "Divide1"
           DstTerminal   3
         }
@@ -21064,7 +21240,7 @@ Plecs {
           Type          Signal
           SrcComponent  "Zero-Order\nHold"
           SrcTerminal   2
-          Points        [555, 175; 555, 125]
+          Points        [300, 225; 300, 175]
           DstComponent  "Subtract"
           DstTerminal   3
         }
@@ -21093,7 +21269,7 @@ Plecs {
           Type          Signal
           SrcComponent  "Divide1"
           SrcTerminal   1
-          Points        [485, 110]
+          Points        [230, 160]
           DstComponent  "Manual Switch"
           DstTerminal   2
         }
@@ -21101,16 +21277,9 @@ Plecs {
           Type          Signal
           SrcComponent  "Constant1"
           SrcTerminal   1
-          Points        [430, 45; 430, 55]
+          Points        [175, 95; 175, 105]
           DstComponent  "Divide1"
           DstTerminal   2
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Constant3"
-          SrcTerminal   1
-          DstComponent  "Manual Switch"
-          DstTerminal   3
         }
         Connection {
           Type          Signal
@@ -21118,6 +21287,28 @@ Plecs {
           SrcTerminal   2
           DstComponent  "Modulador"
           DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Interleaved Currents3"
+          SrcTerminal   1
+          DstComponent  "Scope"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From1"
+          SrcTerminal   1
+          Points        [410, 360; 410, 340]
+          DstComponent  "Scope"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Pulse\nGenerator"
+          SrcTerminal   1
+          DstComponent  "Manual Switch"
+          DstTerminal   3
         }
       }
     }
@@ -21238,11 +21429,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -21259,11 +21445,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -21286,11 +21467,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -21307,11 +21483,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -21334,11 +21505,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -21355,11 +21521,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -21382,11 +21543,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -21403,11 +21559,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -21430,11 +21581,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -21454,11 +21600,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -21475,11 +21616,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -21668,11 +21804,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -21689,11 +21820,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -21882,11 +22008,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -21903,11 +22024,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -22096,11 +22212,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -22117,11 +22228,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -22310,11 +22416,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -22331,11 +22432,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -22524,11 +22620,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -22545,11 +22636,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -22738,11 +22824,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          From
@@ -22759,11 +22840,6 @@ Plecs {
       }
       Parameter {
         Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
       }
@@ -22786,11 +22862,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
     }
     Component {
       Type          Label
@@ -22808,11 +22879,6 @@ Plecs {
       Parameter {
         Variable      "Visibility"
         Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
         Show          off
       }
     }
@@ -22834,11 +22900,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
     }
     Component {
       Type          Label
@@ -22856,11 +22917,6 @@ Plecs {
       Parameter {
         Variable      "Visibility"
         Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
         Show          off
       }
     }
@@ -22882,11 +22938,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
     }
     Component {
       Type          Label
@@ -22904,11 +22955,6 @@ Plecs {
       Parameter {
         Variable      "Visibility"
         Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
         Show          off
       }
     }
@@ -22930,11 +22976,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
     }
     Component {
       Type          Label
@@ -22952,11 +22993,6 @@ Plecs {
       Parameter {
         Variable      "Visibility"
         Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
         Show          off
       }
     }
@@ -22978,11 +23014,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
     }
     Component {
       Type          Label
@@ -23000,11 +23031,6 @@ Plecs {
       Parameter {
         Variable      "Visibility"
         Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
         Show          off
       }
     }
@@ -23026,11 +23052,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
     }
     Component {
       Type          Label
@@ -23050,11 +23071,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
     }
     Component {
       Type          Scope
@@ -23064,16 +23080,20 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [-359, 381; 1561, 1402]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAACCAAAD3vwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMgAAA94AAABjAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABvgAAAPeAAAA"
+      Location      [-38, 241; 1501, 1065]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAACWAAAD5/wCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAD8A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMBAAAAOAAAA+cAAAB+AP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABfAP///wAABukAAAPnAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":157,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
+"QAAAH0AAAADAAAAfQAAAAIAAAB9AAAABQAAAH0AAAAEAAAAfQAAAAcAAAB9AAAABgAAAH0AAAAJAA"
+"AAfQAAAAgAAAB9AAAA2AAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAsAAACtAAA"
+"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"AArAAAAAQAAAAAAAAPoAAAAACs="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -23145,11 +23165,6 @@ Plecs {
         Value         "1"
         Show          off
       }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
     }
     Component {
       Type          Scope
@@ -23167,8 +23182,7 @@ Plecs {
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":193,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
+      HeaderState   "DefaultSecSize0FirstSecSize193LabelsVisualIdxg=="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -23216,16 +23230,20 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 51; 1920, 1061]
+      Location      [0, 26; 1539, 850]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABjAP///wAAAAMAAAeAAAAAXfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAANwAAAA"
+"G0AQQByAGUAYQAAAAAA/////wAAAD8A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAAB+AP///wAAAAMAAAeEAAAAb/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4QAAABfAP///wAAB4QAAANzAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":192,\"Labels\":[\""
-"Delta\"],\"VisualIdxs\":[3]}"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
+"QAAAH0AAAADAAAAfQAAAAIAAAB9AAAABQAAAH0AAAAEAAAAfQAAAAcAAAB9AAAABgAAAH0AAAAJAA"
+"AAfQAAAAgAAAB9AAAHhAAAAAsBAAABAAAAAAAAAAAAAAAAff////8AAACBAAAAAAAAAAsAAADPAAA"
+"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"Aa1AAAAAQAAAAAAAAPoAAAAACs="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
