@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "001e3c02c2b96409",
+        "id": "be8803c627401c88",
         "type": "tabs",
         "children": [
           {
-            "id": "d821db3ed8a1b651",
+            "id": "9393919cc1678449",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -176,7 +176,7 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d821db3ed8a1b651",
+  "active": "d4aa0395fb74d368",
   "lastOpenFiles": [
     "1_Bibliografia/intro/estado da arte",
     "1_Bibliografia/intro/Nova pasta",
